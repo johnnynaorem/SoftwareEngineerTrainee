@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Johnny\\Celsior_Training\\CollegeSolution\\College\\College.csproj",
+      "projectUniqueName": "C:\\Johnny\\Celsior_Training\\Day4\\CollegeSolution\\College\\College.csproj",
       "projectName": "College",
-      "projectPath": "C:\\Johnny\\Celsior_Training\\CollegeSolution\\College\\College.csproj",
+      "projectPath": "C:\\Johnny\\Celsior_Training\\Day4\\CollegeSolution\\College\\College.csproj",
       "packagesPath": "C:\\Users\\johnny.naorem\\.nuget\\packages\\",
-      "outputPath": "C:\\Johnny\\Celsior_Training\\CollegeSolution\\College\\obj\\",
+      "outputPath": "C:\\Johnny\\Celsior_Training\\Day4\\CollegeSolution\\College\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\johnny.naorem\\AppData\\Roaming\\NuGet\\NuGet.Config",
