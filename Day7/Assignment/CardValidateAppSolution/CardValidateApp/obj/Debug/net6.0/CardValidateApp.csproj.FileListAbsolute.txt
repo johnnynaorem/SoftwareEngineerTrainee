@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\bin\Debug\net6.0\CardValidateApp.exe
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\bin\Debug\net6.0\CardValidateApp.deps.json
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\bin\Debug\net6.0\CardValidateApp.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\bin\Debug\net6.0\CardValidateApp.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\bin\Debug\net6.0\CardValidateApp.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.sourcelink.json
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\refint\CardValidateApp.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\CardValidateApp.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\CardValidateAppSolution\CardValidateApp\obj\Debug\net6.0\ref\CardValidateApp.dll
