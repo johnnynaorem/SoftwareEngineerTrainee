@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\bin\Debug\net6.0\EmployeePromotionApp.exe
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\bin\Debug\net6.0\EmployeePromotionApp.deps.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\bin\Debug\net6.0\EmployeePromotionApp.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\bin\Debug\net6.0\EmployeePromotionApp.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\bin\Debug\net6.0\EmployeePromotionApp.pdb
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.sourcelink.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\refint\EmployeePromotionApp.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.pdb
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\EmployeePromotionApp.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeePromotionAppSolution\EmployeePromotionApp\obj\Debug\net6.0\ref\EmployeePromotionApp.dll

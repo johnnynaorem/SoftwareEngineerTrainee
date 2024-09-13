@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\bin\Debug\net6.0\EmployeeAppSolution.exe
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\bin\Debug\net6.0\EmployeeAppSolution.deps.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\bin\Debug\net6.0\EmployeeAppSolution.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\bin\Debug\net6.0\EmployeeAppSolution.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\bin\Debug\net6.0\EmployeeAppSolution.pdb
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.sourcelink.json
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\refint\EmployeeAppSolution.dll
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.pdb
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\EmployeeAppSolution.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day8\Assignment\EmployeeAppSolution\EmployeeAppSolution\obj\Debug\net6.0\ref\EmployeeAppSolution.dll
