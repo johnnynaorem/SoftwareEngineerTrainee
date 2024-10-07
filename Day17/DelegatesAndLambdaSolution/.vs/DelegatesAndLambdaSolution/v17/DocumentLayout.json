@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|c:\\johnny\\celsior_training\\day17\\delegatesandlambdasolution\\delegatesandlambda\\multicastdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|solutionrelative:delegatesandlambda\\multicastdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|c:\\johnny\\celsior_training\\day17\\delegatesandlambdasolution\\delegatesandlambda\\predefinedelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|solutionrelative:delegatesandlambda\\predefinedelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|c:\\johnny\\celsior_training\\day17\\delegatesandlambdasolution\\delegatesandlambda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|solutionrelative:delegatesandlambda\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|c:\\johnny\\celsior_training\\day17\\delegatesandlambdasolution\\delegatesandlambda\\lambda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11B36E99-029D-4012-BB2D-1A3506481E43}|DelegatesAndLambda\\DelegatesAndLambda.csproj|solutionrelative:delegatesandlambda\\lambda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PredefineDelegates.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\PredefineDelegates.cs",
+              "RelativeDocumentMoniker": "DelegatesAndLambda\\PredefineDelegates.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\PredefineDelegates.cs",
+              "RelativeToolTip": "DelegatesAndLambda\\PredefineDelegates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:49:01.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\Program.cs",
+              "RelativeDocumentMoniker": "DelegatesAndLambda\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\Program.cs",
+              "RelativeToolTip": "DelegatesAndLambda\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAACkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:38:43.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Lambda.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\Lambda.cs",
+              "RelativeDocumentMoniker": "DelegatesAndLambda\\Lambda.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\Lambda.cs",
+              "RelativeToolTip": "DelegatesAndLambda\\Lambda.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:56:35.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MulticastDelegate.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\MulticastDelegate.cs",
+              "RelativeDocumentMoniker": "DelegatesAndLambda\\MulticastDelegate.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day17\\DelegatesAndLambdaSolution\\DelegatesAndLambda\\MulticastDelegate.cs",
+              "RelativeToolTip": "DelegatesAndLambda\\MulticastDelegate.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:45:29.102Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

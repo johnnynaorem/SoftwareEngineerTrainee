@@ -1,0 +1,230 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\exceptions\\nopizzasexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\exceptions\\nopizzasexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\services\\pizzaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\services\\pizzaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\controllers\\pizzacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\interface\\ipizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\interface\\ipizzaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\views\\pizza\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\views\\pizza\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\views\\pizza\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\views\\pizza\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\repositories\\pizzaimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\repositories\\pizzaimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\models\\viewmodel\\pizzaimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\models\\viewmodel\\pizzaimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|c:\\johnny\\celsior_training\\day14\\understandingstructureappsolution\\understandingstructureapp\\models\\pizzaimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6112D271-BCD6-4CD3-95B4-4F2283BCF4A5}|UnderstandingStructureApp\\UnderstandingStructureApp.csproj|solutionrelative:understandingstructureapp\\models\\pizzaimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NoPizzasException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Exceptions\\NoPizzasException.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Exceptions\\NoPizzasException.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Exceptions\\NoPizzasException.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Exceptions\\NoPizzasException.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:20:41.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Views\\Pizza\\Details.cshtml",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Views\\Pizza\\Details.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Views\\Pizza\\Details.cshtml",
+              "RelativeToolTip": "UnderstandingStructureApp\\Views\\Pizza\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-24T06:25:15.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PizzaServices.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Services\\PizzaServices.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Services\\PizzaServices.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Services\\PizzaServices.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Services\\PizzaServices.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:26:39.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPizzaService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Interface\\IPizzaService.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Interface\\IPizzaService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Interface\\IPizzaService.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Interface\\IPizzaService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:20:56.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PizzaController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Controllers\\PizzaController.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Controllers\\PizzaController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Controllers\\PizzaController.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Controllers\\PizzaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:56:17.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Interface\\IRepository.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Interface\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Interface\\IRepository.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Interface\\IRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:07:40.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Views\\Pizza\\Index.cshtml",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Views\\Pizza\\Index.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Views\\Pizza\\Index.cshtml",
+              "RelativeToolTip": "UnderstandingStructureApp\\Views\\Pizza\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T07:00:51.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PizzaImageViewModel.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\ViewModel\\PizzaImageViewModel.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Models\\ViewModel\\PizzaImageViewModel.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\ViewModel\\PizzaImageViewModel.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Models\\ViewModel\\PizzaImageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T05:30:26.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Program.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Program.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:19:18.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PizzaRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Repositories\\PizzaRepository.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Repositories\\PizzaRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Repositories\\PizzaRepository.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Repositories\\PizzaRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:38:29.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PizzaImageRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Repositories\\PizzaImageRepository.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Repositories\\PizzaImageRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Repositories\\PizzaImageRepository.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Repositories\\PizzaImageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADcAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:32:09.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Pizza.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\Pizza.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Models\\Pizza.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\Pizza.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Models\\Pizza.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:38:06.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PizzaImages.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\PizzaImages.cs",
+              "RelativeDocumentMoniker": "UnderstandingStructureApp\\Models\\PizzaImages.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\UnderstandingStructureAppSolution\\UnderstandingStructureApp\\Models\\PizzaImages.cs",
+              "RelativeToolTip": "UnderstandingStructureApp\\Models\\PizzaImages.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:31:54.503Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

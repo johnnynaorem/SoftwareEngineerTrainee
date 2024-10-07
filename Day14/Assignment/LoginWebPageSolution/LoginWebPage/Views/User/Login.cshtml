@@ -1,0 +1,104 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@* <form asp-action="Login" method="post">
+    <div class="mb-3">
+        <label for="Id" name="Id" class="form-label">Id<label>
+         <input type="number" class="form-control" name="Id" id="Id">
+    </div>
+    <div class="mb-3">
+        <label for="password" name="Password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> *@
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="bubbles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="content">
+            <div class="h4 text-white">A Thrusted Clinic Service System</div>
+            <div class="fs-5 text-white text-grey">Login And Book Yours Appointment</div>
+            <div class="text my-4 text-grey">
+                We are dedicated to providing exceptional healthcare tailored to your needs. Our team of experienced professionals is committed to fostering a compassionate and welcoming environment for every patient.
+            </div>
+            @* <div class="d-flex align-items-center pt-3 mt-4">
+                <div class="btn btn-primary me-4">Login Page</div>
+                <div class="btn btn-default">Refresh Page</div>
+            </div> *@
+
+        </div>
+        <div class="form-card">
+            <div class="card">
+                <div class="card-head bg-white">
+                    <p class="m-0 text-center fs-08">Sign in with </p>
+                    <div class="d-flex align-items-center justify-content-center my-2">
+                        <div class="btn btn-default">
+                            <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+                                 alt="">
+                            <span>GitHUb</span>
+                        </div>
+                        <div class="btn btn-default mx-3">
+                            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                                 alt="">
+                            <span>Google</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-form">
+                    <p class="text-center text-muted fs-08 mt-3">Or sign in with credentials</p>
+                    <form asp-action="Login" method="post">
+                        <div class="d-flex align-items-center input-field">
+                            <span class="far fa-envelope text-muted"></span>
+                            <input type="text" id="id" name="Id" placeholder="Id" class="form-control" required>
+                        </div>
+                        <div class="d-flex align-items-center input-field">
+                            <span class="fas fa-key text-muted"></span>
+                            <input type="password" id="Password" name="Password" placeholder="Password" class="form-control" required>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label class="text-muted ms-2" for="remember">Remember me</label>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            @* <div class="btn btn-primary mt-3">Sign In</div> *@
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+        integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+        crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: false,
+            "max-glare": 0.8
+        });
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    });
+</script>
+
+
+

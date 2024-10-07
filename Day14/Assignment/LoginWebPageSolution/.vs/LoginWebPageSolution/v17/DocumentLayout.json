@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\repositories\\invalidusercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\repositories\\invalidusercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\interface\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\wwwroot\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\wwwroot\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|c:\\johnny\\celsior_training\\day14\\assignment\\loginwebpagesolution\\loginwebpage\\views\\user\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73D87B45-1019-441D-ADE4-557C02BE2CE7}|LoginWebPage\\LoginWebPage.csproj|solutionrelative:loginwebpage\\views\\user\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Controllers\\UserController.cs",
+              "RelativeToolTip": "LoginWebPage\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T09:16:25.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Program.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Program.cs",
+              "RelativeToolTip": "LoginWebPage\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:51:28.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LoginWebPage\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T16:23:19.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InvalidUserCredentials.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Repositories\\InvalidUserCredentials.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Repositories\\InvalidUserCredentials.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Repositories\\InvalidUserCredentials.cs",
+              "RelativeToolTip": "LoginWebPage\\Repositories\\InvalidUserCredentials.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T20:18:52.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "LoginWebPage\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "LoginWebPage\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T09:26:06.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "LoginWebPage\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "LoginWebPage\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T11:44:20.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Repositories\\Repository.cs",
+              "RelativeToolTip": "LoginWebPage\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:37:24.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Services\\UserService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Services\\UserService.cs",
+              "RelativeToolTip": "LoginWebPage\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:58:51.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Interface\\IRepository.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Interface\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Interface\\IRepository.cs",
+              "RelativeToolTip": "LoginWebPage\\Interface\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:38:37.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Models\\User.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Models\\User.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Models\\User.cs",
+              "RelativeToolTip": "LoginWebPage\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:32:57.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "LoginWebPage\\Interface\\IUserService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Interface\\IUserService.cs",
+              "RelativeToolTip": "LoginWebPage\\Interface\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:34:58.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginPage.css",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\wwwroot\\css\\LoginPage.css",
+              "RelativeDocumentMoniker": "LoginWebPage\\wwwroot\\css\\LoginPage.css",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\wwwroot\\css\\LoginPage.css",
+              "RelativeToolTip": "LoginWebPage\\wwwroot\\css\\LoginPage.css",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-24T19:09:57.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LoginWebPage\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LoginWebPage\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwCwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T14:56:16.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "LoginWebPage\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "LoginWebPage\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAJ0AAAAAAAAAAADwv6IAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-23T11:53:57.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserProfile.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\UserProfile.cshtml",
+              "RelativeDocumentMoniker": "LoginWebPage\\Views\\User\\UserProfile.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day14\\Assignment\\LoginWebPageSolution\\LoginWebPage\\Views\\User\\UserProfile.cshtml",
+              "RelativeToolTip": "LoginWebPage\\Views\\User\\UserProfile.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T09:54:39.048Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

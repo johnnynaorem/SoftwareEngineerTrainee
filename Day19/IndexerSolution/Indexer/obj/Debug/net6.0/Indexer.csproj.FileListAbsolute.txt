@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\bin\Debug\net6.0\Indexer.exe
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\bin\Debug\net6.0\Indexer.deps.json
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\bin\Debug\net6.0\Indexer.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\bin\Debug\net6.0\Indexer.dll
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\bin\Debug\net6.0\Indexer.pdb
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.sourcelink.json
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.dll
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\refint\Indexer.dll
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.pdb
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\Indexer.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day19\IndexerSolution\Indexer\obj\Debug\net6.0\ref\Indexer.dll

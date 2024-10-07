@@ -1,0 +1,1469 @@
+--------------------------------------------------------------Model----------------------------------------------------------
+
+﻿namespace ClinicManagementWebPage.Models
+{
+    public class User
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+        public string? Image { get; set; }
+    }
+}
+
+
+----------------------------------------------------------------------------------
+
+﻿namespace ClinicManagementWebPage.Models
+{
+    public class Doctor
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public long Phone { get; set; }
+        public string? Email { get; set; }
+        public string? Speciality { get; set; }
+
+        public string? Image { get; set; }
+        public List<IFormFile> PostedFiles { get; set; } = new List<IFormFile>();
+
+    }
+
+}
+
+----------------------------------------------------------------------------------
+
+﻿namespace ClinicManagementWebPage.Models
+{
+    public class Appointment
+    {
+        public int AppointmentId { get; set; }
+        public DateTime EndTime => StartTime.AddMinutes(30);
+        public DateTime StartTime { get; set; }
+        public string Doctor { get; set; }
+        public string User { get; set; }
+
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+								Interfaces
+----------------------------------------------------------------------------------------------
+
+﻿using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Interfaces
+{
+    public interface IUserService
+    {
+        User GetUser(string email, string password);
+        List<User> GetAllUser();
+    }
+}
+
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Interfaces
+{
+    public interface IRepository<T> where T : class
+    {
+        List<T> GetAll();
+        T Get(int id);
+        T Get(string email, string password);
+        void Add(T entity); 
+        void Update(T entity); 
+        void Delete(int id);
+    }
+}
+
+----------------------------------------------------------------------------------------------
+
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Interfaces
+{
+    public interface IDoctorService
+    {
+        List<Doctor> GetAllDoctor(); 
+    }
+}
+----------------------------------------------------------------------------------------------
+
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Interfaces
+{
+    public interface IAppointmentService
+    {
+        Appointment CreateAppointment(string doctor, string user, DateTime startTime);
+        List<Appointment> GetAppointmentList();
+
+        List<Appointment> GetAppointment(string user);
+
+        Doctor GetDoctor(int did);
+    }
+}
+----------------------------------------------------------------------------------------------
+							Repositories
+----------------------------------------------------------------------------------------------
+
+﻿using ClinicManagementWebPage.Exceptions;
+using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Repositories
+{
+    public class UserRepository : IRepository<User>
+    {
+        static List<User> users = new List<User>()
+        {
+            new User(){Id = 1, Name = "Johnny Naorem", Email = "johnny@gmail.com", Image = "https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/5397226/1820/2730/m1/fpnw/wm1/ndvld9i93olzarioqzuu6a3bbnxody4gfmpvjyorvip7x9alegcm2kti4tc3ktsv-.jpg?1542627643&s=cfeb8b5f8850e9a99b7761a2c34e27f8", Password="johnny@02"},
+            new User(){Id = 2, Name = "Rohit Laishram", Email = "rohit@gmail.com", Image = "https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/5397226/1820/2730/m1/fpnw/wm1/ndvld9i93olzarioqzuu6a3bbnxody4gfmpvjyorvip7x9alegcm2kti4tc3ktsv-.jpg?1542627643&s=cfeb8b5f8850e9a99b7761a2c34e27f8", Password="rohit@12"}
+        };
+        public List<User> GetAll()
+        {
+            return users;
+        }
+
+        public User Get(string email, string password) {
+            var user = users.FirstOrDefault(x => x.Email == email && x.Password == password);
+            if (user == null)
+            {
+                throw new InvalidUserException();
+            }
+            return user;
+        }
+        public User Get(int uid)
+        {
+            var user = users.FirstOrDefault(x => x.Id == uid);
+            if( user == null)
+            {
+                throw new InvalidCastException();
+            }
+            return user;
+        }
+
+
+        public void Add(User entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(User entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+
+
+﻿using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Repositories
+{
+    public class DoctorRepository : IRepository<Doctor>
+    {
+        static List<Doctor> doctors = new List<Doctor>
+        {
+            new Doctor{Id=1, Name="Patey Cruiser", Email="paty@gmail.com", Phone=8787321466, Speciality="Neurosurgeon", Image="/images/Patey.jpg"},
+            new Doctor{Id=2, Name="Jacqueliene Fernandez", Email="jacqueline@gmail.com", Phone=8787327523, Speciality="Gynecologist", Image="/images/Jacqueliene.jpg"},
+            new Doctor{Id=3, Name="Anna Sthesia", Email="anna@gmail.com", Phone=8787470922, Speciality="Surgeon", Image="/images/Anna.jpg"},
+            new Doctor{Id=4, Name="Paul Moliv", Email="paul@gmail.com", Phone=87874231133, Speciality="Dentist", Image="/images/Paul.jpg"},
+            new Doctor{Id=5, Name="Anna Maul", Email="annamaul@gmail.com", Phone=87874237613, Speciality="Eye Specialist", Image="/images/Maul.jpg"},
+            new Doctor{Id=6, Name="Gail Forcewind", Email="gail@gmail.com", Phone=87874231132, Speciality="Urology", Image="/images/Gail.jpg"},
+
+        };
+
+
+        public List<Doctor> GetAll()
+        {
+            return doctors;
+        }
+
+        public Doctor Get(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Doctor Get(int id)
+        {
+            var doctor = doctors.FirstOrDefault(x => x.Id == id);
+            return doctor;
+        }
+
+        public void Add(Doctor entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Doctor entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------
+
+
+﻿using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Repositories
+{
+    public class AppointmentRepository : IRepository<Appointment>
+    {
+        private static List<Appointment> _appointments = new List<Appointment>();
+
+        public List<Appointment> GetAll()
+        {
+            return _appointments;
+        }
+
+        public Appointment Get(int id)
+        {
+            return _appointments.FirstOrDefault(a => a.AppointmentId == id);
+        }
+
+        public void Add(Appointment appointment)
+        {
+            appointment.AppointmentId = _appointments.Count + 1;
+            _appointments.Add(appointment);
+        }
+
+        public void Update(Appointment appointment)
+        {
+            var existingAppointment = Get(appointment.AppointmentId);
+            if (existingAppointment != null)
+            {
+                existingAppointment.StartTime = appointment.StartTime;
+                existingAppointment.Doctor = appointment.Doctor;
+                existingAppointment.User = appointment.User;
+            }
+        }
+
+        public void Delete(int id)
+        {
+            var appointment = Get(id);
+            if (appointment != null)
+            {
+                _appointments.Remove(appointment);
+            }
+        }
+
+        public Appointment Get(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------
+						Services
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Services
+{
+    public class UserService : IUserService
+    {
+        private readonly IRepository<User> _userRepository;
+
+        public UserService(IRepository<User> userService) {
+            _userRepository = userService;
+        }
+        public User GetUser(string email, string password)
+        {
+            User user = _userRepository.Get(email, password);
+            return user;
+        }
+
+        public List<User> GetAllUser()
+        {
+            var user = _userRepository.GetAll();
+            return user;
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+
+namespace ClinicManagementWebPage.Services
+{
+    public class DoctorService : IDoctorService
+    {
+        private readonly IRepository<Doctor> _doctorRepository;
+
+        public DoctorService(IRepository<Doctor> doctorService)
+        {
+            _doctorRepository = doctorService;
+        }
+        public List<Doctor> GetAllDoctor()
+        {
+            var doctors = _doctorRepository.GetAll();
+            return doctors;
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Exceptions;
+using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+using ClinicManagementWebPage.Repositories;
+
+namespace ClinicManagementWebPage.Services
+{
+    public class AppointmentService : IAppointmentService
+    {
+        private readonly IRepository<Appointment> _appointmentRepo;
+        private readonly IRepository<User> _userRepo;
+        private readonly IRepository<Doctor> _doctorRepo;
+
+        public AppointmentService(IRepository<Appointment> appointmentRepo, IRepository<Doctor> doctorRepo, IRepository<User> userRepo)
+        { 
+            _userRepo = userRepo;
+            _doctorRepo = doctorRepo;
+            _appointmentRepo = appointmentRepo;
+        }
+        public Appointment CreateAppointment(string doctor, string user, DateTime startTime)
+        {
+            if (doctor == null || user == null)
+            {
+                throw new InvalidAppointment("Doctor and user must not be null.");
+            }
+
+            if (startTime <= DateTime.Now)
+            {
+                throw new InvalidAppointment("Appointment start time must be in the future.");
+            }
+
+            var appointments = _appointmentRepo.GetAll();
+            var isUserHaveAppointment = appointments.Where(a => a.User == user && a.StartTime == startTime);
+            var isDoctorHaveAppointment = appointments.Where(a => a.Doctor == doctor && a.StartTime == startTime);
+            if (isUserHaveAppointment.Any())
+            {
+                throw new InvalidAppointment("You have another appointment at this time. Choose another time.");
+            }
+
+            if (isDoctorHaveAppointment.Any())
+            {
+                throw new InvalidAppointment("Doctor have another appointment at this time. Choose another time.");
+            }
+
+            var appointment = new Appointment
+            {
+                StartTime = startTime,
+                Doctor = doctor,
+                User = user
+            };
+
+            _appointmentRepo.Add(appointment);
+            return appointment;
+        }
+
+        public Doctor GetDoctor(int did)
+        {
+            var doctor = _doctorRepo.Get(did);
+            return doctor;
+        }
+
+        public List<Appointment> GetAppointmentList()
+        {
+            return _appointmentRepo.GetAll().OrderBy(e => e.StartTime).ToList();
+        }
+
+
+        public List<Appointment> GetAppointment(string user)
+        {
+            var appointments = _appointmentRepo.GetAll();
+            var returnAppointments = appointments.Where(a => a.User == user).ToList();
+            return returnAppointments;
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+						Exceptions
+----------------------------------------------------------------------------------------------
+
+﻿using System.Runtime.Serialization;
+
+namespace ClinicManagementWebPage.Exceptions
+{
+    internal class InvalidUserException : Exception
+    {
+        string msg;
+        public InvalidUserException()
+        {
+            msg = "Invalid email and password, Try Again";
+        }
+        public override string Message => msg;
+    }
+}
+
+----------------------------------------------------------------------------------------------
+﻿using System.Runtime.Serialization;
+
+namespace ClinicManagementWebPage.Exceptions
+{
+    public class InvalidAppointment : Exception
+    {
+        string msg;
+        public InvalidAppointment()
+        {
+        }
+
+        public InvalidAppointment(string message)
+        {
+            msg = message;
+        }
+
+        public override string Message => msg;
+    }
+}
+----------------------------------------------------------------------------------------------
+						Controllers
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Exceptions;
+using ClinicManagementWebPage.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ClinicManagementWebPage.Controllers
+{
+    public class UserController : Controller
+    {
+        private readonly IUserService _userService;
+
+        public UserController(IUserService userService) { 
+            _userService = userService;
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+            try
+            {
+                var user = _userService.GetUser(email, password);
+                if (user != null)
+                {
+                    HttpContext.Session.SetString("username", user.Name);
+                    HttpContext.Session.SetString("email", user.Email);
+                    return RedirectToAction("Index", "Doctor");
+                }
+                throw new InvalidUserException();
+            }
+            catch (InvalidUserException e)
+            {
+                ModelState.AddModelError(string.Empty, e.Message);
+                return View();
+            }
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+﻿using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+using ClinicManagementWebPage.Repositories;
+using Microsoft.AspNetCore.Mvc;
+
+
+namespace ClinicManagementWebPage.Controllers
+{
+    public class DoctorController : Controller
+    {
+        private readonly IDoctorService _doctorService;
+
+        public DoctorController(IDoctorService doctorService)
+        {
+            _doctorService = doctorService;
+        }
+        public IActionResult Index()
+        {
+            var username = HttpContext.Session.GetString("username");
+            var email = HttpContext.Session.GetString("email");
+            if (username == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+            ViewBag.User = new
+            {
+                Email = email,
+                Name = username,
+            };
+            var doctors = _doctorService.GetAllDoctor();
+            return View(doctors);
+
+        }
+
+        public IActionResult Details(int did) 
+        {
+            var doctors = _doctorService.GetAllDoctor();
+            var doctor = doctors.FirstOrDefault(x => x.Id == did);
+            HttpContext.Session.SetString("doctorId", Convert.ToString(doctor.Id));
+
+            return RedirectToAction("CreateAppointment", "Appointment");
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+
+﻿using ClinicManagementWebPage.Exceptions;
+using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Numerics;
+
+namespace ClinicManagementWebPage.Controllers
+{
+    public class AppointmentController : Controller
+    {
+        private readonly IAppointmentService _appointmentService;
+
+        public AppointmentController(IAppointmentService appointmentService)
+        {
+            _appointmentService = appointmentService;
+        }
+
+        public IActionResult CreateAppointment()
+        {
+            var username = HttpContext.Session.GetString("username");
+            string id = HttpContext.Session.GetString("doctorId");
+            int did;
+            if (id == null)
+            {
+                return NotFound();
+            }
+            did = Convert.ToInt16(id);
+            var doctor = _appointmentService.GetDoctor(did);
+            ViewBag.User = new
+            {
+                Doctor = doctor.Name,
+                Name = username,
+            };
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateAppointment(string doctor, string user, DateTime startTime)
+        {
+            try
+            {
+                var appointment = _appointmentService.CreateAppointment(doctor, user, startTime);
+                if(appointment!=null) return RedirectToAction("DisplayAppointment");
+                throw new InvalidAppointment();
+            }
+            catch (InvalidAppointment ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                ViewBag.User = new { Name = user, Doctor = doctor };
+                return View(); 
+            }
+        }
+
+        public IActionResult DisplayAppointment()
+        {
+            var username = HttpContext.Session.GetString("username");
+            Console.WriteLine(username);
+            ViewBag.User = new
+            {
+                Name = username,
+            };
+            var appointments = _appointmentService.GetAppointment(username);
+            //var appointments = _appointmentService.GetAppointmentList();
+            return View(appointments);
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------
+						Views
+----------------------------------------------------------------------------------------------
+
+User Login View-------
+-----------------------
+@{
+    ViewData["Title"] = "Login";
+}
+
+ @if (TempData["AlertMessage"] != null)
+   {
+       <script>
+           alert('@TempData["AlertMessage"]');
+       </script>
+   }
+
+<div class="bubbles">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="content">
+            <div class="h4 text-white">A Thrusted Clinic Service System</div>
+            <div class="fs-5 text-white text-grey">Login And Book Yours Appointment</div>
+            <div class="text my-4 text-grey">
+                We are dedicated to providing exceptional healthcare tailored to your needs. Our team of experienced professionals is committed to fostering a compassionate and welcoming environment for every patient.
+            </div>
+
+        </div>
+        <div class="form-card">
+            <div class="card">
+                <div class="card-head bg-white">
+                    <p class="m-0 text-center fs-08">Sign in with </p>
+                    <div class="d-flex align-items-center justify-content-center my-2">
+                        <div class="btn btn-default">
+                            <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
+                                 alt="">
+                            <span>GitHUb</span>
+                        </div>
+                        <div class="btn btn-default mx-3">
+                            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                                 alt="">
+                            <span>Google</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-form">
+                    <p class="text-center text-muted fs-08 mt-3">Or sign in with credentials</p>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <form asp-action="Login" method="post">
+                        <div class="d-flex align-items-center input-field">
+                            <span class="far fa-envelope text-muted"></span>
+                            <input type="email" id="Email" name="Email" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="d-flex align-items-center input-field">
+                            <span class="fas fa-key text-muted"></span>
+                            <input type="password" id="Password" name="Password" placeholder="Password" class="form-control" required>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label class="text-muted ms-2" for="remember">Remember me</label>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            @* <div class="btn btn-primary mt-3">Sign In</div> *@
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+        integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+        crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: false,
+            "max-glare": 0.8
+        });
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    });
+</script>
+----------------------------------------------------------------------------------------------
+
+Doctor Display View-------
+-----------------------
+
+@model IEnumerable<ClinicManagementWebPage.Models.Doctor>
+
+@{
+    ViewData["Title"] = "DoctorDisplayPage";
+}
+
+
+<h3>Welcome @ViewBag.User.Name</h3>
+
+<div class="container mb-5">
+    <div class="col-12 mt-5 d-flex" style="justify-content: space-between; align-items: center;">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 heading-section text-center">
+                <h2 class="display-3 fs-3">Doctors</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row card-effects">
+        @{
+            foreach (var doctor in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
+                    <div class="card card-effect p-0 ">
+                        <div class="card-img rounded-0">
+                            <div class="img-hover" style="position: relative">
+                                <img class="rounded-top img-fluid"
+                                     src="@doctor.Image" alt="...">
+                            </div>
+                        </div>
+                        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+                            <div class="pt-6">
+                                <div class="mb-3 mt-4 text-center">
+                                    <p class="doctor-name text-decoration-none fw-bolder text-uppercase text-tb-lines">@doctor.Name</p>
+                                </div>
+                                <p class="text-secondary text-center lh-base">
+                                    @doctor.Speciality
+                                </p>
+                            </div>
+                            <div class="text-center book-btn">
+                                <a asp-action="Details" asp-route-did="@doctor.Id" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+                                    <i class="fa fa-arrow-right icon-arrow before"></i>
+                                    <span class="label fw-normal">Book Appointment</span>
+                                    <i class="fa fa-arrow-right icon-arrow after"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+----------------------------------------------------------------------------------------------
+
+Appointment Create View-----
+-------------------------------
+﻿﻿@model ClinicManagementWebPage.Models.Appointment
+
+
+
+ @* <div>@Model.Speciality</div> *@
+ 
+<div class="container mt-5" >
+    <div class="form-container mx-auto my-auto" style="border: 4px solid #ffffff; padding: 30px; border-radius: 10px; background: linear-gradient(45deg, black, transparent);">
+    <h2>Create Appointment</h2>
+        <form asp-action="CreateAppointment" method="post">
+            <div class="mb-3">
+                <label for="Doctor" class="form-label" style="color: white; font-size: 16px">Concern Doctor: </label>
+                <input type="text" class="form-control" id="Doctor" name="Doctor" value="@ViewBag.User.Doctor">
+            </div>
+            <div class="mb-3">
+                <label for="User" class="form-label" style="color: white; font-size: 16px">User Name: </label>
+                <input type="text" class="form-control" id="Doctor" name="User" value="@ViewBag.User.Name">
+            </div>
+            
+            <div class="mb-3">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" });
+                <label for="StartTime" class="form-label" style="color: white; font-size: 16px">Appointment Time </label>
+                <input type="datetime-local" class="form-control" name="StartTime" id="StartTime">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form> 
+     </div>
+</div>
+-------------------------------------------------------------------------------------------------
+Appointment Display View-----
+-------------------------------
+﻿@model List<ClinicManagementWebPage.Models.Appointment>
+
+@{
+    ViewData["Title"] = "DisplayAppointment";
+}
+
+
+<h2>Appointments</h2>
+
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Appointment ID</th>
+            <th scope="col">User</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">StartTime</th>
+            <th scope="col">EndTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <th scope="row">@appointment.AppointmentId</th>
+                <td>@appointment.User</td>
+                <td>@appointment.Doctor</td>
+                <td>@appointment.StartTime</td>
+                <td>@appointment.EndTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
+----------------------------------------------------------------------------------------------
+Program: 
+
+
+using ClinicManagementWebPage.Interfaces;
+using ClinicManagementWebPage.Models;
+using ClinicManagementWebPage.Repositories;
+using ClinicManagementWebPage.Services;
+
+namespace ClinicManagementWebPage
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSession();
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            #region UserService Injection
+            builder.Services.AddScoped<IRepository<User>, UserRepository>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            #endregion
+            
+            #region DoctorService Injection
+            builder.Services.AddScoped<IRepository<Doctor>, DoctorRepository>();
+            builder.Services.AddScoped<IDoctorService, DoctorService>();
+            #endregion
+
+            #region AppointmentService Injection
+            builder.Services.AddScoped<IRepository<Appointment>, AppointmentRepository>();
+            builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+            #endregion
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseSession();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=User}/{action=Login}/{id?}");
+
+            app.Run();
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------
+Login Page Css:
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8C9EFF, #9320ff, #d09eff);
+}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+.circle {
+    position: absolute;
+    z-index: -100;
+    border-radius: 50%;
+    background-color: rgb(235, 235, 235);
+    animation: flying 7s infinite ease-in;
+    opacity: 0.5;
+    bottom: -100px;
+}
+
+@keyframes flying {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        bottom: 1080px;
+        transform: translateX(-250px);
+    }
+}
+
+.circle:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    animation-delay: 5s;
+}
+
+.circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    animation-delay: 6s;
+}
+
+.circle:nth-child(3) {
+    width: 65px;
+    height: 65px;
+    animation-delay: 4s;
+}
+
+.circle:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-delay: 9s;
+}
+
+
+.container {
+    margin: 50px auto;
+}
+
+    .container .content {
+        max-width: 42%;
+        margin-right: 30px;
+    }
+
+    .container .fs-5 {
+        font-size: 1.4rem !important;
+        font-weight: 200;
+    }
+
+    .container .text-grey {
+        color: #e8e8e8;
+    }
+
+    .container .text {
+        font-weight: 100;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .container .btn {
+        border: none;
+        box-shadow: 0 2px 3px #505050b0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1.3px;
+    }
+
+    .container .content .btn.btn-primary {
+        color: #f2f2f2;
+        background-color: #14ca72;
+    }
+
+        .container .content .btn.btn-primary:hover {
+            background-color: #21a063;
+        }
+
+    .container .btn.btn-default {
+        background-color: #fff;
+    }
+
+        .container .btn.btn-default:hover {
+            background-color: #f2f2f2;
+        }
+
+    .container .btn img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+
+    .container .card {
+        margin-left: 40px;
+        min-width: 320px;
+        max-width: 400px;
+        height: 400px;
+        border: none;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px #975ccfa1;
+    }
+
+        .container .card .card-head {
+            padding: 15px 20px;
+            overflow-x: hidden;
+            box-shadow: 0 2px 3px #1f1f1f33;
+            height: 140px;
+        }
+
+        .container .card .card-form {
+            height: 100%;
+            padding: 15px 20px;
+            background-color: #eeeeee;
+        }
+
+            .container .card .card-form .input-field {
+                background-color: #fff;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 20px;
+                padding: 0.1rem 0.3rem;
+                border-radius: 4px;
+                box-shadow: 0 2px 3px #1f1f1f33;
+            }
+
+                .container .card .card-form .input-field .form-control {
+                    box-shadow: none;
+                    border: none;
+                }
+
+                .container .card .card-form .input-field input:focus::placeholder {
+                    color: #fff;
+                }
+
+        .container .card .fs-08 {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .container .card .card-form .btn {
+            width: 100px;
+        }
+
+            .container .card .card-form .btn.btn.btn-primary {
+                background-color: #841be7;
+            }
+
+                .container .card .card-form .btn.btn.btn-primary:hover {
+                    background-color: #9320ff;
+                }
+
+@media (max-width: 767.5px) {
+    .container .content {
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding: 15px;
+        margin-right: 0px;
+    }
+
+    .container .card {
+        margin-left: 0;
+    }
+
+    .bubbles {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .content .btn {
+        font-size: 0.8rem;
+    }
+
+    .container .card {
+        min-width: 300px;
+    }
+}
+----------------------------------------------------------------------------------------------
+Doctor display Css:
+
+﻿body {
+    font-family: system-ui;
+    background: #f1b4d8;
+    background-image: linear-gradient(to right top, #051937, #20316b, #4d479f, #8659d2, #ca67ff);
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.card-effects .card-effect {
+    border: none;
+    background: #dee2e6;
+}
+
+    .card-effects .card-effect .card-body {
+        box-shadow: 0px 5px 24.25px 0.75px rgba(0,0,0,0.1);
+        background: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px
+    }
+
+    .card-effects .card-effect .card-img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-effects .card-effect:hover .card-img {
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important
+    }
+
+    .card-effects .card-effect .card-img img {
+        width: 100%;
+        transition: .6s
+    }
+
+    .card-effects .card-effect:hover .card-img img {
+        transform: scale(1.2);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+.card-effects .img-hover {
+    position: relative;
+    overflow: hidden
+}
+
+    .card-effects .img-hover img {
+        transition: all 2s ease;
+        transform: scale(1)
+    }
+
+    .card-effects .img-hover:after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3
+    }
+
+    .card-effects .img-hover:before {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3;
+        top: -10%;
+        right: 51%;
+        bottom: -10%;
+        left: 50%;
+        background: rgba(255,255,255,0.3)
+    }
+
+    .card-effects .img-hover:after {
+        top: 50%;
+        right: -10%;
+        bottom: 50%;
+        left: -10%;
+        background: rgba(255,255,255,0.6)
+    }
+
+.card-effects .card-effect:hover .img-hover:before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover:after {
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover img {
+    transform: scale(1.2)
+}
+
+.card-effects .card-btn {
+    display: inline-block;
+    padding: 14px 25px 14px 55px;
+    position: relative;
+    background-color: #2fbfa7;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    background-image: linear-gradient(to right top, #8f42b9, #9746c3, #a04bce, #a84fd8, #b154e3);
+}
+
+    .card-effects .card-btn:hover {
+        background-image: linear-gradient(to right top, #b154e3, #a84fd8, #a04bce, #9746c3, #8f42b9);
+        transition: 0.5s;
+    }
+
+    .card-effects .card-btn .icon-arrow {
+        color: #ffffff;
+        top: 16px;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),opacity 0.4s cubic-bezier(0.86, 0, 0.07,1);
+        font-size: 18px;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+        .card-effects .card-btn .icon-arrow.before {
+            left: 20%;
+            position: absolute;
+            transform-origin: left center
+        }
+
+        .card-effects .card-btn .icon-arrow.after {
+            opacity: 0;
+            position: absolute;
+            right: 48px;
+            transform: translateX(75%) scaleX(0.1);
+            transform-origin: right center
+        }
+
+    .card-effects .card-btn.secondary {
+        background-color: #ff7029
+    }
+
+        .card-effects .card-btn.secondary:hover, .card-effects .card-btn.secondary:active, .card-effects .card-btn.secondary:focus {
+            background-color: #2fbfa7
+        }
+
+    .card-effects .card-btn.white .icon-arrow {
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn.white:hover .icon-arrow, .card-effects .card-btn.white:active .icon-arrow, .card-effects .card-btn.white:focus .icon-arrow {
+        color: #fff
+    }
+
+    .card-effects .card-btn.md .icon-arrow {
+        top: 22px;
+    }
+
+    .card-effects .card-btn.sm {
+        padding: 10px 25px 10px 50px !important;
+        font-size: 14px !important
+    }
+
+    .card-effects .card-btn .label {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+    .card-effects .card-btn.white {
+        background-color: #ffffff;
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn .icon-arrow.white {
+        color: #2fbfa7;
+        top: 16px
+    }
+
+    .card-effects .card-btn:hover, .card-effects .card-btn:active, .card-effects .card-btn:focus {
+        background-color: #ff7029;
+        color: #ffffff
+    }
+
+        .card-effects .card-btn:hover .icon-arrow.before, .card-effects .card-btn:active .icon-arrow.before, .card-effects .card-btn:focus .icon-arrow.before {
+            opacity: 0;
+            transform: translateX(-75%) scaleX(0.1)
+        }
+
+        .card-effects .card-btn:hover .icon-arrow.after, .card-effects .card-btn:active .icon-arrow.after, .card-effects .card-btn:focus .icon-arrow.after {
+            opacity: 1;
+            transform: translateX(0) scaleX(1)
+        }
+
+        .card-effects .card-btn:hover .label, .card-effects .card-btn:active .label, .card-effects .card-btn:focus .label {
+            transform: translateX(-32px)
+        }
+
+.card-effects .text-tb-lines {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: #561778;
+}
+
+    .card-effects .text-tb-lines::before, .text-tb-lines::after {
+        content: '';
+        border-top: 6px double;
+        color: #ffe5f4;
+    }
+
+@media screen and (max-width: 900px){
+    .doctor-name, .book-btn {
+        font-size: 14px
+    }
+}
+----------------------------------------------------------------------------------------------
+static Css:
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #8C9EFF, #9320ff, #d09eff);
+}
+
+.LogoutIcon {
+    border: 2px solid black;
+    width: 42px;
+    height: auto;
+}
+
+.appointmentIcon, .LogoutIcon {
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.appointmentIcon a img{
+    border-radius: 30px;
+}
+
+    .appointmentIcon:hover {
+        background: #4b469c;
+        opacity: .8;
+    }
+    .LogoutIcon:hover {
+        background: #4b469c;
+        border: none;
+    }
+.loginUserFirstName:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.form-container {
+    width: 55%;
+}
+
+@media screen and (max-width: 800px){
+    .form-container{
+        width: 100%;
+    }
+}
+----------------------------------------------------------------------------------------------
+Layout Page----
+
+﻿@{
+    var isLoginPage = ViewData["Title"]?.ToString() == "Login";
+    var isDoctorDisplayPage = ViewData["Title"]?.ToString() == "DoctorDisplayPage" || ViewData["Title"]?.ToString() == "Details";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Online Appointment Booking Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LoginWebPage.styles.css" asp-append-version="true" />
+    @if (isLoginPage)
+    {
+        <link rel="stylesheet" href="~/css/LoginPage.css" asp-append-version="true" />
+    }
+    @if (isDoctorDisplayPage)
+    {
+        <link rel="stylesheet" href="~/css/doctorDisplay.css" asp-append-version="true" />
+    }
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Login">LoginWebPage</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end align-items-center">
+                        @if (!isLoginPage)
+                        {
+                            <li class="appointmentIcon nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="DisplayAppointment"><img src="/images/appointmentIcon.jpg" width="30"/></a>
+                            </li>
+                             @* <li class="LogoutIcon nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login"><p class="m-0 loginUserFirstName">@ViewBag.User.Name[0]</p></a>
+                             </li> *@
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+     @* <footer class="border-top footer text-muted">
+         <div class="container">
+             &copy; 2024 - LoginWebPage - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+         </div>
+     </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+----------------------------------------------------------------------------------------------

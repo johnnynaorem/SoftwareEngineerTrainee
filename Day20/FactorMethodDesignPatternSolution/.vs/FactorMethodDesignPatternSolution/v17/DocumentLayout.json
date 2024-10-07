@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\smsfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\smsfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\emailfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\emailfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\notificationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\notificationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\inotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\inotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\emailnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\emailnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\factormethoddesignpatternsolution\\factormethoddesignpattern\\smsnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AD3C16-5B24-4018-9832-BEF3F72A65F5}|FactorMethodDesignPattern\\FactorMethodDesignPattern.csproj|solutionrelative:factormethoddesignpattern\\smsnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\EmailFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\EmailFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\EmailFactory.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\EmailFactory.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:28:47.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SMSFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\SMSFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\SMSFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\SMSFactory.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\SMSFactory.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:27:46.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\NotificationFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\NotificationFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\NotificationFactory.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\NotificationFactory.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:26:00.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailNotification.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\EmailNotification.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\EmailNotification.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\EmailNotification.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\EmailNotification.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:24:49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SMSNotification.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\SMSNotification.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\SMSNotification.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\SMSNotification.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\SMSNotification.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:24:07.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "INotification.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\INotification.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\INotification.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\INotification.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\INotification.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:23:17.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\Program.cs",
+              "RelativeDocumentMoniker": "FactorMethodDesignPattern\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodDesignPatternSolution\\FactorMethodDesignPattern\\Program.cs",
+              "RelativeToolTip": "FactorMethodDesignPattern\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T17:20:56.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

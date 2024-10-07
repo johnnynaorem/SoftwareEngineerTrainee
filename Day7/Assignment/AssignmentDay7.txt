@@ -1,0 +1,687 @@
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DoctorAssignment
+{
+    public class Doctor
+    {
+        public string Name { get; set; }
+        public string Specialty { get; set; }
+        public int YearsOfExperience { get; set; }
+
+        public Doctor(string name, string specialty, int yearsOfExperience)
+        {
+            Name = name;
+            Specialty = specialty;
+            YearsOfExperience = yearsOfExperience;
+        }
+
+        public void PrintDetails()
+        {
+            Console.WriteLine("------Doctors in Our Database------ ");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Specialty: {Specialty}");
+            Console.WriteLine($"Years of Experience: {YearsOfExperience}");
+            Console.WriteLine();
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace DoctorAssignment
+{
+    internal class DoctorServices : IDoctorInterface
+    {
+        List<Doctor> doctors = new List<Doctor>();
+
+        public void AddDoctor(Doctor doctor)
+        {
+            try {
+                doctors.Add(doctor);
+            }catch (Exception ex) {
+                throw new InvalidInputDetailException();
+            }
+        }
+        
+        public void DisplayDoctor()
+        {
+            if (doctors.Count == 0) {
+                Console.WriteLine("Empty");
+                return;
+            }
+            foreach (Doctor doctor in doctors)
+            {
+                doctor.PrintDetails();
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DoctorAssignment
+{
+    internal interface IDoctorInterface
+    {
+        public void AddDoctor(Doctor doctor);
+        public void DisplayDoctor();
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿
+
+namespace DoctorAssignment
+{
+    
+    internal class InvalidInputDetailException : Exception
+    {
+            string message;
+            public InvalidInputDetailException()
+            {
+                message = "The details entered are invalid. Please try again.";
+            }
+        public override string Message => message;
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using Microsoft.VisualBasic;
+
+namespace DoctorAssignment
+{
+    internal class Program
+    {
+        IDoctorInterface doctorManager;
+
+        public Program()
+        {
+            doctorManager = new DoctorServices();
+        }
+
+        public void printMenu()
+        {
+            Console.WriteLine("1-Add Doctor");
+            Console.WriteLine("2-Print All Doctors");
+            Console.WriteLine("0-Exit");
+        }
+
+        public void AddDoctor()
+        {
+            try {
+                Console.WriteLine("Enter the details of the doctor:");
+
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+
+                Console.Write("Specialty: ");
+                string specialty = Console.ReadLine();
+
+                Console.Write("Years of Experience: ");
+                int yearsOfExperience = Convert.ToInt32(Console.ReadLine());
+
+                Doctor doctor = new Doctor(name, specialty, yearsOfExperience);
+
+                doctorManager.AddDoctor(doctor);
+            }
+            catch(FormatException ex)
+            {
+                Console.WriteLine("Years of Exprience Input was not in the required type");
+            }
+            catch (InvalidInputDetailException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        void MainInteraction()
+        {
+            var choice = 0;
+            do
+            {
+                printMenu();
+                choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        AddDoctor();
+                        break;
+                    case 2:
+                        doctorManager.DisplayDoctor();
+                        break;
+                    case 0:
+                        Console.WriteLine("Exit...");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
+                }
+            } while (choice != 0);
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.MainInteraction();
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LongestShortestProject
+{
+    internal interface IWordInterface
+    {
+        public void LongestWord();
+        public void ShortestWord();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿namespace LongestShortestProject
+{
+    internal class Program
+    {
+        Word word = new Word();
+        IWordInterface wordManger;
+
+        public Program() {
+            word.TakeInputFromConsole();
+            wordManger = new WordManager(word.input);
+        }
+
+
+        static void Main(string[] args)
+        {
+            var program = new Program();
+            program.wordManger.ShortestWord();
+            program.wordManger.LongestWord();
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LongestShortestProject
+{
+    internal class Word
+    {
+        public string input {  get; set; }
+
+        public void TakeInputFromConsole()
+        {
+            bool flag = true;
+            while (flag)
+            {
+                try
+                {
+                    Console.WriteLine("Enter words separated by commas:");
+                    input = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
+                        throw new ArgumentException("Input cannot be empty or whitespace.");
+                    }
+
+                    if (!input.Contains(","))
+                    {
+                        throw new ArgumentException("Input must contain commas to separate words.");
+                    }
+                    
+                    flag = false;
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LongestShortestProject
+{
+    internal class WordManager : IWordInterface
+    {
+        string[] words;
+        public WordManager( string input) {
+            words = input.Split(',').Select(word => word.Trim()).ToArray();
+        }
+        public void LongestWord()
+        {
+            string result = words.OrderByDescending(word => word.Length).FirstOrDefault();
+            Console.WriteLine($"Longest Word: {result}");
+        }
+
+        public void ShortestWord()
+        {
+            string result = words.OrderBy(word => word.Length).FirstOrDefault();
+            Console.WriteLine($"Shortest Word: {result}");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿namespace PrimeNumber
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> primeNumbers = new List<int>();
+            int number;
+
+            Console.WriteLine("Enter numbers one by one. Enter 0 to stop:");
+
+            while (true)
+            {
+                try
+                {
+                    string input = Console.ReadLine();
+
+                    if (!int.TryParse(input, out number))
+                    {
+                        throw new FormatException("Input is not a valid integer.");
+                    }
+
+                    if (number == 0)
+                    {
+                        break;
+                    }
+
+                    if (IsPrime(number))
+                    {
+                        primeNumbers.Add(number);
+                    }
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Unexpected error: {ex.Message}");
+                }
+            }
+
+            Console.WriteLine("Prime numbers entered:");
+            foreach (var prime in primeNumbers)
+            {
+                Console.WriteLine(prime);
+            }
+        }
+
+        static bool IsPrime(int number)
+        {
+            if (number <= 1) return false;
+            if (number == 2) return true;
+            if (number % 2 == 0) return false;
+
+            int maxDivisor = (int)Math.Sqrt(number);
+
+            for (int i = 3; i <= maxDivisor; i += 2)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RepeatingVowel
+{
+    internal interface IWordAnalyzer
+    {
+        (int Count, List<string> Words) FindWordsWithLeastRepeatingVowels();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿namespace RepeatingVowel
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string input;
+            try
+            {
+                input = WordInput.GetInputFromConsole();
+                IWordAnalyzer wordAnalyzer = new WordHandler(input);
+
+
+                var result = wordAnalyzer.FindWordsWithLeastRepeatingVowels();
+                int count = result.Count;
+                List<string> words = result.Words;
+
+
+                Console.WriteLine($"Number of repeating vowels: {count}");
+                Console.WriteLine("Words with the least number of repeating vowels:");
+                foreach (var word in words)
+                {
+                    Console.WriteLine(word);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RepeatingVowel
+{
+    internal class WordHandler : IWordAnalyzer
+    {
+        string[] words;
+
+        public WordHandler(string input)
+        {
+            words = input.Split(',').Select(word => word.Trim()).ToArray();
+        }
+
+        private int CountRepeatingVowels(string word)
+        {
+            int count = 0;
+            string vowels = "aeiou";
+            var vowelCounts = new int[5];
+            foreach (char c in word)
+            {
+                switch (c)
+                {
+                    case 'a': vowelCounts[0]++; break;
+                    case 'e': vowelCounts[1]++; break;
+                    case 'i': vowelCounts[2]++; break;
+                    case 'o': vowelCounts[3]++; break;
+                    case 'u': vowelCounts[4]++; break;
+                }
+            }
+            count = vowelCounts.Where(v => v > 1).Sum(v => v - 1);
+            return count;
+        }
+        public (int Count, List<string> Words) FindWordsWithLeastRepeatingVowels()
+        {
+            var wordRepeats = new List<Tuple<string, int>>();
+
+            foreach (var word in words)
+            {
+                int count = CountRepeatingVowels(word);
+                wordRepeats.Add(Tuple.Create(word, count));
+            }
+
+            if (wordRepeats.Count == 0)
+            {
+                return (0, new List<string>());
+            }
+
+            int minRepeatingVowels = wordRepeats.Min(wr => wr.Item2);
+            var leastRepeatingWords = wordRepeats
+                .Where(wr => wr.Item2 == minRepeatingVowels)
+                .Select(wr => wr.Item1)
+                .ToList();
+
+            return (minRepeatingVowels, leastRepeatingWords);
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RepeatingVowel
+{
+    internal class WordInput
+    {
+        public static string GetInputFromConsole()
+        {
+            string input;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter words separated by commas:");
+                    input = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
+                        throw new ArgumentException("Input cannot be empty or whitespace.");
+                    }
+
+                    if (!input.Contains(","))
+                    {
+                        throw new ArgumentException("Input must contain commas to separate words.");
+                    }
+
+                    return input;
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CardValidateApp
+{
+    public class CardValidator : ICardInterface
+    {
+        public bool IsValidCardNumber(string cardNumber)
+        {
+            try
+            {
+                if (!HasValidFormat(cardNumber))
+                {
+                    Console.WriteLine("Error: Card number must be in the format 'XXXX XXXX XXXX XXXX'.");
+                    return false;
+                }
+
+                string cleanCardNumber = CleanCardNumber(cardNumber);
+
+                if (!HasValidLength(cleanCardNumber))
+                {
+                    Console.WriteLine("Error: Card number must be exactly 16 digits.");
+                    return false;
+                }
+
+                if (!ContainsOnlyDigits(cleanCardNumber))
+                {
+                    Console.WriteLine("Error: Card number must contain only digits.");
+                    return false;
+                }
+
+                if (!IsLuhnValid(cleanCardNumber))
+                {
+                    Console.WriteLine("Error: Card number is not valid according to the Luhn algorithm.");
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An unexpected error occurred during validation: {ex.Message}");
+                return false;
+            }
+        }
+
+        private bool HasValidFormat(string cardNumber)
+        {
+            string[] parts = cardNumber.Split(' ');
+
+            if (parts.Length != 4)
+                return false;
+
+            return parts.All(part => part.Length == 4 && part.All(char.IsDigit));
+        }
+
+        private string CleanCardNumber(string cardNumber) =>
+            cardNumber.Replace(" ", "").Replace("-", "");
+
+        private bool HasValidLength(string cardNumber) =>
+            cardNumber.Length == 16;
+
+        private bool ContainsOnlyDigits(string cardNumber) =>
+            cardNumber.All(char.IsDigit);
+
+        private bool IsLuhnValid(string cardNumber)
+        {
+            int totalSum = CalculateLuhnSum(cardNumber);
+            return totalSum % 10 == 0;
+        }
+
+        private int CalculateLuhnSum(string cardNumber)
+        {
+            return cardNumber
+                .Reverse()
+                .Select((digit, index) => (index % 2 == 1 ? MultiplyByTwo(digit) : (int)char.GetNumericValue(digit)))
+                .Sum();
+        }
+
+        private int MultiplyByTwo(char digit)
+        {
+            int doubled = (int)char.GetNumericValue(digit) * 2;
+            return doubled > 9 ? doubled - 9 : doubled;
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CardValidateApp
+{
+    internal interface ICardInterface
+    {
+        bool IsValidCardNumber(string cardNumber);
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿namespace CardValidateApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+                ICardInterface cardValidator = new CardValidator();
+
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Enter a credit card number to validate (XXXX XXXX XXXX XXXX) (or type 'exit' to quit):");
+                        string input = Console.ReadLine();
+
+                        if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
+                        {
+                            break;
+                        }
+
+                        bool isValid = cardValidator.IsValidCardNumber(input);
+
+                        Console.WriteLine($"Card Number '{input}' is {(isValid ? "Valid" : "Invalid")}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"An error occurred: {ex.Message}");
+                    }
+                }
+            }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------

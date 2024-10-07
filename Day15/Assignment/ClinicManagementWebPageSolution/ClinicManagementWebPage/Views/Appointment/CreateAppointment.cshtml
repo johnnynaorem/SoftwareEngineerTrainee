@@ -1,0 +1,44 @@
+﻿@model ClinicManagementWebPage.Models.Appointment
+
+
+
+ @* <div>@Model.Speciality</div> *@
+ @* <form asp-action="CreateAppointment" method="post">
+     <div class="d-flex">
+         <label>Doctor:</label>
+          <p>@Model.Name</p>
+     </div>
+     <div class="d-flex">
+         <label>User:</label>
+         <p>@ViewBag.User.Name</p>
+     </div>
+      <div>
+          <label>start time:</label>
+          <input type="datetime-local" asp-for="starttime" />
+      </div>
+     <button type="submit">Create</button>
+ </form> *@
+
+<div class="container mt-5" >
+    <div class="form-container mx-auto my-auto" style="border: 4px solid #ffffff; padding: 30px; border-radius: 10px; background: linear-gradient(45deg, black, transparent);">
+    <h2>Create Appointment</h2>
+        <form asp-action="CreateAppointment" method="post">
+            <div class="mb-3">
+                <label for="Doctor" class="form-label" style="color: white; font-size: 16px">Concern Doctor: </label>
+                <input type="text" class="form-control" id="Doctor" name="Doctor" value="@ViewBag.User.Doctor">
+            </div>
+            <div class="mb-3">
+                <label for="User" class="form-label" style="color: white; font-size: 16px">User Name: </label>
+                <input type="text" class="form-control" id="Doctor" name="User" value="@ViewBag.User.Name">
+            </div>
+            
+            <div class="mb-3">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" });
+                <label for="StartTime" class="form-label" style="color: white; font-size: 16px">Appointment Time </label>
+                <input type="datetime-local" class="form-control" name="StartTime" id="StartTime">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form> 
+     </div>
+</div>

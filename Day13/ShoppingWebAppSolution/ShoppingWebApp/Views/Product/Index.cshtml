@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ShoppingWebApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex">
+        <div class="row gap-2">
+    
+
+
+
+@{
+    foreach(var product in Model)
+    {            
+                        <div class="card p-2 col-3 shadow rounded" style="border: 1px solid red">
+                    <div class="p-info px-3 py-3">
+                        <div>
+                        <h5 class="mb-0">@product.Name</h5>
+                            <span>@product.Name</span>
+                        </div> 
+                        
+                        <div class="p-price d-flex flex-row">
+                            <h1>$</h1>
+                            <h1>@product.Price</h1>
+                        </div>
+                        <div class="heart">
+                            <i class="bx bx-heart"></i>
+                        </div>
+                    </div>
+                    <div class="text-center p-image">
+                        <img src="@product.Image">
+                    </div> <div class="p-about">
+                        <p>@product.Description</p>
+                    </div>
+                    <div class="buttons d-flex flex-row gap-3 px-3">
+                        <a asp-action="Edit" asp-route-pid="@product.Id">Edit</a>
+                        <button class="btn btn-danger w-100">View</button>
+                        <button class="btn btn-outline-danger w-100">Buy Now</button>
+                    </div>
+                </div>
+    }
+}     
+</div>
+
+</div>
+

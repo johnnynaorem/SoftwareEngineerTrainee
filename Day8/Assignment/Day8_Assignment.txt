@@ -1,0 +1,665 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeePromotionApp
+{
+    internal class EmployeePromotion
+    {
+
+       List<string> employees;
+
+        public EmployeePromotion()
+        {
+            employees = new List<string>();
+        }
+
+        public void AddEmployeeNames()
+        {
+            Console.WriteLine("Please enter the employee names in the order of their eligibility for promotion (Please enter blank to stop):");
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    break;
+                }
+
+                employees.Add(input);
+            }
+        }
+
+        public void FindPosition()
+        {
+            Console.WriteLine("Please enter the name of the employee to check promotion position");
+            string name = Console.ReadLine()?? "";
+            var index = employees.IndexOf(name);
+
+            Console.WriteLine($"\"{name}\" is the the position {index+1} for promotion.");
+        }
+
+        public void PromotedEmployee()
+        {
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("Promoted Employee list: ");
+            employees.Sort();
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
+        }
+
+        public void TestCapacity()
+        {
+            List<int> number = new List<int>();
+            for (int i = 0; i < 10; i++) {
+                number.Add(i);
+                Console.WriteLine($"The current size of the collection for adding {i} is {number.Capacity}");
+            }
+        }
+
+        public void CapacityOfList()
+        {
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine($"The current size of the collection is {employees.Capacity}");
+            employees.TrimExcess();
+            Console.WriteLine($"The size after removing the extra space is {employees.Capacity}");
+        }
+
+        public void DisplayEmployees()
+        {
+            Console.WriteLine("\nThe employees eligible for promotion are: ");
+
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿namespace EmployeePromotionApp
+{
+    internal class Program
+    {
+        //Employee employee;
+        EmployeePromotion employeePromotion;
+
+        public Program()
+        {
+            //employee = new Employee();
+            employeePromotion = new EmployeePromotion();
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.employeePromotion.AddEmployeeNames();
+            //program.employeePromotion.TestCapacity();
+            //program.employeePromotion.DisplayEmployees();
+            program.employeePromotion.FindPosition();
+            program.employeePromotion.CapacityOfList();
+            program.employeePromotion.PromotedEmployee();
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace EmployeeAppSolution
+{
+    public class Employee : IComparable<Employee>
+    {
+        public int Id { get; set; }
+        public int Age { get; set; }
+        public string Name { get; set; }
+        public decimal Salary { get; set; }
+        public Employee()
+        {
+        }
+        public Employee(int id, int age, string name, decimal salary)
+        {
+            this.Id = id;
+            this.Age = age;
+            this.Name = name;
+            this.Salary = salary;
+        }
+
+        public void GetEmployeeDetailsFromConsole()
+        {
+            try
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Enter employee name: ");
+                Console.ResetColor();
+                Name = Console.ReadLine();
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Enter employee age: ");
+                Console.ResetColor();
+                Age = Convert.ToInt32(Console.ReadLine());
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Enter employee salary: ");
+                Console.ResetColor();
+                Salary = Convert.ToDecimal(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid format. Please enter a valid number.");
+                Console.ResetColor();
+                throw;
+            }
+        }
+
+        public override string ToString() { 
+            return "Employee ID : " + Id + "\nName: " + Name + "\nAge: " + Age +"\nSalary: " + Salary;
+        }
+
+        public int CompareTo(Employee? other)
+        {
+          return this.Salary.CompareTo(other.Salary);
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿namespace EmployeeAppSolution
+{
+    public class EmployeeServices
+    {
+        Dictionary<int, Employee> employees = new Dictionary<int, Employee>();
+        List<Employee> employeeList = new List<Employee>();
+        public void TakeEmployeeDetailsAndStore()
+        {
+            int choice = 0;
+            do
+            {
+                try
+                {
+                    Employee employee = new Employee();
+                    employee.GetEmployeeDetailsFromConsole();
+                    employee.Id = employees.Count + 100;
+                    employees.Add(employee.Id, employee);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Employee added successfully.");
+                    Console.ResetColor();
+                }
+                catch (Exception ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Error: {ex.Message}");
+                    Console.ResetColor();
+                }
+
+                Console.WriteLine("Do you want to continue? Enter any number other than 0 to continue, or 0 to stop.");
+                try
+                {
+                    choice = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input. Please enter a number.");
+                    Console.ResetColor();
+                    choice = -1;
+                }
+            } while (choice != 0);
+        }
+
+        public void FindAndPrintEmployeeById()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("Enter Employee ID to Find: ");
+            Console.ResetColor();
+            int id;
+            try
+            {
+                id = Convert.ToInt32(Console.ReadLine());
+                if (employees.ContainsKey(id))
+                {
+                    Employee employee = employees[id];
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Employee found:");
+                    Console.WriteLine(employee);
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Employee with ID {0} not found.", id);
+                    Console.ResetColor();
+                }
+            }
+            catch (FormatException)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid ID format. Please enter a numeric ID.");
+                Console.ResetColor();
+            }
+        }
+
+        public void FindEmployeeByName()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("Enter Employee Name to Search: ");
+            Console.ResetColor();
+            string name = Console.ReadLine().Trim();
+
+            bool found = false;
+
+            try
+            {
+                foreach (var employee in employees.Values)
+                {
+                    if (employee.Name == name)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("------------------------------------------");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(employee);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("------------------------------------------");
+                        Console.ResetColor();
+                        found = true;
+                    }
+                }
+
+                if (!found)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"No employees found with the name {name}");
+                    Console.ResetColor();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"An error occurred while searching: {ex.Message}");
+                Console.ResetColor();
+            }
+        }
+
+        public void FindEmployeeByNameAndPrintOlder()
+        {
+            if (employees.Count != 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write("Enter Employee Name to Search: ");
+                Console.ResetColor();
+                string name = Console.ReadLine().Trim();
+
+                bool found = false;
+                Employee targetEmployee = null;
+
+                try
+                {
+                    foreach (var employee in employees.Values)
+                    {
+                        if (employee.Name == name)
+                        {
+                            targetEmployee = employee;
+                            found = true;
+                        }
+                    }
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine($"Employee List Older than {name}");
+                    foreach (var employee in employees.Values)
+                    {
+                        if (targetEmployee.Age < employee.Age)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("------------------------------------------");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine(employee);
+                            Console.ResetColor();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("------------------------------------------");
+                            Console.ResetColor();
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"No employees found with the name {name}");
+                        Console.ResetColor();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"An error occurred while searching: {ex.Message}");
+                    Console.ResetColor();
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Empty!!!");
+            
+        }
+
+        public void PrintEmployee()
+        {
+            if (employees.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("No employees to display.");
+                Console.ResetColor();
+                return;
+            }
+            Console.WriteLine("Employees List.");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            foreach (var item in employees.Values)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("------------------------------------------");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(item);
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("------------------------------------------");
+                Console.ResetColor();
+            }
+            Console.ResetColor();
+        }
+
+        public void DeleteEmployee()
+        {
+            try
+            {
+                if (employees.Count == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Empty!!!!!");
+                    Console.ResetColor();
+                    return;
+                }
+                Console.WriteLine("Enter the Id of Employee which You want to delete: ");
+                int id = Convert.ToInt16(Console.ReadLine());
+                bool found = false;
+                foreach (var item in employees)
+                {
+                    if (id == item.Value.Id)
+                    {
+                        employees.Remove(id);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Employee with ID {id} is Deleted Successfully");
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Employee Not Found");
+                }
+            }
+            catch (FormatException ex) {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid ID format. Please enter a numeric ID.");
+                Console.ResetColor();
+            }
+        }
+
+        public void ModifyEmployeeDetails()
+        {
+
+            if (employees.Count > 0)
+            {
+                
+                try
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write("Enter Employee ID to Modify: ");
+                    Console.ResetColor();
+                    int id;
+                    id = Convert.ToInt32(Console.ReadLine());
+                    if (employees.ContainsKey(id))
+                    {
+                        Employee employee = employees[id];
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Employee found:");
+                        Console.WriteLine(employee);
+                        Console.ResetColor();
+
+                        Console.WriteLine("Which field do you want to modify?");
+                        Console.WriteLine("1. Name");
+                        Console.WriteLine("2. Salary");
+                        Console.WriteLine("3. Age");
+                        Console.Write("Enter your choice (1-3): ");
+
+                        int fieldChoice;
+                        try
+                        {
+                            fieldChoice = Convert.ToInt32(Console.ReadLine());
+                            switch (fieldChoice)
+                            {
+                                case 1:
+                                    Console.Write("Enter new Name: ");
+                                    employee.Name = Console.ReadLine().Trim();
+                                    break;
+                                case 2:
+                                    Console.Write("Enter new Salary: ");
+                                    try
+                                    {
+                                        employee.Salary = Convert.ToDecimal(Console.ReadLine());
+                                    }
+                                    catch (FormatException)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine("Invalid salary format. Please enter a numeric value.");
+                                        Console.ResetColor();
+                                    }
+                                    break;
+                                case 3:
+                                    Console.Write("Enter new Age: ");
+                                    try
+                                    {
+                                        employee.Age = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    catch (FormatException)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine("Invalid age format. Please enter a numeric value.");
+                                        Console.ResetColor();
+                                    }
+                                    break;
+                                default:
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("Invalid choice. No modifications were made.");
+                                    Console.ResetColor();
+                                    return;
+                            }
+                            employees[id] = employee;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Employee details updated successfully.");
+                            Console.ResetColor();
+                        }
+                        catch (FormatException)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Invalid input. Please enter a valid number.");
+                            Console.ResetColor();
+                        }
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Employee with ID {0} not found.", id);
+                        Console.ResetColor();
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid ID format. Please enter a numeric ID.");
+                    Console.ResetColor();
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Empty!!!");
+            Console.ResetColor();
+        }
+        
+
+        public void SortingEmployeeList()
+        {
+            try
+            {
+                employeeList = employees.Values.ToList();
+                employeeList.Sort();
+
+                if (employeeList.Count == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("No employees to sort.");
+                    Console.ResetColor();
+                    return;
+                }
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Sorted Employees by Salary (Ascending):");
+                Console.ResetColor();
+                foreach (var item in employeeList)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("------------------------------------------");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(item);
+                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("------------------------------------------");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"An error occurred while sorting: {ex.Message}");
+                Console.ResetColor();
+            }
+        }
+
+
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeeAppSolution
+{
+    public class UserInteraction
+    {
+        EmployeeServices employeeServices;
+        public UserInteraction()
+        {
+            employeeServices = new EmployeeServices();
+        }
+        public void ShowMenu()
+        {
+            int choice;
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Employee Manager:");
+                Console.WriteLine("1. Add Employee");
+                Console.WriteLine("2. Find and Print Employee by ID");
+                Console.WriteLine("3. Find and Print Employee by Name");
+                Console.WriteLine("4. Find and Print Older than Employee by Name");
+                Console.WriteLine("5. Print All Employees");
+                Console.WriteLine("6. Sort Employees by Salary");
+                Console.WriteLine("7. Delete Employee");
+                Console.WriteLine("8. Modify Employee");
+                Console.WriteLine("0. Exit");
+                Console.ResetColor();
+                Console.Write("Enter your choice (1-8): ");
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                choice = Convert.ToInt32(Console.ReadLine());
+                Console.ResetColor();
+
+                switch (choice)
+                {
+                    case 1:
+                        employeeServices.TakeEmployeeDetailsAndStore();
+                        break;
+                    case 2:
+                        employeeServices.FindAndPrintEmployeeById();
+                        break;
+                    case 3:
+                        employeeServices.FindEmployeeByName();
+                        break;
+                    case 4:
+                        employeeServices.FindEmployeeByNameAndPrintOlder();
+                        break;
+                    case 5:
+                        employeeServices.PrintEmployee();
+                        break;
+                    case 6:
+                        employeeServices.SortingEmployeeList();
+                        break;
+                    case 7:
+                        employeeServices.DeleteEmployee();
+                        break;
+                    case 8:
+                        employeeServices.ModifyEmployeeDetails();
+                        break;
+                    case 0:
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Exiting...");
+                        Console.ResetColor();
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid choice. Please enter a number between 1 and 6.");
+                        Console.ResetColor();
+                        break;
+                }
+                Console.WriteLine();
+            } while (choice != 0);
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+﻿namespace EmployeeAppSolution
+{
+    internal class Program
+    {
+        UserInteraction userInteraction;
+        public Program() {
+            userInteraction = new UserInteraction();
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.userInteraction.ShowMenu();
+        }
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------

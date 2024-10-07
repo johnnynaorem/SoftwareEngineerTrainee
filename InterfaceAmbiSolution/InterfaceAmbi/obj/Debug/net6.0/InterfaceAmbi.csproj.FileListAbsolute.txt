@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\bin\Debug\net6.0\InterfaceAmbi.exe
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\bin\Debug\net6.0\InterfaceAmbi.deps.json
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\bin\Debug\net6.0\InterfaceAmbi.runtimeconfig.json
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\bin\Debug\net6.0\InterfaceAmbi.dll
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\bin\Debug\net6.0\InterfaceAmbi.pdb
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.sourcelink.json
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.dll
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\refint\InterfaceAmbi.dll
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.pdb
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\InterfaceAmbi.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\InterfaceAmbiSolution\InterfaceAmbi\obj\Debug\net6.0\ref\InterfaceAmbi.dll

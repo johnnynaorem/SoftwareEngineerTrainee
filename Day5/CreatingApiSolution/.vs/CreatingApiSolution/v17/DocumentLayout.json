@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|c:\\johnny\\celsior_training\\day5\\creatingapisolution\\creatingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|solutionrelative:creatingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|c:\\johnny\\celsior_training\\day5\\creatingapisolution\\creatingapi\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|solutionrelative:creatingapi\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|c:\\johnny\\celsior_training\\day5\\creatingapisolution\\creatingapi\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7186848-B64F-4698-816E-C6D5EA2A2343}|CreatingApi\\CreatingApi.csproj|solutionrelative:creatingapi\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Issue.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Issue.cs",
+              "RelativeDocumentMoniker": "CreatingApi\\Issue.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Issue.cs",
+              "RelativeToolTip": "CreatingApi\\Issue.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAUwDcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T04:44:40.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Employee.cs",
+              "RelativeDocumentMoniker": "CreatingApi\\Employee.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Employee.cs",
+              "RelativeToolTip": "CreatingApi\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T04:37:32.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Program.cs",
+              "RelativeDocumentMoniker": "CreatingApi\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day5\\CreatingApiSolution\\CreatingApi\\Program.cs",
+              "RelativeToolTip": "CreatingApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T04:35:47.817Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

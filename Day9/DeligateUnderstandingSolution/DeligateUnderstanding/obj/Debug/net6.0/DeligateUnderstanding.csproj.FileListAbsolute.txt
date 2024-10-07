@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\bin\Debug\net6.0\DeligateUnderstanding.exe
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\bin\Debug\net6.0\DeligateUnderstanding.deps.json
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\bin\Debug\net6.0\DeligateUnderstanding.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\bin\Debug\net6.0\DeligateUnderstanding.dll
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\bin\Debug\net6.0\DeligateUnderstanding.pdb
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.sourcelink.json
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.dll
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\refint\DeligateUnderstanding.dll
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.pdb
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\DeligateUnderstanding.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day9\DeligateUnderstandingSolution\DeligateUnderstanding\obj\Debug\net6.0\ref\DeligateUnderstanding.dll

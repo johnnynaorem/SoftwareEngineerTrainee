@@ -1,0 +1,565 @@
+Dotor Model----
+----------------------------------------
+﻿using System.Globalization;
+
+namespace DoctorListWebApplication.Models
+{
+	public class Doctor
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public long Phone { get; set; }
+		public string Email { get; set; }
+		public string Speciality { get; set; }
+
+		public string Image {  get; set; }
+        	public List<IFormFile> PostedFiles { get; set; } = new List<IFormFile>();
+
+
+    }
+
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+DoctorController----
+-------------------------------------------﻿
+using DoctorListWebApplication.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DoctorListWebApplication.Controllers
+{
+	public class DoctorController : Controller
+	{
+		 static List<Doctor> doctors = new List<Doctor>
+		{
+			new Doctor{Id=1, Name="Patey Cruiser", Email="paty@gmail.com", Phone=8787321466, Speciality="Neurosurgeon", Image="/images/Patey.jpg"},
+			new Doctor{Id=2, Name="Jacqueliene Fernandez", Email="jacqueline@gmail.com", Phone=8787327523, Speciality="Gynecologist", Image="/images/Jacqueliene.jpg"},
+			new Doctor{Id=3, Name="Anna Sthesia", Email="anna@gmail.com", Phone=8787470922, Speciality="Surgeon", Image="/images/Anna.jpg"},
+			new Doctor{Id=4, Name="Paul Moliv", Email="paul@gmail.com", Phone=87874231133, Speciality="Dentist", Image="/images/Paul.jpg"},
+			new Doctor{Id=5, Name="Anna Maul", Email="annamaul@gmail.com", Phone=87874237613, Speciality="Eye Specialist", Image="/images/Maul.jpg"},
+			new Doctor{Id=6, Name="Gail Forcewind", Email="gail@gmail.com", Phone=87874231132, Speciality="Urology", Image="/images/Gail.jpg"},
+
+		};
+
+        private readonly ILogger<DoctorController> _logger;
+        private IWebHostEnvironment Environment;
+        public DoctorController(ILogger<DoctorController> logger, IWebHostEnvironment _environment)
+        {
+            _logger = logger;
+            Environment = _environment;
+        }
+
+
+        public IActionResult Index()
+		{
+
+			return View(doctors);
+		}
+
+		[HttpGet]
+		public IActionResult Create(){
+			return View(new Doctor());
+		}
+
+		[HttpPost]
+
+		[HttpPost]
+		public IActionResult Create(Doctor doctor)
+		{
+			if (doctor != null && doctor.PostedFiles.Count > 0)
+			{
+				foreach (var file in doctor.PostedFiles)
+				{
+					if (file.Length > 0)
+					{
+						var fileName = Path.GetFileName(file.FileName);
+						var path = Path.Combine(Environment.WebRootPath, "images", fileName);
+
+						var counter = 1;
+						while (System.IO.File.Exists(path))
+						{
+							var newFileName = $"{Path.GetFileNameWithoutExtension(fileName)}_{counter++}{Path.GetExtension(fileName)}";
+							path = Path.Combine(Environment.WebRootPath, "images", newFileName);
+						}
+
+						using (var stream = new FileStream(path, FileMode.Create))
+						{
+							file.CopyTo(stream);
+						}
+						doctor.Image = $"/images/{fileName}";
+					}
+				}
+
+				doctor.Id = doctors.Count + 1;
+        doctors.Add(doctor);
+
+			}
+				return RedirectToAction("Index");
+		}
+
+
+        [HttpGet]
+		public IActionResult Details(int did)
+		{
+			var doctor = doctors.FirstOrDefault(d => d.Id == did);
+			return View(doctor);
+		}
+
+		[HttpGet]
+		public IActionResult Edit(int did){
+			var doctor = doctors.FirstOrDefault(d => d.Id == did);
+			return View(doctor);
+		}
+
+		[HttpPost]
+		public IActionResult Edit(int did, Doctor doctor){
+			var oldDoctor = doctors.FirstOrDefault(d => d.Id==did);
+			oldDoctor.Name = doctor.Name;
+			oldDoctor.Speciality = doctor.Speciality;
+			oldDoctor.Email = doctor.Email;
+            oldDoctor.Phone = doctor.Phone;
+			oldDoctor.Image = "/images/" + doctor.Image;
+			return RedirectToAction("Index");
+		}
+
+		[HttpPost]
+		public IActionResult Delete(int did){
+		 var doctor = doctors.FirstOrDefault(e=> e.Id == did);
+		 doctors.Remove(doctor);
+		 return RedirectToAction("Index");
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------
+Index View-----
+---------------------------------------------------
+﻿@model IEnumerable<DoctorListWebApplication.Models.Doctor>
+
+<div class="container mb-5">
+    <div class="col-12 mt-5 d-flex" style="justify-content: space-between; align-items: center;">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 heading-section text-center">
+                <h2 class="display-3 fs-3">Doctors</h2>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-secondary">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Create">Create</a>
+            </button>
+        </div>
+    </div>
+    <div class="row card-effects">
+        @{
+            foreach(var doctor in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
+                    <div class="card card-effect p-0 ">
+                        <div class="card-img rounded-0">
+                            <div class="img-hover" style="position: relative">
+                                <img class="rounded-top img-fluid"
+                                     src="@doctor.Image" alt="...">
+                                <form asp-action="Delete" asp-route-did="@doctor.Id" method="post">
+                                    <button type="submit" class="delete-btn" style="position: absolute; top: 5px; right: 5px; cursor: pointer;">X</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+                            <div class="pt-6">
+                                <div class="h4 mb-3 mt-4 text-center">
+                                    <p class="text-decoration-none fw-bolder text-uppercase text-tb-lines">@doctor.Name</p>
+                                </div>
+                                <p class="text-secondary text-center lh-base">
+                                    @doctor.Speciality
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <a asp-action="Details" asp-route-did="@doctor.Id" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+                                    <i class="fa fa-arrow-right icon-arrow before"></i>
+                                    <span class="label fw-normal">Know More!</span>
+                                    <i class="fa fa-arrow-right icon-arrow after"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+-------------------------------------------------------------------------------------------------------------------
+Create View----
+----------------------------------------
+@model DoctorListWebApplication.Models.Doctor
+
+<h2>Create Doctor</h2>
+
+<div class="row">
+    <div class="col-md-4 mx-auto p-3 mt-3" style="background: radial-gradient(black, transparent)">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group my-2">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label asp-for="Speciality" class="control-label"></label>
+                <input asp-for="Speciality" class="form-control" />
+                <span asp-validation-for="Speciality" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" type="text" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label for="PostedFiles" class="control-label"></label>
+                <input type="file" name="PostedFiles" class="form-control" multiple accept="image/*" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+------------------------------------------------------------------------------------------------------------
+
+Edit View -----
+----------------------------------------
+@model DoctorListWebApplication.Models.Doctor
+
+<h2>Edit Doctor Details of @Model.Name</h2>
+
+<div class="row">
+    <div class="col-md-4 mx-auto mt-3" style="background: radial-gradient(black, transparent)">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group my-1">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group my-1">
+                <label asp-for="Speciality" class="control-label"></label>
+                <input asp-for="Speciality" class="form-control" />
+                <span asp-validation-for="Speciality" class="text-danger"></span>
+            </div>
+            <div class="form-group my-1">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group my-1">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group my-1">
+                <label>Current Image:</label><br />
+                @if (!string.IsNullOrEmpty(Model.Image))
+
+                {
+                    <img src="@Model.Image" alt="Doctor Image" style="max-width: 20%; height: auto;" />
+                }
+                <br />
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" type="file" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group my-1">
+                <input type="submit" asp-route-did="@Model.Id" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+-----------------------------------------------------------------------------------------------------------------
+
+Details View -----
+-------------------------------------
+﻿@model DoctorListWebApplication.Models.Doctor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Of Dr. @Model.Name</h4>
+    <hr />
+    <div class="card mx-auto d-flex flex-row " style="max-width: 600px">
+        <div style="width: 50%"> 
+        <img src="@Model.Image" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body text-black">
+            <h5 class="card-title fs-2">@Model.Name</h5>
+            <p class="card-text fs-3">@Model.Speciality</p>
+            <p class="card-text">@Model.Email</p>
+            <p class="card-text">@Model.Phone</p>
+            <button class="btn btn-primary">
+                <a asp-action="Edit" asp-route-did="@Model.Id" style="color:black; text-decoration: none">
+                    Edit
+                </a>
+            </button>
+            
+        </div>
+        
+    </div>
+</div>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Css--------
+----------------------------
+body {
+    font-family: system-ui;
+    background: #f1b4d8;
+    background-image: linear-gradient(to right top, #051937, #20316b, #4d479f, #8659d2, #ca67ff);
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.card-effects .card-effect {
+    border: none;
+    background: #dee2e6;
+}
+
+    .card-effects .card-effect .card-body {
+        box-shadow: 0px 5px 24.25px 0.75px rgba(0,0,0,0.1);
+        background: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px
+    }
+
+    .card-effects .card-effect .card-img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-effects .card-effect:hover .card-img {
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important
+    }
+
+    .card-effects .card-effect .card-img img {
+        width: 100%;
+        transition: .6s
+    }
+
+    .card-effects .card-effect:hover .card-img img {
+        transform: scale(1.2);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+.card-effects .img-hover {
+    position: relative;
+    overflow: hidden
+}
+
+    .card-effects .img-hover img {
+        transition: all 2s ease;
+        transform: scale(1)
+    }
+
+    .card-effects .img-hover:after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3
+    }
+
+    .card-effects .img-hover:before {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3;
+        top: -10%;
+        right: 51%;
+        bottom: -10%;
+        left: 50%;
+        background: rgba(255,255,255,0.3)
+    }
+
+    .card-effects .img-hover:after {
+        top: 50%;
+        right: -10%;
+        bottom: 50%;
+        left: -10%;
+        background: rgba(255,255,255,0.6)
+    }
+
+.card-effects .card-effect:hover .img-hover:before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover:after {
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover img {
+    transform: scale(1.2)
+}
+
+.card-effects .card-btn {
+    display: inline-block;
+    padding: 14px 25px 14px 55px;
+    position: relative;
+    background-color: #2fbfa7;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    background-image: linear-gradient(to right top, #8f42b9, #9746c3, #a04bce, #a84fd8, #b154e3);
+}
+
+    .card-effects .card-btn:hover {
+        background-image: linear-gradient(to right top, #b154e3, #a84fd8, #a04bce, #9746c3, #8f42b9);
+        transition: 0.5s;
+    }
+
+    .card-effects .card-btn .icon-arrow {
+        color: #ffffff;
+        top: 16px;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),opacity 0.4s cubic-bezier(0.86, 0, 0.07,1);
+        font-size: 18px;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+        .card-effects .card-btn .icon-arrow.before {
+            left: 20%;
+            position: absolute;
+            transform-origin: left center
+        }
+
+        .card-effects .card-btn .icon-arrow.after {
+            opacity: 0;
+            position: absolute;
+            right: 48px;
+            transform: translateX(75%) scaleX(0.1);
+            transform-origin: right center
+        }
+
+    .card-effects .card-btn.secondary {
+        background-color: #ff7029
+    }
+
+        .card-effects .card-btn.secondary:hover, .card-effects .card-btn.secondary:active, .card-effects .card-btn.secondary:focus {
+            background-color: #2fbfa7
+        }
+
+    .card-effects .card-btn.white .icon-arrow {
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn.white:hover .icon-arrow, .card-effects .card-btn.white:active .icon-arrow, .card-effects .card-btn.white:focus .icon-arrow {
+        color: #fff
+    }
+
+    .card-effects .card-btn.md .icon-arrow {
+        top: 22px;
+    }
+
+    .card-effects .card-btn.sm {
+        padding: 10px 25px 10px 50px !important;
+        font-size: 14px !important
+    }
+
+    .card-effects .card-btn .label {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+    .card-effects .card-btn.white {
+        background-color: #ffffff;
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn .icon-arrow.white {
+        color: #2fbfa7;
+        top: 16px
+    }
+
+    .card-effects .card-btn:hover, .card-effects .card-btn:active, .card-effects .card-btn:focus {
+        background-color: #ff7029;
+        color: #ffffff
+    }
+
+        .card-effects .card-btn:hover .icon-arrow.before, .card-effects .card-btn:active .icon-arrow.before, .card-effects .card-btn:focus .icon-arrow.before {
+            opacity: 0;
+            transform: translateX(-75%) scaleX(0.1)
+        }
+
+        .card-effects .card-btn:hover .icon-arrow.after, .card-effects .card-btn:active .icon-arrow.after, .card-effects .card-btn:focus .icon-arrow.after {
+            opacity: 1;
+            transform: translateX(0) scaleX(1)
+        }
+
+        .card-effects .card-btn:hover .label, .card-effects .card-btn:active .label, .card-effects .card-btn:focus .label {
+            transform: translateX(-32px)
+        }
+
+.card-effects .text-tb-lines {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: #561778;
+}
+
+    .card-effects .text-tb-lines::before, .text-tb-lines::after {
+        content: '';
+        border-top: 6px double;
+        color: #ffe5f4;
+    }
+
+.delete-btn {
+    border: none;
+    background-color: transparent;
+    color: red;
+    padding: 5px 10px;
+}
+.delete-btn:hover {
+    border-radius: 20px;
+    color: black;
+    background: red;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

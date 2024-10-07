@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\bin\Debug\net6.0\DelegatesAndLambda.exe
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\bin\Debug\net6.0\DelegatesAndLambda.deps.json
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\bin\Debug\net6.0\DelegatesAndLambda.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\bin\Debug\net6.0\DelegatesAndLambda.dll
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\bin\Debug\net6.0\DelegatesAndLambda.pdb
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.sourcelink.json
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.dll
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\refint\DelegatesAndLambda.dll
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.pdb
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\DelegatesAndLambda.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day17\DelegatesAndLambdaSolution\DelegatesAndLambda\obj\Debug\net6.0\ref\DelegatesAndLambda.dll

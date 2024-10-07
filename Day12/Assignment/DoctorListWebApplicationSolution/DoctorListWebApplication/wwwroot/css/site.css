@@ -1,0 +1,232 @@
+body {
+    font-family: system-ui;
+    background: #f1b4d8;
+    background-image: linear-gradient(to right top, #051937, #20316b, #4d479f, #8659d2, #ca67ff);
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.card-effects .card-effect {
+    border: none;
+    background: #dee2e6;
+}
+
+    .card-effects .card-effect .card-body {
+        box-shadow: 0px 5px 24.25px 0.75px rgba(0,0,0,0.1);
+        background: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px
+    }
+
+    .card-effects .card-effect .card-img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-effects .card-effect:hover .card-img {
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important
+    }
+
+    .card-effects .card-effect .card-img img {
+        width: 100%;
+        transition: .6s
+    }
+
+    .card-effects .card-effect:hover .card-img img {
+        transform: scale(1.2);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+.card-effects .img-hover {
+    position: relative;
+    overflow: hidden
+}
+
+    .card-effects .img-hover img {
+        transition: all 2s ease;
+        transform: scale(1)
+    }
+
+    .card-effects .img-hover:after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3
+    }
+
+    .card-effects .img-hover:before {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        opacity: 1;
+        z-index: 3;
+        top: -10%;
+        right: 51%;
+        bottom: -10%;
+        left: 50%;
+        background: rgba(255,255,255,0.3)
+    }
+
+    .card-effects .img-hover:after {
+        top: 50%;
+        right: -10%;
+        bottom: 50%;
+        left: -10%;
+        background: rgba(255,255,255,0.6)
+    }
+
+.card-effects .card-effect:hover .img-hover:before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover:after {
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 900ms linear
+}
+
+.card-effects .card-effect:hover .img-hover img {
+    transform: scale(1.2)
+}
+
+.card-effects .card-btn {
+    display: inline-block;
+    padding: 14px 25px 14px 55px;
+    position: relative;
+    background-color: #2fbfa7;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    background-image: linear-gradient(to right top, #8f42b9, #9746c3, #a04bce, #a84fd8, #b154e3);
+}
+
+    .card-effects .card-btn:hover {
+        background-image: linear-gradient(to right top, #b154e3, #a84fd8, #a04bce, #9746c3, #8f42b9);
+        transition: 0.5s;
+    }
+
+    .card-effects .card-btn .icon-arrow {
+        color: #ffffff;
+        top: 16px;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),opacity 0.4s cubic-bezier(0.86, 0, 0.07,1);
+        font-size: 18px;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+        .card-effects .card-btn .icon-arrow.before {
+            left: 20%;
+            position: absolute;
+            transform-origin: left center
+        }
+
+        .card-effects .card-btn .icon-arrow.after {
+            opacity: 0;
+            position: absolute;
+            right: 48px;
+            transform: translateX(75%) scaleX(0.1);
+            transform-origin: right center
+        }
+
+    .card-effects .card-btn.secondary {
+        background-color: #ff7029
+    }
+
+        .card-effects .card-btn.secondary:hover, .card-effects .card-btn.secondary:active, .card-effects .card-btn.secondary:focus {
+            background-color: #2fbfa7
+        }
+
+    .card-effects .card-btn.white .icon-arrow {
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn.white:hover .icon-arrow, .card-effects .card-btn.white:active .icon-arrow, .card-effects .card-btn.white:focus .icon-arrow {
+        color: #fff
+    }
+
+    .card-effects .card-btn.md .icon-arrow {
+        top: 22px;
+    }
+
+    .card-effects .card-btn.sm {
+        padding: 10px 25px 10px 50px !important;
+        font-size: 14px !important
+    }
+
+    .card-effects .card-btn .label {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+    .card-effects .card-btn.white {
+        background-color: #ffffff;
+        color: #2fbfa7
+    }
+
+    .card-effects .card-btn .icon-arrow.white {
+        color: #2fbfa7;
+        top: 16px
+    }
+
+    .card-effects .card-btn:hover, .card-effects .card-btn:active, .card-effects .card-btn:focus {
+        background-color: #ff7029;
+        color: #ffffff
+    }
+
+        .card-effects .card-btn:hover .icon-arrow.before, .card-effects .card-btn:active .icon-arrow.before, .card-effects .card-btn:focus .icon-arrow.before {
+            opacity: 0;
+            transform: translateX(-75%) scaleX(0.1)
+        }
+
+        .card-effects .card-btn:hover .icon-arrow.after, .card-effects .card-btn:active .icon-arrow.after, .card-effects .card-btn:focus .icon-arrow.after {
+            opacity: 1;
+            transform: translateX(0) scaleX(1)
+        }
+
+        .card-effects .card-btn:hover .label, .card-effects .card-btn:active .label, .card-effects .card-btn:focus .label {
+            transform: translateX(-32px)
+        }
+
+.card-effects .text-tb-lines {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: #561778;
+}
+
+    .card-effects .text-tb-lines::before, .text-tb-lines::after {
+        content: '';
+        border-top: 6px double;
+        color: #ffe5f4;
+    }
+
+.delete-btn {
+    border: none;
+    background-color: transparent;
+    color: red;
+    padding: 5px 10px;
+}
+.delete-btn:hover {
+    border-radius: 20px;
+    color: black;
+    background: red;
+}

@@ -1,0 +1,168 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\views\\doctor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\views\\doctor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\views\\doctor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\views\\doctor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\views\\doctor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\views\\doctor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|c:\\johnny\\celsior_training\\day12\\assignment\\doctorlistwebapplicationsolution\\doctorlistwebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40F389C0-98F6-48BA-8ACF-65FDC36C0E66}|DoctorListWebApplication\\DoctorListWebApplication.csproj|solutionrelative:doctorlistwebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DoctorListWebApplication\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T11:50:18.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Details.cshtml",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Views\\Doctor\\Details.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Details.cshtml",
+              "RelativeToolTip": "DoctorListWebApplication\\Views\\Doctor\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T06:21:39.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DoctorListWebApplication\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAANYAAAAAAAAAAAAmwN4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-19T10:46:11.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Controllers\\DoctorController.cs*",
+              "RelativeToolTip": "DoctorListWebApplication\\Controllers\\DoctorController.cs*",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAFgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T09:28:15.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Edit.cshtml",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Views\\Doctor\\Edit.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Edit.cshtml",
+              "RelativeToolTip": "DoctorListWebApplication\\Views\\Doctor\\Edit.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T07:08:52.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Create.cshtml",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Views\\Doctor\\Create.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Create.cshtml",
+              "RelativeToolTip": "DoctorListWebApplication\\Views\\Doctor\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-21T07:13:46.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Program.cs",
+              "RelativeToolTip": "DoctorListWebApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T08:27:18.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Index.cshtml",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Views\\Doctor\\Index.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Views\\Doctor\\Index.cshtml",
+              "RelativeToolTip": "DoctorListWebApplication\\Views\\Doctor\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAMAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-19T09:12:05.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "DoctorListWebApplication\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day12\\Assignment\\DoctorListWebApplicationSolution\\DoctorListWebApplication\\Models\\Doctor.cs",
+              "RelativeToolTip": "DoctorListWebApplication\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA0wAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T08:58:45.653Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

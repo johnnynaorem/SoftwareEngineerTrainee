@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\bin\Debug\net6.0\FactorMethodDesignPattern.exe
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\bin\Debug\net6.0\FactorMethodDesignPattern.deps.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\bin\Debug\net6.0\FactorMethodDesignPattern.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\bin\Debug\net6.0\FactorMethodDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\bin\Debug\net6.0\FactorMethodDesignPattern.pdb
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.sourcelink.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\refint\FactorMethodDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.pdb
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\FactorMethodDesignPattern.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodDesignPatternSolution\FactorMethodDesignPattern\obj\Debug\net6.0\ref\FactorMethodDesignPattern.dll

@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\bin\Debug\net6.0\ClinicManageApp.exe
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\bin\Debug\net6.0\ClinicManageApp.deps.json
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\bin\Debug\net6.0\ClinicManageApp.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\bin\Debug\net6.0\ClinicManageApp.dll
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\bin\Debug\net6.0\ClinicManageApp.pdb
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.sourcelink.json
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.dll
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\refint\ClinicManageApp.dll
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.pdb
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ClinicManageApp.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day9\ClinicManageApp\ClinicManageApp\obj\Debug\net6.0\ref\ClinicManageApp.dll

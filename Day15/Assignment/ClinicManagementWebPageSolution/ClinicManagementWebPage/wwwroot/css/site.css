@@ -1,0 +1,57 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #8C9EFF, #9320ff, #d09eff);
+}
+
+.LogoutIcon {
+    border: 2px solid black;
+    width: 42px;
+    height: auto;
+}
+
+.appointmentIcon, .LogoutIcon {
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.appointmentIcon a img{
+    border-radius: 30px;
+}
+
+    .appointmentIcon:hover {
+        background: #4b469c;
+        opacity: .8;
+    }
+    .LogoutIcon:hover {
+        background: #4b469c;
+        border: none;
+    }
+.loginUserFirstName:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.form-container {
+    width: 55%;
+}
+
+@media screen and (max-width: 800px){
+    .form-container{
+        width: 100%;
+    }
+}

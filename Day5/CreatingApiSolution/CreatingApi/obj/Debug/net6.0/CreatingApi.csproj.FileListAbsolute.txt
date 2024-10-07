@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\bin\Debug\net6.0\CreatingApi.exe
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\bin\Debug\net6.0\CreatingApi.deps.json
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\bin\Debug\net6.0\CreatingApi.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\bin\Debug\net6.0\CreatingApi.dll
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\bin\Debug\net6.0\CreatingApi.pdb
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.sourcelink.json
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.dll
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\refint\CreatingApi.dll
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.pdb
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\CreatingApi.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day5\CreatingApiSolution\CreatingApi\obj\Debug\net6.0\ref\CreatingApi.dll

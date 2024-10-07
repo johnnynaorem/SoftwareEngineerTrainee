@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.sourcelink.json
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\bin\Debug\net6.0\Day7Class.exe
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\bin\Debug\net6.0\Day7Class.deps.json
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\bin\Debug\net6.0\Day7Class.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\bin\Debug\net6.0\Day7Class.dll
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\bin\Debug\net6.0\Day7Class.pdb
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.dll
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\refint\Day7Class.dll
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.pdb
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\Day7Class.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day7\Day7ClassSolution\Day7Class\obj\Debug\net6.0\ref\Day7Class.dll

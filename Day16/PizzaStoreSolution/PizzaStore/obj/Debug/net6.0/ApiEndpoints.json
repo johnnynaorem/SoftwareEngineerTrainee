@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "PizzaStore.Controllers.CustomerController",
+    "Method": "ViewPizzas",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

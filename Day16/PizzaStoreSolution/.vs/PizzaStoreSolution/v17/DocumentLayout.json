@@ -1,0 +1,343 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\dtos\\pizzacartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\dtos\\pizzacartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\exceptions\\noentityfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\exceptions\\noentityfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|c:\\johnny\\celsior_training\\day16\\pizzastoresolution\\pizzastore\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59AC8C1-195A-48AE-9AD4-4B89083FD6A6}|PizzaStore\\PizzaStore.csproj|solutionrelative:pizzastore\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDetailsRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\OrderDetailsRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Repositories\\OrderDetailsRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\OrderDetailsRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Repositories\\OrderDetailsRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAlwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T08:16:16.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "PizzaStore\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvx8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:50:09.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Program.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Program.cs",
+              "RelativeToolTip": "PizzaStore\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:49:14.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ICustomerService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Interfaces\\ICustomerService.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Interfaces\\ICustomerService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Interfaces\\ICustomerService.cs",
+              "RelativeToolTip": "PizzaStore\\Interfaces\\ICustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:43:23.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Services\\CustomerService.cs",
+              "RelativeToolTip": "PizzaStore\\Services\\CustomerService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:43:06.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:24:38.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CollectionEmptyException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Exceptions\\CollectionEmptyException.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeToolTip": "PizzaStore\\Exceptions\\CollectionEmptyException.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:26:00.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PizzaRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\PizzaRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Repositories\\PizzaRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\PizzaRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Repositories\\PizzaRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:27:45.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwDQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:05:02.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:11:05.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\Order.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Order.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\Order.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:02:39.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "PizzaStore\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:09:41.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CartDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\DTOs\\CartDTO.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\DTOs\\CartDTO.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\DTOs\\CartDTO.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\DTOs\\CartDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:08:59.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\Cart.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Cart.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T04:48:39.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pizza.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Pizza.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\Pizza.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Pizza.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\Pizza.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T04:46:07.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NoEntityFoundException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Exceptions\\NoEntityFoundException.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Exceptions\\NoEntityFoundException.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Exceptions\\NoEntityFoundException.cs",
+              "RelativeToolTip": "PizzaStore\\Exceptions\\NoEntityFoundException.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:15:12.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PizzaCartDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\DTOs\\PizzaCartDTO.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\DTOs\\PizzaCartDTO.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\DTOs\\PizzaCartDTO.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\DTOs\\PizzaCartDTO.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:08:19.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\Customer.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\Customer.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\Customer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T04:43:28.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "PizzaStore\\Models\\OrderDetails.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day16\\PizzaStoreSolution\\PizzaStore\\Models\\OrderDetails.cs",
+              "RelativeToolTip": "PizzaStore\\Models\\OrderDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T05:07:21.91Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

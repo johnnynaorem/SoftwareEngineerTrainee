@@ -1,0 +1,140 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\clinicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\clinicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\ipatientinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\ipatientinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|c:\\johnny\\celsior_training\\day9\\clinicmanageapp\\clinicmanageapp\\idoctorinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A2D524E-1380-4D85-B343-523EB6FE618F}|ClinicManageApp\\ClinicManageApp.csproj|solutionrelative:clinicmanageapp\\idoctorinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPatientInterface.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\IPatientInterface.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\IPatientInterface.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\IPatientInterface.cs",
+              "RelativeToolTip": "ClinicManageApp\\IPatientInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T10:46:08.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDoctorInterface.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\IDoctorInterface.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\IDoctorInterface.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\IDoctorInterface.cs",
+              "RelativeToolTip": "ClinicManageApp\\IDoctorInterface.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAASwAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:38:48.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\UserInteraction.cs",
+              "RelativeToolTip": "ClinicManageApp\\UserInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T10:07:11.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Appointment.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\Appointment.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Appointment.cs",
+              "RelativeToolTip": "ClinicManageApp\\Appointment.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:33:12.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClinicManager.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\ClinicManager.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\ClinicManager.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\ClinicManager.cs",
+              "RelativeToolTip": "ClinicManageApp\\ClinicManager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:46:43.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Doctor.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\Doctor.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Doctor.cs",
+              "RelativeToolTip": "ClinicManageApp\\Doctor.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA2wBQAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:16:17.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Patient.cs",
+              "RelativeDocumentMoniker": "ClinicManageApp\\Patient.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day9\\ClinicManageApp\\ClinicManageApp\\Patient.cs",
+              "RelativeToolTip": "ClinicManageApp\\Patient.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:29:02.741Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
