@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|c:\\johnny\\celsior_training\\day27\\assignment\\simpleshopsolution\\simpleshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|solutionrelative:simpleshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|c:\\johnny\\celsior_training\\day27\\assignment\\simpleshopsolution\\simpleshop\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|solutionrelative:simpleshop\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|c:\\johnny\\celsior_training\\day27\\assignment\\simpleshopsolution\\simpleshop\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|solutionrelative:simpleshop\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|c:\\johnny\\celsior_training\\day27\\assignment\\simpleshopsolution\\simpleshop\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D313DCF9-7FB5-4272-9D2B-050D060D813E}|SimpleShop\\SimpleShop.csproj|solutionrelative:simpleshop\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "SimpleShop\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\UserInteraction.cs",
+              "RelativeToolTip": "SimpleShop\\UserInteraction.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowC0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T12:49:26.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\Service.cs",
+              "RelativeDocumentMoniker": "SimpleShop\\Service.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\Service.cs",
+              "RelativeToolTip": "SimpleShop\\Service.cs",
+              "ViewState": "AgIAAGABAAAAAAAAAAAowHcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T12:41:40.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\IService.cs",
+              "RelativeDocumentMoniker": "SimpleShop\\IService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\IService.cs",
+              "RelativeToolTip": "SimpleShop\\IService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T12:37:16.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\Program.cs",
+              "RelativeDocumentMoniker": "SimpleShop\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\Assignment\\SimpleShopSolution\\SimpleShop\\Program.cs",
+              "RelativeToolTip": "SimpleShop\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T12:36:44.65Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

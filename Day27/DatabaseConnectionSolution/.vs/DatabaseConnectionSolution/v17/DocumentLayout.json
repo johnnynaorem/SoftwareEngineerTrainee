@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseConnectionSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{066FF111-5AD9-4790-8F60-71B46564A0FC}|DatabaseConnection\\DatabaseConnection.csproj|c:\\johnny\\celsior_training\\day27\\databaseconnectionsolution\\databaseconnection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{066FF111-5AD9-4790-8F60-71B46564A0FC}|DatabaseConnection\\DatabaseConnection.csproj|solutionrelative:databaseconnection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseConnectionSolution\\DatabaseConnection\\Program.cs",
+              "RelativeDocumentMoniker": "DatabaseConnection\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseConnectionSolution\\DatabaseConnection\\Program.cs",
+              "RelativeToolTip": "DatabaseConnection\\Program.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAcwGQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T04:17:43.701Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

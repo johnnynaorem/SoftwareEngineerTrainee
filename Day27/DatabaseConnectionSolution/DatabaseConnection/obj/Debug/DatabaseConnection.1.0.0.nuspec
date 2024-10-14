@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DatabaseConnection</id>
+    <version>1.0.0</version>
+    <authors>DatabaseConnection</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="5ccb91c6dda11bd662a55173b687c64c6e4aea4f" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Johnny\Celsior_Training\Day27\DatabaseConnectionSolution\DatabaseConnection\bin\Debug\net6.0\DatabaseConnection.runtimeconfig.json" target="lib\net6.0\DatabaseConnection.runtimeconfig.json" />
+    <file src="C:\Johnny\Celsior_Training\Day27\DatabaseConnectionSolution\DatabaseConnection\bin\Debug\net6.0\DatabaseConnection.dll" target="lib\net6.0\DatabaseConnection.dll" />
+  </files>
+</package>
