@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|c:\\johnny\\celsior_training\\day26\\wordyappconsole\\wordyappconsole\\wordyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|solutionrelative:wordyappconsole\\wordyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|c:\\johnny\\celsior_training\\day26\\wordyappconsole\\wordyappconsole\\iwordy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|solutionrelative:wordyappconsole\\iwordy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|c:\\johnny\\celsior_training\\day26\\wordyappconsole\\wordyappconsole\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|solutionrelative:wordyappconsole\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|c:\\johnny\\celsior_training\\day26\\wordyappconsole\\wordyappconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FE8D481-CD50-45C1-A825-CE30D5E81149}|WordyAppConsole\\WordyAppConsole.csproj|solutionrelative:wordyappconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "WordyAppConsole\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\UserInteraction.cs",
+              "RelativeToolTip": "WordyAppConsole\\UserInteraction.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAA2wAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T07:07:59.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IWordy.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\IWordy.cs",
+              "RelativeDocumentMoniker": "WordyAppConsole\\IWordy.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\IWordy.cs",
+              "RelativeToolTip": "WordyAppConsole\\IWordy.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T07:02:47.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WordyService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\WordyService.cs",
+              "RelativeDocumentMoniker": "WordyAppConsole\\WordyService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\WordyService.cs",
+              "RelativeToolTip": "WordyAppConsole\\WordyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:44:02.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\Program.cs",
+              "RelativeDocumentMoniker": "WordyAppConsole\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\Program.cs",
+              "RelativeToolTip": "WordyAppConsole\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T04:42:42.06Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

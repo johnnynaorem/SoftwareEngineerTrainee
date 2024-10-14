@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\DoctorAssignmentSolution\\DoctorAssignment\\DoctorAssignment.csproj",
-      "projectName": "DoctorAssignment",
-      "projectPath": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\DoctorAssignmentSolution\\DoctorAssignment\\DoctorAssignment.csproj",
+      "projectUniqueName": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\WordyAppConsole.csproj",
+      "projectName": "WordyAppConsole",
+      "projectPath": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\WordyAppConsole.csproj",
       "packagesPath": "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\.nuget\\packages\\",
-      "outputPath": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\DoctorAssignmentSolution\\DoctorAssignment\\obj\\",
+      "outputPath": "C:\\Johnny\\Celsior_Training\\Day26\\WordyAppConsole\\WordyAppConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
