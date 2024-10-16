@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\clinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\clinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\iclinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\iclinicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\doctorappointmentappusingdbfirstapproachormsolution\\doctorappointmentappusingdbfirstapproachorm\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25960B80-0139-4D4A-8D84-8759ACA5B824}|DoctorAppointmentAppUsingDBFirstApproachORM\\DoctorAppointmentAppUsingDBFirstApproachORM.csproj|solutionrelative:doctorappointmentappusingdbfirstapproachorm\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClinicService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicService.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicService.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwH4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T03:58:21.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IClinicService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\IClinicService.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\IClinicService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\IClinicService.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\IClinicService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T10:44:54.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\UserInteraction.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\UserInteraction.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T10:40:14.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClinicContext.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicContext.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicContext.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicContext.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\ClinicContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T09:02:48.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Appointment.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Appointment.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T08:56:11.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Patient.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Patient.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Patient.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T08:53:22.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Doctor.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T08:51:02.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorAppointmentAppUsingDBFirstApproachORM\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\DoctorAppointmentAppUsingDBFirstApproachORMSolution\\DoctorAppointmentAppUsingDBFirstApproachORM\\Program.cs",
+              "RelativeToolTip": "DoctorAppointmentAppUsingDBFirstApproachORM\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T08:48:37.488Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
