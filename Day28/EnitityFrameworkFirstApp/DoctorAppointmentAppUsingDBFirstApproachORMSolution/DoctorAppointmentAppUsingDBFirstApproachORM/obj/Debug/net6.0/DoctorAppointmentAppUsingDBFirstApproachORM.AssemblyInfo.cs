@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoctorAppointmentAppUsingDBFirstApproachORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+feec8199520dba80fb5c06e67c1a1d97feb6cf66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2870174bc5c429366377ab7ac82fccf19f6f729")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoctorAppointmentAppUsingDBFirstApproachORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoctorAppointmentAppUsingDBFirstApproachORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,7 +9,7 @@ namespace DoctorAppointmentAppUsingDBFirstApproachORM
         static void Main(string[] args)
         {
             UserInteraction userInteraction = new UserInteraction();
-            userInteraction.Menu();
+            userInteraction.MainMenu();
         }
     }
 }
