@@ -10,9 +10,11 @@ namespace EFCoreWebAPI.Controllers
     public class ProductController : ControllerBase
     {
         private IProductService _productService;
+        private readonly ILogger _logger;
 
-        public ProductController(IProductService productService) {
+        public ProductController(IProductService productService, ILogger logger) {
             _productService = productService;
+            _logger = logger;
         }
 
         [HttpPost("CreateProduct")]
@@ -21,9 +23,11 @@ namespace EFCoreWebAPI.Controllers
             try
             {
                 var productId = await _productService.CreateProduct(product);
+                _logger.LogInformation("Product Added");
                 return Ok(productId);
             }
             catch (Exception ex) {
+                _logger.LogError(ex.Message);
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }

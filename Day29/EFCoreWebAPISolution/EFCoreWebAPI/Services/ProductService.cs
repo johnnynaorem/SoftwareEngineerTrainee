@@ -29,7 +29,7 @@ namespace EFCoreWebAPI.Services
                 var products = await _productRepo.GetAll();
                 return products;
             }
-            catch (Exception ex) {
+            catch (CollectionEmptyException) {
                 throw new CollectionEmptyException("Product");
             }
         }
@@ -39,24 +39,25 @@ namespace EFCoreWebAPI.Services
             try
             {
                 var product = await _productRepo.Get(Id);
-                return product;
-            }
-            catch (Exception ex) {
+                if (product != null)
+                {
+                    return product;
+                }
                 throw new NotFoundException("Product");
             }
-            
+            catch (Exception ) {
+                throw new NotFoundException("Product");
+            }
         }
 
-        public Task<Product> UpdateProductPrice(float price, int Id)
+        public async Task<Product> UpdateProductPrice(float price, int Id)
         {
-            var oldProduct = _productRepo.Get(Id);
+            var oldProduct = await _productRepo.Get(Id);
             if (oldProduct != null) {
-                oldProduct.Result.Price = price;
+                oldProduct.Price = price;
                 return oldProduct;
             }
             throw new NotUpdateException("Product Price Update Fail");
         }
-
-
     }
 }

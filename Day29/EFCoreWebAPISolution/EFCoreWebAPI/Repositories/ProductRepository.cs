@@ -51,7 +51,7 @@ namespace EFCoreWebAPI.Repositories
             if (products.Count == 0)
             {
                 throw new CollectionEmptyException("Products");
-            }
+            }   
             return products;
         }
     }

@@ -160,7 +160,6 @@ namespace EFCoreWebAPITest
         {
             var exception = Assert.ThrowsAsync<NotFoundException>(async () => await repository.Delete(id));
             Assert.That(exception.Message, Is.EqualTo("Not Found in Product for delete"));
-
         }
 
 
@@ -169,7 +168,6 @@ namespace EFCoreWebAPITest
         {
             var exception = Assert.ThrowsAsync<CollectionEmptyException>(async () => await repository.GetAll());
             Assert.That(exception.Message, Is.EqualTo("Empty Collection - Products"));
-
         }
     }
 }

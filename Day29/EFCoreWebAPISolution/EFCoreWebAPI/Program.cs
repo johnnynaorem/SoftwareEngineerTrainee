@@ -4,11 +4,13 @@ using EFCoreWebAPI.Models;
 using EFCoreWebAPI.Repositories;
 using EFCoreWebAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EFCoreWebAPI
 {
     public class Program
     {
+        [ExcludeFromCodeCoverage]
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
