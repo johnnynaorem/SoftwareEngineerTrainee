@@ -10,7 +10,8 @@ namespace EFCoreWebAPI.Repositories
     {
         private readonly ShoppingContext _context;
 
-        public ProductRepository(ShoppingContext shoppingContext) {
+        public ProductRepository(ShoppingContext shoppingContext)
+        {
             _context = shoppingContext;
         }
         public async Task<Product> Add(Product entity)
@@ -20,9 +21,9 @@ namespace EFCoreWebAPI.Repositories
                 await _context.Products.AddAsync(entity);
                 await _context.SaveChangesAsync();
                 return entity;
-
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 throw new CouldNotAddException("Product");
             }
         }
@@ -36,7 +37,7 @@ namespace EFCoreWebAPI.Repositories
                 await _context.SaveChangesAsync();
                 return product;
             }
-            throw new NotFoundException("Product for delete");
+            throw new NotFoundException("Product. Product Delete Fail");
         }
 
         public async Task<Product> Get(int key)
@@ -48,11 +49,23 @@ namespace EFCoreWebAPI.Repositories
         public async Task<IEnumerable<Product>> GetAll()
         {
             var products = await _context.Products.ToListAsync();
-            if (products.Count == 0)
+            if (products.Any())
             {
-                throw new CollectionEmptyException("Products");
-            }   
-            return products;
+                return products;
+            }
+            throw new CollectionEmptyException("Products");
+        }
+
+        public async Task<Product> Update(Product entity, int pid)
+        {
+            var oldProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id == pid);
+            if (oldProduct != null)
+            {
+                oldProduct.Price = entity.Price;
+                await _context.SaveChangesAsync();
+                return oldProduct;
+            }
+            throw new NotUpdateException("Product Price Update Fail");
         }
     }
 }

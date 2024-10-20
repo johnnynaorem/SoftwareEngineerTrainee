@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapitest\\productcontrollertesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|solutionrelative:efcorewebapitest\\productcontrollertesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapitest\\productservicetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|solutionrelative:efcorewebapitest\\productservicetesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapitest\\productrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBD065CC-6B78-4CFD-8666-75B37A319EF1}|EFCoreWebAPITest\\EFCoreWebAPITest.csproj|solutionrelative:efcorewebapitest\\productrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|c:\\johnny\\celsior_training\\day29\\efcorewebapisolution\\efcorewebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7818E659-A648-48DF-ABFB-C34AAFDB0A56}|EFCoreWebAPI\\EFCoreWebAPI.csproj|solutionrelative:efcorewebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,47 +26,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "EFCoreWebAPI\\Program.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Program.cs",
-              "RelativeToolTip": "EFCoreWebAPI\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T11:12:26.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductControllerTesting.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductControllerTesting.cs",
-              "RelativeDocumentMoniker": "EFCoreWebAPITest\\ProductControllerTesting.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductControllerTesting.cs",
-              "RelativeToolTip": "EFCoreWebAPITest\\ProductControllerTesting.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAArwH8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T06:40:50.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "EFCoreWebAPI\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "EFCoreWebAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwCAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T06:37:59.702Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -87,48 +36,48 @@
               "RelativeDocumentMoniker": "EFCoreWebAPI\\Services\\ProductService.cs",
               "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Services\\ProductService.cs",
               "RelativeToolTip": "EFCoreWebAPI\\Services\\ProductService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wC0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvygAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:56:12.652Z",
+              "WhenOpened": "2024-10-20T19:29:20.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductServiceTesting.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductServiceTesting.cs",
-              "RelativeDocumentMoniker": "EFCoreWebAPITest\\ProductServiceTesting.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductServiceTesting.cs",
-              "RelativeToolTip": "EFCoreWebAPITest\\ProductServiceTesting.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAwwMIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T04:53:11.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ProductRepositoryTest.cs",
               "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductRepositoryTest.cs",
               "RelativeDocumentMoniker": "EFCoreWebAPITest\\ProductRepositoryTest.cs",
               "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPITest\\ProductRepositoryTest.cs",
               "RelativeToolTip": "EFCoreWebAPITest\\ProductRepositoryTest.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAA6wK0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAAK0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T04:51:50.645Z",
+              "WhenOpened": "2024-10-20T17:56:10.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "EFCoreWebAPI\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "EFCoreWebAPI\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwDUAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Repositories\\ProductRepository.cs*",
+              "RelativeToolTip": "EFCoreWebAPI\\Repositories\\ProductRepository.cs*",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T04:51:40.727Z",
+              "WhenOpened": "2024-10-20T17:55:15.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "EFCoreWebAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day29\\EFCoreWebAPISolution\\EFCoreWebAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "EFCoreWebAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T17:54:32.926Z",
               "EditorCaption": ""
             }
           ]

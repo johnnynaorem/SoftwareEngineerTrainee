@@ -11,7 +11,8 @@ namespace EFCoreWebAPI.Services
         private readonly IRepository<int, Product> _productRepo;
         private readonly IMapper _mapper;
 
-        public ProductService(IRepository<int, Product> productRepository, IMapper mapper) {
+        public ProductService(IRepository<int, Product> productRepository, IMapper mapper)
+        {
             _productRepo = productRepository;
             _mapper = mapper;
         }
@@ -29,35 +30,33 @@ namespace EFCoreWebAPI.Services
                 var products = await _productRepo.GetAll();
                 return products;
             }
-            catch (CollectionEmptyException) {
+            catch (CollectionEmptyException)
+            {
                 throw new CollectionEmptyException("Product");
             }
         }
 
         public async Task<Product> GetProduct(int Id)
         {
-            try
-            {
-                var product = await _productRepo.Get(Id);
-                if (product != null)
-                {
-                    return product;
-                }
-                throw new NotFoundException("Product");
-            }
-            catch (Exception ) {
-                throw new NotFoundException("Product");
-            }
+
+            var product = await _productRepo.Get(Id);
+            if (product != null) return product;
+            throw new NotFoundException("Product");
         }
 
         public async Task<Product> UpdateProductPrice(float price, int Id)
         {
-            var oldProduct = await _productRepo.Get(Id);
-            if (oldProduct != null) {
-                oldProduct.Price = price;
+            try
+            {
+                var updateProduct = new Product { Price = price };
+                var oldProduct = await _productRepo.Update(updateProduct, Id);
                 return oldProduct;
             }
-            throw new NotUpdateException("Product Price Update Fail");
+            catch (Exception)
+            {
+                throw new NotUpdateException("Product Price Update Fail");
+            }
+
         }
     }
 }

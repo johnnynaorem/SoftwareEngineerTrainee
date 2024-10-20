@@ -1,4 +1,5 @@
 ﻿using EFCoreWebAPI.Interfaces;
+using EFCoreWebAPI.Models;
 using EFCoreWebAPI.Models.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,9 @@ namespace EFCoreWebAPI.Controllers
     public class ProductController : ControllerBase
     {
         private IProductService _productService;
-        private readonly ILogger _logger;
+        private readonly ILogger<ProductController> _logger;
 
-        public ProductController(IProductService productService, ILogger logger) {
+        public ProductController(IProductService productService, ILogger<ProductController> logger) {
             _productService = productService;
             _logger = logger;
         }
@@ -38,8 +39,8 @@ namespace EFCoreWebAPI.Controllers
         {
             try
             {
-                var product = await _productService.UpdateProductPrice(price, productId);
-                return Ok(product);
+                var updateProduct = await _productService.UpdateProductPrice(price, productId);
+                return Ok(updateProduct);
             }
             catch (Exception ex)
             {

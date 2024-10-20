@@ -72,5 +72,10 @@ namespace EFCoreWebAPI.Repositories
             }
             throw new NotFoundException("Customer for delete");
         }
+
+        public Task<Customer> Update(Customer entity, int pid)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

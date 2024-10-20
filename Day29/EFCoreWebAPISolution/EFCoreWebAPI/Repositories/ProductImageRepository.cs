@@ -59,5 +59,10 @@ namespace EFCoreWebAPI.Repositories
             }
             return productImages;
         }
+
+        public Task<ProductImage> Update(ProductImage entity, int pid)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

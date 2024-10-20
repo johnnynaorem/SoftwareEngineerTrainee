@@ -10,8 +10,6 @@ namespace EFCoreWebAPI.Exceptions
         {
             this.msg =$"Not Add into {message}";
         }
-
         public override string Message => msg;
-
     }
 }

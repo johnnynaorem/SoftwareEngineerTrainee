@@ -2,7 +2,6 @@
 
 namespace EFCoreWebAPI.Exceptions
 {
-    [Serializable]
     public class NotFoundException : Exception
     {
 

@@ -6,6 +6,7 @@
         Task<IEnumerable<T>> GetAll();
         Task<T> Add(T entity);
         Task<T> Delete(int key);
+        Task <T> Update(T entity, int pid);
 
     }
 }

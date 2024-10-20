@@ -149,25 +149,25 @@ namespace EFCoreWebAPITest
             };
 
             //Assert
-            Assert.ThrowsAsync<CouldNotAddException>(async () => await repository.Add(product));
+            var exception = Assert.ThrowsAsync<CouldNotAddException>(async () => await repository.Add(product));
+            Assert.IsNotNull(exception);
+            Assert.AreEqual(exception.Message, "Not Add into Product");
 
+        }
+
+        [Test]
+        public async Task CollectionEmptyException_GetAll()
+        {
+            Assert.ThrowsAsync<CollectionEmptyException>(async () => await repository.GetAll());
         }
 
         [Test]
         [TestCase(2)]
-
-        public async Task TestNotFoundException(int id)
+        public async Task NotDeleteException_Delete(int id)
         {
             var exception = Assert.ThrowsAsync<NotFoundException>(async () => await repository.Delete(id));
-            Assert.That(exception.Message, Is.EqualTo("Not Found in Product for delete"));
-        }
-
-
-        [Test]
-        public async Task TestCollectionEmptyException()
-        {
-            var exception = Assert.ThrowsAsync<CollectionEmptyException>(async () => await repository.GetAll());
-            Assert.That(exception.Message, Is.EqualTo("Empty Collection - Products"));
+            Assert.IsNotNull(exception);
+            Assert.AreEqual(exception.Message, "Not Found in Product. Product Delete Fail");
         }
     }
 }
