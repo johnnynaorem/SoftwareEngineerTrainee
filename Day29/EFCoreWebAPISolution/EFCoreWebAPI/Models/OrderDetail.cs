@@ -11,7 +11,7 @@ namespace EFCoreWebAPI.Models
         public int Quantity { get; set; }
         public float Price { get; set; }
         public Order Order { get; set; }
-        public Product Product { get; set; }
+        public Product Product { get; set; }    
         public OrderDetail()
         {
             Order = new Order();

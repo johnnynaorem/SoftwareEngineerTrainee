@@ -11,7 +11,7 @@ namespace EFCoreWebAPI.Controllers
     public class ProductController : ControllerBase
     {
         private IProductService _productService;
-        private readonly ILogger<ProductController> _logger;
+        private readonly ILogger<ProductController> _logger;    
 
         public ProductController(IProductService productService, ILogger<ProductController> logger) {
             _productService = productService;
