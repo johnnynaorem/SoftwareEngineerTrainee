@@ -1,0 +1,151 @@
+[
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.BookingController",
+    "Method": "BookEvent",
+    "RelativePath": "api/Booking/BookEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EventBookingWebApi.Models.DTOs.BookingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.BookingController",
+    "Method": "GetEventWithEmployee",
+    "RelativePath": "api/Booking/getEventWithEmployee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.BookingController",
+    "Method": "GetEventWithEmployeeUsingDTO",
+    "RelativePath": "api/Booking/getEventWithEmployeeUsingDTO",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.BookingController",
+    "Method": "GetAllBooking",
+    "RelativePath": "api/Booking/ListOfBooking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EmployeeController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/Employee/createEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "EventBookingWebApi.Models.DTOs.EmployeeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployees",
+    "RelativePath": "api/Employee/GetEmployee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployeeNames",
+    "RelativePath": "api/Employee/GetEmployeeName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployeeNameAndEmail",
+    "RelativePath": "api/Employee/GetEmployeeNameAndEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EventController",
+    "Method": "CreateEvent",
+    "RelativePath": "api/Event/CreateEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EventBookingWebApi.Models.DTOs.EventDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EventController",
+    "Method": "GetEvents",
+    "RelativePath": "api/Event/GetAllEvents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.EventController",
+    "Method": "GetEvent",
+    "RelativePath": "api/Event/GetEvents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventBookingWebApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventBookingWebApi.WeatherForecast, EventBookingWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
