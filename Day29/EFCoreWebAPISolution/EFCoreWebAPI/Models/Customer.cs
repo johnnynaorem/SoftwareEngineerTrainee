@@ -12,6 +12,8 @@
         public Cart Cart { get; set; }
 
         public IEnumerable<Order> Orders { get; set; }
+        public string Username { get; set; }
+        public User User { get; set; }
         public Customer()
         {
             Orders = new List<Order>();

@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "EFCoreWebAPI.Controllers.AuthenticationController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Authentication/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EFCoreWebAPI.Models.DTO.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.AuthenticationController",
+    "Method": "LoginUser",
+    "RelativePath": "api/Authentication/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EFCoreWebAPI.Models.DTO.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EFCoreWebAPI.Controllers.CustomerController",
     "Method": "CreateCustomer",
     "RelativePath": "api/Customer",

@@ -16,6 +16,7 @@ namespace EFCoreWebAPI.Context
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<User> Users { get; set; }
 
         override protected void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -50,6 +51,12 @@ namespace EFCoreWebAPI.Context
                 .WithMany(p => p.ProductImages)
                 .HasForeignKey(pi => pi.ProductId)
                 .HasConstraintName("FK_ProductImage_Product");
+
+            modelBuilder.Entity<Customer>()
+                .HasOne(c => c.User)
+                .WithOne(u => u.Customer)
+                .HasForeignKey<Customer>(c => c.Username)
+                .HasConstraintName("FK_Customer_User");
         }
 
     }
