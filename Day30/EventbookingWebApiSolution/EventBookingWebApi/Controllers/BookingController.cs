@@ -60,7 +60,7 @@ namespace EventBookingWebApi.Controllers
                                            from e in employees
                                            join ev in events
                                            on e.EmployeeId equals ev.EmployeeId
-                                           select new {e.Name,e.EmployeeId,ev.Title,ev.EventId}).ToList();
+                                           select e).ToList();
                 return Ok(eventWithEmployee);
             }
             catch (Exception ex)
