@@ -13,8 +13,23 @@
         "IsRequired": false
       },
       {
-        "Name": "ClaimantId",
-        "Type": "System.Int32",
+        "Name": "ClaimType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantPhone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantEmail",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -26,6 +41,38 @@
         "Name": "Files",
         "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimTypeController",
+    "Method": "CreatePolicy",
+    "RelativePath": "api/ClaimType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enitity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.ClaimTypeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.PolicyController",
+    "Method": "CreatePolicyWithTypes",
+    "RelativePath": "api/Policy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enitity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.PolicyDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

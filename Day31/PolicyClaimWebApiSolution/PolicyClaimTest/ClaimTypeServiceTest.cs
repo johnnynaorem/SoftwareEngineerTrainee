@@ -50,7 +50,7 @@ namespace PolicyClaimTest
             var addClaimType = await claimTypeService.CreateClaimType(claimType);
 
             Assert.IsNotNull(addClaimType);
-            Assert.AreEqual(addClaimType, 1);
+            Assert.AreEqual(addClaimType, "Something");
         }
 
         [Test]

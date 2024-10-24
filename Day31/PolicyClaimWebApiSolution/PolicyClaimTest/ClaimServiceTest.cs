@@ -18,6 +18,7 @@ namespace PolicyClaimTest
         PolicyContext context;
         ClaimRepository repository;
         ClaimFileRepository fileRepository;
+        ClaimantRepository claimantRepository;
 
         [SetUp]
         public void Setup()
@@ -28,6 +29,7 @@ namespace PolicyClaimTest
             context = new PolicyContext((DbContextOptions<PolicyContext>)options);
             repository = new ClaimRepository(context);
             fileRepository = new ClaimFileRepository(context);
+            claimantRepository = new ClaimantRepository(context);
         }
 
         [Test]
@@ -36,7 +38,9 @@ namespace PolicyClaimTest
             var createDTO = new CreateClaimDTO
             {
                 PolicyNumber = "POL123",
-                ClaimantId = 1,
+                ClaimantName = "test1",
+                ClaimantEmail = "test1",
+                ClaimantPhone = "34546",
                 ClaimDate = DateTime.Now,
             };
 
@@ -48,7 +52,7 @@ namespace PolicyClaimTest
             };
 
             //var claimService = new ClaimService(repository);
-            ClaimService claimService = new ClaimService(repository, fileRepository);
+            ClaimService claimService = new ClaimService(repository, fileRepository, claimantRepository);
             var addClaim = await claimService.CreateClaim(createDTO);
 
             Assert.IsNotNull(addClaim);
@@ -61,8 +65,10 @@ namespace PolicyClaimTest
             var createDTO = new CreateClaimDTO
             {
                 PolicyNumber = "POL123",
-                ClaimantId = 1,
-                ClaimDate = DateTime.Now,
+                ClaimantName = "test1",
+                ClaimantEmail = "test1",
+                ClaimantPhone = "34546",
+                ClaimDate = DateTime.Now
             };
 
             var expectedClaim = new Claim
@@ -72,7 +78,7 @@ namespace PolicyClaimTest
                 ClaimDate = DateTime.Now,
             };
 
-            ClaimService claimService = new ClaimService(repository, fileRepository);
+            ClaimService claimService = new ClaimService(repository, fileRepository, claimantRepository);
             await claimService.CreateClaim(createDTO);
             var result = await claimService.GetAll();
             Assert.IsNotNull(result);

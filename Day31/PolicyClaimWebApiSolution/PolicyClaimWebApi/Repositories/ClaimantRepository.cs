@@ -24,7 +24,7 @@ namespace PolicyClaimWebApi.Repositories
             }
             catch (Exception)
             {
-                throw new CouldNotAddException("Fail to add ClaimFile");
+                throw new CouldNotAddException("Fail to add Claimant");
             }
         }
 

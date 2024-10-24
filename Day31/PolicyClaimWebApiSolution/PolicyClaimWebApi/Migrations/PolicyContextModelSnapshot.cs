@@ -40,11 +40,17 @@ namespace PolicyClaimWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("TypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("ClaimID");
 
                     b.HasIndex("ClaimantId");
 
                     b.HasIndex("PolicyNumber");
+
+                    b.HasIndex("TypeName");
 
                     b.ToTable("Claims");
                 });
@@ -98,11 +104,8 @@ namespace PolicyClaimWebApi.Migrations
 
             modelBuilder.Entity("PolicyClaimWebApi.Models.ClaimType", b =>
                 {
-                    b.Property<int>("TypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TypeId"), 1L, 1);
+                    b.Property<string>("TypeName")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("PolicyNumber")
                         .IsRequired()
@@ -112,11 +115,7 @@ namespace PolicyClaimWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TypeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("TypeId");
+                    b.HasKey("TypeName");
 
                     b.HasIndex("PolicyNumber");
 
@@ -143,15 +142,21 @@ namespace PolicyClaimWebApi.Migrations
                         .WithMany("Claims")
                         .HasForeignKey("ClaimantId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Claim_Claimant");
+                        .IsRequired();
 
                     b.HasOne("PolicyClaimWebApi.Models.Policy", "Policy")
                         .WithMany("Claims")
                         .HasForeignKey("PolicyNumber")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Claim_Policy");
+                        .IsRequired();
+
+                    b.HasOne("PolicyClaimWebApi.Models.ClaimType", "ClaimType")
+                        .WithMany("Claims")
+                        .HasForeignKey("TypeName")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ClaimType");
 
                     b.Navigation("Claimant");
 
@@ -164,8 +169,7 @@ namespace PolicyClaimWebApi.Migrations
                         .WithMany("ClaimFiles")
                         .HasForeignKey("ClaimID")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_ClaimFile_Claim");
+                        .IsRequired();
 
                     b.Navigation("Claim");
                 });
@@ -176,8 +180,7 @@ namespace PolicyClaimWebApi.Migrations
                         .WithMany("Types")
                         .HasForeignKey("PolicyNumber")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Policy_ClaimType");
+                        .IsRequired();
 
                     b.Navigation("Policy");
                 });
@@ -188,6 +191,11 @@ namespace PolicyClaimWebApi.Migrations
                 });
 
             modelBuilder.Entity("PolicyClaimWebApi.Models.Claimant", b =>
+                {
+                    b.Navigation("Claims");
+                });
+
+            modelBuilder.Entity("PolicyClaimWebApi.Models.ClaimType", b =>
                 {
                     b.Navigation("Claims");
                 });

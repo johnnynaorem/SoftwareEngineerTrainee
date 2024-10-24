@@ -5,7 +5,7 @@ namespace PolicyClaimWebApi.Interfaces
 {
     public interface IClaimTypeService
     {
-        Task<int> CreateClaimType(ClaimTypeDTO entity);
+        Task<string> CreateClaimType(ClaimTypeDTO entity);
         Task<IEnumerable<ClaimType>> GetAll();
     }
 }

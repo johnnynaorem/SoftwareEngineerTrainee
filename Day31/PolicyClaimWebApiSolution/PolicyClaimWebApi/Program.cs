@@ -38,6 +38,7 @@ namespace PolicyClaimWebApi
             builder.Services.AddScoped<IClaimantService, ClaimantService>();
             builder.Services.AddScoped<IClaimService, ClaimService>();
             builder.Services.AddScoped<IPolicyService, PolicyService>();
+            builder.Services.AddScoped<IClaimTypeService, ClaimTypeService>();
             #endregion;
             // Add services to the container.
 

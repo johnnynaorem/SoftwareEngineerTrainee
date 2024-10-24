@@ -7,7 +7,8 @@ namespace PolicyClaimWebApi.Models
         [Key]
         public string PolicyNumber { get; set; }
         public string AboutPolicy { get; set; } = string.Empty;
-        public IEnumerable<ClaimType> Types { get; set; } = new List<ClaimType>();
-        public IEnumerable<Claim> Claims { get; set; } = new List<Claim>();
+
+        public ICollection<ClaimType> Types { get; set; } = new List<ClaimType>();
+        public ICollection<Claim> Claims { get; set; } = new List<Claim>();
     }
 }

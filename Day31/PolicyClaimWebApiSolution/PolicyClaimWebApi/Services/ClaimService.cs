@@ -2,17 +2,20 @@
 using PolicyClaimWebApi.Interfaces;
 using PolicyClaimWebApi.Models;
 using PolicyClaimWebApi.Models.DTOs;
+using PolicyClaimWebApi.Repositories;
 
 namespace PolicyClaimWebApi.Services
 {
     public class ClaimService : IClaimService
     {
+        private readonly IRepository<int, Claimant> _claimRepo;
         private readonly IRepository<int, Claim> _repository;
         private readonly IRepository<int, ClaimFile> _claimFileRepo;
         private readonly string _fileStoragePath;
 
-        public ClaimService(IRepository<int, Claim> repository, IRepository<int, ClaimFile> claimFileRepo)
+        public ClaimService(IRepository<int, Claim> repository, IRepository<int, ClaimFile> claimFileRepo, IRepository<int, Claimant> claimantRepository)
         {
+            _claimRepo = claimantRepository;
             _repository = repository;
             _claimFileRepo = claimFileRepo;
             _fileStoragePath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
@@ -24,14 +27,25 @@ namespace PolicyClaimWebApi.Services
         }
         public async Task<Claim> CreateClaim(CreateClaimDTO entity)
         {
+            var claimant = new Claimant
+            {
+                Name = entity.ClaimantName,
+                Phone = entity.ClaimantPhone,
+                Email = entity.ClaimantEmail,
+            };
+
+            var addedClaimant = await _claimRepo.Add(claimant);
+
             var claim = new Claim
             {
                 PolicyNumber = entity.PolicyNumber,
-                ClaimantId = entity.ClaimantId,
-                ClaimDate = entity.ClaimDate
+                ClaimantId = addedClaimant.ClaimantId,
+                ClaimDate = entity.ClaimDate,
+                TypeName = entity.ClaimType,
+               
             };
 
-            await _repository.Add(claim);
+            var addedClaim = await _repository.Add(claim);
 
             if (entity.Files != null && entity.Files.Count > 0)
             {
@@ -49,7 +63,7 @@ namespace PolicyClaimWebApi.Services
 
                         var claimFile = new ClaimFile
                         {
-                            ClaimID = claim.ClaimID, 
+                            ClaimID = addedClaim.ClaimID, 
                             FilePath = filePath 
                         };
 

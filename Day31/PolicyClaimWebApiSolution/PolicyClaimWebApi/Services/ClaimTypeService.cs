@@ -12,7 +12,7 @@ namespace PolicyClaimWebApi.Services
         {
             _repository = repository;
         }
-        public async Task<int> CreateClaimType(ClaimTypeDTO entity)
+        public async Task<string> CreateClaimType(ClaimTypeDTO entity)
         {
             ClaimType claimType = new ClaimType
             {
@@ -21,8 +21,8 @@ namespace PolicyClaimWebApi.Services
                 PolicyNumber = entity.PolicyNumber,
             };
 
-            var addClaimant = await _repository.Add(claimType);
-            return addClaimant.TypeId;
+            var addClaimType = await _repository.Add(claimType);
+            return addClaimType.TypeName;
         }
 
         public async Task<IEnumerable<ClaimType>> GetAll()

@@ -23,6 +23,7 @@ namespace PolicyClaimTest
         ClaimFileRepository fileRepository;
         ClaimController claimController;
         ClaimService claimService;
+        ClaimantRepository claimantRepository;
 
         [SetUp]
         public void Setup()
@@ -33,7 +34,8 @@ namespace PolicyClaimTest
             context = new PolicyContext((DbContextOptions<PolicyContext>)options);
             repository = new ClaimRepository(context);
             fileRepository = new ClaimFileRepository(context);
-            claimService = new ClaimService(repository, fileRepository);
+            claimantRepository = new ClaimantRepository(context);
+            claimService = new ClaimService(repository, fileRepository, claimantRepository);
             claimController = new ClaimController(claimService);
         }
 
@@ -43,7 +45,10 @@ namespace PolicyClaimTest
             var createDTO = new CreateClaimDTO
             {
                 PolicyNumber = "POL123",
-                ClaimantId = 1,
+                ClaimantName = "test1",
+                ClaimantEmail = "test1",
+                ClaimantPhone = "34546",
+                ClaimType = "Test",
                 ClaimDate = DateTime.Now,
             };
 

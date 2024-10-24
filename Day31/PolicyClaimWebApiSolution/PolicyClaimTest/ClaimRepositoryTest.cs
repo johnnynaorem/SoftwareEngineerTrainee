@@ -36,7 +36,8 @@ namespace PolicyClaimTest
             {
                 ClaimantId = 1,
                 PolicyNumber = "POL123",
-                ClaimDate = DateTime.Now
+                ClaimDate = DateTime.Now,
+                TypeName = "Test",
             };
 
             var addedUser = await repository.Add(claim);
@@ -53,7 +54,8 @@ namespace PolicyClaimTest
             {
                 ClaimantId = 1,
                 PolicyNumber = "POL123",
-                ClaimDate = DateTime.Now
+                ClaimDate = DateTime.Now,
+                TypeName = "Test",
             };
 
             //Act
