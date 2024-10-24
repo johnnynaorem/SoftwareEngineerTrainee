@@ -8,6 +8,10 @@ namespace PolicyClaimWebApi.Services
     {
         private readonly IRepository<int, ClaimType> _repository;
 
+        public ClaimTypeService(IRepository<int, ClaimType> repository)
+        {
+            _repository = repository;
+        }
         public async Task<int> CreateClaimType(ClaimTypeDTO entity)
         {
             ClaimType claimType = new ClaimType

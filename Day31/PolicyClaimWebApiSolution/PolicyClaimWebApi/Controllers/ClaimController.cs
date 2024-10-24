@@ -19,13 +19,35 @@ namespace PolicyClaimWebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateClaimWithFiles([FromForm] CreateClaimDTO createClaimDto)
         {
-            //if (createClaimDto.Files == null || createClaimDto.Files.Count == 0)
-            //{
-            //    return BadRequest("At least one file must be uploaded.");
-            //}
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (createClaimDto.Files == null || createClaimDto.Files.Count == 0)
+                    {
+                        return BadRequest("At least one file must be uploaded.");
+                    }
 
-            var claim = await _claimService.CreateClaim(createClaimDto);
-            return Ok(new { ClaimId = claim.ClaimID, Files = createClaimDto.Files.Count });
+                    var claim = await _claimService.CreateClaim(createClaimDto);
+                    return Ok(new { ClaimId = claim.ClaimID, Files = createClaimDto.Files.Count });
+                }
+                else
+                {
+                    return BadRequest(new ErrorResponseDTO
+                    {
+                        ErrorCode = 400,
+                        ErrorMessage = "one or more fields validate error"
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorResponseDTO
+                {
+                    ErrorMessage = ex.Message,
+                    ErrorCode = 500
+                });
+            }
         }
     }
 }

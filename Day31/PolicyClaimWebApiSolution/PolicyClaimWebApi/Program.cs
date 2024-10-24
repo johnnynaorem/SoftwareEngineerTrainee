@@ -4,6 +4,7 @@ using PolicyClaimWebApi.Interfaces;
 using PolicyClaimWebApi.Models;
 using PolicyClaimWebApi.Repositories;
 using PolicyClaimWebApi.Services;
+using PolicyClaimWebApi.Validations;
 
 namespace PolicyClaimWebApi
 {
@@ -12,6 +13,11 @@ namespace PolicyClaimWebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            #region Filters
+            builder.Services.AddScoped<ClaimExceptionFilter>();
+            #endregion
+
 
             #region Contexts
             builder.Services.AddDbContext<PolicyContext>(options =>

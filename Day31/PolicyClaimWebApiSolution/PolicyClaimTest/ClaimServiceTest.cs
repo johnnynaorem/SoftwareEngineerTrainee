@@ -55,6 +55,29 @@ namespace PolicyClaimTest
             Assert.AreEqual(addClaim.PolicyNumber, expectedClaim.PolicyNumber);
         }
 
+        [Test]
+        public async Task ClaimGet_Test()
+        {
+            var createDTO = new CreateClaimDTO
+            {
+                PolicyNumber = "POL123",
+                ClaimantId = 1,
+                ClaimDate = DateTime.Now,
+            };
+
+            var expectedClaim = new Claim
+            {
+                PolicyNumber = "POL123",
+                ClaimantId = 1,
+                ClaimDate = DateTime.Now,
+            };
+
+            ClaimService claimService = new ClaimService(repository, fileRepository);
+            await claimService.CreateClaim(createDTO);
+            var result = await claimService.GetAll();
+            Assert.IsNotNull(result);
+        }
+
 
     }
 }

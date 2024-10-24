@@ -61,9 +61,10 @@ namespace PolicyClaimWebApi.Services
             return claim;
         }
 
-        public Task<IEnumerable<Claim>> GetAll()
+        public async Task<IEnumerable<Claim>> GetAll()
         {
-            throw new NotImplementedException();
+            var claims = await _repository.GetAll();
+            return claims;
         }
     }
 }

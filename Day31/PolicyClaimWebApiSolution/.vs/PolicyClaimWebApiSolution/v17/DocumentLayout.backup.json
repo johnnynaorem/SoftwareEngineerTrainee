@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\claimcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\claimcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\claimtyperepositorytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\claimtyperepositorytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\controllers\\claimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\controllers\\claimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\services\\claimtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\services\\claimtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\models\\dtos\\createclaimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\models\\dtos\\createclaimdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\claimtypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\claimtypeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\policyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\policyservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\services\\claimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\repositories\\claimtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\repositories\\claimtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\claimrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\claimrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimtest\\claimservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C387EA14-80D3-415F-B925-96DD33984EB0}|PolicyClaimTest\\PolicyClaimTest.csproj|solutionrelative:policyclaimtest\\claimservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\validations\\claimexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\validations\\claimexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\interfaces\\iclaimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\interfaces\\iclaimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\models\\dtos\\errorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\models\\dtos\\errorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\interfaces\\iclaimfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\interfaces\\iclaimfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\validations\\policynumbervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\validations\\policynumbervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|c:\\johnny\\celsior_training\\day31\\policyclaimwebapisolution\\policyclaimwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33BAF0AA-E9F7-4EA8-9D83-80FD453F28AB}|PolicyClaimWebApi\\PolicyClaimWebApi.csproj|solutionrelative:policyclaimwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,45 +50,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateClaimDTO.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Models\\DTOs\\CreateClaimDTO.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Models\\DTOs\\CreateClaimDTO.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Models\\DTOs\\CreateClaimDTO.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Models\\DTOs\\CreateClaimDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ClaimTypeService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Services\\ClaimTypeService.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Services\\ClaimTypeService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Services\\ClaimTypeService.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Services\\ClaimTypeService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T06:46:43.168Z",
+              "WhenOpened": "2024-10-24T11:44:02.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClaimTypeServiceTest.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimTypeServiceTest.cs",
+              "RelativeDocumentMoniker": "PolicyClaimTest\\ClaimTypeServiceTest.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimTypeServiceTest.cs",
+              "RelativeToolTip": "PolicyClaimTest\\ClaimTypeServiceTest.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwC4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:41:09.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClaimControllerTest.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimControllerTest.cs",
-              "RelativeDocumentMoniker": "PolicyClaimTest\\ClaimControllerTest.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimControllerTest.cs",
-              "RelativeToolTip": "PolicyClaimTest\\ClaimControllerTest.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAywC4AAAApAAAAAAAAAA==",
+              "Title": "ClaimTypeRepositoryTesting.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimTypeRepositoryTesting.cs",
+              "RelativeDocumentMoniker": "PolicyClaimTest\\ClaimTypeRepositoryTesting.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimTypeRepositoryTesting.cs",
+              "RelativeToolTip": "PolicyClaimTest\\ClaimTypeRepositoryTesting.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAFQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T05:22:34.496Z",
+              "WhenOpened": "2024-10-24T11:33:10.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ClaimServiceTest.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimServiceTest.cs",
-              "RelativeDocumentMoniker": "PolicyClaimTest\\ClaimServiceTest.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimServiceTest.cs",
-              "RelativeToolTip": "PolicyClaimTest\\ClaimServiceTest.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwC8AAAAOAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ClaimTypeRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Repositories\\ClaimTypeRepository.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Repositories\\ClaimTypeRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Repositories\\ClaimTypeRepository.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Repositories\\ClaimTypeRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T05:05:09.595Z",
+              "WhenOpened": "2024-10-24T11:32:51.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PolicyServiceTest.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\PolicyServiceTest.cs",
+              "RelativeDocumentMoniker": "PolicyClaimTest\\PolicyServiceTest.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\PolicyServiceTest.cs",
+              "RelativeToolTip": "PolicyClaimTest\\PolicyServiceTest.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:23:19.409Z",
               "EditorCaption": ""
             },
             {
@@ -95,74 +125,61 @@
               "RelativeDocumentMoniker": "PolicyClaimTest\\ClaimRepositoryTest.cs",
               "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimTest\\ClaimRepositoryTest.cs",
               "RelativeToolTip": "PolicyClaimTest\\ClaimRepositoryTest.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAawCAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAgwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:48:35.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Program.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Program.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Program.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAswDgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T17:51:06.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClaimController.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Controllers\\ClaimController.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Controllers\\ClaimController.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Controllers\\ClaimController.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Controllers\\ClaimController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAEwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T17:49:06.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IClaimFileService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Interfaces\\IClaimFileService.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Interfaces\\IClaimFileService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Interfaces\\IClaimFileService.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Interfaces\\IClaimFileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T17:45:00.301Z",
+              "WhenOpened": "2024-10-24T10:45:12.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IClaimService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Interfaces\\IClaimService.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Interfaces\\IClaimService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Interfaces\\IClaimService.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Interfaces\\IClaimService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAUAAAAAAAAAA==",
+              "Title": "ErrorResponseDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Models\\DTOs\\ErrorResponseDTO.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Models\\DTOs\\ErrorResponseDTO.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Models\\DTOs\\ErrorResponseDTO.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Models\\DTOs\\ErrorResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T17:38:48.753Z",
+              "WhenOpened": "2024-10-24T09:49:06.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClaimService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Services\\ClaimService.cs",
-              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Services\\ClaimService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Services\\ClaimService.cs",
-              "RelativeToolTip": "PolicyClaimWebApi\\Services\\ClaimService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAswD0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ClaimExceptionFilter.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Validations\\ClaimExceptionFilter.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Validations\\ClaimExceptionFilter.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Validations\\ClaimExceptionFilter.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Validations\\ClaimExceptionFilter.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T17:18:01.997Z",
+              "WhenOpened": "2024-10-24T09:47:19.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Program.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T09:43:59.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PolicyNumberValidator.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Validations\\PolicyNumberValidator.cs",
+              "RelativeDocumentMoniker": "PolicyClaimWebApi\\Validations\\PolicyNumberValidator.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\PolicyClaimWebApiSolution\\PolicyClaimWebApi\\Validations\\PolicyNumberValidator.cs",
+              "RelativeToolTip": "PolicyClaimWebApi\\Validations\\PolicyNumberValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T07:41:28.341Z",
               "EditorCaption": ""
             }
           ]

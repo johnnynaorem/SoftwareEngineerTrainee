@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using PolicyClaimWebApi.Contexts;
 using PolicyClaimWebApi.Exceptions;
 using PolicyClaimWebApi.Models;
+using PolicyClaimWebApi.Models.DTOs;
 using PolicyClaimWebApi.Repositories;
 using System;
 using System.Collections.Generic;
@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace PolicyClaimTest
 {
-    public class ClaimRepositoryTest
+    public class ClaimTypeRepositoryTesting
     {
         DbContextOptions options;
         PolicyContext context;
-        ClaimRepository repository;
+        ClaimTypeRepository repository;
 
         [SetUp]
         public void Setup()
@@ -25,39 +25,39 @@ namespace PolicyClaimTest
                 .UseInMemoryDatabase("TestAdd")
                 .Options;
             context = new PolicyContext((DbContextOptions<PolicyContext>)options);
-            repository = new ClaimRepository(context);
+            repository = new ClaimTypeRepository(context);
         }
 
         [Test]
-        public async Task AddClaim_Test()
+        public async Task AddClaimType_Test()
         {
             //Arrangement
-            Claim claim = new Claim
+            var claimType = new ClaimType
             {
-                ClaimantId = 1,
+                TypeDescription = "Something",
                 PolicyNumber = "POL123",
-                ClaimDate = DateTime.Now
+                TypeName = "Test"
             };
 
-            var addedUser = await repository.Add(claim);
-            Assert.NotNull(addedUser);
+            var addedClaimType = await repository.Add(claimType);
+            Assert.NotNull(addedClaimType);
 
-            Assert.AreEqual(1, addedUser.ClaimID);
+            Assert.AreEqual(claimType.PolicyNumber, addedClaimType.PolicyNumber);
         }
 
         [Test]
-        public async Task GetClaim_Test()
+        public async Task GetClaimType_Test()
         {
             //Arrangement
-            Claim claim = new Claim
+            var claimType = new ClaimType
             {
-                ClaimantId = 1,
+                TypeDescription = "Something",
                 PolicyNumber = "POL123",
-                ClaimDate = DateTime.Now
+                TypeName = "Test"
             };
 
             //Act
-            await repository.Add(claim);
+            await repository.Add(claimType);
             var result = await repository.GetAll();
 
             //Assert
@@ -67,28 +67,27 @@ namespace PolicyClaimTest
         //Exceptions Testing
 
         [Test]
-        public async Task ClaimRepositoryAdd_CouldNotAddException()
+        public async Task ClaimTypeRepositoryAdd_CouldNotAddException()
         {
-            Claim claim = new Claim
+            var claimType = new ClaimType
             {
-                ClaimantId = 1,
+                TypeDescription = "Something",
                 PolicyNumber = null,
-                ClaimDate = DateTime.Now
+                TypeName = "Test"
             };
 
-            var exception = Assert.ThrowsAsync<CouldNotAddException>(async () => await repository.Add(claim));
+            var exception = Assert.ThrowsAsync<CouldNotAddException>(async () => await repository.Add(claimType));
             Assert.IsNotNull(exception);
-            Assert.AreEqual(exception.Message, "Fail to add Claim");
+            Assert.AreEqual(exception.Message, "Fail to add ClaimType");
         }
 
 
         [Test]
-        public async Task ClaimRepositoryGetAll_EmptyCollectionException()
+        public async Task ClaimTypeRepositoryGetAll_EmptyCollectionException()
         {
             var exception = Assert.ThrowsAsync<EmptyCollectionException>(async () => await repository.GetAll());
             Assert.IsNotNull(exception);
-            Assert.AreEqual(exception.Message, "Claims Collection Empty");
+            Assert.AreEqual(exception.Message, "ClaimType collection is empty");
         }
     }
-
 }

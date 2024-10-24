@@ -2,8 +2,7 @@
 
 namespace PolicyClaimWebApi.Exceptions
 {
-    [Serializable]
-    internal class EmptyCollectionException : Exception
+    public class EmptyCollectionException : Exception
     {
         public EmptyCollectionException()
         {
