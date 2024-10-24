@@ -1,0 +1,85 @@
+[
+  {
+    "ContainingType": "InsurancePolicyWebAPI.Controllers.ClaimantController",
+    "Method": "Create",
+    "RelativePath": "api/Claimant/CreateClaimant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "InsurancePolicyWebAPI.Models.DTOs.ClaimantDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InsurancePolicyWebAPI.Controllers.ClaimantController",
+    "Method": "Get",
+    "RelativePath": "api/Claimant/GetAllClaimant",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InsurancePolicyWebAPI.Controllers.ClaimReport",
+    "Method": "CreateReport",
+    "RelativePath": "api/ClaimReport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FilePath",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfIncident",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "PolicyNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InsurancePolicyWebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[InsurancePolicyWebAPI.WeatherForecast, InsurancePolicyWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\controllers\\claimreportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\controllers\\claimreportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\services\\claimreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\services\\claimreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\models\\claimreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\models\\claimreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\repositories\\claimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\repositories\\claimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\repositories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\repositories\\policyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\services\\policyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\models\\dtos\\claimreportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\models\\dtos\\claimreportrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|c:\\johnny\\celsior_training\\day31\\insurancepolicywebapisolution\\insurancepolicywebapi\\interfaces\\iclaimreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3370A043-1B4A-40C9-A047-CE44AEEA32DB}|InsurancePolicyWebAPI\\InsurancePolicyWebAPI.csproj|solutionrelative:insurancepolicywebapi\\interfaces\\iclaimreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PolicyRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Repositories\\PolicyRepository.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Repositories\\PolicyRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Repositories\\PolicyRepository.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Repositories\\PolicyRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T13:11:40.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T13:11:34.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PolicyService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Services\\PolicyService.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Services\\PolicyService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Services\\PolicyService.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Services\\PolicyService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T13:10:45.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClaimRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Repositories\\ClaimRepository.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Repositories\\ClaimRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Repositories\\ClaimRepository.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Repositories\\ClaimRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T13:06:17.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Program.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T13:04:48.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClaimReportRequest.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Models\\DTOs\\ClaimReportRequest.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Models\\DTOs\\ClaimReportRequest.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Models\\DTOs\\ClaimReportRequest.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Models\\DTOs\\ClaimReportRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T12:54:51.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClaimReport.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Models\\ClaimReport.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Models\\ClaimReport.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Models\\ClaimReport.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Models\\ClaimReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T12:53:55.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IClaimReport.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Interfaces\\IClaimReport.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Interfaces\\IClaimReport.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Interfaces\\IClaimReport.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Interfaces\\IClaimReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T12:41:43.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClaimReportService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Services\\ClaimReportService.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Services\\ClaimReportService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Services\\ClaimReportService.cs",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Services\\ClaimReportService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswEkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T12:44:33.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClaimReportController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Controllers\\ClaimReportController.cs",
+              "RelativeDocumentMoniker": "InsurancePolicyWebAPI\\Controllers\\ClaimReportController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day31\\InsurancePolicyWebAPISolution\\InsurancePolicyWebAPI\\Controllers\\ClaimReportController.cs*",
+              "RelativeToolTip": "InsurancePolicyWebAPI\\Controllers\\ClaimReportController.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wBgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T11:10:09.099Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

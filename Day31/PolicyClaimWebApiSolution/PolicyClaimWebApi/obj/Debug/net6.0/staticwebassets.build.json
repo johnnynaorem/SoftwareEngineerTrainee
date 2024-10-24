@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "m8r3GV4PYgXftlbrsXdCgcyqlMF4+251Ururqs74w6Y=",
+  "Source": "PolicyClaimWebApi",
+  "BasePath": "_content/PolicyClaimWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
