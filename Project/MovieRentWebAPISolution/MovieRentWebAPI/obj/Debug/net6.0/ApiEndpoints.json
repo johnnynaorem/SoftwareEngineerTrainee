@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "RegisterCustomer",
+    "RelativePath": "api/Customer/RegisterCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "MovieRentWebAPI.Models.DTOs.CreateCustomerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "UpdateCustomerProfile",
+    "RelativePath": "api/Customer/UpdateCustomerProfile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "MovieRentWebAPI.Models.DTOs.CreateCustomerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
     "Method": "AddMovie",
     "RelativePath": "api/Movie/AddMovie",
@@ -64,6 +106,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "ReserveMovie",
+    "RelativePath": "api/MovieReservation/MovieReservation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reserveMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.ReserveMovieDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "UpdateMovieReserveStatus",
+    "RelativePath": "api/MovieReservation/UpdateMovieReserveStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateMovieReserveStatus",
+        "Type": "MovieRentWebAPI.Models.DTOs.ReservedMovieStatusUpdateRequestDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

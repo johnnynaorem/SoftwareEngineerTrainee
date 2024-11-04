@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MovieRentWebAPI.Context;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Repositories;
 using NUnit.Framework;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,7 +59,7 @@ namespace MovieRentWebApiTesting
             };
             var addedUser = await repository.Add(user);
 
-            var getUser = await repository.Get(1);
+            var getUser = await repository.Get("johnnynaorem7@gmail.com");
             Assert.IsNotNull(getUser);
         }
 
@@ -78,6 +80,76 @@ namespace MovieRentWebApiTesting
 
             var getUser = await repository.GetAll();
             Assert.IsNotNull(getUser);
+        }
+
+        [Test]
+        public async Task UpdateUser_test()
+        {
+            var user = new User
+            {
+                UserName = "TestUser",
+                UserEmail = "johnnynaorem7@gmail.com",
+                Password = Encoding.UTF8.GetBytes("TestPassword"),
+                HashKey = Encoding.UTF8.GetBytes("TestHashKey"),
+                Role = UserRole.Admin
+            };
+
+            var updateUser = new User
+            {
+                UserName = "TestUserUpdate",
+                UserEmail = "johnnynaorem7@gmail.com",
+                Password = Encoding.UTF8.GetBytes("TestPassword"),
+                HashKey = Encoding.UTF8.GetBytes("TestHashKey"),
+                Role = UserRole.Admin
+            };
+            await repository.Add(user);
+            var update = await repository.Update(updateUser, user.UserEmail);
+            Assert.IsNotNull(update);
+            Assert.AreEqual(user.UserEmail, updateUser.UserEmail);
+        }
+
+        [Test]
+        public async Task DeleteUser_test()
+        {
+            User user = new User
+            {
+                UserName = "TestUser",
+                UserEmail = "johnnynaorem7@gmail.com",
+                Password = Encoding.UTF8.GetBytes("TestPassword"),
+                HashKey = Encoding.UTF8.GetBytes("TestHashKey"),
+                Role = UserRole.Admin
+            };
+            var addUser = await repository.Add(user);
+            var delete = await repository.Delete(addUser.UserEmail);
+            Assert.IsNotNull(delete);
+            Assert.AreEqual(user.UserEmail, delete.UserEmail);
+        }
+
+        [Test]
+        public async Task DeleteUserFail_test()
+        {
+            var exception = Assert.ThrowsAsync<Exception>(async () => await repository.Delete("johnnynao10@gmail.com"));
+            Assert.AreEqual(exception.Message, "Delete Failed");
+        }
+
+        [Test]
+        public async Task GetAllUsers_ShouldThrowEmptyCollectionException_WhenNoUsersExist()
+        {
+            
+
+            var exception = Assert.ThrowsAsync<EmptyCollectionException>(async () => await repository.GetAll());
+            Assert.AreEqual("Users Collection Empty", exception.Message);
+        }
+
+        [Test]
+        public async Task UpdateUserFail_test()
+        {
+            var exception = Assert.ThrowsAsync<CouldNotUpdateException>(async () => await repository.Update(new User
+            {
+                UserName = "TestUserUpdate",
+                Role = UserRole.user,
+            }, "johnnynao10@gmail.com"));
+            Assert.AreEqual(exception.Message, "Update Failed");
         }
     }
 }

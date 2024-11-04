@@ -6,7 +6,7 @@ using MovieRentWebAPI.Models;
 
 namespace MovieRentWebAPI.Repositories
 {
-    public class UserRepository : IRepository<int, User>
+    public class UserRepository : IRepository<string, User>
     {
         private readonly MovieRentContext _context;
 
@@ -27,7 +27,7 @@ namespace MovieRentWebAPI.Repositories
                 }
                 else
                 {
-                    throw new Exception("User already Exist.... Please LogIn");
+                    throw new InvalidOperationException("User already Exist.... Please LogIn");
                 }
             }
             catch (Exception ex) {
@@ -35,7 +35,7 @@ namespace MovieRentWebAPI.Repositories
             }
         }
 
-        public async Task<User> Delete(int key)
+        public async Task<User> Delete(string key)
         {
             var deletedUser = await Get(key);
             if (deletedUser != null) {
@@ -46,9 +46,9 @@ namespace MovieRentWebAPI.Repositories
             throw new Exception("Delete Failed");
         }
 
-        public async Task<User> Get(int key)
+        public async Task<User> Get(string key)
         {
-            var user = _context.Users.FirstOrDefault(x => x.UserId == key);
+            var user = _context.Users.FirstOrDefault(x => x.UserEmail == key);
             return user;
         }
 
@@ -62,7 +62,7 @@ namespace MovieRentWebAPI.Repositories
             throw new EmptyCollectionException("Users Collection Empty");
         }
 
-        public async Task<User> Update(User entity, int key)
+        public async Task<User> Update(User entity, string key)
         {
             var updatedUser = await Get(key);
             if (updatedUser != null) 
@@ -74,10 +74,7 @@ namespace MovieRentWebAPI.Repositories
                 await _context.SaveChangesAsync();
                 return updatedUser;
             }
-            else
-            {
-                throw new Exception("Update Failed");
-            }
+            throw new CouldNotUpdateException("Update Failed");
         }
     }
 }

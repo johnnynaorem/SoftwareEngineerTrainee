@@ -27,14 +27,14 @@ namespace MovieRentWebAPI.Context
             modelBuilder.Entity<Customer>()
                 .HasMany(c => c.Wishlists)
                 .WithOne(w => w.Customer)
-                .HasForeignKey(c => c.WishlistId)
+                .HasForeignKey(w => w.CustomerId) 
                 .HasConstraintName("FK_Customer_Wishlist")
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Customer>()
                 .HasMany(c => c.Reservations)
                 .WithOne(r => r.Customer)
-                .HasForeignKey(c => c.ReservationId)
+                .HasForeignKey(r => r.CustomerId) 
                 .HasConstraintName("FK_Customer_Reservation")
                 .OnDelete(DeleteBehavior.Cascade);
 
@@ -46,18 +46,18 @@ namespace MovieRentWebAPI.Context
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Rental>()
-                 .HasOne(r => r.Movie)
-                 .WithMany(m => m.Rentals)
-                 .HasForeignKey(m => m.MovieId)
-                 .HasConstraintName("FK_Rental_Movie")
-                 .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(r => r.Movie)
+                .WithMany(m => m.Rentals)
+                .HasForeignKey(r => r.MovieId)
+                .HasConstraintName("FK_Rental_Movie")
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Movie>()
-                 .HasMany(m => m.Reservations)
-                 .WithOne(r => r.Movie)
-                 .HasForeignKey(m => m.ReservationId)
-                 .HasConstraintName("FK_Movie_Reservation")
-                 .OnDelete(DeleteBehavior.Cascade);
+                .HasMany(m => m.Reservations)
+                .WithOne(r => r.Movie)
+                .HasForeignKey(r => r.MovieId) 
+                .HasConstraintName("FK_Movie_Reservation")
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Payment>()
                 .HasOne(p => p.Customer)
@@ -65,6 +65,7 @@ namespace MovieRentWebAPI.Context
                 .HasForeignKey(p => p.CustomerId)
                 .HasConstraintName("FK_Payment_Customer")
                 .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

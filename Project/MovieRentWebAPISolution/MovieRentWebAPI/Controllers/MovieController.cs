@@ -48,7 +48,7 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
-        [HttpPost("GetAllMovies")]
+        [HttpGet("GetAllMovies")]
         [Authorize]
         public async Task<IActionResult> GetAllMovies()
         {
@@ -67,7 +67,7 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
-        [HttpPost("GetAllMoviesNames")]
+        [HttpGet("GetAllMoviesNames")]
         [Authorize]
         public async Task<IActionResult> GetAllMoviesNames()
         {
@@ -92,8 +92,19 @@ namespace MovieRentWebAPI.Controllers
         [HttpGet("filter")]
         public async Task<IActionResult> FilterMovies([FromQuery] MovieFilterDTO filter)
         {
-            var movies = await _movieService.FilterMoviesAsync(filter);
-            return Ok(movies);
+            try
+            {
+                var movies = await _movieService.FilterMoviesAsync(filter);
+                return Ok(movies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
         }
     }
 }

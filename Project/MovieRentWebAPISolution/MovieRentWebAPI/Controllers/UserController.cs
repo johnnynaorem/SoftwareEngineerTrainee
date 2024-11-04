@@ -75,7 +75,7 @@ namespace MovieRentWebAPI.Controllers
                 return StatusCode(StatusCodes.Status401Unauthorized, new ErrorResponseDTO
                 {
                     ErrorCode = 401,
-                    ErrorMessage = "An unexpected error occurred. Please try again later."
+                    ErrorMessage = ex.Message
                 });
             }
         }

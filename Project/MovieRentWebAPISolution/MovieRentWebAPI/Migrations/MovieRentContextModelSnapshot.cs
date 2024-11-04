@@ -160,12 +160,12 @@ namespace MovieRentWebAPI.Migrations
             modelBuilder.Entity("MovieRentWebAPI.Models.Reservation", b =>
                 {
                     b.Property<int>("ReservationId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservationId"), 1L, 1);
 
                     b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IsActive")
                         .HasColumnType("int");
 
                     b.Property<int>("MovieId")
@@ -174,7 +174,14 @@ namespace MovieRentWebAPI.Migrations
                     b.Property<DateTime>("ReservationDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("ReservationId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("Reservations");
                 });
@@ -214,7 +221,10 @@ namespace MovieRentWebAPI.Migrations
             modelBuilder.Entity("MovieRentWebAPI.Models.Wishlist", b =>
                 {
                     b.Property<int>("WishlistId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WishlistId"), 1L, 1);
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
@@ -223,6 +233,8 @@ namespace MovieRentWebAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("WishlistId");
+
+                    b.HasIndex("CustomerId");
 
                     b.HasIndex("MovieId");
 
@@ -278,14 +290,14 @@ namespace MovieRentWebAPI.Migrations
                 {
                     b.HasOne("MovieRentWebAPI.Models.Customer", "Customer")
                         .WithMany("Reservations")
-                        .HasForeignKey("ReservationId")
+                        .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Customer_Reservation");
 
                     b.HasOne("MovieRentWebAPI.Models.Movie", "Movie")
                         .WithMany("Reservations")
-                        .HasForeignKey("ReservationId")
+                        .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Movie_Reservation");
@@ -297,18 +309,18 @@ namespace MovieRentWebAPI.Migrations
 
             modelBuilder.Entity("MovieRentWebAPI.Models.Wishlist", b =>
                 {
+                    b.HasOne("MovieRentWebAPI.Models.Customer", "Customer")
+                        .WithMany("Wishlists")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Customer_Wishlist");
+
                     b.HasOne("MovieRentWebAPI.Models.Movie", "Movie")
                         .WithMany()
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("MovieRentWebAPI.Models.Customer", "Customer")
-                        .WithMany("Wishlists")
-                        .HasForeignKey("WishlistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Customer_Wishlist");
 
                     b.Navigation("Customer");
 

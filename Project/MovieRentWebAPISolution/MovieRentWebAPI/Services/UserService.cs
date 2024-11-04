@@ -11,12 +11,12 @@ namespace MovieRentWebAPI.Services
 {
     public class UserService : IUserService
     {
-        private readonly IRepository<int, User> _userRepo;
+        private readonly IRepository<string, User> _userRepo;
         private readonly ILogger<UserService> _logger;
         private readonly ITokenService _tokenService;
         private readonly IEmailSender _emailSender;
 
-        public UserService(IRepository<int, User> userRepository, ILogger<UserService> logger, ITokenService tokenService, IEmailSender emailSender)
+        public UserService(IRepository<string, User> userRepository, ILogger<UserService> logger, ITokenService tokenService, IEmailSender emailSender)
         {
             _userRepo = userRepository;
             _logger = logger;
@@ -49,16 +49,15 @@ namespace MovieRentWebAPI.Services
             byte[] newPasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(entity.NewPassword));
             user.Password = newPasswordHash;
 
-            var userUpdateSuccess = await _userRepo.Update(user, user.UserId);
+            var userUpdateSuccess = await _userRepo.Update(user, user.UserEmail);
             if(userUpdateSuccess != null)
             {
                 string body = $"Dear {userUpdateSuccess.UserName},\n\n" +
                             "Welcome to our service!\n\n" +
-                            $"Your password has been successfully change at {DateTime.Now}.\nHere are your login details:\n\n" +
+                            $"Your password has been successfully updated at {DateTime.Now}.\nHere is your new password:\n\n" +
                             $"**New Password:** {entity.NewPassword}\n\n" +
                             "For your security, please remember the following:\n" +
                             "- Do not share your password with anyone.\n" +
-                            "- We recommend changing your password after your first login to something more secure.\n" +
                             "- If you suspect any unauthorized access, please change your password immediately.\n\n" +
                             "Thank you for choosing us! If you have any questions, feel free to reach out to our support team.\n\n" +
                             "Best regards,\n" +
@@ -92,7 +91,8 @@ namespace MovieRentWebAPI.Services
                 UserName = userCreate.UserName,
                 Password = passwordHash,
                 HashKey = hmac.Key,
-                UserEmail = userCreate.UserEmail
+                UserEmail = userCreate.UserEmail,
+                Role = userCreate.Role
             };
             try
             {
@@ -134,8 +134,7 @@ namespace MovieRentWebAPI.Services
 
         public async Task<LoginResponseDTO> LoginUser(LoginRequestDTO loginUser)
         {
-            var users = await _userRepo.GetAll();
-            var user = users.FirstOrDefault(u => u.UserEmail == loginUser.UserEmail);
+            var user = await _userRepo.Get(loginUser.UserEmail);
             if (user == null)
             {
                 throw new Exception("User not found");

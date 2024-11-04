@@ -24,7 +24,7 @@ namespace MovieRentWebAPI.Repositories
             }
             catch (Exception ex)
             {
-                throw new CouldNotAddException($"Movie Add Failed....{ex.Message}");
+                throw new CouldNotAddException($"Movie Add Failed: {ex.Message}");
             }
         }
 
@@ -59,23 +59,48 @@ namespace MovieRentWebAPI.Repositories
         public async Task<Movie> Update(Movie entity, int key)
         {
             var updateMovie = await Get(key);
-            if (updateMovie != null)
+            if (updateMovie == null)
+            {
+                throw new KeyNotFoundException($"Movie with ID {key} not found.");
+            }
+
+            if (!string.IsNullOrWhiteSpace(entity.Title))
             {
                 updateMovie.Title = entity.Title;
-                updateMovie.Genre = entity.Genre;
-                updateMovie.Description = entity.Description;
-                updateMovie.Rating = entity.Rating;
-                updateMovie.AvailableCopies = entity.AvailableCopies;
-                updateMovie.Rental_Price = entity.Rental_Price;
-                updateMovie.CoverImage = entity.CoverImage;
+            }
 
-                await _context.SaveChangesAsync();
-                return updateMovie;
-            }
-            else
+            if (!string.IsNullOrWhiteSpace(entity.Genre))
             {
-                throw new Exception("Update Failed");
+                updateMovie.Genre = entity.Genre;
             }
+
+            if (!string.IsNullOrWhiteSpace(entity.Description))
+            {
+                updateMovie.Description = entity.Description;
+            }
+
+            if (entity.Rating != null)
+            {
+                updateMovie.Rating = entity.Rating;
+            }
+
+            if (entity.AvailableCopies >= 0) 
+            {
+                updateMovie.AvailableCopies = entity.AvailableCopies;
+            }
+
+            if (entity.Rental_Price >= 0)
+            {
+                updateMovie.Rental_Price = entity.Rental_Price;
+            }
+            if (!string.IsNullOrWhiteSpace(entity.CoverImage))
+            {
+                updateMovie.CoverImage = entity.CoverImage;
+            }
+
+            await _context.SaveChangesAsync();
+            return updateMovie;
+            
         }
     }
 }
