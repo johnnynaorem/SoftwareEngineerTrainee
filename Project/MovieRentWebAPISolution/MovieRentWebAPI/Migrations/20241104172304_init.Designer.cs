@@ -12,7 +12,7 @@ using MovieRentWebAPI.Context;
 namespace MovieRentWebAPI.Migrations
 {
     [DbContext(typeof(MovieRentContext))]
-    [Migration("20241104105457_init")]
+    [Migration("20241104172304_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

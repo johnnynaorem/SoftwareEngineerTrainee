@@ -68,7 +68,7 @@ namespace MovieRentWebAPI.Services
             return addReservation.ReservationId;
         }
 
-        public async Task<Reservation> UpdateMovieReservationStatus(ReservedMovieStatusUpdateRequestDTO entity)
+        public async Task<ReservedStatusUpdateResponseDTO> UpdateMovieReservationStatus(ReservedMovieStatusUpdateRequestDTO entity)
         {
             var reservation = new Reservation
             {
@@ -177,7 +177,7 @@ namespace MovieRentWebAPI.Services
 
                 }
             }
-            return movieReservationUpdateStatus;
+            return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status, ReservationId = movieReservationUpdateStatus.ReservationId };
         }
     }
 }

@@ -51,6 +51,11 @@ namespace MovieRentWebAPI.Services
                 filteredMovies = filteredMovies.Where(m => m.Genre.Equals(filter.Genre, StringComparison.OrdinalIgnoreCase));
             }
 
+            if (filter.Rating.HasValue)
+            {
+                filteredMovies = filteredMovies.Where(m => m.Rating == filter.Rating);
+            }
+
             if (filter.ReleaseDate.HasValue)
             {
                 filteredMovies = filteredMovies.Where(m => m.ReleaseDate.Date == filter.ReleaseDate.Value.Date);

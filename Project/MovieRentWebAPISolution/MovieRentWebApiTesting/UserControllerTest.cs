@@ -15,6 +15,7 @@ using MovieRentWebAPI.Repositories;
 using MovieRentWebAPI.Services;
 using NUnit.Framework;
 using System.Data;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -81,7 +82,6 @@ namespace MovieRentWebApiTesting
                 HashKey = hmac.Key,
                 Role = role,
             };
-            var userService = new UserService(repository, loggerUserService.Object, mockTokenService.Object, _mockEmailSender.Object);
 
             mapper.Setup(m => m.Map<User>(newUser)).Returns(userEntity);
 
@@ -136,11 +136,10 @@ namespace MovieRentWebApiTesting
                 Username = username
             };
 
-            mapper.Setup(m => m.Map<User>(newUser)).Returns(userEntity);
-            mapper.Setup(m => m.Map<LoginResponseDTO>(loginC)).Returns(loginR);
+            mapper.Setup(m => m.Map<LoginResponseDTO>(It.IsAny<LoginRequestDTO>())).Returns(loginR);
+            userService.CreateUser(newUser); 
 
             // Act
-            await userController.RegistrationUser(newUser);
             var result = await userController.LoginUser(loginC);
             Assert.IsNotNull(result);
             var resultObject = result as OkObjectResult;
@@ -152,6 +151,67 @@ namespace MovieRentWebApiTesting
             //Assert.IsNotNull(returnedUser);
             //Assert.AreEqual(username, returnedUser.Username);
         }
+
+        [Test]
+        [TestCase("TestUser2", "TestPassword2", "TestHashKey", UserRole.Admin, "newPassword")]
+        public async Task ChangePassword_UserController_Testing(string username, string email, string password, UserRole role, string newPassword)
+        {
+            // Arrange
+            HMACSHA256 hmac = new HMACSHA256();
+            byte[] passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+
+            var newUser = new UserCreateDTO
+            {
+                UserName = username,
+                UserEmail = email,
+                Password = password,
+                Role = role
+            };
+
+            var userEntity = new User
+            {
+                UserName = username,
+                UserEmail = email,
+                Password = passwordHash,
+                HashKey = hmac.Key,
+                Role = role
+            };
+
+
+            var updatePassword = new ChangePasswordRequestDTO
+            {
+                OldPassword = password,
+                NewPassword = newPassword,
+            };
+
+            var userServiceMock = new Mock<IUserService>();
+            var userController = new UserController(userServiceMock.Object, loggerController.Object);
+
+            await userController.RegistrationUser(newUser);
+
+            // Mocking the ClaimsPrincipal
+            var userClaims = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
+            {
+                new Claim("Username", username),
+                new Claim("Email", email)
+            }));
+
+            userController.ControllerContext = new ControllerContext
+            {
+                HttpContext = new DefaultHttpContext { User = userClaims }
+            };
+
+            // Act
+            var result = await userController.ChangePassword(updatePassword);
+            Assert.IsNotNull(result);
+            var resultObject = result as OkObjectResult;
+
+            // Assert
+            Assert.IsNotNull(resultObject);
+            Assert.AreEqual(200, resultObject.StatusCode);
+        }
+
 
         //Exceptions Testing
         [Test]

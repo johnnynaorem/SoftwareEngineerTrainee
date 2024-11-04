@@ -19,8 +19,8 @@ namespace MovieRentWebAPI.Controllers
             _logger = logger;
         }
 
-        [HttpPost("MovieReservation")]
-        [Authorize]
+        [HttpPost("ReserveMovie")]
+        [Authorize(Roles = "user")]
 
         public async Task <IActionResult> ReserveMovie(ReserveMovieDTO reserveMovie)
         {
@@ -50,7 +50,7 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
-        [HttpPut("UpdateMovieReserveStatus")]
+        [HttpPatch("UpdateMovieReserveStatus")]
         [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> UpdateMovieReserveStatus(ReservedMovieStatusUpdateRequestDTO updateMovieReserveStatus)

@@ -35,7 +35,7 @@ namespace MovieRentWebAPI.Services
 
             if (user == null)
             {
-                throw new Exception("User not found");
+                throw new InvalidOperationException("User not found");
             }
 
             HMACSHA256 hmac = new HMACSHA256(user.HashKey);
@@ -43,7 +43,7 @@ namespace MovieRentWebAPI.Services
 
             if (!passwordHash.SequenceEqual(user.Password))
             {
-                throw new Exception("Incorrect old password");
+                throw new InvalidOperationException("Incorrect old password");
             }
 
             byte[] newPasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(entity.NewPassword));
@@ -127,9 +127,10 @@ namespace MovieRentWebAPI.Services
             }
         }
 
-        public Task<IEnumerable<User>> GetUsers()
+        public async Task<IEnumerable<User>> GetUsers()
         {
-            throw new NotImplementedException();
+            var users = await _userRepo.GetAll();
+            return users;
         }
 
         public async Task<LoginResponseDTO> LoginUser(LoginRequestDTO loginUser)

@@ -90,6 +90,7 @@ namespace MovieRentWebAPI.Controllers
         }
 
         [HttpGet("filter")]
+        [Authorize]
         public async Task<IActionResult> FilterMovies([FromQuery] MovieFilterDTO filter)
         {
             try

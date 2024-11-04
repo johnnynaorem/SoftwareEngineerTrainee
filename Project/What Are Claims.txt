@@ -1,0 +1,21 @@
+What Are Claims?
+Claims are pieces of information about a user that tell a system who they are and what they can do. Think of claims as small notes attached to a user that say things like:
+
+"This user is named Alice."
+"Alice is an admin."
+"Alice's email is alice@example.com."
+Example Scenario
+Imagine you have a website where users can log in to access different features.
+
+User Logs In: When Alice logs in, the system creates a token (like a digital ID card) for her. This token contains claims about her.
+
+Claims in the Token:
+
+Name: "Alice"
+Email: "alice@example.com"
+Role: "Admin" (meaning she has special privileges)
+Using Claims:
+
+When Alice tries to access an admin dashboard, the system checks her token.
+It looks at the claims: since her role is "Admin," the system lets her in.
+If another user, Bob, logs in as a regular user (with a role claim of "User"), he won't be able to access the admin dashboard.

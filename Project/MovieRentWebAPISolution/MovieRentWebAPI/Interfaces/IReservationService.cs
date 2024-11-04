@@ -6,6 +6,6 @@ namespace MovieRentWebAPI.Interfaces
     public interface IReservationService
     {
         Task<int> ReserverMovie(ReserveMovieDTO reserveMovie);
-        Task<Reservation> UpdateMovieReservationStatus(ReservedMovieStatusUpdateRequestDTO entity);
+        Task<ReservedStatusUpdateResponseDTO> UpdateMovieReservationStatus(ReservedMovieStatusUpdateRequestDTO entity);
     }
 }

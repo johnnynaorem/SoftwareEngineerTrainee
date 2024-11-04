@@ -40,7 +40,7 @@ namespace MovieRentWebAPI.Repositories
 
         public async Task<Customer> Get(int key)
         {
-            var cutomer =  _context.Customers.FirstOrDefault(c => c.UserId == key);
+            var cutomer =  _context.Customers.FirstOrDefault(c => c.CustomerId == key);
             return cutomer;
         }
 

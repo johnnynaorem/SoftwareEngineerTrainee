@@ -20,7 +20,7 @@ namespace MovieRentWebAPI.Controllers
             _logger = logger;
         }
 
-        [HttpPost("UserRegistrarion")]
+        [HttpPost("UserRegistration")]
 
         public async Task<IActionResult> RegistrationUser(UserCreateDTO userCreateDTO)
         {

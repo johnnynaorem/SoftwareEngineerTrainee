@@ -48,7 +48,7 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
-        [HttpPut("UpdateCustomerProfile")]
+        [HttpPatch("UpdateCustomerProfile")]
         [Authorize]
         public async Task<IActionResult> UpdateCustomerProfile(CreateCustomerDTO customer)
         {
@@ -72,13 +72,13 @@ namespace MovieRentWebAPI.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
                 {
-                    ErrorMessage = ex.ToString(),
+                    ErrorMessage = ex.Message.ToString(),
                     ErrorCode = 500
                 });
             }
         }
 
-        [HttpGet]
+        [HttpGet("GetAllCustomer")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllCustomers()
         {
