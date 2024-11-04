@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\isupplierservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\isupplierservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\icustomerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\icustomerservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|c:\\johnny\\celsior_training\\day6\\day6tasksolution\\day6task\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE8773CB-AB17-4C97-9758-7D31A00414D3}|Day6Task\\Day6Task.csproj|solutionrelative:day6task\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISupplierServices.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ISupplierServices.cs",
+              "RelativeDocumentMoniker": "Day6Task\\ISupplierServices.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ISupplierServices.cs",
+              "RelativeToolTip": "Day6Task\\ISupplierServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T08:11:17.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Supplier.cs",
+              "RelativeDocumentMoniker": "Day6Task\\Supplier.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Supplier.cs",
+              "RelativeToolTip": "Day6Task\\Supplier.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T08:00:44.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ProductServices.cs",
+              "RelativeDocumentMoniker": "Day6Task\\ProductServices.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ProductServices.cs",
+              "RelativeToolTip": "Day6Task\\ProductServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T07:36:57.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Program.cs",
+              "RelativeDocumentMoniker": "Day6Task\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Program.cs",
+              "RelativeToolTip": "Day6Task\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwJMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T07:19:48.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICustomerServices.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ICustomerServices.cs",
+              "RelativeDocumentMoniker": "Day6Task\\ICustomerServices.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\ICustomerServices.cs",
+              "RelativeToolTip": "Day6Task\\ICustomerServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T09:49:35.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Customer.cs",
+              "RelativeDocumentMoniker": "Day6Task\\Customer.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Customer.cs",
+              "RelativeToolTip": "Day6Task\\Customer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAhwBQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T07:27:13.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Product.cs",
+              "RelativeDocumentMoniker": "Day6Task\\Product.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\Day6TaskSolution\\Day6Task\\Product.cs",
+              "RelativeToolTip": "Day6Task\\Product.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T07:22:25.225Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

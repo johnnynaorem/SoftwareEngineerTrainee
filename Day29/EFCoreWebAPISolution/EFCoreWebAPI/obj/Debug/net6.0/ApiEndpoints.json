@@ -1,0 +1,150 @@
+[
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.AuthenticationController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Authentication/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EFCoreWebAPI.Models.DTO.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.AuthenticationController",
+    "Method": "LoginUser",
+    "RelativePath": "api/Authentication/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "EFCoreWebAPI.Models.DTO.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.CustomerController",
+    "Method": "CreateCustomer",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "EFCoreWebAPI.Models.DTO.CustomerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.GetProductController",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/GetProduct/getAllProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.GetProductController",
+    "Method": "GetProduct",
+    "RelativePath": "api/GetProduct/getProductById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.ProductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Product/CreateProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "EFCoreWebAPI.Models.DTO.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.ProductController",
+    "Method": "UpdateProductPrice",
+    "RelativePath": "api/Product/UpdateProductPrice",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "price",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.ProductImageController",
+    "Method": "CreateProductImage",
+    "RelativePath": "api/ProductImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productImage",
+        "Type": "EFCoreWebAPI.Models.DTO.ProductImageDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EFCoreWebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EFCoreWebAPI.WeatherForecast, EFCoreWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

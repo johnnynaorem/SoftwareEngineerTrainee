@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\bin\Debug\net6.0\BuildDesignPattern.exe
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\bin\Debug\net6.0\BuildDesignPattern.deps.json
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\bin\Debug\net6.0\BuildDesignPattern.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\bin\Debug\net6.0\BuildDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\bin\Debug\net6.0\BuildDesignPattern.pdb
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.sourcelink.json
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\refint\BuildDesignPattern.dll
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.pdb
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\BuildDesignPattern.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day20\BuildDesignPatternSolution\BuildDesignPattern\obj\Debug\net6.0\ref\BuildDesignPattern.dll

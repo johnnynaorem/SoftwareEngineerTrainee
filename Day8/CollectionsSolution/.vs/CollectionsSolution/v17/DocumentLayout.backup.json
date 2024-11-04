@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day8\\CollectionsSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A197801-4C60-4A3F-8935-DC16DECDB2A5}|Collections\\Collections.csproj|c:\\johnny\\celsior_training\\day8\\collectionssolution\\collections\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A197801-4C60-4A3F-8935-DC16DECDB2A5}|Collections\\Collections.csproj|solutionrelative:collections\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A197801-4C60-4A3F-8935-DC16DECDB2A5}|Collections\\Collections.csproj|c:\\johnny\\celsior_training\\day8\\collectionssolution\\collections\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A197801-4C60-4A3F-8935-DC16DECDB2A5}|Collections\\Collections.csproj|solutionrelative:collections\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day8\\CollectionsSolution\\Collections\\Customer.cs",
+              "RelativeDocumentMoniker": "Collections\\Customer.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day8\\CollectionsSolution\\Collections\\Customer.cs",
+              "RelativeToolTip": "Collections\\Customer.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwDUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T05:13:02.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day8\\CollectionsSolution\\Collections\\Program.cs",
+              "RelativeDocumentMoniker": "Collections\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day8\\CollectionsSolution\\Collections\\Program.cs*",
+              "RelativeToolTip": "Collections\\Program.cs*",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAowFAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T04:36:29.425Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

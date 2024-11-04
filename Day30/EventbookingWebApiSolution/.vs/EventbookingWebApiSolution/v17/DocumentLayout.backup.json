@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|c:\\johnny\\celsior_training\\day30\\eventbookingwebapisolution\\eventbookingwebapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|solutionrelative:eventbookingwebapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "EventBookingWebApi\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "EventBookingWebApi\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwD4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:22:12.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

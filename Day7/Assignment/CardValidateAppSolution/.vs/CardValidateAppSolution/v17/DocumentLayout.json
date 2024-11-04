@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|c:\\johnny\\celsior_training\\day7\\assignment\\cardvalidateappsolution\\cardvalidateapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|solutionrelative:cardvalidateapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|c:\\johnny\\celsior_training\\day7\\assignment\\cardvalidateappsolution\\cardvalidateapp\\cardvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|solutionrelative:cardvalidateapp\\cardvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|c:\\johnny\\celsior_training\\day7\\assignment\\cardvalidateappsolution\\cardvalidateapp\\icardinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E8689F-244A-433C-A590-BA1BCC17A8D7}|CardValidateApp\\CardValidateApp.csproj|solutionrelative:cardvalidateapp\\icardinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CardValidator.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\CardValidator.cs",
+              "RelativeDocumentMoniker": "CardValidateApp\\CardValidator.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\CardValidator.cs",
+              "RelativeToolTip": "CardValidateApp\\CardValidator.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAowEcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T11:39:45.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICardInterface.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\ICardInterface.cs",
+              "RelativeDocumentMoniker": "CardValidateApp\\ICardInterface.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\ICardInterface.cs",
+              "RelativeToolTip": "CardValidateApp\\ICardInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T11:36:05.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\Program.cs",
+              "RelativeDocumentMoniker": "CardValidateApp\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day7\\Assignment\\CardValidateAppSolution\\CardValidateApp\\Program.cs",
+              "RelativeToolTip": "CardValidateApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T11:31:20.253Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

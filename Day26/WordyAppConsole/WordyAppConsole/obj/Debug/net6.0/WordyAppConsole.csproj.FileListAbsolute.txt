@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\bin\Debug\net6.0\WordyAppConsole.exe
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\bin\Debug\net6.0\WordyAppConsole.deps.json
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\bin\Debug\net6.0\WordyAppConsole.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\bin\Debug\net6.0\WordyAppConsole.dll
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\bin\Debug\net6.0\WordyAppConsole.pdb
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.sourcelink.json
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.dll
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\refint\WordyAppConsole.dll
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.pdb
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\WordyAppConsole.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day26\WordyAppConsole\WordyAppConsole\obj\Debug\net6.0\ref\WordyAppConsole.dll

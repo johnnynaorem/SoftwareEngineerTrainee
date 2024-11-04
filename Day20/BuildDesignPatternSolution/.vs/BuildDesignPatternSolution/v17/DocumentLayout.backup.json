@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\beveragedirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\beveragedirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\teabuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\teabuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\coffeebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\coffeebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\beveragebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\beveragebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|c:\\johnny\\celsior_training\\day20\\builddesignpatternsolution\\builddesignpattern\\beverage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6495A98D-1350-49FB-A56A-EAA8B959C764}|BuildDesignPattern\\BuildDesignPattern.csproj|solutionrelative:builddesignpattern\\beverage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BeverageDirector.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\BeverageDirector.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\BeverageDirector.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\BeverageDirector.cs*",
+              "RelativeToolTip": "BuildDesignPattern\\BeverageDirector.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:51:18.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeaBuilder.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\TeaBuilder.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\TeaBuilder.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\TeaBuilder.cs*",
+              "RelativeToolTip": "BuildDesignPattern\\TeaBuilder.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:50:41.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoffeeBuilder.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\CoffeeBuilder.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\CoffeeBuilder.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\CoffeeBuilder.cs*",
+              "RelativeToolTip": "BuildDesignPattern\\CoffeeBuilder.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:50:19.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BeverageBuilder.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\BeverageBuilder.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\BeverageBuilder.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\BeverageBuilder.cs",
+              "RelativeToolTip": "BuildDesignPattern\\BeverageBuilder.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:49:34.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Beverage.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\Beverage.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\Beverage.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\Beverage.cs",
+              "RelativeToolTip": "BuildDesignPattern\\Beverage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:48:49.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\Program.cs",
+              "RelativeDocumentMoniker": "BuildDesignPattern\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\BuildDesignPatternSolution\\BuildDesignPattern\\Program.cs*",
+              "RelativeToolTip": "BuildDesignPattern\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T11:47:21.218Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|c:\\johnny\\celsior_training\\day19\\understandingabstactclasssolution\\understandingabstactclass\\currentaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|solutionrelative:understandingabstactclass\\currentaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|c:\\johnny\\celsior_training\\day19\\understandingabstactclasssolution\\understandingabstactclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|solutionrelative:understandingabstactclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|c:\\johnny\\celsior_training\\day19\\understandingabstactclasssolution\\understandingabstactclass\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|solutionrelative:understandingabstactclass\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|c:\\johnny\\celsior_training\\day19\\understandingabstactclasssolution\\understandingabstactclass\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|solutionrelative:understandingabstactclass\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|c:\\johnny\\celsior_training\\day19\\understandingabstactclasssolution\\understandingabstactclass\\savingaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE67FF8A-E498-4515-96D8-71EFDF232703}|UnderstandingAbstactClass\\UnderstandingAbstactClass.csproj|solutionrelative:understandingabstactclass\\savingaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "UnderstandingAbstactClass\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\UserInteraction.cs",
+              "RelativeToolTip": "UnderstandingAbstactClass\\UserInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T06:54:05.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CurrentAccount.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\CurrentAccount.cs",
+              "RelativeDocumentMoniker": "UnderstandingAbstactClass\\CurrentAccount.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\CurrentAccount.cs",
+              "RelativeToolTip": "UnderstandingAbstactClass\\CurrentAccount.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T10:04:16.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SavingAccount.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\SavingAccount.cs",
+              "RelativeDocumentMoniker": "UnderstandingAbstactClass\\SavingAccount.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\SavingAccount.cs",
+              "RelativeToolTip": "UnderstandingAbstactClass\\SavingAccount.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:38:34.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BankAccount.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\BankAccount.cs",
+              "RelativeDocumentMoniker": "UnderstandingAbstactClass\\BankAccount.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\BankAccount.cs",
+              "RelativeToolTip": "UnderstandingAbstactClass\\BankAccount.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:36:40.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\Program.cs",
+              "RelativeDocumentMoniker": "UnderstandingAbstactClass\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\UnderstandingAbstactClassSolution\\UnderstandingAbstactClass\\Program.cs",
+              "RelativeToolTip": "UnderstandingAbstactClass\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:36:05.482Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

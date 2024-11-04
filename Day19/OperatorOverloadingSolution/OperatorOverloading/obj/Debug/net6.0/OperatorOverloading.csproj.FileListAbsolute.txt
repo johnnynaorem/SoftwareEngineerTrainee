@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\bin\Debug\net6.0\OperatorOverloading.exe
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\bin\Debug\net6.0\OperatorOverloading.deps.json
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\bin\Debug\net6.0\OperatorOverloading.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\bin\Debug\net6.0\OperatorOverloading.dll
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\bin\Debug\net6.0\OperatorOverloading.pdb
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.sourcelink.json
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.dll
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\refint\OperatorOverloading.dll
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.pdb
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\OperatorOverloading.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day19\OperatorOverloadingSolution\OperatorOverloading\obj\Debug\net6.0\ref\OperatorOverloading.dll

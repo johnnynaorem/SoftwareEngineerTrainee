@@ -1,0 +1,394 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\repositories\\orderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\services\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\services\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\interfaces\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\interfaces\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\repositories\\pizzarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\orderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\pizza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\dtos\\pizzacartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\dtos\\pizzacartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|c:\\johnny\\ma\u0027am git\\celsiorfsddotnet\\day16\\pizzastoresolution\\pizzastoreapi\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27EC67A7-EBE7-48E5-9D5E-9151A2C4E4EF}|PizzaStoreAPI\\PizzaStoreAPI.csproj|solutionrelative:pizzastoreapi\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderDetailsController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\OrderDetailsController.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Controllers\\OrderDetailsController.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\OrderDetailsController.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Controllers\\OrderDetailsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvyMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T12:56:38.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\OrderService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Services\\OrderService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAYwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:26:18.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:47:28.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDetailService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\OrderDetailService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Services\\OrderDetailService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\OrderDetailService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Services\\OrderDetailService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T12:12:29.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Services\\CartService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Services\\CartService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Services\\CartService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwBQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T06:57:49.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\OrderController.cs*",
+              "RelativeToolTip": "PizzaStoreAPI\\Controllers\\OrderController.cs*",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:05:30.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderDetailsRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\OrderDetailsRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Repositories\\OrderDetailsRepository.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\OrderDetailsRepository.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Repositories\\OrderDetailsRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T07:10:54.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CollectionEmptyException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Exceptions\\CollectionEmptyException.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Exceptions\\CollectionEmptyException.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T12:42:30.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwCIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:57:28.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:33:37.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IOrderDetailService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IOrderDetailService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Interfaces\\IOrderDetailService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\IOrderDetailService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Interfaces\\IOrderDetailService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAMwAcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T12:10:27.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PizzaRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\PizzaRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Repositories\\PizzaRepository.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\PizzaRepository.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Repositories\\PizzaRepository.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwEAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T19:59:11.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CartDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\DTOs\\CartDTO.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\DTOs\\CartDTO.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\DTOs\\CartDTO.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\DTOs\\CartDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:17:47.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Order.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\Order.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:51:42.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Pizza.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Pizza.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\Pizza.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Pizza.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\Pizza.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:20:09.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\OrderDetails.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\OrderDetails.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\OrderDetails.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:59:12.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PizzaCartDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\DTOs\\PizzaCartDTO.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\DTOs\\PizzaCartDTO.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\DTOs\\PizzaCartDTO.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\DTOs\\PizzaCartDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:17:27.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Controllers\\CartController.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:05:36.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwCoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:43:02.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Models\\Cart.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Models\\Cart.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:36:43.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Program.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:15:21.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\ICartService.cs",
+              "RelativeDocumentMoniker": "PizzaStoreAPI\\Interfaces\\ICartService.cs",
+              "ToolTip": "C:\\Johnny\\Ma\u0027am Git\\CelsiorFSDDotnet\\Day16\\PizzaStoreSolution\\PizzaStoreAPI\\Interfaces\\ICartService.cs",
+              "RelativeToolTip": "PizzaStoreAPI\\Interfaces\\ICartService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIAwwAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:29:42.311Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

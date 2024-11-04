@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\bin\Debug\net6.0\TaskApplication.exe
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\bin\Debug\net6.0\TaskApplication.deps.json
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\bin\Debug\net6.0\TaskApplication.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\bin\Debug\net6.0\TaskApplication.dll
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\bin\Debug\net6.0\TaskApplication.pdb
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.sourcelink.json
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.dll
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\refint\TaskApplication.dll
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.pdb
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\TaskApplication.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day5\TaskApplicationSolution\TaskApplication\obj\Debug\net6.0\ref\TaskApplication.dll

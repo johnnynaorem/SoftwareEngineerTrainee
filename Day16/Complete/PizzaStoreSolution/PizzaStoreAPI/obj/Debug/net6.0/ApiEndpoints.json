@@ -1,0 +1,123 @@
+[
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.CartController",
+    "Method": "AddPizzaToCart",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pizzaCartDTO",
+        "Type": "PizzaStoreAPI.Models.DTOs.PizzaCartDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.CartController",
+    "Method": "GetCart",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.CustomerController",
+    "Method": "ViewPizzas",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.OrderController",
+    "Method": "AddCartToOrder",
+    "RelativePath": "api/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "paymentMethod",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.OrderController",
+    "Method": "GetOrder",
+    "RelativePath": "api/Order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.OrderDetailsController",
+    "Method": "AddOrderDetails",
+    "RelativePath": "api/OrderDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PizzaStoreAPI.Controllers.OrderDetailsController",
+    "Method": "GetOrderDetails",
+    "RelativePath": "api/OrderDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sl",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

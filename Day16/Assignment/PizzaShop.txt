@@ -1,0 +1,1204 @@
+-----------------------------------------MODELS--------------------------
+-------------------------------------------------------------------------------------------
+
+﻿namespace PizzaStore.Models
+{
+    public class Cart : IEquatable<Cart>
+    {
+        public int CartNumber {  get; set; }
+        public int CustomerId { get; set; }
+        public List<int> Pizzas { get; set; }
+
+        public Cart() { 
+            Pizzas = new List<int>();
+        }
+
+        public bool Equals(Cart? other)
+        {
+            return (this ?? new Cart()).CartNumber == (other ?? new Cart()).CartNumber;
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStore.Models
+{
+    public class Customer : IEquatable<Customer>
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public float Phone { get; set; }
+
+        public bool Equals(Customer? other)
+        {
+            return (this ?? new Customer()).Id == (other ?? new Customer()).Id;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStore.Models
+{
+    public enum OrderStatus
+    {
+        Created,
+        Processing,
+        Success,
+        Delivered,
+        Pending,
+        Cancelled
+    }
+    public class Order : IEquatable<Order>
+    {
+        public int OrderNumber { get; set; }
+        public int CustomerId { get; set; }
+        public float TotalAmount { get; set; }
+        public string PaymentMethod { get; set; } = string.Empty;
+        public bool IsPaymnetSuccess { get; set; }
+        public OrderStatus OrderStatus { get; set; }
+
+        public bool Equals(Order? other)
+        {
+            return (this ?? new Order()).OrderNumber == (other ?? new Order()).OrderNumber;
+        }
+    }
+
+}
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStore.Models
+{
+    public class OrderDetails : IEquatable<OrderDetails>
+    {
+        public int SlNo { get; set; }
+        public int OrderNumber { get; set; }
+        public int PizzaId { get; set; }
+        public int Quantity { get; set; }
+        public float Price { get; set; }
+        public float Discount { get; set; }
+
+        public bool Equals(OrderDetails? other)
+        {
+            return (this ?? new OrderDetails()).SlNo == (other ?? new OrderDetails()).SlNo;
+        }
+    }
+
+}
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStore.Models
+{
+    public class Pizza : IEquatable<Pizza>
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? Image {  get; set; }
+        public float Price { get; set; }
+        public int Quantity { get; set; }
+        public bool Equals(Pizza? other)
+        {
+            return (this?? new Pizza()).Id == (other?? new Pizza()).Id;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+
+﻿namespace PizzaStore.Models.DTOs
+{
+    public class CartDTO : IEquatable<CartDTO>
+    {
+        public int CartNumber { get; set; }
+        public List<PizzaCartDTO> Pizzas { get; set; }
+        public CartDTO()
+        {
+            Pizzas = new List<PizzaCartDTO>();
+        }
+
+        public bool Equals(CartDTO? other)
+        {
+            return (this ?? new CartDTO()).CartNumber == (other ?? new CartDTO()).CartNumber;
+        }
+    }
+
+}
+
+-------------------------------------------------------------------------------------------
+namespace PizzaStore.Models.DTOs
+{
+    public class PizzaCartDTO : IEquatable<PizzaCartDTO>
+    {
+        public int SLNo { get; set; }
+        public int PizzaId { get; set; }
+        public int Quantity { get; set; }
+        public float Price { get; set; }
+        public float Discount { get; set; }
+
+        public bool Equals(PizzaCartDTO? other)
+        {
+            return (this ?? new PizzaCartDTO()).SLNo == (other ?? new PizzaCartDTO()).SLNo;
+        }
+    }
+
+}
+-------------------------------------------------------------------------------------------
+					Interfaces
+-------------------------------------------------------------------------------------------
+
+﻿namespace PizzaStoreAPI.Interfaces
+{
+    public interface IRepository <K,T> where T : class
+    {
+        Task<IEnumerable<T>> GetAll();
+        Task<T> Get(K key);
+        Task<T> Add(T entity);
+        Task<T> Update(T entity);
+        Task<T> Delete(K key);
+    }
+
+}
+
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+
+namespace PizzaStoreAPI.Interfaces
+{
+    public interface IOrderService
+    {
+        public Task<Order> AddCartToOrder(int cartNumber, int customerId, string paymentMethod);
+        public Task<IEnumerable<Order>> GetOrder(int customerId);
+        public Task<Order> UpdateOrder(int customerId, int orderNumber, string paymentMethod);
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+
+namespace PizzaStoreAPI.Interfaces
+{
+    public interface IOrderDetailService
+    {
+        public Task<OrderDetails> AddOrderToOrderDetail(int customerId);
+        public Task<OrderDetails> GetAllOrderDetails(int SiNo);
+    }
+}
+-------------------------------------------------------------------------------------------
+
+﻿using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Interfaces
+{
+    public interface ICustomerService
+    {
+        public Task<IEnumerable<Pizza>> ViewPizzas();
+
+    }
+}
+
+-------------------------------------------------------------------------------------------
+
+﻿using PizzaStoreAPI.Models.DTOs;
+
+namespace PizzaStoreAPI.Interfaces
+{
+    public interface ICartService
+    {
+        public Task<PizzaCartDTO> AddPizzaToCart(PizzaCartDTO pizzaCartDTO, int customerId);
+        public Task<CartDTO> GetCart(int customerId);
+        public Task<CartDTO> UpdateCart(int cartNumber, PizzaCartDTO pizzaCartDTO);
+
+    }
+}
+
+-------------------------------------------------------------------------------------------
+				Repositories
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Repositories
+{
+    public class CartRepository : IRepository<int, Cart>
+    {
+        static List<Cart> carts = new List<Cart>();
+  
+
+        public async Task<Cart> Add(Cart entity)
+        {
+            if(carts.Count == 0)
+                entity.CartNumber = 1;
+            else
+                entity.CartNumber = carts.Max(c => c.CartNumber) + 1;
+            carts.Add(entity);
+            return entity;
+        }
+
+        public async Task<Cart> Delete(int key)
+        {
+            var cart = await Get(key);
+            carts.Remove(cart);
+            return cart;
+        }
+
+        public async Task<Cart> Get(int key)
+        {
+            var cart = carts.FirstOrDefault(c => c.CartNumber == key);
+            if (cart == null)
+            {
+                throw new NoEntityFoundException("Cart", key);
+            }
+            return cart;
+        }
+
+        public async Task<IEnumerable<Cart>> GetAll()
+        {
+            if (carts.Count == 0)
+            {
+                throw new CollectionEmptyException("Cart");
+            }
+            return carts;
+        }
+
+
+        public async Task<Cart> Update(Cart entity)
+        {
+            var cart = await Get(entity.CartNumber);
+
+            if (cart == null)
+            {
+                throw new NoEntityFoundException("Cart", entity.CartNumber);
+            }
+            cart.CustomerId = entity.CustomerId;
+            cart.Pizzas = entity.Pizzas;
+            return cart;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Repositories
+{
+    public class CustomerRepository : IRepository<int, Customer>
+    {
+        static List<Customer> customers = new List<Customer>()
+        {
+            new Customer(){Id=1, Name="John", Email="john@gmail.com", Phone=1234567890},
+            new Customer(){Id=2, Name="Jane", Email="jane@gmail.com", Phone=9876543210},
+        };
+        public async Task<Customer> Add(Customer entity)
+        {
+            entity.Id = customers.Max(c => c.Id) + 1;
+            customers.Add(entity);
+            return entity;
+        }
+
+        public async Task<Customer> Delete(int key)
+        {
+            var customer = await Get(key);
+            customers.Remove(customer);
+            return customer;
+        }
+
+        public async Task<Customer> Get(int key)
+        {
+            var customer = customers.FirstOrDefault(c => c.Id == key);
+            if (customer == null)
+            {
+                throw new NoEntityFoundException("Customer",key);
+            }
+            return customer;
+        }
+
+        public async Task<IEnumerable<Customer>> GetAll()
+        {
+            if(customers.Count == 0)
+            {
+                throw new CollectionEmptyException("Customer");
+            }
+            return customers;
+        }
+
+        public async Task<Customer> Update(Customer entity)
+        {
+            var customer = await Get(entity.Id);
+
+            if(customer == null)
+            {
+                throw new NoEntityFoundException("Customer", entity.Id);
+            }
+            customer.Name = entity.Name;
+            customer.Email = entity.Email;
+            customer.Phone = entity.Phone;
+            return customer;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Repositories
+{
+    public class OrderDetailsRepository : IRepository<int, OrderDetails>
+    {
+        static List<OrderDetails> orderDetails = new List<OrderDetails>();
+        public async Task<OrderDetails> Add(OrderDetails entity)
+        {
+            if(orderDetails.Count == 0)
+                entity.SiNo = 1;
+            else
+            {
+                entity.SiNo = orderDetails.Max(o => o.SiNo) + 1;
+
+            }
+            orderDetails.Add(entity);
+            return entity;
+        }
+
+        public async Task<OrderDetails> Delete(int key)
+        {
+            var orderDetail = await Get(key);
+            orderDetails.Remove(orderDetail);
+            return orderDetail;
+        }
+
+        public async Task<OrderDetails> Get(int key)
+        {
+            var orderDetail = orderDetails.FirstOrDefault(c => c.SiNo == key);
+            if (orderDetail == null)
+            {
+                throw new NoEntityFoundException("OrderDetails", key);
+            }
+            return orderDetail;
+        }
+
+        public async Task<IEnumerable<OrderDetails>> GetAll()
+        {
+            if (orderDetails.Count == 0)
+            {
+                throw new CollectionEmptyException("OrderDetails");
+            }
+            return orderDetails;
+        }
+
+        public async Task<OrderDetails> Update(OrderDetails entity)
+        {
+            var orderDetail = await Get(entity.SiNo);
+
+            if (orderDetail == null)
+            {
+                throw new NoEntityFoundException("Order", entity.OrderNumber);
+            }
+            orderDetail.OrderNumber = entity.OrderNumber;
+            //orderDetail.PizzaId = entity.PizzaId;
+            //orderDetail.Quantity = entity.Quantity;
+            //orderDetail.Price = entity.Price;
+            //orderDetail.Discount = entity.Discount;
+            return orderDetail;
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Repositories
+{
+    public class OrderRepository : IRepository<int, Order>
+    {
+        static List<Order> orders = new List<Order>();
+        public async Task<Order> Add(Order entity)
+        {
+            if (orders.Count == 0)
+                entity.OrderNumber = 1;
+            else
+                entity.OrderNumber = orders.Max(o => o.OrderNumber) + 1;
+            orders.Add(entity);
+            return entity;
+        }
+
+        public async Task<Order> Delete(int key)
+        {
+            var order = await Get(key);
+            orders.Remove(order);
+            return order;
+        }
+
+        public async Task<Order> Get(int key)
+        {
+            var order = orders.FirstOrDefault(c => c.OrderNumber == key);
+            if (order == null)
+            {
+                throw new NoEntityFoundException("Order", key);
+            }
+            return order;
+        }
+
+        public async Task<IEnumerable<Order>> GetAll()
+        {
+            if (orders.Count == 0)
+            {
+                throw new CollectionEmptyException("Order");
+            }
+            return orders;
+        }
+
+
+        public async Task<Order> Update(Order entity)
+        {
+            var order = await Get(entity.OrderNumber);
+
+            if (order == null)
+            {
+                throw new NoEntityFoundException("Order", entity.OrderNumber);
+            }
+            order.CustomerId = entity.CustomerId;
+            order.TotalAmount = entity.TotalAmount;
+            order.PaymentMethod = entity.PaymentMethod;
+            order.IsPaymentSuccess = entity.IsPaymentSuccess;
+            order.OrderStatus = entity.OrderStatus;
+            return order;
+
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+
+namespace PizzaStoreAPI.Repositories
+{
+    public class PizzaRepository :IRepository<int, Pizza>
+    {
+        static List<Pizza> pizzas = new List<Pizza>()
+        {
+            new Pizza(){Id=1, Name="Margherita", Price=100, Quantity=10, Image="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,w_1460/https://storage.googleapis.com/gen-atmedia/3/2012/07/f2203c0e403286947dcf80815b656236fec71e88.jpeg", Description="Classic Margherita Pizza"},
+            new Pizza(){Id=2, Name="Pepperoni", Price=150, Quantity=10, Image="https://www.modernhoney.com/wp-content/uploads/2022/10/Homemade-Pepperoni-Pizza-with-Hot-Honey-1-scaled.jpg",Description="Pepperoni Pizza"}
+        };
+        public async Task<Pizza> Add(Pizza entity)
+        {
+            if (pizzas.Count == 0)
+            {
+                entity.Id = 1;
+            }
+            else
+                entity.Id = pizzas.Max(c => c.Id) + 1;
+            pizzas.Add(entity);
+            return entity;
+        }
+
+        public async Task<Pizza> Delete(int key)
+        {
+            var pizza = await Get(key);
+            pizzas.Remove(pizza);
+            return pizza;
+        }
+
+        public async Task<Pizza> Get(int key)
+        {
+            var pizza = pizzas.FirstOrDefault(c => c.Id == key);
+            if (pizza == null)
+            {
+                throw new NoEntityFoundException("Pizza", key);
+            }
+            return pizza;
+        }
+
+        public async Task<IEnumerable<Pizza>> GetAll()
+        {
+            if (pizzas.Count == 0)
+            {
+                throw new CollectionEmptyException("Pizza");
+            }
+            return pizzas;
+        }
+
+        public async Task<Pizza> Update(Pizza entity)
+        {
+            var pizza = await Get(entity.Id);
+
+            if (pizza == null)
+            {
+                throw new NoEntityFoundException("Pizza", entity.Id);
+            }
+            pizza.Name = entity.Name;
+            pizza.Price = entity.Price;
+            pizza.Image = entity.Image;
+            pizza.Description = entity.Description;
+            pizza.Quantity = entity.Quantity;
+            return pizza;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+				Services
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+using PizzaStoreAPI.Repositories;
+
+namespace PizzaStoreAPI.Services
+{
+    public class CartService : ICartService
+    {
+        private readonly IRepository<int, Customer> _customerRepository;
+        private readonly IRepository<int, Pizza> _pizzaRepository;
+        private readonly IRepository<int, Cart> _cartRepository;
+
+        public CartService(
+            IRepository<int, Customer> customerRepository,
+            IRepository<int, Pizza> pizzaRepository,
+            IRepository<int, Cart> cartRepository
+        )
+        {
+            _customerRepository = customerRepository;
+            _pizzaRepository = pizzaRepository;
+            _cartRepository = cartRepository;
+        }
+
+        public async Task<PizzaCartDTO> AddPizzaToCart(PizzaCartDTO pizzaCartDTO, int customerId)
+        {
+            if (!(await DoesCustomerHaveCart(customerId)))
+            {
+                var cart = await CreateNewCart(customerId, pizzaCartDTO.PizzaId, pizzaCartDTO.Quantity);
+                //await _cartRepository.Add(cart);
+                return pizzaCartDTO;
+            }
+
+            var custCart = await GetCustomerCart(customerId);
+            if (await DoesCartContainPizza(custCart.CartNumber, pizzaCartDTO.PizzaId))
+            {
+                var pizza = custCart.Pizzas.FirstOrDefault(p => p.Id == pizzaCartDTO.PizzaId);
+                pizza.Quantity += pizzaCartDTO.Quantity;
+            }
+            else
+            {
+                custCart.Pizzas.Add(await CreatePizza(pizzaCartDTO));
+            }
+
+            await _cartRepository.Update(custCart);
+            return pizzaCartDTO;
+        }
+
+        
+        async Task<Pizza> CreatePizza(PizzaCartDTO pizzaCartDTO)
+        {
+            var pizzaFromRepo = await _pizzaRepository.Get(pizzaCartDTO.PizzaId);
+            if (pizzaFromRepo == null)
+            {
+                throw new NoEntityFoundException("Pizza", pizzaCartDTO.PizzaId);
+            }
+
+            
+            return new Pizza()
+            {
+                Id = pizzaFromRepo.Id,
+                Name = pizzaFromRepo.Name,
+                Price = pizzaFromRepo.Price,
+                Quantity = pizzaCartDTO.Quantity
+            };
+        }
+
+        
+        async Task<bool> DoesCartContainPizza(int cartId, int pizzaId)
+        {
+            var cart = await _cartRepository.Get(cartId);
+            return cart.Pizzas.Any(p => p.Id == pizzaId);
+        }
+
+        
+        async Task<Cart> GetCustomerCart(int customerId)
+        {
+            var carts = await _cartRepository.GetAll();
+            return carts.FirstOrDefault(c => c.CustomerId == customerId);
+        }
+
+        
+        async Task<bool> DoesCustomerHaveCart(int customerId)
+        {
+            try
+            {
+                var customer = await _customerRepository.Get(customerId);
+                var carts = await _cartRepository.GetAll();
+                return carts.Any(c => c.CustomerId == customerId);
+            }
+            catch (CollectionEmptyException)
+            {
+                return false;
+            }
+        }
+
+        
+        async Task<Cart> CreateNewCart(int customerId, int pizzaId, int qty)
+        {
+            var pizza = await _pizzaRepository.Get(pizzaId);
+            if (pizza == null)
+            {
+                throw new NoEntityFoundException("Pizza", pizzaId);
+            }
+
+            Cart cart = new Cart()
+            {
+                CustomerId = customerId,
+                Pizzas = new List<Pizza>
+                {
+                    new Pizza()
+                    {
+                        Id = pizza.Id,
+                        Name = pizza.Name,
+                        Price = pizza.Price,
+                        Quantity = qty
+                    }
+                }
+            };
+            return await _cartRepository.Add(cart);
+        }
+
+        public async Task<CartDTO> GetCart(int customerId)
+        {
+            var cart = await GetCustomerCart(customerId);
+            if (cart == null)
+            {
+                throw new NoEntityFoundException("Cart", customerId);
+            }
+
+            var pizzaDtoObjects = await MapPizzaToPizzaDTO(cart.Pizzas);
+            return new CartDTO()
+            {
+                CartNumber = cart.CartNumber,
+                Pizzas = pizzaDtoObjects
+            };
+        }
+
+        async Task<List<PizzaCartDTO>> MapPizzaToPizzaDTO(List<Pizza> pizzas)
+        {
+            return pizzas.Select(p => new PizzaCartDTO
+            {
+                PizzaId = p.Id,
+                PizzaName = p.Name,
+                Price = p.Price,
+                Quantity = p.Quantity
+            }).ToList();
+        }
+
+        public Task<CartDTO> UpdateCart(int cartNumber, PizzaCartDTO pizzaCartDTO)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Repositories;
+
+namespace PizzaStoreAPI.Services
+{
+    public class CustomerService : ICustomerService
+    {
+        private readonly IRepository<int, Pizza> _pizzaRepository;
+
+        public CustomerService(IRepository<int,Pizza> pizzaRepository)
+        {
+            _pizzaRepository = pizzaRepository;
+        }
+        public async Task<IEnumerable<Pizza>> ViewPizzas()
+        {
+            var pizzas = (await _pizzaRepository.GetAll()).ToList().OrderBy(p => p.Name);
+            return pizzas;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+using PizzaStoreAPI.Repositories;
+
+namespace PizzaStoreAPI.Services
+{
+    public class OrderDetailService : IOrderDetailService
+    {
+        private readonly IRepository<int, Order> _orderRepo;
+        private readonly IRepository<int, Customer> _customerRepo;
+        private readonly IRepository<int, Pizza> _pizzaRepo;
+        private readonly IRepository<int, OrderDetails> _orderDetailsRepo;
+
+        public OrderDetailService(IRepository<int, Customer> customerRepo, IRepository<int, Order> orderRepo, IRepository<int, OrderDetails> orderDetailRepo) 
+        {
+            _orderRepo = orderRepo;
+            _customerRepo = customerRepo;
+            _orderDetailsRepo = orderDetailRepo;
+        }
+
+        public async Task<OrderDetails> AddOrderToOrderDetail(int customerId)
+        {
+            var orders = await _orderRepo.Get(customerId);
+            //var custOrder = orders.Where(o => o.CustomerId == customerId);
+            if (await DoesCustomerHaveThisOrderDetails(customerId) || orders == null)
+            {
+                throw new CollectionEmptyException("order");
+            }
+            var OrderDetail = new OrderDetails
+            {
+                OrderNumber = orders.OrderNumber,
+                Pizza = orders.Pizza,
+                //PizzaId = pizzaCartDTO.PizzaId,
+                //Quantity = pizzaCartDTO.Quantity,
+                //Price = pizzaCartDTO.Price,
+                //Discount = pizzaCartDTO.Discount,
+            };
+
+            await _orderDetailsRepo.Add(OrderDetail);
+            return OrderDetail;
+        }
+
+        async Task<bool> DoesCustomerHaveThisOrderDetails(int orderNumber)
+        {
+            try
+            {
+                var orderDetails = await _orderDetailsRepo.GetAll();
+                return orderDetails.Any(o => o.OrderNumber == orderNumber);
+            }
+            catch (CollectionEmptyException)
+            {
+                return false;
+            }
+        }
+
+        async Task<OrderDetails> IOrderDetailService.GetAllOrderDetails(int sl)
+        {
+            var orderDetails = await _orderDetailsRepo.Get(sl);
+            return orderDetails;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+
+﻿using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+using PizzaStoreAPI.Repositories;
+
+namespace PizzaStoreAPI.Services
+{
+    public class OrderService : IOrderService
+    {
+        private readonly IRepository<int, Cart> _cartRepo;
+        private readonly IRepository<int, Customer> _customerRepo;
+        private readonly IRepository<int, Order> _orderRepo;
+
+        public OrderService(IRepository<int, Cart> cartRepo, IRepository<int, Customer> customerRepo, IRepository<int, Order> orderRepo) 
+        { 
+            _cartRepo = cartRepo;
+            _customerRepo = customerRepo;
+            _orderRepo = orderRepo;
+        }
+        public async Task<Order> AddCartToOrder(int cartNumber, int customerId, string paymentMethod)
+        {
+            var custCart = await GetCustomerCart(customerId);
+            var isCustHavethisCart = custCart.CartNumber == cartNumber;
+            if (!isCustHavethisCart) 
+            {
+                throw new CollectionEmptyException("No Cart for Customer");
+            }
+            var carts = await _cartRepo.GetAll();
+            int orderNumber = carts.Count() + 1;
+            var totalAmount = await GetTotalAmount(custCart);
+
+            Order order = new Order()
+            {
+                CustomerId = customerId,
+                OrderNumber = cartNumber,
+                TotalAmount = totalAmount,
+                PaymentMethod = paymentMethod,
+                IsPaymentSuccess = true,
+                OrderStatus = OrderStatus.Created,
+                Pizza = custCart.Pizzas
+                
+            };
+            Console.WriteLine("From Order Service: " + order.OrderStatus);
+            await _orderRepo.Add(order);
+            await _cartRepo.Delete(cartNumber);
+            return order;
+        }
+
+        async Task<float> GetTotalAmount(Cart custCart)
+        {
+            float totalPrice = 0;
+            foreach(var pizza in custCart.Pizzas)
+            {
+                totalPrice += pizza.Price * pizza.Quantity;
+            }
+            return totalPrice;
+        }
+        async Task<Cart> GetCustomerCart(int customerId)
+        {
+            var carts = await _cartRepo.GetAll();
+            return carts.FirstOrDefault(c => c.CustomerId == customerId);
+        }
+
+        public async Task<IEnumerable<Order>> GetOrder(int customerId)
+        {
+            var order = await GetCustomerOrder(customerId);
+            if (order == null)
+            {
+                throw new NoEntityFoundException("Order", customerId);
+            }
+            return order;
+
+        }
+        async Task<IEnumerable<Order>> GetCustomerOrder(int customerId)
+        {
+            var orders = await _orderRepo.GetAll();
+            return orders.Where(order => order.CustomerId == customerId);
+        }
+
+        public async Task<Order> UpdateOrder(int customerId, int orderNumber, string paymentMethod)
+        {
+            var order = await _orderRepo.GetAll();
+            var updateOrder = order.FirstOrDefault(o => o.OrderNumber == orderNumber && o.CustomerId == customerId);
+
+            updateOrder.OrderStatus = OrderStatus.Processing;
+            updateOrder.PaymentMethod = paymentMethod;
+
+            return updateOrder;
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------
+					Controllers
+-------------------------------------------------------------------------------------------
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models.DTOs;
+using System.Diagnostics;
+
+namespace PizzaStoreAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CartController : ControllerBase
+    {
+        private readonly ICartService _cartService;
+
+        public CartController(ICartService cartService)
+        {
+            _cartService = cartService;
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddPizzaToCart(PizzaCartDTO pizzaCartDTO, int customerId)
+        {
+            try
+            {
+                var cart = await _cartService.AddPizzaToCart(pizzaCartDTO, customerId);
+                return Ok(cart);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetCart(int customerId)
+        {
+            try
+            {
+                var cart = await _cartService.GetCart(customerId);
+                return Ok(cart);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using PizzaStoreAPI.Exceptions;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Services;
+
+namespace PizzaStoreAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CustomerController : ControllerBase
+    {
+        private readonly ICustomerService _customerService;
+
+        public CustomerController(ICustomerService customerService)
+        {
+            _customerService = customerService;
+        }
+        [HttpGet]
+        public async Task<IActionResult> ViewPizzas()
+        {
+            try
+            {
+                var pizzas = await _customerService.ViewPizzas();
+                return Ok(pizzas);
+            }
+            catch(CollectionEmptyException e)
+            {
+                
+                return NotFound(e.Message);
+            }
+            catch (Exception e)
+            {
+                //return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
+                return BadRequest(e.Message);
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models.DTOs;
+using PizzaStoreAPI.Services;
+using System.Diagnostics;
+
+namespace PizzaStoreAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrderController : ControllerBase
+    {
+        private readonly IOrderService _orderService;
+
+        public OrderController(IOrderService orderService) {
+            _orderService = orderService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCartToOrder(int cartNumber, int customerId, string paymentMethod)
+        {
+            try
+            {
+                var cart = await _orderService.AddCartToOrder(cartNumber, customerId, paymentMethod);
+                return Ok(cart);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetOrder(int customerId)
+        {
+            try
+            {
+                var order = await _orderService.GetOrder(customerId);
+                return Ok(order);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Update(int customerId, int orderNumber, string paymentMethod)
+        //{
+        //    try
+        //    {
+        //        var order = await _orderService.UpdateOrder(customerId, orderNumber, paymentMethod);
+        //        return Ok(order);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Debug.WriteLine(e.Message);
+        //        Debug.WriteLine(e.StackTrace);
+        //        return BadRequest(e.Message);
+        //    }
+        //}
+    }
+}
+
+-------------------------------------------------------------------------------------------
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Models.DTOs;
+using PizzaStoreAPI.Services;
+using System.Diagnostics;
+
+namespace PizzaStoreAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrderDetailsController : ControllerBase
+    {
+        private readonly IOrderDetailService _orderDetailService;
+
+        public OrderDetailsController(IOrderDetailService orderDetailService) 
+        { 
+            _orderDetailService = orderDetailService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddOrderDetails(int orderNumber)
+        {
+            try
+            {
+                var cart = await _orderDetailService.AddOrderToOrderDetail(orderNumber);
+                return Ok(cart);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOrderDetails(int Sl)
+        {
+            try
+            {
+                var order = await _orderDetailService.GetAllOrderDetails(Sl);
+                return Ok(order);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.StackTrace);
+                return BadRequest(e.Message);
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+				Exceptions
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStoreAPI.Exceptions
+{
+    internal class CollectionEmptyException : Exception
+    {
+        string message;
+        public CollectionEmptyException()
+        {
+            message = "Collection is empty";
+        }
+
+        public CollectionEmptyException(string? entity)
+        {
+            message = $"Collection of {entity} is empty";
+        }
+        public override string Message => message;
+
+    }
+}
+-------------------------------------------------------------------------------------------
+﻿namespace PizzaStoreAPI.Exceptions
+{
+    internal class NoEntityFoundException : Exception
+    {
+        string message;
+        public NoEntityFoundException()
+        {
+            message = "No entity found";
+        }
+        public NoEntityFoundException(string? entity)
+        {
+            message = $"No {message} found";
+        }
+
+        public NoEntityFoundException(string? message, int key)
+        {
+            message = $"No {message} found with id {key}";
+        }
+        override public string Message => message;
+
+
+    }
+}
+-------------------------------------------------------------------------------------------
+				Program
+-------------------------------------------------------------------------------------------
+
+using PizzaStoreAPI.Interfaces;
+using PizzaStoreAPI.Models;
+using PizzaStoreAPI.Repositories;
+using PizzaStoreAPI.Services;
+
+namespace PizzaStoreAPI
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+
+            builder.Services.AddControllers();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            #region RepositoryInjection
+            builder.Services.AddScoped<IRepository<int, Pizza>, PizzaRepository>();
+            builder.Services.AddScoped<IRepository<int, Customer>, CustomerRepository>();
+            builder.Services.AddScoped<IRepository<int, Order>, OrderRepository>();
+            builder.Services.AddScoped<IRepository<int, Cart>, CartRepository>();
+            builder.Services.AddScoped<IRepository<int, OrderDetails>, OrderDetailsRepository>();
+            #endregion
+
+
+            #region ServiceInjection
+            builder.Services.AddScoped<ICustomerService, CustomerService>();
+            builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+            #endregion
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseAuthorization();
+
+
+            app.MapControllers();
+
+            app.Run();
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\bin\Debug\net6.0\PrivateConstructor.exe
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\bin\Debug\net6.0\PrivateConstructor.deps.json
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\bin\Debug\net6.0\PrivateConstructor.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\bin\Debug\net6.0\PrivateConstructor.dll
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\bin\Debug\net6.0\PrivateConstructor.pdb
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.sourcelink.json
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.dll
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\refint\PrivateConstructor.dll
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.pdb
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\PrivateConstructor.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day19\PrivateConstructorSolution\PrivateConstructor\obj\Debug\net6.0\ref\PrivateConstructor.dll

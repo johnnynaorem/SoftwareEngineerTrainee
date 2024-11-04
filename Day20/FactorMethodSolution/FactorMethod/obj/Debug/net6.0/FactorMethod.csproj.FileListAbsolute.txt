@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\bin\Debug\net6.0\FactorMethod.exe
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\bin\Debug\net6.0\FactorMethod.deps.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\bin\Debug\net6.0\FactorMethod.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\bin\Debug\net6.0\FactorMethod.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\bin\Debug\net6.0\FactorMethod.pdb
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.sourcelink.json
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\refint\FactorMethod.dll
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.pdb
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\FactorMethod.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day20\FactorMethodSolution\FactorMethod\obj\Debug\net6.0\ref\FactorMethod.dll

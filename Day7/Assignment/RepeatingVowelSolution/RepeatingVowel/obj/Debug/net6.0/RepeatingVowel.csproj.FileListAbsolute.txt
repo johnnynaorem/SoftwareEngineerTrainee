@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\bin\Debug\net6.0\RepeatingVowel.exe
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\bin\Debug\net6.0\RepeatingVowel.deps.json
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\bin\Debug\net6.0\RepeatingVowel.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\bin\Debug\net6.0\RepeatingVowel.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\bin\Debug\net6.0\RepeatingVowel.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.sourcelink.json
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\refint\RepeatingVowel.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\RepeatingVowel.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\RepeatingVowelSolution\RepeatingVowel\obj\Debug\net6.0\ref\RepeatingVowel.dll

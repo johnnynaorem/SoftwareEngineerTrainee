@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|c:\\johnny\\celsior_training\\day30\\eventbookingwebapisolution\\eventbookingwebapi\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|solutionrelative:eventbookingwebapi\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|c:\\johnny\\celsior_training\\day30\\eventbookingwebapisolution\\eventbookingwebapi\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|solutionrelative:eventbookingwebapi\\exceptions\\collectionemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|c:\\johnny\\celsior_training\\day30\\eventbookingwebapisolution\\eventbookingwebapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|solutionrelative:eventbookingwebapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|c:\\johnny\\celsior_training\\day30\\eventbookingwebapisolution\\eventbookingwebapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26887DF-7874-4557-BEC0-BB2F598A756E}|EventBookingWebApi\\EventBookingWebApi.csproj|solutionrelative:eventbookingwebapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "EventBookingWebApi\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "EventBookingWebApi\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T16:56:18.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CollectionEmptyException.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeDocumentMoniker": "EventBookingWebApi\\Exceptions\\CollectionEmptyException.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Exceptions\\CollectionEmptyException.cs",
+              "RelativeToolTip": "EventBookingWebApi\\Exceptions\\CollectionEmptyException.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T16:56:13.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "EventBookingWebApi\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Services\\BookingService.cs",
+              "RelativeToolTip": "EventBookingWebApi\\Services\\BookingService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T11:23:55.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "EventBookingWebApi\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day30\\EventbookingWebApiSolution\\EventBookingWebApi\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "EventBookingWebApi\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwD4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:22:12.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

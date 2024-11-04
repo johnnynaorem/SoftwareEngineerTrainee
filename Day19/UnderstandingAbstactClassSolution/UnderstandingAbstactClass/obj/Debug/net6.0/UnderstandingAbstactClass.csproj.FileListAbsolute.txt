@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\bin\Debug\net6.0\UnderstandingAbstactClass.exe
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\bin\Debug\net6.0\UnderstandingAbstactClass.deps.json
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\bin\Debug\net6.0\UnderstandingAbstactClass.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\bin\Debug\net6.0\UnderstandingAbstactClass.dll
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\bin\Debug\net6.0\UnderstandingAbstactClass.pdb
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.sourcelink.json
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.dll
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\refint\UnderstandingAbstactClass.dll
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.pdb
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\UnderstandingAbstactClass.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day19\UnderstandingAbstactClassSolution\UnderstandingAbstactClass\obj\Debug\net6.0\ref\UnderstandingAbstactClass.dll

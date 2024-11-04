@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\bin\Debug\net6.0\UnderstandingInterface.exe
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\bin\Debug\net6.0\UnderstandingInterface.deps.json
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\bin\Debug\net6.0\UnderstandingInterface.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\bin\Debug\net6.0\UnderstandingInterface.dll
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\bin\Debug\net6.0\UnderstandingInterface.pdb
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.sourcelink.json
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.dll
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\refint\UnderstandingInterface.dll
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.pdb
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\UnderstandingInterface.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day6\UnderstandingInterfaceSolution\UnderstandingInterface\obj\Debug\net6.0\ref\UnderstandingInterface.dll

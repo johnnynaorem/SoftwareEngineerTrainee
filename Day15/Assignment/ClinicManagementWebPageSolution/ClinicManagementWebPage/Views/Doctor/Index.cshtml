@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<ClinicManagementWebPage.Models.Doctor>
+
+@{
+    ViewData["Title"] = "DoctorDisplayPage";
+}
+
+ @* @if (TempData["AlertMessage"] != null)
+ {
+     <script>
+         alert('@TempData["AlertMessage"]');
+     </script>
+ } *@
+
+<h3>Welcome @ViewBag.User.Name</h3>
+
+<div class="container mb-5">
+    <div class="col-12 mt-5 d-flex" style="justify-content: space-between; align-items: center;">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 heading-section text-center">
+                <h2 class="display-3 fs-3">Doctors</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row card-effects">
+        @{
+            foreach (var doctor in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-3">
+                    <div class="card card-effect p-0 ">
+                        <div class="card-img rounded-0">
+                            <div class="img-hover" style="position: relative">
+                                <img class="rounded-top img-fluid"
+                                     src="@doctor.Image" alt="...">
+                            </div>
+                        </div>
+                        <div class="card-body position-relative pt-0 px-1-9 pb-1-9">
+                            <div class="pt-6">
+                                <div class="mb-3 mt-4 text-center">
+                                    <p class="doctor-name text-decoration-none fw-bolder text-uppercase text-tb-lines">@doctor.Name</p>
+                                </div>
+                                <p class="text-secondary text-center lh-base">
+                                    @doctor.Speciality
+                                </p>
+                            </div>
+                            <div class="text-center book-btn">
+                                <a asp-action="Details" asp-route-did="@doctor.Id" class="btn d-block btn-primary py-3 fs-5 card-btn md">
+                                    <i class="fa fa-arrow-right icon-arrow before"></i>
+                                    <span class="label fw-normal">Book Appointment</span>
+                                    <i class="fa fa-arrow-right icon-arrow after"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

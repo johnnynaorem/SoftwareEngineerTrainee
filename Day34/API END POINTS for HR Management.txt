@@ -1,0 +1,75 @@
+API END POINTS:-
+
+
+1) Registration and Login for employee:
+	* POST(/api/employee/register) - Create Employee 
+	* POST (/api/employee/login) -  Employee Login and JWT generation
+	* GET (/api/employee/getAll) - Get all Employees
+	* GET (/api/employee/{id}) - Get single Employee
+
+2) User Profiles 
+	* GET(/api/employee/{id}) - Employee can fetch their data
+	* PUT(/api/employeeId/{id}/updateProfile) - Employee can update their profile
+
+3) Timesheet Submission
+	* POST(/api/timesheet/submit ) -> Timesheet Submit by Employee
+
+	-------------
+		* GET(/api/timesheet/{id}/overtime/calculate) => Calculate Overtime for a employee //
+	------------
+
+	* GET(/api/timesheet/{id}) -> Get timesheet and review by HR 
+	* PUT (/api/timesheet/{id}/approve,
+		/api/timesheet/{id}/rejected) -> Status Update by HR
+
+4) Leave and Absence Management
+	* POST(/api/leave/request ) -> Leave Apply by Employee
+	* GET(/api/leave/{id})-> Get timesheet and review by HR/Employee
+	* PUT(/api/leave/{id}/approve,
+		/api/timesheet/{id}/rejected) -> Status Update by HR
+
+5) Notification
+	* POST(/api/notifications/send ) -> Notification Send
+	* Get(/api/notification/{id}) -> Get Notification by Employee 
+	
+
+6) Project
+	* Post(/api/project/generate)
+	* GET(api/project/getAll) => Get all projects
+	* GET(api/project/{id}) => Get project by Id
+
+7)Task
+ 	* POST(api/task/{projectid}/add) => Generate Task for a project
+	* GET(api/task/getAll) => Get all tasks for all project
+	* GET(api/task/{projectId}/getAll) => Get all tasks for single project
+	* GET(api/task/{id}) => Get single task
+
+ 
+
+8) Attendance 
+	* POST(/api/attendance/{empId}/mark ) => Attendance Marked by HR
+	* GET(api/attendance/GetAll) => Get all employees attendance by HR
+	* GET(api/attendance/{empId}/Get) => Get attendance by Employee
+
+
+9) Report
+	*POST(/api/report/{employeeId}/generateReport) => Generate by Employee
+	*GET(/api/report/getAll) => Get all reports by HR
+	*GET(/api/report/{employeeId}/getAll) => Get all reports for Employee
+	*GET(/api/report/{employeeId}/{id}) => Get a report for Employee
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+A mock is like a fake version of an object that you use in tests. It helps you test your code without needing the real thing.
+
+Simple Explanation:
+Purpose: Mocks allow you to isolate the part of your code you want to test, without relying on its dependencies (like databases, web services, etc.).
+
+Behavior: You can set up mocks to return specific values or act in certain ways when their methods are called.
+
+Verification: After running your test, you can check if the mock was used correctly—like checking if a specific method was called.
+
+Example:
+Imagine you have a class that gets user data from a database. Instead of connecting to the actual database during testing, you create a mock version that pretends to be the database:
+
+Create the mock: It acts like the database.
+Set expectations: Tell the mock what to return when asked for user data.
+Run the test: Use the mock in your test instead of the real database.
+Check behavior: See if your code called the mock as expected.
+In summary, mocks help you test your code in a controlled and simple way without external dependencies.
+
+
+

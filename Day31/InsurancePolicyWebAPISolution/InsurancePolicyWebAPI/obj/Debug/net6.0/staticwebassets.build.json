@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UO7vTo4mrtLFrJVHuC4RQxMnnqXftP/UeBKH5QWrlXY=",
+  "Source": "InsurancePolicyWebAPI",
+  "BasePath": "_content/InsurancePolicyWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

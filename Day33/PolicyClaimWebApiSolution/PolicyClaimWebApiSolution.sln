@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicyClaimWebApi", "PolicyClaimWebApi\PolicyClaimWebApi.csproj", "{3C0F7056-BB9B-4BB6-A2E2-73153256F1B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimPolicyTest", "ClaimPolicyTest\ClaimPolicyTest.csproj", "{5388F728-854B-46FB-BC90-A18569DE3204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C0F7056-BB9B-4BB6-A2E2-73153256F1B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0F7056-BB9B-4BB6-A2E2-73153256F1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0F7056-BB9B-4BB6-A2E2-73153256F1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0F7056-BB9B-4BB6-A2E2-73153256F1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5388F728-854B-46FB-BC90-A18569DE3204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5388F728-854B-46FB-BC90-A18569DE3204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5388F728-854B-46FB-BC90-A18569DE3204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5388F728-854B-46FB-BC90-A18569DE3204}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A65BB478-7D58-44D3-8B6F-5448C0C6F6AA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.sourcelink.json
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\bin\Debug\net6.0\C#Features.exe
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\bin\Debug\net6.0\C#Features.deps.json
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\bin\Debug\net6.0\C#Features.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\bin\Debug\net6.0\C#Features.dll
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\bin\Debug\net6.0\C#Features.pdb
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.dll
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\refint\C#Features.dll
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.pdb
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\C#Features.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day10\ConsoleAp\C#Features\obj\Debug\net6.0\ref\C#Features.dll

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAmbi", "InterfaceAmbi\InterfaceAmbi.csproj", "{122D5563-082B-4555-A915-E1D18A590E91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{122D5563-082B-4555-A915-E1D18A590E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122D5563-082B-4555-A915-E1D18A590E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122D5563-082B-4555-A915-E1D18A590E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122D5563-082B-4555-A915-E1D18A590E91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E89FAF8-9B33-48DA-B1B3-EC7F78340373}
+	EndGlobalSection
+EndGlobal

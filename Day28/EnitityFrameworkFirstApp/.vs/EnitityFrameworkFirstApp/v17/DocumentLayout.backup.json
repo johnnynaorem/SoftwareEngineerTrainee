@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\model\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\model\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\model\\supplierproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\model\\supplierproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|c:\\johnny\\celsior_training\\day28\\enitityframeworkfirstapp\\enitityframeworkfirstapp\\shoppingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2040C2DE-9F84-42BE-87E3-07719B871F2B}|EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp.csproj|solutionrelative:enitityframeworkfirstapp\\shoppingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20241015070145_init.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Migrations\\20241015070145_init.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T07:01:45.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SupplierProduct.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\SupplierProduct.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Model\\SupplierProduct.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\SupplierProduct.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Model\\SupplierProduct.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T06:45:51.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Supplier.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Model\\Supplier.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Supplier.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Model\\Supplier.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T06:20:17.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Category.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Model\\Category.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Category.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Model\\Category.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T06:06:58.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShoppingContext.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\ShoppingContext.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\ShoppingContext.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\ShoppingContext.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\ShoppingContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAArwBMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T05:05:00.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Product.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Model\\Product.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Model\\Product.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Model\\Product.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T05:02:56.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Program.cs",
+              "RelativeDocumentMoniker": "EnitityFrameworkFirstApp\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day28\\EnitityFrameworkFirstApp\\EnitityFrameworkFirstApp\\Program.cs",
+              "RelativeToolTip": "EnitityFrameworkFirstApp\\Program.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswHwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T04:59:32.422Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

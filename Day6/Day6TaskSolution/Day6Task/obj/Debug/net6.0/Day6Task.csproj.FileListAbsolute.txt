@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\bin\Debug\net6.0\Day6Task.exe
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\bin\Debug\net6.0\Day6Task.deps.json
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\bin\Debug\net6.0\Day6Task.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\bin\Debug\net6.0\Day6Task.dll
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\bin\Debug\net6.0\Day6Task.pdb
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.sourcelink.json
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.dll
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\refint\Day6Task.dll
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.pdb
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\Day6Task.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day6\Day6TaskSolution\Day6Task\obj\Debug\net6.0\ref\Day6Task.dll

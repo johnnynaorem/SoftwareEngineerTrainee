@@ -1,0 +1,214 @@
+---------------------------------------------------------------------------
+Factory Method Design Pattern
+-----------------------------------
+It define an interface for creating an object in the superclass but let subclasses decide which class to instantiate.
+
+The factory method pattern allows a client to get an object without specifying the class name. It is the job of the factory method to create an object of the intended class and return it to the client.
+
+Think of a Factory: Imagine a toy factory where we can order different types of toys (like cars, dolls, etc.). We just tell the factory what type of toy we want, and it gives us the right one.
+Benefits: This keeps our code flexible and easy to change. If we want to add a new toy type, we can just update the factory, and the rest of our code doesn’t need to change.
+
+Pros:
+ we avoid tight coupling between the creator and the concrete products.
+ Single Responsibility Principle. we can move the product creation code into one place in the program, making the code easier to support.
+ Open/Closed Principle. we can introduce new types of products into the program without breaking existing client code.
+
+Cons:
+ The code may become more complicated since we need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when we're introducing the pattern into an existing hierarchy of creator classes.
+
+real time example:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    public interface INotification
+    {
+        void Notify(string message);
+    }
+}
+
+----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    internal class SMSNotification : INotification
+    {
+        public void Notify(string message)
+        {
+            Console.WriteLine($"SMS notification: {message}");
+        }
+    }
+}
+
+----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    internal class EmailNotification : INotification
+    {
+        public void Notify(string message)
+        {
+            Console.WriteLine($"Email notification: {message}");
+        }
+    }
+}
+
+----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    public abstract class NotificationFactory
+    {
+        public abstract INotification CreateNotification();
+    }
+}
+
+----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    internal class EmailFactory : NotificationFactory
+    {
+        public override INotification CreateNotification()
+        {
+            return new EmailNotification();
+        }
+    }
+}
+
+----------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorMethodDesignPattern
+{
+    internal class SMSFactory : NotificationFactory
+    {
+        public override INotification CreateNotification()
+        {
+            return new SMSNotification();
+        }
+    }
+}
+
+----------------------------------------------------------------
+namespace FactorMethodDesignPattern
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            NotificationFactory emailFactory = new EmailFactory();
+            INotification emailNotification = emailFactory.CreateNotification();
+            emailNotification.Notify("This is an Email notification");
+
+            NotificationFactory smsFactory = new SMSFactory();
+            INotification smsNotification = smsFactory.CreateNotification();
+            smsNotification.Notify("This is a SMS notification");
+        }
+    }
+}
+
+----------------------------------------------------------------
+
+Builder Pattern: 
+
+It is a way to construct complex objects step by step. It allow us to create an object by specifying its parts separately and then combining them into a final product.
+
+Think of Building a House: Imagine we're building a house. We start with the foundation, then add walls, a roof, and so on. Each part can be built separately before putting it all together.
+
+Benefits: This makes it easy to create different types of houses (big, small, with gardens, etc.) without having to deal with a complicated constructor that takes lots of parameters.
+
+Pros:
+ We can construct objects step-by-step, defer construction steps or run steps recursively.
+ we can reuse the same construction code when building various representations of products.
+ Single Responsibility Principle. we can isolate complex construction code from the business logic of the product.
+
+Cons:
+The overall complexity of the code increases since the pattern requires creating multiple new classes.
+
+real time example:
+
+----------------------------------------------------------------------
+public class Sandwich
+{
+    public string Bread { get; set; }
+    public string Filling { get; set; }
+    public bool HasSauce { get; set; }
+
+    public void ShowDetails()
+    {
+        Console.WriteLine($"Sandwich with {Bread} bread, {Filling} filling" + (HasSauce ? ", with sauce." : "."));
+    }
+}
+----------------------------------------------------------------
+public class SandwichBuilder
+{
+    private Sandwich _sandwich = new Sandwich();
+
+    public SandwichBuilder SetBread(string bread)
+    {
+        _sandwich.Bread = bread;
+        return this;
+    }
+
+    public SandwichBuilder SetFilling(string filling)
+    {
+        _sandwich.Filling = filling;
+        return this;
+    }
+
+    public SandwichBuilder AddSauce(bool addSauce)
+    {
+        _sandwich.HasSauce = addSauce;
+        return this;
+    }
+
+    public Sandwich Build() => _sandwich;
+}
+
+------------------------------------------------------------------
+class Program
+{
+    static void Main(string[] args)
+    {
+        var sandwich = new SandwichBuilder()
+            .SetBread("Whole Wheat")
+            .SetFilling("Turkey")
+            .AddSauce(true)
+            .Build();
+
+        sandwich.ShowDetails(); 
+	// Outputs: Sandwich with Whole Wheat bread, Turkey filling, with sauce.
+    }
+}
+
+----------------------------------------------------------------------------

@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\bankacccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\bankacccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\bankaccountfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\bankaccountfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\savingfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\savingfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\currentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\currentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\products\\current.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\products\\current.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|c:\\johnny\\celsior_training\\day20\\factormethodsolution\\factormethod\\products\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB4D51C-70B5-4588-8C16-E66EC5AB813B}|FactorMethod\\FactorMethod.csproj|solutionrelative:factormethod\\products\\saving.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CurrentFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\CurrentFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\CurrentFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\CurrentFactory.cs",
+              "RelativeToolTip": "FactorMethod\\CurrentFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:11:31.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Current.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Products\\Current.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\Products\\Current.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Products\\Current.cs",
+              "RelativeToolTip": "FactorMethod\\Products\\Current.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T10:06:52.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SavingFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\SavingFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\SavingFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\SavingFactory.cs",
+              "RelativeToolTip": "FactorMethod\\SavingFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:31:59.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BankAccountFactory.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\BankAccountFactory.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\BankAccountFactory.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\BankAccountFactory.cs",
+              "RelativeToolTip": "FactorMethod\\BankAccountFactory.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAArwAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:28:02.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Saving.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Products\\Saving.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\Products\\Saving.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Products\\Saving.cs",
+              "RelativeToolTip": "FactorMethod\\Products\\Saving.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:26:17.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BankAcccount.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\BankAcccount.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\BankAcccount.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\BankAcccount.cs",
+              "RelativeToolTip": "FactorMethod\\BankAcccount.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:15:18.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Program.cs",
+              "RelativeDocumentMoniker": "FactorMethod\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day20\\FactorMethodSolution\\FactorMethod\\Program.cs",
+              "RelativeToolTip": "FactorMethod\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:13:59.769Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

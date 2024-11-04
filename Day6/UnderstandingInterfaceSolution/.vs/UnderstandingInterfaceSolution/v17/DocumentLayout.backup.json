@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\isolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\isolverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\issue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|c:\\johnny\\celsior_training\\day6\\understandinginterfacesolution\\understandinginterface\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7927197B-9A50-4AFE-A110-37EC4D45752A}|UnderstandingInterface\\UnderstandingInterface.csproj|solutionrelative:understandinginterface\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\EmployeeService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\EmployeeService.cs",
+              "RelativeToolTip": "UnderstandingInterface\\EmployeeService.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAuwHQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:40:54.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ISolverService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\ISolverService.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\ISolverService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\ISolverService.cs",
+              "RelativeToolTip": "UnderstandingInterface\\ISolverService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:39:56.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\IEmployeeService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\IEmployeeService.cs",
+              "RelativeToolTip": "UnderstandingInterface\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:38:28.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Issue.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Issue.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\Issue.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Issue.cs",
+              "RelativeToolTip": "UnderstandingInterface\\Issue.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:37:10.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Employee.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\Employee.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Employee.cs",
+              "RelativeToolTip": "UnderstandingInterface\\Employee.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:35:50.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Program.cs",
+              "RelativeDocumentMoniker": "UnderstandingInterface\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day6\\UnderstandingInterfaceSolution\\UnderstandingInterface\\Program.cs",
+              "RelativeToolTip": "UnderstandingInterface\\Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T06:35:04.977Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

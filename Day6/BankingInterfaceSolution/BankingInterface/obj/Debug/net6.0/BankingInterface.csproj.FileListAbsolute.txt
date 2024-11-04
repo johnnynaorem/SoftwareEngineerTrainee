@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\bin\Debug\net6.0\BankingInterface.exe
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\bin\Debug\net6.0\BankingInterface.deps.json
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\bin\Debug\net6.0\BankingInterface.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\bin\Debug\net6.0\BankingInterface.dll
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\bin\Debug\net6.0\BankingInterface.pdb
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.sourcelink.json
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.dll
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\refint\BankingInterface.dll
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.pdb
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\BankingInterface.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day6\BankingInterfaceSolution\BankingInterface\obj\Debug\net6.0\ref\BankingInterface.dll

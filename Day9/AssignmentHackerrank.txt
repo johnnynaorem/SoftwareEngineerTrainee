@@ -1,0 +1,443 @@
+public static void plusMinus(List<int> arr)
+    {
+        decimal positiveNumbers = 0;
+        decimal negativeNumbers = 0;
+        decimal zeros = 0;
+        for(int i=0; i<arr.Count; i++){
+            if(arr[i]>0){
+                positiveNumbers++;
+            }
+            else if(arr[i]<0){
+                negativeNumbers++;
+            }
+            else{
+                zeros++;
+            }
+        }
+        
+        Console.WriteLine(positiveNumbers/arr.Count);
+        Console.WriteLine(negativeNumbers/arr.Count);
+        Console.WriteLine(zeros/arr.Count);
+        
+        
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static void staircase(int n)
+    {
+        for(int i=1; i<=n; i++){
+            for(int j=n; j>i; j--){
+                Console.Write(" ");
+            }
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("#");
+            }
+            Console.WriteLine();
+        }
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static void miniMaxSum(List<int> arr)
+    {
+        long max = 0;
+        long min = long.MaxValue;
+        for (int i = 0; i < arr.Count; i++)
+    {
+        long sum = 0;
+        
+        for (int j = 0; j < arr.Count; j++)
+        {
+            if (j == i)
+            {
+                continue; 
+            }
+            sum += arr[j];
+        }
+
+        if (sum > max)
+        {
+            max = sum;
+        }
+        if (sum < min)
+        {
+            min = sum; 
+        }
+    }
+        Console.Write(min);
+        Console.Write(" ");
+        Console.Write(max);
+    }
+-----------------------------------------------------------------------------------------------------------
+
+public static List<int> breakingRecords(List<int> scores)
+    {
+        int min = scores[0];
+        int max=scores[0];
+        int minbreaks=0;
+        int maxbreaks=0;
+        
+        for (int i=1; i<scores.Count;i++)
+        {
+            if (scores[i] > max)
+        {
+            max = scores[i];
+            maxbreaks++;    
+        }
+        else if (scores[i] < min)
+        {
+            min = scores[i]; 
+            minbreaks++;     
+        }
+        }
+        return new List<int> {maxbreaks, minbreaks};
+    }
+--------------------------------------------------------------------------------------------------------------
+
+public static string timeConversion(string s)
+    {
+         DateTime dateTime = DateTime.Parse(s);
+         string time24Hour = dateTime.ToString("HH:mm:ss");
+         
+         return time24Hour;
+        
+        
+    }
+--------------------------------------------------------------------------------------------------------------
+
+public static List<int> gradingStudents(List<int> grades)
+    {
+        List<int> result = new List<int>();
+        int n = 0;
+        for(int i=0; i<grades.Count; i++){
+            int temp = grades[i]/5;
+            int cal = 5*(temp+1);
+            if(grades[i]>=38){
+                if(cal - grades[i] < 3)
+                {
+                    result.Add(cal);
+                }else{
+                    result.Add(grades[i]);
+                }
+            }
+            else{
+                result.Add(grades[i]);
+            }
+        }
+        return result;
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+    {
+        int noOfApple = 0;
+        int noOfOrange = 0;
+        for(int i=0; i<apples.Count; i++){
+            int check = apples[i] + a;
+            if(check>=s && check<=t){
+                noOfApple++;
+            }
+        }
+        
+        for(int i=0; i<oranges.Count; i++){
+            int check = oranges[i] + b;
+            if(check>=s && check<=t){
+                noOfOrange++;
+            }
+        }
+        
+        Console.WriteLine(noOfApple);
+        Console.WriteLine(noOfOrange);
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static string kangaroo(int x1, int v1, int x2, int v2)
+    {
+        if (x1 < x2 && v1 <= v2)
+        {
+            return "NO";
+        }
+        if (x2 < x1 && v2 <= v1)
+        {
+            return "NO";
+        }
+    
+        if ((x2 - x1) % (v1 - v2) == 0)
+        {
+            return "YES";
+        }
+    
+        return "NO";
+    }
+-----------------------------------------------------------------------------------------------------------
+
+public static int getTotalX(List<int> a, List<int> b)
+    {
+         int lcm = a.Aggregate(LCM);
+        int gcd = b.Aggregate(GCD);
+        
+        int count = 0;
+        for (int i = lcm; i <= gcd; i += lcm)
+        {
+            if (gcd % i == 0)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+    private static int LCM(int a, int b)
+    {
+        return a * b / GCD(a, b);
+    }
+
+    private static int GCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+S
+--------------------------------------------------------------------------------------------------------------
+
+public static List<int> breakingRecords(List<int> scores)
+    {
+        int max = 0;
+        int min = 0;
+        List<int> result = new List<int>{0,0};
+        int highestScore = scores[0];
+        int lowestScore = scores[0];
+        for(int i=0; i<scores.Count; i++){
+            if(highestScore < scores[i]){
+                highestScore = scores[i];
+                result[0]++;
+            }
+            
+            if(lowestScore > scores[i]){
+               lowestScore = scores[i];
+               result[1]++;
+            }
+        }
+        
+        return result;
+    }
+--------------------------------------------------------------------------------------------------------------
+
+public static int birthday(List<int> s, int d, int m)
+    {
+        int noOfWays = 0;
+        for(int i=0; i<=s.Count - m; i++){
+            int sum = 0;
+            for(int j=0; j<m; j++){
+                sum = sum + s[i+j];
+            }
+            if(sum == d){
+                noOfWays++;
+            }
+        }
+        
+        return noOfWays;
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static int divisibleSumPairs(int n, int k, List<int> ar)
+    {
+        int count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
+                if ((ar[i] + ar[j]) % k == 0)
+                {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+------------------------------------------------------------------------------------------------------------
+
+public static int migratoryBirds(List<int> arr)
+{
+    int[] birdCount = new int[6];
+    foreach (var bird in arr)
+    {
+        birdCount[bird]++;
+    }
+
+    int maxCount = 0;
+    int birdType = 0;
+
+    for (int i = 1; i < birdCount.Length; i++)
+    {
+        if (birdCount[i] > maxCount)
+        {
+            maxCount = birdCount[i];
+            birdType = i;
+        }
+        else if (birdCount[i] == maxCount)
+        {
+            birdType = Math.Min(birdType, i);
+        }
+    }
+
+    return birdType;
+
+}
+-----------------------------------------------------------------------------------------------------------
+
+public static string dayOfProgrammer(int year)
+    {
+  if (year == 1918)
+    {
+        return "26.09.1918";
+    }
+    else if ((year < 1918 && year % 4 == 0) || (year > 1918 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))))
+    {
+        return $"12.09.{year}";
+    }
+    else
+    {
+        return $"13.09.{year}";
+    }
+    }
+
+
+--------------------------------------------------------------------------------------------------------------
+
+public static void bonAppetit(List<int> bill, int k, int b)
+{
+    int totalCost = bill.Sum();
+    int annaShare = (totalCost - bill[k]) / 2;
+    int actualShare = b - annaShare;
+
+    if (actualShare == 0)
+    {
+        Console.WriteLine("Bon Appetit");
+    }
+    else
+    {
+        Console.WriteLine(actualShare);
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+public static List<int> climbingLeaderboard(List<int> ranked, List<int> player)
+    {
+ var uniqueRanked = ranked.Distinct().ToList();
+    var results = new List<int>();
+
+    int rankIndex = uniqueRanked.Count - 1;
+    
+    foreach (var score in player)
+    {
+        while (rankIndex >= 0 && score >= uniqueRanked[rankIndex])
+        {
+            rankIndex--;
+        }
+        results.Add(rankIndex + 2);
+    }
+
+    return results;
+    }
+
+------------------------------------------------------------------------------------------------------------
+
+ public static string organizingContainers(List<List<int>> container)
+{
+
+    int n = container.Count;
+
+    int[] containerSums = new int[n]; 
+    int[] ballSums = new int[n];     
+
+    // Calculate the sum of each row and column
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            containerSums[i] += container[i][j]; 
+            ballSums[j] += container[i][j];      
+        }
+    }
+
+    Array.Sort(containerSums);
+    Array.Sort(ballSums);
+
+
+    return containerSums.SequenceEqual(ballSums) ? "Possible" : "Impossible";
+}
+------------------------------------------------------------------------------------------------------------
+
+public static string encryption(string s)
+    {
+s = s.Replace(" ", "");
+
+
+    int length = s.Length;
+
+
+    int rows = (int)Math.Floor(Math.Sqrt(length));
+    int cols = (int)Math.Ceiling(Math.Sqrt(length));
+
+
+    if (rows * cols < length)
+    {
+        rows = cols;
+    }
+
+
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < cols; i++)
+    {
+        for (int j = i; j < length; j += cols)
+        {
+            result.Append(s[j]);
+        }
+        result.Append(" ");
+    }
+
+    return result.ToString().Trim();
+    }
+
+
+-----------------------------------------------------------------------------------------------------------
+public static string gridSearch(List<string> G, List<string> P)
+    {
+int rowsG = G.Count;
+    int colsG = G[0].Length;
+    int rowsP = P.Count;
+    int colsP = P[0].Length;
+
+    for (int i = 0; i <= rowsG - rowsP; i++)
+    {
+        for (int j = 0; j <= colsG - colsP; j++)
+        {
+            bool match = true;
+
+            for (int k = 0; k < rowsP; k++)
+            {
+                if (G[i + k].Substring(j, colsP) != P[k])
+                {
+                    match = false;
+                    break;
+                }
+            }
+
+            if (match)
+            {
+                return "YES";
+            }
+        }
+    }
+
+    return "NO";
+    }
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------

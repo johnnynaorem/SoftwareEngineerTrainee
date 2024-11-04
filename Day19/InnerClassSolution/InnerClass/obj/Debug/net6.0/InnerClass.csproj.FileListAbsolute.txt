@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\bin\Debug\net6.0\InnerClass.exe
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\bin\Debug\net6.0\InnerClass.deps.json
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\bin\Debug\net6.0\InnerClass.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\bin\Debug\net6.0\InnerClass.dll
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\bin\Debug\net6.0\InnerClass.pdb
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.sourcelink.json
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.dll
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\refint\InnerClass.dll
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.pdb
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\InnerClass.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day19\InnerClassSolution\InnerClass\obj\Debug\net6.0\ref\InnerClass.dll

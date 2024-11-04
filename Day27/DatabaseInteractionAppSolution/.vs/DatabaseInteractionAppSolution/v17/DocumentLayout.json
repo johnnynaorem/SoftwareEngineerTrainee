@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|c:\\johnny\\celsior_training\\day27\\databaseinteractionappsolution\\databaseinteractionapp\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|solutionrelative:databaseinteractionapp\\userinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|c:\\johnny\\celsior_training\\day27\\databaseinteractionappsolution\\databaseinteractionapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|solutionrelative:databaseinteractionapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|c:\\johnny\\celsior_training\\day27\\databaseinteractionappsolution\\databaseinteractionapp\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|solutionrelative:databaseinteractionapp\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|c:\\johnny\\celsior_training\\day27\\databaseinteractionappsolution\\databaseinteractionapp\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CBB9154-188F-4D8B-BC33-A177AE225ED9}|DatabaseInteractionApp\\DatabaseInteractionApp.csproj|solutionrelative:databaseinteractionapp\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IServices.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\IServices.cs",
+              "RelativeDocumentMoniker": "DatabaseInteractionApp\\IServices.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\IServices.cs",
+              "RelativeToolTip": "DatabaseInteractionApp\\IServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T09:50:27.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\Services.cs",
+              "RelativeDocumentMoniker": "DatabaseInteractionApp\\Services.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\Services.cs",
+              "RelativeToolTip": "DatabaseInteractionApp\\Services.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFYBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:17:51.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserInteraction.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\UserInteraction.cs",
+              "RelativeDocumentMoniker": "DatabaseInteractionApp\\UserInteraction.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\UserInteraction.cs",
+              "RelativeToolTip": "DatabaseInteractionApp\\UserInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:16:58.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\Program.cs",
+              "RelativeDocumentMoniker": "DatabaseInteractionApp\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day27\\DatabaseInteractionAppSolution\\DatabaseInteractionApp\\Program.cs",
+              "RelativeToolTip": "DatabaseInteractionApp\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:13:09.313Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

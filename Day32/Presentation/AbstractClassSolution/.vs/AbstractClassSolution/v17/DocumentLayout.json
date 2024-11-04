@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\interface\\interface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\interface\\interface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\device\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\device\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\device\\printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\device\\printer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\paypal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\paypal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|c:\\johnny\\celsior_training\\day32\\presentation\\abstractclasssolution\\abstractclass\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED1F996-48E9-4AF3-AAAC-9C549D420BA4}|AbstractClass\\AbstractClass.csproj|solutionrelative:abstractclass\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Laptop.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Device\\Laptop.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\Device\\Laptop.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Device\\Laptop.cs",
+              "RelativeToolTip": "AbstractClass\\Device\\Laptop.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T09:00:51.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Printer.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Device\\Printer.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\Device\\Printer.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Device\\Printer.cs",
+              "RelativeToolTip": "AbstractClass\\Device\\Printer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T09:00:36.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Interface.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Interface\\Interface.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\Interface\\Interface.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Interface\\Interface.cs",
+              "RelativeToolTip": "AbstractClass\\Interface\\Interface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T09:00:16.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PayPal.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\PayPal.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\PayPal.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\PayPal.cs",
+              "RelativeToolTip": "AbstractClass\\PayPal.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T08:26:45.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Program.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\Program.cs",
+              "RelativeToolTip": "AbstractClass\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T07:15:10.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreditCard.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\CreditCard.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\CreditCard.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\CreditCard.cs",
+              "RelativeToolTip": "AbstractClass\\CreditCard.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T07:12:56.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "AbstractClass\\PaymentMethod.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day32\\Presentation\\AbstractClassSolution\\AbstractClass\\PaymentMethod.cs",
+              "RelativeToolTip": "AbstractClass\\PaymentMethod.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T06:28:47.655Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

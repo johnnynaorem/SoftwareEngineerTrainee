@@ -1,0 +1,438 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\appointment\\displayappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\appointment\\displayappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\appointment\\createappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\appointment\\createappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\exceptions\\invalidappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\exceptions\\invalidappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\doctor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\views\\doctor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\views\\doctor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\wwwroot\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\wwwroot\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\repositories\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|c:\\johnny\\celsior_training\\day15\\assignment\\clinicmanagementwebpagesolution\\clinicmanagementwebpage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA0E8D9-2A34-4F77-9F6E-C2B9F9B71C01}|ClinicManagementWebPage\\ClinicManagementWebPage.csproj|solutionrelative:clinicmanagementwebpage\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Doctor\\Details.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\Doctor\\Details.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Doctor\\Details.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\Doctor\\Details.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T17:28:21.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ClinicManagementWebPage\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-26T10:19:11.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwDcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:51:14.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA5wBwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T17:02:05.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateAppointment.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Appointment\\CreateAppointment.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\Appointment\\CreateAppointment.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Appointment\\CreateAppointment.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\Appointment\\CreateAppointment.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T20:53:22.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABsAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T17:09:40.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:55:16.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DisplayAppointment.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Appointment\\DisplayAppointment.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\Appointment\\DisplayAppointment.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Appointment\\DisplayAppointment.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\Appointment\\DisplayAppointment.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T20:52:47.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InvalidAppointment.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Exceptions\\InvalidAppointment.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Exceptions\\InvalidAppointment.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Exceptions\\InvalidAppointment.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Exceptions\\InvalidAppointment.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T17:14:10.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T16:19:06.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Doctor\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Views\\Doctor\\Index.cshtml",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Views\\Doctor\\Index.cshtml",
+              "RelativeToolTip": "ClinicManagementWebPage\\Views\\Doctor\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T17:04:45.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Services\\AppointmentService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Services\\AppointmentService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:10:56.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Repositories\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\AppointmentRepository.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Repositories\\AppointmentRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T18:14:00.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:03:24.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Interfaces\\IAppointmentService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Interfaces\\IAppointmentService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:11:15.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:07:31.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Services\\UserService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\UserService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Services\\UserService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:13:41.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginPage.css",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\wwwroot\\css\\LoginPage.css",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\wwwroot\\css\\LoginPage.css",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\wwwroot\\css\\LoginPage.css",
+              "RelativeToolTip": "ClinicManagementWebPage\\wwwroot\\css\\LoginPage.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-26T10:19:13.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Repositories\\DoctorRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Repositories\\DoctorRepository.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Repositories\\DoctorRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T16:39:16.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\Appointment.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T18:04:02.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Interfaces\\IDoctorService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IDoctorService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Interfaces\\IDoctorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T16:54:27.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\DoctorService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Services\\DoctorService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Services\\DoctorService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Services\\DoctorService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T16:54:10.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:16:08.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Program.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Program.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T21:00:07.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Models\\Doctor.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\Doctor.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T16:29:59.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ClinicManagementWebPage\\Models\\User.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day15\\Assignment\\ClinicManagementWebPageSolution\\ClinicManagementWebPage\\Models\\User.cs",
+              "RelativeToolTip": "ClinicManagementWebPage\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:00:49.155Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

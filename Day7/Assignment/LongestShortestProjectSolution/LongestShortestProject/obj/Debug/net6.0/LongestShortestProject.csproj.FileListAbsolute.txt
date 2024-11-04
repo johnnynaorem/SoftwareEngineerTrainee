@@ -1,0 +1,15 @@
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\bin\Debug\net6.0\LongestShortestProject.exe
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\bin\Debug\net6.0\LongestShortestProject.deps.json
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\bin\Debug\net6.0\LongestShortestProject.runtimeconfig.json
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\bin\Debug\net6.0\LongestShortestProject.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\bin\Debug\net6.0\LongestShortestProject.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.AssemblyInfoInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.AssemblyInfo.cs
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.csproj.CoreCompileInputs.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.sourcelink.json
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\refint\LongestShortestProject.dll
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.pdb
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\LongestShortestProject.genruntimeconfig.cache
+C:\Johnny\Celsior_Training\Day7\Assignment\LongestShortestProjectSolution\LongestShortestProject\obj\Debug\net6.0\ref\LongestShortestProject.dll

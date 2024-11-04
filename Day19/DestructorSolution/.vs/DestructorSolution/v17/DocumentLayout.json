@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day19\\DestructorSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE3739-040C-4B0D-ABFB-44ABAF7B2C2D}|Destructor\\Destructor.csproj|c:\\johnny\\celsior_training\\day19\\destructorsolution\\destructor\\destructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE3739-040C-4B0D-ABFB-44ABAF7B2C2D}|Destructor\\Destructor.csproj|solutionrelative:destructor\\destructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAE3739-040C-4B0D-ABFB-44ABAF7B2C2D}|Destructor\\Destructor.csproj|c:\\johnny\\celsior_training\\day19\\destructorsolution\\destructor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FAE3739-040C-4B0D-ABFB-44ABAF7B2C2D}|Destructor\\Destructor.csproj|solutionrelative:destructor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Destructor.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\DestructorSolution\\Destructor\\Destructor.cs",
+              "RelativeDocumentMoniker": "Destructor\\Destructor.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\DestructorSolution\\Destructor\\Destructor.cs",
+              "RelativeToolTip": "Destructor\\Destructor.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T05:22:05.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\DestructorSolution\\Destructor\\Program.cs",
+              "RelativeDocumentMoniker": "Destructor\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\DestructorSolution\\Destructor\\Program.cs",
+              "RelativeToolTip": "Destructor\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T05:21:30.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

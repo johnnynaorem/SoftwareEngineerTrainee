@@ -1,0 +1,40 @@
+html {
+  font-size: 14px;
+  font-family: inter;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+hr {
+    width: 90%;
+}
+
+.about-text {
+    width: 55%;
+    margin-left: 60px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .about-text, .footer-left {
+        margin: 0;
+        width: 100%;
+        font-size: 15px;
+    }
+    hr{
+        width: 100%;
+    }
+}

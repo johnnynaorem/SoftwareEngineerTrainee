@@ -1,0 +1,199 @@
+[
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimController",
+    "Method": "CreateClaimWithFiles",
+    "RelativePath": "api/Claim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PolicyNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantPhone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimantEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaimDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Files",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimController",
+    "Method": "GetAllClaims",
+    "RelativePath": "api/Claim/GetAllClaims",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimController",
+    "Method": "UpdateClaimStatus",
+    "RelativePath": "api/Claim/UpdateStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateClaimStatus",
+        "Type": "PolicyClaimWebApi.Models.DTOs.UpdateClaimStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimTypeController",
+    "Method": "CreatePolicy",
+    "RelativePath": "api/ClaimType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enitity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.ClaimTypeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimTypeController",
+    "Method": "GetAllClaimTypes",
+    "RelativePath": "api/ClaimType/GetAllClaimTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.ClaimTypeController",
+    "Method": "GetAllClaimTypesNames",
+    "RelativePath": "api/ClaimType/GetAllClaimTypesNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.PolicyController",
+    "Method": "CreatePolicyWithTypes",
+    "RelativePath": "api/Policy/createPolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enitity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.PolicyDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.PolicyController",
+    "Method": "GetAllPolicies",
+    "RelativePath": "api/Policy/GetAllPolicies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.PolicyController",
+    "Method": "GetAllPoliciesNames",
+    "RelativePath": "api/Policy/GetAllPoliciesNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PolicyClaimWebApi.Models.DTOs.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PolicyClaimWebApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PolicyClaimWebApi.WeatherForecast, PolicyClaimWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

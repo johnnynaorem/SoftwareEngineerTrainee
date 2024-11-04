@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day19\\InnerClassSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3EB7B70-15B7-4943-A322-4813CB8EB06C}|InnerClass\\InnerClass.csproj|c:\\johnny\\celsior_training\\day19\\innerclasssolution\\innerclass\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3EB7B70-15B7-4943-A322-4813CB8EB06C}|InnerClass\\InnerClass.csproj|solutionrelative:innerclass\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3EB7B70-15B7-4943-A322-4813CB8EB06C}|InnerClass\\InnerClass.csproj|c:\\johnny\\celsior_training\\day19\\innerclasssolution\\innerclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3EB7B70-15B7-4943-A322-4813CB8EB06C}|InnerClass\\InnerClass.csproj|solutionrelative:innerclass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\InnerClassSolution\\InnerClass\\Employee.cs",
+              "RelativeDocumentMoniker": "InnerClass\\Employee.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\InnerClassSolution\\InnerClass\\Employee.cs",
+              "RelativeToolTip": "InnerClass\\Employee.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T07:00:54.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\InnerClassSolution\\InnerClass\\Program.cs",
+              "RelativeDocumentMoniker": "InnerClass\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\InnerClassSolution\\InnerClass\\Program.cs",
+              "RelativeToolTip": "InnerClass\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T07:00:43.332Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

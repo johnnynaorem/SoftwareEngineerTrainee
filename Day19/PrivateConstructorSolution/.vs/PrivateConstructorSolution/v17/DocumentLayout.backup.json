@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior_Training\\Day19\\PrivateConstructorSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04FD7E37-3C7E-4885-9A9F-E4EE91867D82}|PrivateConstructor\\PrivateConstructor.csproj|c:\\johnny\\celsior_training\\day19\\privateconstructorsolution\\privateconstructor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04FD7E37-3C7E-4885-9A9F-E4EE91867D82}|PrivateConstructor\\PrivateConstructor.csproj|solutionrelative:privateconstructor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04FD7E37-3C7E-4885-9A9F-E4EE91867D82}|PrivateConstructor\\PrivateConstructor.csproj|c:\\johnny\\celsior_training\\day19\\privateconstructorsolution\\privateconstructor\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04FD7E37-3C7E-4885-9A9F-E4EE91867D82}|PrivateConstructor\\PrivateConstructor.csproj|solutionrelative:privateconstructor\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\PrivateConstructorSolution\\PrivateConstructor\\Connection.cs",
+              "RelativeDocumentMoniker": "PrivateConstructor\\Connection.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\PrivateConstructorSolution\\PrivateConstructor\\Connection.cs",
+              "RelativeToolTip": "PrivateConstructor\\Connection.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA4wBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T06:43:23.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior_Training\\Day19\\PrivateConstructorSolution\\PrivateConstructor\\Program.cs",
+              "RelativeDocumentMoniker": "PrivateConstructor\\Program.cs",
+              "ToolTip": "C:\\Johnny\\Celsior_Training\\Day19\\PrivateConstructorSolution\\PrivateConstructor\\Program.cs*",
+              "RelativeToolTip": "PrivateConstructor\\Program.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T06:43:06.816Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
