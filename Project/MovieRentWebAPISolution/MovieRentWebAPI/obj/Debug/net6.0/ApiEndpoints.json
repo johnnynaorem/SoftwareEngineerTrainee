@@ -110,6 +110,16 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "GetAllReservation",
+    "RelativePath": "api/MovieReservation/GetAllReservation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
     "Method": "ReserveMovie",
     "RelativePath": "api/MovieReservation/ReserveMovie",
     "HttpMethod": "POST",

@@ -179,5 +179,11 @@ namespace MovieRentWebAPI.Services
             }
             return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status.ToString(), ReservationId = movieReservationUpdateStatus.ReservationId };
         }
+
+        public async Task<IEnumerable<Reservation>> GetAll()
+        {
+            var reservation = await _reservationRepo.GetAll();
+            return reservation;
+        }
     }
 }
