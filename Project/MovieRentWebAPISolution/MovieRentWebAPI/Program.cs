@@ -58,7 +58,7 @@ namespace MovieRentWebAPI
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
-            builder.Services.AddScoped<IMovieServive, MovieService>();
+            builder.Services.AddScoped<IMovieService, MovieService>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<IReservationService, MovieReservationService>();
             #endregion

@@ -177,7 +177,7 @@ namespace MovieRentWebAPI.Services
 
                 }
             }
-            return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status, ReservationId = movieReservationUpdateStatus.ReservationId };
+            return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status.ToString(), ReservationId = movieReservationUpdateStatus.ReservationId };
         }
     }
 }

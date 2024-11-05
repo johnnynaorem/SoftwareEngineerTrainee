@@ -1,22 +1,17 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
 using MovieRentWebAPI.Context;
 using MovieRentWebAPI.Controllers;
-using MovieRentWebAPI.EmailInterface;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
 using MovieRentWebAPI.Repositories;
 using MovieRentWebAPI.Services;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MovieRentWebApiTesting
 {
@@ -27,7 +22,7 @@ namespace MovieRentWebApiTesting
         private MovieRentContext movieRentContext;
         private Mock<ILogger<MovieService>> loggerMovieService;
         private Mock<ILogger<MovieController>> loggerController;
-        private IMovieServive movieService;
+        private IMovieService movieService;
         private MovieController movieController;
         private Mock<IMapper> mapper;
 
@@ -117,7 +112,7 @@ namespace MovieRentWebApiTesting
             await movieController.AddMovie(movie);
             var result = await movieController.GetAllMovies();
             Assert.IsNotNull(result);
-            var resultObject =  result as OkObjectResult;
+            var resultObject = result as OkObjectResult;
 
             //// Assert
             Assert.IsNotNull(resultObject);
@@ -219,6 +214,143 @@ namespace MovieRentWebApiTesting
             //// Assert
             Assert.IsNotNull(resultObject);
             Assert.AreEqual(200, resultObject.StatusCode);
+        }
+
+        //Exceptions Test
+        [Test]
+        public async Task CreateUser_ReturnsInternalServerError_OnException()
+        {
+            var mockMovieService = new Mock<IMovieService>();
+            var controller = new MovieController(mockMovieService.Object, loggerController.Object);
+
+            var newMovie = new CreateMovieDTO
+            {
+                Title = "Echoes of the Past",
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            mockMovieService.Setup(service => service.CreateMovie(newMovie))
+                .ThrowsAsync(new Exception("An error occurred"));
+
+            // Act
+            var result = await controller.AddMovie(newMovie) as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(401, result.StatusCode);
+        }
+
+        [Test]
+        public async Task MovieGetAll_InternalServerError500_Test()
+        {
+            var mockMovieService = new Mock<IMovieService>();
+            var controller = new MovieController(mockMovieService.Object, loggerController.Object);
+
+            var newMovie = new CreateMovieDTO
+            {
+                Title = "Echoes of the Past",
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            mockMovieService.Setup(service => service.GetAll())
+                .ThrowsAsync(new Exception("An error occurred"));
+
+            // Act
+            var result = await controller.GetAllMovies() as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(500, result.StatusCode);
+        }
+
+        [Test]
+        public async Task MovieFilter_InternalServerError500_Test()
+        {
+            var mockMovieService = new Mock<IMovieService>();
+            var controller = new MovieController(mockMovieService.Object, loggerController.Object);
+
+            var filter = new MovieFilterDTO
+            {
+                Title = "test",
+                Genre = "test Genre",
+            };
+
+            mockMovieService.Setup(service => service.FilterMoviesAsync(filter))
+                .ThrowsAsync(new Exception("An error occurred"));
+
+            // Act
+            var result = await controller.FilterMovies(filter) as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(500, result.StatusCode);
+        }
+
+        [Test]
+        public async Task MovieNamesGetAll_InternalServerError500_Test()
+        {
+            var mockMovieService = new Mock<IMovieService>();
+            var controller = new MovieController(mockMovieService.Object, loggerController.Object);
+
+            var newMovie = new CreateMovieDTO
+            {
+                Title = "Echoes of the Past",
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            mockMovieService.Setup(service => service.GetAll())
+                .ThrowsAsync(new Exception("An error occurred"));
+
+            // Act
+            var result = await controller.GetAllMoviesNames() as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(500, result.StatusCode);
+        }
+
+        [Test]
+        public async Task AddMovie_BadRequest400_Test()
+        {
+            var mockMovieService = new Mock<IMovieService>();
+            var controller = new MovieController(mockMovieService.Object, loggerController.Object);
+            controller.ModelState.AddModelError("Title", "Cannot be blank");
+
+            var newMovie = new CreateMovieDTO
+            {
+                Title = null,
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            mockMovieService.Setup(service => service.CreateMovie(newMovie))
+                .ThrowsAsync(new Exception("An error occurred"));
+
+            // Act
+            var result = await controller.AddMovie(newMovie) as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(StatusCodes.Status400BadRequest, result.StatusCode);
         }
     }
 }

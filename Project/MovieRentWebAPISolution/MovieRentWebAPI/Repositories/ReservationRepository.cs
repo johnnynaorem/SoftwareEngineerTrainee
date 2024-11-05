@@ -14,7 +14,7 @@ namespace MovieRentWebAPI.Repositories
         }
         public async Task<Reservation> Add(Reservation entity)
         {
-            var existingReservation =  _context.Reservations.FirstOrDefault(r => r.CustomerId == entity.CustomerId && r.MovieId == entity.MovieId && r.Status == ReservationStatus.Pending || r.Status==ReservationStatus.Active);
+            var existingReservation =  _context.Reservations.FirstOrDefault(r => r.CustomerId == entity.CustomerId && r.MovieId == entity.MovieId && r.Status == ReservationStatus.Pending || r.Status==ReservationStatus.Active && r.ReservationDate.Date == entity.ReservationDate.Date);
             if(existingReservation != null)
             {
                 throw new InvalidOperationException("You cannot reserve the same movie more than once at the same time.");

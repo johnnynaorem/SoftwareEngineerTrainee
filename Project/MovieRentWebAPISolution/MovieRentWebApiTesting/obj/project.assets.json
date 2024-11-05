@@ -6929,19 +6929,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Johnny Naorem\\.nuget\\packages\\": {}
+    "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj",
+      "projectUniqueName": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj",
       "projectName": "MovieRentWebApiTesting",
-      "projectPath": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj",
-      "packagesPath": "C:\\Users\\Johnny Naorem\\.nuget\\packages\\",
-      "outputPath": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\obj\\",
+      "projectPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj",
+      "packagesPath": "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\.nuget\\packages\\",
+      "outputPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Johnny Naorem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6956,8 +6956,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj": {
-              "projectPath": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj"
+            "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj": {
+              "projectPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj"
             }
           }
         }
@@ -7026,7 +7026,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,7 +3,7 @@ using MovieRentWebAPI.Models.DTOs;
 
 namespace MovieRentWebAPI.Interfaces
 {
-    public interface IMovieServive
+    public interface IMovieService
     {
         Task<int> CreateMovie(CreateMovieDTO movieDTO);
         Task<IEnumerable<Movie>> GetAll();

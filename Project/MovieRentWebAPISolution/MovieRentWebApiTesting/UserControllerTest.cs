@@ -238,6 +238,33 @@ namespace MovieRentWebApiTesting
             Assert.NotNull(result);
             Assert.AreEqual(StatusCodes.Status500InternalServerError, result.StatusCode);
         }
+        
+        [Test]
+        public async Task CreateUser_BadRequest_OnException()
+        {
+            var mockUserService = new Mock<IUserService>();
+            var controller = new UserController(mockUserService.Object, loggerController.Object);
+            controller.ModelState.AddModelError("UserEmail", "Enter valid email");
+
+            var user = new UserCreateDTO
+            {
+                UserName = "Something",
+                UserEmail = "something@gmail.com",
+                Password = "password",
+                Role = 0
+            };
+
+
+            // Act
+            var result = await controller.RegistrationUser(user) as ObjectResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+
+            var badRequestResult = result as BadRequestObjectResult;
+            Assert.IsNotNull(badRequestResult);
+            Assert.AreEqual(400, badRequestResult.StatusCode);
+        }
 
         [Test]
         [TestCase("test13", "test@gmail.com", "testPassword", "wrongPassword")]
@@ -286,6 +313,96 @@ namespace MovieRentWebApiTesting
             // Assert
             Assert.NotNull(result);
             Assert.AreEqual(StatusCodes.Status401Unauthorized, result.StatusCode);
+        }
+
+        [Test]
+        [TestCase("test13", "test@gmail.com", "testPassword", "wrongPassword")]
+        public async Task UserChangePassword_ReturnsUnauthorizeError_OnException(string username, string email, string password, string wrongPass)
+        {
+            HMACSHA256 hmac = new HMACSHA256();
+            byte[] passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+            var newUser = new UserCreateDTO
+            {
+                UserName = username,
+                UserEmail = email,
+                Password = password,
+                Role = 0
+            };
+
+            var userEntity = new User
+            {
+                UserName = username,
+                UserEmail = email,
+                Password = passwordHash,
+                HashKey = hmac.Key,
+                Role = 0
+            };
+
+
+            var changePassword = new ChangePasswordRequestDTO
+            {
+                OldPassword = "wrongPassword",
+                NewPassword = password,
+            };
+
+
+            mapper.Setup(m => m.Map<User>(newUser)).Returns(userEntity);
+
+
+            // Act
+            await userController.RegistrationUser(newUser);
+            var result = await userController.ChangePassword(changePassword) as ObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(StatusCodes.Status401Unauthorized, result.StatusCode);
+        }
+
+        [Test]
+        public async Task UserLogin_BadRequest_Test()
+        {
+            var mockUserService = new Mock<IUserService>();
+            var controller = new UserController(mockUserService.Object, loggerController.Object);
+            controller.ModelState.AddModelError("UserEmail", "Enter valid email");
+
+            var loginC = new LoginRequestDTO
+            {
+                Password = "password",
+                UserEmail = "something@gmail.com"
+            };
+
+
+            // Act
+            var result = await controller.LoginUser(loginC);
+            Assert.NotNull(result);
+            var BadRequest = result as BadRequestObjectResult;
+
+            Assert.IsNotNull(BadRequest);
+            Assert.AreEqual(400, BadRequest.StatusCode);
+        }
+
+        [Test]
+        public async Task UserPasswordChange_BadRequest_Test()
+        {
+            var mockUserService = new Mock<IUserService>();
+            var controller = new UserController(mockUserService.Object, loggerController.Object);
+            controller.ModelState.AddModelError("OldPassword", "Old password is required");
+
+            var loginC = new ChangePasswordRequestDTO
+            {
+                OldPassword = null,
+                NewPassword = "newPassword"
+            };
+
+
+            // Act
+            var result = await controller.ChangePassword(loginC);
+            Assert.NotNull(result);
+            var BadRequest = result as BadRequestObjectResult;
+
+            Assert.IsNotNull(BadRequest);
+            Assert.AreEqual(400, BadRequest.StatusCode);
         }
     }
 }

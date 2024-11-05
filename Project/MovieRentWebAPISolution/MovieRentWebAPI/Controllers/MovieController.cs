@@ -10,9 +10,9 @@ namespace MovieRentWebAPI.Controllers
     public class MovieController : ControllerBase
     {
         private readonly ILogger<MovieController> _logger;
-        private readonly IMovieServive _movieService;
+        private readonly IMovieService _movieService;
 
-        public MovieController(IMovieServive movieServive, ILogger<MovieController> logger)
+        public MovieController(IMovieService movieServive, ILogger<MovieController> logger)
         {
             _logger = logger;
             _movieService = movieServive;

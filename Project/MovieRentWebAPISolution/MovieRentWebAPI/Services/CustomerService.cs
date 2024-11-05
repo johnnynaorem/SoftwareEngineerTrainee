@@ -49,7 +49,7 @@ namespace MovieRentWebAPI.Services
                                 $"**Customer ID:** {addCustomer.CustomerId}\n" +
                                 $"**Registered Contact Number:** {addCustomer.PhoneNumber}\n\n" +
                                 "You can now start browsing our extensive catalog of movies, reserve discs, and manage your rentals. To log in to your account, please click the link below:\n\n" +
-                                $"[Login to Your Account](www.MovieRentalApp.com)\n\n" +
+                                $"[Login to Your Account](https://localhost:7203/swagger/index.html)\n\n" +
                                 "For your convenience, here are some tips to enhance your experience:\n" +
                                 "- Explore different genres to find your favorites.\n" +
                                 "- Use our wishlist feature to save movies for later.\n" +

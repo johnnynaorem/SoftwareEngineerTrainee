@@ -6,7 +6,7 @@ using MovieRentWebAPI.Models.DTOs;
 
 namespace MovieRentWebAPI.Services
 {
-    public class MovieService : IMovieServive
+    public class MovieService : IMovieService
     {
         private readonly IRepository<int, Movie> _movieRepo;
         private readonly ILogger<MovieService> _logger;
@@ -49,11 +49,6 @@ namespace MovieRentWebAPI.Services
             if (!string.IsNullOrWhiteSpace(filter.Genre))
             {
                 filteredMovies = filteredMovies.Where(m => m.Genre.Equals(filter.Genre, StringComparison.OrdinalIgnoreCase));
-            }
-
-            if (filter.Rating.HasValue)
-            {
-                filteredMovies = filteredMovies.Where(m => m.Rating == filter.Rating);
             }
 
             if (filter.ReleaseDate.HasValue)
@@ -99,7 +94,7 @@ namespace MovieRentWebAPI.Services
                 var updateMovie = await _movieRepo.Update(movie, oldMovie.MovieId);
                 return updateMovie.MovieId;
             }
-            throw new Exception("Update Failed");
+            throw new InvalidOperationException("Update Failed");
         }
     }
 }

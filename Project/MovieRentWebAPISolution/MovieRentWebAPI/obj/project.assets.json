@@ -3092,19 +3092,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Johnny Naorem\\.nuget\\packages\\": {}
+    "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj",
+      "projectUniqueName": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj",
       "projectName": "MovieRentWebAPI",
-      "projectPath": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj",
-      "packagesPath": "C:\\Users\\Johnny Naorem\\.nuget\\packages\\",
-      "outputPath": "C:\\Johnny Naorem\\C#&DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\obj\\",
+      "projectPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\MovieRentWebAPI.csproj",
+      "packagesPath": "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\.nuget\\packages\\",
+      "outputPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Johnny Naorem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Johnny.Naorem.PYRAMIDINDIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3178,7 +3178,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

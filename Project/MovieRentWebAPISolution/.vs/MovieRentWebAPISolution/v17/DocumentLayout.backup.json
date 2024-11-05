@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\",
+  "WorkspaceRootPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny naorem\\c#\u0026dotnet\\johnny\\new folder\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\moviereservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\moviereservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\services\\moviereservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny naorem\\c#\u0026dotnet\\johnny\\new folder\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny naorem\\c#\u0026dotnet\\johnny\\new folder\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\moviereservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\moviereservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerRepository.cs",
-              "DocumentMoniker": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\CustomerRepository.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\CustomerRepository.cs",
-              "ToolTip": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\CustomerRepository.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\CustomerRepository.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwCwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T21:17:10.772Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MovieReservationService.cs",
-              "DocumentMoniker": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
               "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "ToolTip": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
               "RelativeToolTip": "MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAArwK8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAIwLcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T21:07:46.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovieReservationController.cs",
-              "DocumentMoniker": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "ToolTip": "C:\\Johnny Naorem\\C#\u0026DotNet\\johnny\\New folder\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwC8AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T21:11:27.2Z",
+              "WhenOpened": "2024-11-05T07:26:04.384Z",
               "EditorCaption": ""
             }
           ]

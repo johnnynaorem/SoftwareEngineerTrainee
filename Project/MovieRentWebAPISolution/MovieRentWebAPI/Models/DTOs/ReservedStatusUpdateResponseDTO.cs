@@ -3,6 +3,6 @@
     public class ReservedStatusUpdateResponseDTO
     {
         public int ReservationId { get; set; }
-        public ReservationStatus Status { get; set; }
+        public string Status { get; set; }
     }
 }
