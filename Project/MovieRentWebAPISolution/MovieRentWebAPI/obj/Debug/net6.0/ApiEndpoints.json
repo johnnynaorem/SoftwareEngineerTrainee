@@ -151,6 +151,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MovieRentWebAPI.Controllers.PaymentController",
+    "Method": "GetPayments",
+    "RelativePath": "api/Payment/GetAllPayments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.PaymentController",
+    "Method": "MakePayment",
+    "RelativePath": "api/Payment/MakePayment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payment",
+        "Type": "MovieRentWebAPI.Models.DTOs.MakePaymentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.RentalController",
+    "Method": "GetRentals",
+    "RelativePath": "api/Rental/GetRentals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.RentMovieDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.RentalController",
+    "Method": "RentMovie",
+    "RelativePath": "api/Rental/RentMovie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.RentMovieDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.RentalController",
+    "Method": "UpdateRental",
+    "RelativePath": "api/Rental/UpdateRental",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.RentalUpdateRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MovieRentWebAPI.Controllers.UserController",
     "Method": "ChangePassword",
     "RelativePath": "api/User/ChangePassword",

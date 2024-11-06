@@ -1,4 +1,5 @@
-﻿using MovieRentWebAPI.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using MovieRentWebAPI.Context;
 using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
@@ -33,9 +34,10 @@ namespace MovieRentWebAPI.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Payment> Get(int key)
+        public async Task<Payment> Get(int key)
         {
-            throw new NotImplementedException();
+            var payment = await _context.Payments.FirstOrDefaultAsync(p => p.paymentId == key);
+            return payment;
         }
 
         public async Task<IEnumerable<Payment>> GetAll()

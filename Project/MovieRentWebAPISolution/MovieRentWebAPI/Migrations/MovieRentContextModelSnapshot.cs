@@ -115,9 +115,15 @@ namespace MovieRentWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RentalId")
+                        .HasColumnType("int");
+
                     b.HasKey("paymentId");
 
                     b.HasIndex("CustomerId");
+
+                    b.HasIndex("RentalId")
+                        .IsUnique();
 
                     b.ToTable("Payments");
                 });
@@ -133,6 +139,9 @@ namespace MovieRentWebAPI.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
@@ -142,7 +151,7 @@ namespace MovieRentWebAPI.Migrations
                     b.Property<double>("RentalFee")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("ReturnDate")
+                    b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Status")
@@ -262,7 +271,15 @@ namespace MovieRentWebAPI.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_Payment_Customer");
 
+                    b.HasOne("MovieRentWebAPI.Models.Rental", "Rental")
+                        .WithOne("Payment")
+                        .HasForeignKey("MovieRentWebAPI.Models.Payment", "RentalId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Customer");
+
+                    b.Navigation("Rental");
                 });
 
             modelBuilder.Entity("MovieRentWebAPI.Models.Rental", b =>
@@ -343,6 +360,12 @@ namespace MovieRentWebAPI.Migrations
                     b.Navigation("Rentals");
 
                     b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("MovieRentWebAPI.Models.Rental", b =>
+                {
+                    b.Navigation("Payment")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MovieRentWebAPI.Models.User", b =>

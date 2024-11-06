@@ -8,25 +8,54 @@ namespace MovieRentWebAPI.Services
     {
         private readonly ILogger<Payment> _logger;
         private readonly IRepository<int, Payment> _paymentRepo;
-        private readonly IRepository<int, Movie> _moiveRepo;
+        private readonly IRepository<int, Rental> _rentalRepo;
+        private IRentalService _rentalService;
 
-        public PaymentService(IRepository<int, Payment> paymentRepository, IRepository<int, Movie> movieRepo, ILogger<Payment> logger)
+        public PaymentService(IRepository<int, Payment> paymentRepository, IRepository<int, Rental> rentalRepo, ILogger<Payment> logger, IRentalService rentalService)
         {
             _logger = logger;
             _paymentRepo = paymentRepository;
-            _moiveRepo = movieRepo;
+            _rentalRepo = rentalRepo;
+            _rentalService = rentalService;
         }
-        public async Task<int> GeneratePayment(MakePaymentDTO payment)
-        {
-            var paymentCredentials = new Payment
-            {
-                CustomerId = payment.CustomerId,
-                Amount = payment.Amount,
-                PaymentType = payment.PaymentType
-            };
 
-            var addPayment = await _paymentRepo.Add(paymentCredentials);
-            return addPayment.paymentId;
+        private async Task<Rental> GetRental(int id) {
+            var rental = await _rentalRepo.Get(id);
+            if (rental != null) { 
+                return rental;
+            }
+            throw new InvalidOperationException($"Not Rental Found with ID {id}");
+        }
+        public async Task<string> GeneratePayment(MakePaymentDTO payment)
+        {
+            try
+            {
+                var rental = await GetRental(payment.RentalId);
+
+                var paymentCredentials = new Payment
+                {
+                    RentalId = rental.RentalId,
+                    CustomerId = payment.CustomerId,
+                    PaymentType = payment.PaymentType,
+                    Amount = rental.RentalFee,
+                    PaymentDate = DateTime.Now,
+                };
+
+                var addPayment = await _paymentRepo.Add(paymentCredentials);
+
+                var updateRentalStatus = new RentalUpdateRequestDTO
+                {
+                    RentalId = payment.RentalId,
+                    Status = RentalStatus.Confirmed,
+                };
+
+                await _rentalService.Update(updateRentalStatus);
+                return $"Payment is Successfull.\nYour PaymentId is {addPayment.paymentId} with Payment Method: {addPayment.PaymentType}";
+            }
+            catch (Exception ex) {
+                _logger.LogError(ex.Message);
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<IEnumerable<Payment>> GetAllPayments()

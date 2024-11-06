@@ -3,48 +3,36 @@
   "WorkspaceRootPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\rentalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\models\\dtos\\makepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\models\\dtos\\makepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\moviereservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\moviereservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\moviereservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\services\\moviereservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\interfaces\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\interfaces\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\models\\dtos\\reservemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\models\\dtos\\reservemoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\models\\dtos\\makepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\models\\dtos\\makepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,145 +46,106 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MakePaymentDTO.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAMwC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:54:03.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovieRepository.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:51:42.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentRepository.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:49:32.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\PaymentService.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\PaymentService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\PaymentService.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Services\\PaymentService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:46:27.954Z",
+              "WhenOpened": "2024-11-05T20:56:22.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Title": "RentalController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\RentalController.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\RentalController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\RentalController.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\RentalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:44:53.722Z",
+              "WhenOpened": "2024-11-05T20:43:54.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowBgAAABHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RentalService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\RentalService.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\RentalService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\RentalService.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Services\\RentalService.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAIAwwGEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T11:27:48.047Z",
+              "WhenOpened": "2024-11-05T19:59:36.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IReservationService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IReservationService.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Interfaces\\IReservationService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IReservationService.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Interfaces\\IReservationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAIAwwDgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T10:55:44.259Z",
+              "WhenOpened": "2024-11-05T19:47:46.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovieReservationController.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\MovieReservationController.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAuwFcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\PaymentService.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Services\\PaymentService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAIAwwDoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T10:18:21.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Models\\Reservation.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\Reservation.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Models\\Reservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T10:20:54.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ReserveMovieDTO.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\ReserveMovieDTO.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Models\\DTOs\\ReserveMovieDTO.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\ReserveMovieDTO.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Models\\DTOs\\ReserveMovieDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T10:20:26.447Z",
+              "WhenOpened": "2024-11-05T19:01:03.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MovieReservationService.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Services\\MovieReservationService.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAIwL0AAAAAAAAAAAAAAA==",
+              "Title": "MakePaymentDTO.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Models\\DTOs\\MakePaymentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T07:26:04.384Z",
+              "WhenOpened": "2024-11-05T18:59:39.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T18:55:51.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\PaymentRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAIAwwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T18:53:04.449Z",
               "EditorCaption": ""
             }
           ]

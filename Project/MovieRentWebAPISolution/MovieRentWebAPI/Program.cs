@@ -52,6 +52,8 @@ namespace MovieRentWebAPI
             builder.Services.AddScoped<IRepository<string, User>, UserRepository>();
             builder.Services.AddScoped<IRepository<int, Customer>, CustomerRepository>();
             builder.Services.AddScoped<IRepository<int, Reservation>, ReservationRepository>();
+            builder.Services.AddScoped<IRepository<int, Rental>, RentalRepository>();
+            builder.Services.AddScoped<IRepository<int, Payment>, PaymentRepository>();
             #endregion
 
             #region Services
@@ -61,6 +63,9 @@ namespace MovieRentWebAPI
             builder.Services.AddScoped<IMovieService, MovieService>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<IReservationService, MovieReservationService>();
+            builder.Services.AddScoped<IRentalService, RentalService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+
             #endregion
 
             var emailConfig = builder.Configuration

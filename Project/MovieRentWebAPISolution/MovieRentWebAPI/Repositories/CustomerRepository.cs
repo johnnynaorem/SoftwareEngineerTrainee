@@ -19,16 +19,9 @@ namespace MovieRentWebAPI.Repositories
             var customer = _context.Customers.FirstOrDefault(c => c.FullName == entity.FullName && c.UserId == entity.UserId);
             if(customer == null)
             {
-                customer = new Customer
-                {
-                    FullName = entity.FullName,
-                    UserId = entity.UserId,
-                    Address = entity.Address,
-                    PhoneNumber = entity.PhoneNumber,
-                };
-                 _context.Customers.Add(customer);
+                 _context.Customers.Add(entity);
                 await _context.SaveChangesAsync();
-                return customer;
+                return entity;
             }
             throw new CouldNotAddException("Existing Customer... Add Failed");
         }

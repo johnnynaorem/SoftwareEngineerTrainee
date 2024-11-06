@@ -1,4 +1,6 @@
-﻿using MovieRentWebAPI.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using MovieRentWebAPI.Context;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 
@@ -35,9 +37,14 @@ namespace MovieRentWebAPI.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Reservation>> GetAll()
+        public async Task<IEnumerable<Reservation>> GetAll()
         {
-            throw new NotImplementedException();
+            var reservations = await _context.Reservations.ToListAsync();
+            if (reservations.Any())
+            {
+                return reservations;
+            }
+            throw new EmptyCollectionException("Reservations Collection Empty");
         }
 
         public async Task<Reservation> Update(Reservation entity, int key)

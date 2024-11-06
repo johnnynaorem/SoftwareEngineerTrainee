@@ -66,6 +66,11 @@ namespace MovieRentWebAPI.Context
                 .HasConstraintName("FK_Payment_Customer")
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Payment>()
+               .HasOne(p => p.Rental)
+               .WithOne(r => r.Payment)
+               .HasForeignKey<Payment>(p => p.RentalId)
+               .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
