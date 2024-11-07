@@ -13,6 +13,10 @@ namespace MovieRentWebAPI.Repositories
         {
             _context = context;
         }
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
         public async Task<Movie> Add(Movie entity)
         {
             try

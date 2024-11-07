@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models.DTOs;
+using MovieRentWebAPI.Services;
 
 namespace MovieRentWebAPI.Controllers
 {
@@ -95,6 +97,52 @@ namespace MovieRentWebAPI.Controllers
                 });
             }
 
+        }
+
+        [HttpPatch("PickUpMovie")]
+        [Authorize]
+        public async Task<IActionResult> PickUpMovie(PickUpMovieDTO pickUp)
+        {
+            try
+            {
+                var user = await _customerService.PickUpMovie(pickUp);
+                return Ok(user);
+            }
+            catch (MoviePickUpException ex)
+            {
+                return BadRequest(new ErrorResponseDTO
+                {
+                    ErrorCode = 400,
+                    ErrorMessage = ex.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
+
+        [HttpPatch("returnMovie")]
+        [Authorize]
+        public async Task<IActionResult> ReturnMovie(ReturnMovieResquestDTO returnMovie)
+        {
+            try
+            {
+                var user = await _customerService.ReturnMovie(returnMovie);
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
         }
     }
 }

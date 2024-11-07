@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models.DTOs;
 using System.Security.Claims;
@@ -79,6 +80,7 @@ namespace MovieRentWebAPI.Controllers
                 });
             }
         }
+
 
         [HttpPut("ChangePassword")]
         [Authorize]

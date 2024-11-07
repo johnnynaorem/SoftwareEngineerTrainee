@@ -7,5 +7,7 @@
         Task<T> Delete(K key);
         Task<T> Get(K key);
         Task<IEnumerable<T>> GetAll();
+
+        Task SaveChangesAsync();
     }
 }

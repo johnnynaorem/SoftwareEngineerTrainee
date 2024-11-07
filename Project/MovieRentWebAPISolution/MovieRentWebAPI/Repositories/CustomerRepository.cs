@@ -43,7 +43,12 @@ namespace MovieRentWebAPI.Repositories
             if (customers.Any()) { 
                 return customers;
             }
-            throw new EmptyCollectionException("Customers Collection Empry");
+            throw new EmptyCollectionException("Customers Collection Empty");
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Customer> Update(Customer entity, int key)

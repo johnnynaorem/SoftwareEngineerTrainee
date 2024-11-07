@@ -135,8 +135,6 @@ namespace MovieRentWebApiTesting
         [Test]
         public async Task GetAllUsers_ShouldThrowEmptyCollectionException_WhenNoUsersExist()
         {
-            
-
             var exception = Assert.ThrowsAsync<EmptyCollectionException>(async () => await repository.GetAll());
             Assert.AreEqual("Users Collection Empty", exception.Message);
         }

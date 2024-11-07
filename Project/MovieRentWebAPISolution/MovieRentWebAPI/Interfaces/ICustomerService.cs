@@ -9,6 +9,9 @@ namespace MovieRentWebAPI.Interfaces
         Task<int> UpdateCustomer(CreateCustomerDTO customerDTO, int key);
         Task<IEnumerable<Customer>> GetAllCustomer();
         Task<Customer> GetCustomerById(int id);
+        Task<PickUpResponseMovieDTO> PickUpMovie(PickUpMovieDTO pickUpMovie);
+
+        Task<ReturnMovieResponseDTO> ReturnMovie(ReturnMovieResquestDTO returnMovie);
 
     }
 }

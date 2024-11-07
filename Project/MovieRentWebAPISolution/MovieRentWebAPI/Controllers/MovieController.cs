@@ -107,5 +107,24 @@ namespace MovieRentWebAPI.Controllers
                 });
             }
         }
+
+        [HttpPatch("UpdateMovieDetails")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateMovieDetails(CreateMovieDTO updateMovie, int movieId)
+        {
+            try
+            {
+                var movies = await _movieService.UpdateMovie(updateMovie, movieId);
+                return Ok(movies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
     }
 }

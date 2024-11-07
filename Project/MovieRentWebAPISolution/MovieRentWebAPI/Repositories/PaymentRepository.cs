@@ -14,6 +14,11 @@ namespace MovieRentWebAPI.Repositories
         {
             _context = movieRentContext;
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
         public async Task<Payment> Add(Payment entity)
         {
             try

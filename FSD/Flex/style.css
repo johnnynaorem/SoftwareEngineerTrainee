@@ -1,0 +1,11 @@
+
+.item{
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1.3s;
+}
+.item:hover{
+    transform: scale(1.2);
+    background-color: aquamarine;
+}

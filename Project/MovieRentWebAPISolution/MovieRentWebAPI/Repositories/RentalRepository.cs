@@ -49,6 +49,11 @@ namespace MovieRentWebAPI.Repositories
             throw new EmptyCollectionException("Rentals Collection Empty");
         }
 
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<Rental> Update(Rental entity, int key)
         {
 
@@ -59,10 +64,13 @@ namespace MovieRentWebAPI.Repositories
                 if (rental == null)
                     throw new KeyNotFoundException($"Rental with ID {key} not found.");
 
-                if (rental.ReturnDate != null) 
+                if (rental.ReturnDate == null && entity.ReturnDate!=null)
+                {
                     rental.ReturnDate = entity.ReturnDate;
+                    rental.Status = RentalStatus.Returned;
+                }
 
-                if (rental.Status!= RentalStatus.Pending) 
+                if (rental.Status!= entity.Status) 
                     rental.Status = entity.Status;
 
                 await _context.SaveChangesAsync();

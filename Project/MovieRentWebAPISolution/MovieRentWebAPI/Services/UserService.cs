@@ -1,5 +1,6 @@
 ﻿using MovieRentWebAPI.EmailInterface;
 using MovieRentWebAPI.EmailModels;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;

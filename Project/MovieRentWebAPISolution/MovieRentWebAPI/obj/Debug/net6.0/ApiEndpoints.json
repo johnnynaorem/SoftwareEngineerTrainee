@@ -11,6 +11,22 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "PickUpMovie",
+    "RelativePath": "api/Customer/PickUpMovie",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pickUp",
+        "Type": "MovieRentWebAPI.Models.DTOs.PickUpMovieDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
     "Method": "RegisterCustomer",
     "RelativePath": "api/Customer/RegisterCustomer",
     "HttpMethod": "POST",
@@ -20,6 +36,22 @@
       {
         "Name": "customer",
         "Type": "MovieRentWebAPI.Models.DTOs.CreateCustomerDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "ReturnMovie",
+    "RelativePath": "api/Customer/returnMovie",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.ReturnMovieResquestDTO",
         "IsRequired": true
       }
     ],
@@ -109,6 +141,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
+    "Method": "UpdateMovieDetails",
+    "RelativePath": "api/Movie/UpdateMovieDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateMovie",
+        "Type": "MovieRentWebAPI.Models.DTOs.CreateMovieDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
     "Method": "GetAllReservation",
     "RelativePath": "api/MovieReservation/GetAllReservation",
@@ -183,13 +236,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "rentMovie",
-        "Type": "MovieRentWebAPI.Models.DTOs.RentMovieDTO",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -267,6 +314,38 @@
       {
         "Name": "userCreateDTO",
         "Type": "MovieRentWebAPI.Models.DTOs.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.WishlistController",
+    "Method": "AddWishlist",
+    "RelativePath": "api/Wishlist/AddWishlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wishlistDto",
+        "Type": "MovieRentWebAPI.Models.DTOs.AddWishlistDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.WishlistController",
+    "Method": "RemoveWishlist",
+    "RelativePath": "api/Wishlist/RemoveWishlist",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wishlistDto",
+        "Type": "MovieRentWebAPI.Models.DTOs.AddWishlistDTO",
         "IsRequired": true
       }
     ],

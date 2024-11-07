@@ -14,6 +14,10 @@ namespace MovieRentWebAPI.Repositories
         {
             _context = movieRentContext;
         }
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
         public async Task<Reservation> Add(Reservation entity)
         {
             var existingReservation =  _context.Reservations.FirstOrDefault(r => r.CustomerId == entity.CustomerId && r.MovieId == entity.MovieId && r.Status == ReservationStatus.Pending || r.Status==ReservationStatus.Active && r.ReservationDate.Date == entity.ReservationDate.Date);

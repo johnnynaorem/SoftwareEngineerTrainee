@@ -56,7 +56,7 @@ namespace MovieRentWebAPI.Controllers
 
         [HttpGet("GetRentals")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetRentals(RentMovieDTO rentMovie)
+        public async Task<IActionResult> GetRentals()
         {
             try
             {
