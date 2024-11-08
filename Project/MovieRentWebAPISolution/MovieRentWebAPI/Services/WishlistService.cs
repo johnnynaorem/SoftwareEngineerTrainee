@@ -41,11 +41,11 @@ namespace MovieRentWebAPI.Services
                     var removeWishlist = await _wishlistRepo.Delete(isExist.WishlistId);
                     return true;
                 }
-                return false;
+                throw new InvalidOperationException($"Wishlist is Not Founded with MovieId: {wishlist.MovieId} & CustomerId: {wishlist.CustomerId}");
             }
             catch (Exception ex)
             {
-                return false;
+                throw;
             }
         }
     }

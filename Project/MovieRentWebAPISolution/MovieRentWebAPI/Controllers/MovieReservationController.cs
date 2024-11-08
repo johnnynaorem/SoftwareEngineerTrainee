@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
+using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
 
 namespace MovieRentWebAPI.Controllers
@@ -90,6 +92,10 @@ namespace MovieRentWebAPI.Controllers
             {
                     var reservation = await _movieReservationService.GetAll();
                     return Ok(reservation);
+            }
+            catch (EmptyCollectionException ex)
+            {
+                return Ok(new { message = "List is Empty",reservation = new List<Reservation>() });
             }
             catch (Exception ex)
             {

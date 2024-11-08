@@ -83,9 +83,9 @@ namespace MovieRentWebAPI.Services
                                     $"**Rental Date:** {rental.RentalDate}\n" +
                                     $"**Due Date:** {rental.DueDate}\n" +
                                     $"**Rental Fee:** {rental.RentalFee:C}\n" +
-                                    $"**Rental Status:** Active";
+                                    $"**Rental Status:** Confirmed";
 
-                SendMail("Your Rental Status Updated To Active", emailBody);
+                SendMail("Your movie rental has been successfully created", emailBody);
 
                 return $"Payment is Successfull.\nYour PaymentId is {addPayment.paymentId} with Payment Method: {addPayment.PaymentType}";
             }

@@ -92,14 +92,14 @@ namespace MovieRentWebApiTesting
             var service = new WishlistService(repository);
             await service.Add(wishlist);
 
-            var result = await service.RemoveWishlist(1);
+            var result = await service.RemoveWishlist(wishlist);
 
             Assert.IsNotNull(result);
             Assert.IsTrue(true);
         }
 
         [Test]
-        public async Task RemoveWishlist_ReturnsFalse_WhenExceptionOccurs()
+        public async Task RemoveWishlist_ReturnsFailed_WhenExceptionOccurs()
         {
             // Arrange
             var mockRepository = new Mock<IRepository<int, Wishlist>>();
@@ -115,10 +115,13 @@ namespace MovieRentWebApiTesting
             mockRepository.Setup(r => r.Delete(1)).ThrowsAsync(new Exception("Database Error"));
 
             // Act
-            var result = await wishlistService.RemoveWishlist(1);
+            var exception = Assert.ThrowsAsync<InvalidOperationException>
+                (async () => await wishlistService.RemoveWishlist(addWishlistDTO));
+                
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.IsNotNull(exception);
+            Assert.AreEqual(exception.Message, $"Wishlist is Not Founded with MovieId: {addWishlistDTO.MovieId} & CustomerId: {addWishlistDTO.CustomerId}");
         }
     }
 }

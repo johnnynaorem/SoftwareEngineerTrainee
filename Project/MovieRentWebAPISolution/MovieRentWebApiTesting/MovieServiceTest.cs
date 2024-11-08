@@ -170,23 +170,31 @@ namespace MovieRentWebApiTesting
         [TestCase("Test1", "test Genre1", "Test Description1", 8, 20, 200, "TestHashKey1")]
         public async Task UpdateMovie_Fail_test(string Title, string Genre, string Description, double rating, int avilCopy, double rentalPrice, string image)
         {
-            
-            var updateMovieDTO = new CreateMovieDTO
+            var _mockRepository = new Mock<IRepository<int, Movie>>();
+            var _service = new MovieService(_mockRepository.Object, loggerMovieService.Object);
+
+            var movieDTO = new CreateMovieDTO
             {
-                Title = Title,
-                Genre = Genre,
-                Description = Description,
-                Rating = rating,
-                AvailableCopies = avilCopy,
-                Rental_Price = rentalPrice,
-                CoverImage = image
+                Title = "Test Movie",
+                Genre = "Action",
+                Description = "Test Description",
+                Rental_Price = 5.99,
+                CoverImage = "image.jpg",
+                AvailableCopies = 10,
+                Rating = 4.5
             };
+            int movieKey = 1;
 
-            var MovieService = new MovieService(repository, loggerMovieService.Object);
-            var exception = Assert.ThrowsAsync< InvalidOperationException>(async () => await MovieService.UpdateMovie(updateMovieDTO, 1));
-            Assert.IsNotNull(exception);
+            // Mock the _movieRepo.Get method to return null (movie not found)
+            _mockRepository.Setup(repo => repo.Get(movieKey)).ReturnsAsync((Movie)null);
 
-            Assert.IsTrue(exception.Message == "Update Failed");
+            // Act & Assert: Check that an InvalidOperationException is thrown
+            var exception = Assert.ThrowsAsync<InvalidOperationException>(async () =>
+                await _service.UpdateMovie(movieDTO, movieKey)
+            );
+
+            // Assert: Verify the exception message
+            Assert.AreEqual("Update Failed", exception.Message);
         }
     }
 }

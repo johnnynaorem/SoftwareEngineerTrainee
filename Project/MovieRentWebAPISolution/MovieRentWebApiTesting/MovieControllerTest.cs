@@ -352,5 +352,70 @@ namespace MovieRentWebApiTesting
             Assert.NotNull(result);
             Assert.AreEqual(StatusCodes.Status400BadRequest, result.StatusCode);
         }
+
+        [Test]
+        public async Task UpdateMovieDetails_Success200()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            var movie = new Movie
+            {
+                MovieId = 1,
+                Title = "Echoes of the Past",
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            var update = new CreateMovieDTO
+            {
+                Title = "Echoes of the Past Update",
+                Genre = "Mystery Update",
+            };
+
+            _mockMovieService.Setup(s => s.UpdateMovie(update, 1))
+                .ReturnsAsync(movie.MovieId);
+
+            var result = await _controller.UpdateMovieDetails(update, 1) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 200);
+        }
+
+        [Test]
+        public async Task UpdateMovieDetails_InternalServerError500()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            var movie = new Movie
+            {
+                MovieId = 1,
+                Title = "Echoes of the Past",
+                Genre = "Mystery",
+                Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                Rental_Price = 550,
+                CoverImage = "movie.jpg",
+                Rating = 8,
+                AvailableCopies = 8,
+            };
+
+            var update = new CreateMovieDTO
+            {
+                Title = "Echoes of the Past Update",
+                Genre = "Mystery Update",
+            };
+
+            _mockMovieService.Setup(s => s.UpdateMovie(update, 1))
+                .ThrowsAsync(new Exception("Error in Server"));
+
+
+            var result = await _controller.UpdateMovieDetails(update, 1) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 500);
+        }
     }
 }

@@ -144,7 +144,7 @@
     "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
     "Method": "UpdateMovieDetails",
     "RelativePath": "api/Movie/UpdateMovieDetails",
-    "HttpMethod": "GET",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06D01B1C-2776-44A9-9BAF-15F1C16E2D04}|MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapitesting\\movieservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06D01B1C-2776-44A9-9BAF-15F1C16E2D04}|MovieRentWebApiTesting\\MovieRentWebApiTesting.csproj|solutionrelative:movierentwebapitesting\\movieservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|c:\\johnny\\celsior\\softwareengineertrainee\\project\\movierentwebapisolution\\movierentwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{768D20F9-3649-444F-8EF8-D6E00B46D7EC}|MovieRentWebAPI\\MovieRentWebAPI.csproj|solutionrelative:movierentwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,20 +29,33 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 199,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "MovieRepository.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDAAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T20:08:12.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MovieController.cs",
               "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\MovieController.cs",
               "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\MovieController.cs",
               "RelativeToolTip": "MovieRentWebAPI\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAswHYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAqwH8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:50:55.908Z",
+              "WhenOpened": "2024-11-08T19:42:15.884Z",
               "EditorCaption": ""
             },
             {
@@ -45,22 +66,41 @@
               "RelativeDocumentMoniker": "MovieRentWebAPI\\Services\\MovieService.cs",
               "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Services\\MovieService.cs",
               "RelativeToolTip": "MovieRentWebAPI\\Services\\MovieService.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAgwFcAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv1oAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:50:28.446Z",
+              "WhenOpened": "2024-11-08T19:56:11.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovieRepository.cs",
-              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "RelativeDocumentMoniker": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "RelativeToolTip": "MovieRentWebAPI\\Repositories\\MovieRepository.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFwAAABFAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MovieRentWebAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MovieRentWebAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwF8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:49:44.826Z",
+              "WhenOpened": "2024-11-08T19:41:24.951Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 199,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MovieServiceTest.cs",
+              "DocumentMoniker": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieServiceTest.cs",
+              "RelativeDocumentMoniker": "MovieRentWebApiTesting\\MovieServiceTest.cs",
+              "ToolTip": "C:\\Johnny\\Celsior\\SoftwareEngineerTrainee\\Project\\MovieRentWebAPISolution\\MovieRentWebApiTesting\\MovieServiceTest.cs*",
+              "RelativeToolTip": "MovieRentWebApiTesting\\MovieServiceTest.cs*",
+              "ViewState": "AgIAALEAAAAAAAAAAAAuwLIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:56:45.744Z",
               "EditorCaption": ""
             }
           ]

@@ -41,7 +41,7 @@ namespace MovieRentWebAPI.Controllers
             {
                 return BadRequest(new ErrorResponseDTO
                 {
-                    ErrorCode = 500,
+                    ErrorCode = 400,
                     ErrorMessage = ex.Message,
                 });
             }
