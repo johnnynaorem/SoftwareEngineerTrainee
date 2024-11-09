@@ -108,6 +108,21 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
+        [HttpGet("GetMovies")]
+        [Authorize(Roles = "Admin,user")]
+        public async Task<IActionResult> GetAllMovies(int pageNumber = 1, int pageSize = 10 )
+        {
+            try
+            {
+                var result = await _movieService.GetAll(pageNumber, pageSize);
+                return Ok(result); 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
         [HttpPatch("UpdateMovieDetails")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateMovieDetails(CreateMovieDTO updateMovie, int movieId)

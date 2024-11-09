@@ -102,8 +102,14 @@ namespace MovieRentWebApiTesting
         [Test]
         public async Task GetAll_EmptyCollectionException()
         {
+            var _options = new DbContextOptionsBuilder<MovieRentContext>()
+               .UseInMemoryDatabase("Test1")
+               .Options;
+            var _context = new MovieRentContext(_options);
+            var _repository = new PaymentRepository(_context);
+
             var exception = Assert.ThrowsAsync<EmptyCollectionException>
-                (async () => await repository.GetAll());
+                (async () => await _repository.GetAll());
             Assert.IsNotNull(exception);
             Assert.AreEqual("Payment Collection Empty", exception.Message);
         }

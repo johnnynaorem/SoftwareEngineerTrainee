@@ -63,7 +63,7 @@ namespace MovieRentWebApiTesting
         }
 
         [Test]
-        public void Add_ShouldThrowCouldNotAddException_WhenCustomerAlreadyExists()
+        public async Task Add_ShouldThrowCouldNotAddException_WhenCustomerAlreadyExists()
         {
             // Arrange
             var existingCustomer = new Customer
@@ -75,6 +75,8 @@ namespace MovieRentWebApiTesting
             };
 
             // Act & Assert
+            await _context.Customers.AddAsync(existingCustomer);
+            await _context.SaveChangesAsync();
             var exception = Assert.ThrowsAsync<CouldNotAddException>(async () =>
                 await _customerRepository.Add(existingCustomer)
             );

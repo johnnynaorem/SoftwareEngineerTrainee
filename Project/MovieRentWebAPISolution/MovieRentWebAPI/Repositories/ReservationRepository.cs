@@ -36,9 +36,10 @@ namespace MovieRentWebAPI.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Reservation> Get(int key)
+        public async Task<Reservation> Get(int key)
         {
-            throw new NotImplementedException();
+            var reservation = await _context.Reservations.FirstOrDefaultAsync(r => r.ReservationId == key);
+            return reservation;
         }
 
         public async Task<IEnumerable<Reservation>> GetAll()

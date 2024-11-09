@@ -137,7 +137,7 @@ namespace MovieRentWebApiTesting
         [TestCase("oldpassword", "newPassword")]
         public async Task UserChangePassword_UserNotFound_Test(string oldpass, string newPass)
         {
-            // Arrange
+            // Arrangezz
             var user = new UserCreateDTO
             {
                 UserName = "Test2",

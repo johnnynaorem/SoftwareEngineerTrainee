@@ -70,6 +70,40 @@ namespace MovieRentWebAPI.Services
             return movies;
         }
 
+        public async Task<PaginatedResponseDTO<Movie>> GetAll(int pageNumber, int pageSize)
+        {
+            var allMovies = await _movieRepo.GetAll();
+
+            //Validate
+
+            pageNumber = Math.Max(pageNumber, 1);
+            pageSize = Math.Max(pageSize, 5); 
+
+            //limit the max page size 
+
+            const int maxPageSize = 20;
+            pageSize = Math.Min(pageSize, maxPageSize);
+
+            // Logic for Pagination
+
+            var totalRecords = allMovies.Count();
+            var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+            var pagedMovies = allMovies
+                .Skip((pageNumber - 1) * pageSize) 
+                .Take(pageSize) 
+                .ToList();
+
+            return new PaginatedResponseDTO<Movie>
+            {
+                Data = pagedMovies,
+                TotalRecords = totalRecords,
+                TotalPages = totalPages,
+                PageSize = pageSize,
+                PageNumber = pageNumber
+            };
+        }
+
         public async Task<Movie> GetMovie(int key)
         {
             var movie = await _movieRepo.Get(key);

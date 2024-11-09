@@ -45,11 +45,16 @@ namespace MovieRentWebAPI.Services
             var addReservation = await _reservationRepo.Add(reservation);
             if (addReservation != null) 
             {
-
                 var customer = await _customerRepo.Get(addReservation.CustomerId);
-
+                if (customer == null)
+                {
+                    throw new InvalidOperationException("Customer not found");
+                }
                 var movie = await _movieRepo.Get(addReservation.MovieId);
-
+                if (movie == null)
+                {
+                    throw new InvalidOperationException("Movie not found");
+                }
                 string emailBody = $"Dear {customer.FullName},\n\n" +
                                     "Thank you for your reservation with the Video Disc Rental App!\n\n" +
                                     $"Your reservation for the movie **{movie.Title}** has been successfully created on {DateTime.Now}.\n\n" +
@@ -103,20 +108,6 @@ namespace MovieRentWebAPI.Services
                             "The Video Disc Rental App Team";
                         SendMail("Update: Your Reservation Status", mailBody);
                         break;
-
-                    //case ReservationStatus.Pending:
-                    //    mailBody = $"Dear {customer.FullName},\n\n" +
-                    //        "We would like to keep you informed that your movie reservation is currently in a pending state.\n\n" +
-                    //        $"**Reservation Status:** Pending\n" +
-                    //        $"**Details:** Awaiting confirmation\n" +
-                    //        $"**Movie Title:** \"{movie.Title}\"\n" +
-                    //        $"**Reservation ID:** {reservation.ReservationId}\n\n" +
-                    //        "We appreciate your patience during this time and will update you as soon as your reservation is confirmed.\n" +
-                    //        "If you have any inquiries, please do not hesitate to reach out to our support team.\n\n" +
-                    //        "Best wishes,\n" +
-                    //        "The Video Disc Rental App Team";
-                    //    SendMail("Update: Your Reservation Status", mailBody);
-                    //    break;
 
                     case ReservationStatus.Completed:
                         mailBody = $"Dear {customer.FullName},\n\n" +
@@ -176,8 +167,9 @@ namespace MovieRentWebAPI.Services
                         break;
 
                 }
+                return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status.ToString(), ReservationId = movieReservationUpdateStatus.ReservationId };
             }
-            return new ReservedStatusUpdateResponseDTO { Status = movieReservationUpdateStatus.Status.ToString(), ReservationId = movieReservationUpdateStatus.ReservationId };
+            throw new InvalidOperationException("Reservation not found");
         }
 
         public async Task<IEnumerable<Reservation>> GetAll()
