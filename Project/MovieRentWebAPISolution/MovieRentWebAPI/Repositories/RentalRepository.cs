@@ -79,15 +79,15 @@ namespace MovieRentWebAPI.Repositories
             }
             catch (KeyNotFoundException ex)
             {
-                throw new CouldNotUpdateException("Rental not found..." + ex.Message);
+                throw new KeyNotFoundException("Rental not found..." + ex.Message);
             }
             catch (DbUpdateException ex)
             {
-                throw new CouldNotUpdateException("Failed to update the rental due to a database issue." + ex.Message);
+                throw new DbUpdateException("Failed to update the rental due to a database issue." + ex.Message);
             }
             catch (Exception ex)
             {
-                throw new CouldNotUpdateException("Rental update failed due to an unexpected error." + ex.Message);
+                throw new Exception("Rental update failed due to an unexpected error." + ex.Message);
             }
         }
     }
