@@ -63,7 +63,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for choosing us! If you have any questions, feel free to reach out to our support team.\n\n" +
                             "Best regards,\n" +
                             "The Support Team";
-                SendMail("Update Password Successfully", body);
+                SendMail(userUpdateSuccess.UserEmail,"Update Password Successfully", body);
             }
 
             return new LoginResponseDTO()
@@ -73,11 +73,11 @@ namespace MovieRentWebAPI.Services
             };
         }
 
-        private void SendMail(string title, string body)
+        private void SendMail(string mailTo, string title, string body)
         {
             var rng = new Random();
             var message = new Message(new string[] {
-                        "johnnynaorem7@gmail.com" },
+                        mailTo },
                     title,
                     body);
             _emailSender.SendEmail(message);
@@ -117,7 +117,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for choosing us! If you have any questions, feel free to reach out to our support team.\n\n" +
                             "Best regards,\n" +
                             "The Support Team";
-                    SendMail("Your Account Has Been Created", body);
+                    SendMail(addesUser.UserEmail,"Your Account Has Been Created", body);
                 }
                 return response;
             }

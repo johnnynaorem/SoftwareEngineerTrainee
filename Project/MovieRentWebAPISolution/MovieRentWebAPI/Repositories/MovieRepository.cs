@@ -83,7 +83,7 @@ namespace MovieRentWebAPI.Repositories
                 updateMovie.Description = entity.Description;
             }
 
-            if (entity.Rating != null)
+            if (entity.Rating.HasValue)
             {
                 updateMovie.Rating = entity.Rating;
             }

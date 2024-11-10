@@ -11,9 +11,10 @@
         //navigate
         public User User { get; set; }
         public IEnumerable<Payment> Payments { get; set; }
-        public ICollection<Rental> Rentals { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
-        public ICollection<Wishlist> Wishlists { get; set; }
+        public IEnumerable<Rental> Rentals { get; set; }
+        public IEnumerable<Reservation> Reservations { get; set; }
+        public IEnumerable<Wishlist> Wishlists { get; set; }
+        public IEnumerable<ReviewForMovie> Reviews { get; set; }
 
     }
 }

@@ -90,13 +90,21 @@ namespace MovieRentWebApiTesting
         [Test]
         public async Task Get_ShouldReturnCustomer_WhenCustomerExists()
         {
-            // Act
+            var newCustomer = new Customer
+            {
+                FullName = "Alice Brown",
+                Address = "789 Birch St",
+                PhoneNumber = "555-1234",
+                UserId = 3
+            };
+
+            await _customerRepository.Add(newCustomer);
             var customer = await _customerRepository.Get(1);
 
             // Assert
             Assert.NotNull(customer);
             Assert.AreEqual(1, customer.CustomerId);
-            Assert.AreEqual("John Doe", customer.FullName);
+            Assert.AreEqual("Alice Brown", customer.FullName);
         }
 
         [Test]

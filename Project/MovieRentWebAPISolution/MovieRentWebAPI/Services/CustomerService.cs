@@ -126,7 +126,10 @@ namespace MovieRentWebAPI.Services
                             where rental.MovieId == movieId && rental.CustomerId == customerId && rental.Status == RentalStatus.Confirmed
                             select new { rental.MovieId, rental.CustomerId }
                            ).ToList();
-            if (isReady.Any())
+
+            var movie = await _movieRepo.Get(movieId);
+
+            if (isReady.Any() && movie.AvailableCopies > 0)
             {
                 return true;
             }

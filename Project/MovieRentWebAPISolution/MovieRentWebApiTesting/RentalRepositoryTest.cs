@@ -2,6 +2,7 @@
 using Moq;
 using MovieRentWebAPI.Context;
 using MovieRentWebAPI.Exceptions;
+using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Repositories;
 using NUnit.Framework;
@@ -175,6 +176,8 @@ namespace MovieRentWebApiTesting
         [Test]
         public async Task UpdateRental_DbUpdateException()
         {
+            var mockDbContext = new Mock<MovieRentContext>();
+            var mockRepository = new Mock<IRepository<int, Rental>>();
             var rental = new Rental
             {
                 MovieId = 1,
@@ -184,16 +187,24 @@ namespace MovieRentWebApiTesting
                 RentalDate = DateTime.Now,
             };
 
+            await repository.Add(rental);
+            await context.SaveChangesAsync();
+
             var updateRental = new Rental
             {
                 ReturnDate = DateTime.Now,
                 Status = RentalStatus.Returned,
             };
-            await repository.Add(rental);
-            var result = Assert.ThrowsAsync<DbUpdateException>(async () => await repository.Update(updateRental, 2));
+
+            mockRepository.Setup(repo => repo.Update(It.IsAny<Rental>(), It.IsAny<int>()))
+                .ThrowsAsync(new DbUpdateException("Failed to update the rental due to a database issue"));
+
+            var result = Assert.ThrowsAsync<DbUpdateException>(async () => await mockRepository.Object.Update(updateRental, 1));
+
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Message.Contains("Failed to update the rental due to a database issue"));
         }
+
 
         [Test]
         public async Task UpdateRental_Exception()

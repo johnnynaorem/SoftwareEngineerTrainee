@@ -38,15 +38,25 @@ namespace MovieRentWebAPI.Services
             return movie;
         }
 
-        private async Task<bool> IsReservedMovie(int movieId)
+        private async Task<bool> IsReservedMovie(int movieId, int customerId)
         {
             var reservations = await _movieRervationService.GetAll();
-            var isMovieReserved = (
-                                    from movie in reservations
-                                    where movie.MovieId == movieId && movie.Status == ReservationStatus.Active
-                                    select movie.MovieId
-                                   ).ToList();
-            if (!isMovieReserved.Any()) return false;
+            //var isMovieReserved = (
+            //                        from reserve in reservations
+            //                        where reserve.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId
+            //                        select reserve.MovieId
+            //                       ).ToList();
+            //if (!isMovieReserved.Any()) return false;
+
+
+            var isMovieReserved = reservations.FirstOrDefault(reserve => reserve.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId);
+            await _movieRervationService.UpdateMovieReservationStatus(new ReservedMovieStatusUpdateRequestDTO
+            {
+                ReservationId = isMovieReserved.ReservationId,
+                Status = ReservationStatus.Completed
+            });
+
+            if (isMovieReserved!=null) return false;
 
             return true;
         }
@@ -106,7 +116,7 @@ namespace MovieRentWebAPI.Services
                     throw new InvalidOperationException("Customer not Found");
                 }
 
-                bool isMovieReserved = await IsReservedMovie(movie.MovieId);
+                bool isMovieReserved = await IsReservedMovie(movie.MovieId, customer.CustomerId);
                 if (!isMovieReserved)
                 {
                     _logger.LogWarning("Movie with ID " + rentMovieDTO.MovieId + " is not reserved.");

@@ -1,7 +1,7 @@
 ﻿namespace MovieRentWebAPI.Models
 {
     public enum RentalStatus {
-        Pending, Confirmed, Active, Returned, Overdue, Cancelled
+        Pending, Confirmed, Active, Returned, Overdue
     }
     public class Rental
     {

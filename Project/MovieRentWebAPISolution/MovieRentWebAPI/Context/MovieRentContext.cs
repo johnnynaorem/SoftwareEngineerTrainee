@@ -14,6 +14,7 @@ namespace MovieRentWebAPI.Context
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Wishlist> Wishlists { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<ReviewForMovie> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -71,6 +72,21 @@ namespace MovieRentWebAPI.Context
                .WithOne(r => r.Payment)
                .HasForeignKey<Payment>(p => p.RentalId)
                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Movie>()
+                .HasMany(m => m.Reviews)
+                .WithOne(r => r.Movie)
+                .HasForeignKey(r => r.MovieId)
+                .HasConstraintName("FK_Movie_Review")
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Customer>()
+                .HasMany(c => c.Reviews)
+                .WithOne(r => r.Customer)
+                .HasForeignKey(r => r.CustomerId)
+                .HasConstraintName("FK_Customer_Review")
+                .HasConstraintName("FK_Customer_Review")
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
