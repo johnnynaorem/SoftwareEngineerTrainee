@@ -78,6 +78,18 @@ namespace MovieRentWebAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            // Register CORS policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins", policy =>
+                {
+                    policy.AllowAnyOrigin()  // Allows all origins (you can restrict this to specific domains)
+                          .AllowAnyMethod()  // Allows all HTTP methods (GET, POST, PUT, DELETE, etc.)
+                          .AllowAnyHeader(); // Allows any headers (like Authorization)
+                });
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(opt =>
@@ -110,6 +122,8 @@ namespace MovieRentWebAPI
             });
 
             var app = builder.Build();
+
+            app.UseCors("AllowAllOrigins");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
