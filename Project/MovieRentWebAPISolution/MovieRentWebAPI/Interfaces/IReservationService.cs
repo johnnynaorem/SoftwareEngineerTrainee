@@ -8,8 +8,8 @@ namespace MovieRentWebAPI.Interfaces
         Task<int> ReserverMovie(ReserveMovieDTO reserveMovie);
         Task<ReservedStatusUpdateResponseDTO> UpdateMovieReservationStatus(ReservedMovieStatusUpdateRequestDTO entity);
 
-        Task<IEnumerable<Movie>> GetAllByCustomer(int customerId);
-        Task<IEnumerable<Movie>> GetAllByMovie(int movieId);
+        Task<IEnumerable<Reservation>> GetAllByCustomer(int customerId);
+        Task<Reservation> GetReservationById(int movieId);
         Task<IEnumerable<Reservation>> GetAll();
     }
 }

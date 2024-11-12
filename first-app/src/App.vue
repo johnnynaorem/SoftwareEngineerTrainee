@@ -32,23 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-
-  /* img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    border: 5px solid green;
-    transition: 2s ;
-
-  } */
-  img:hover{
-    /* width: 300px;
-    height: 300px; */
-    /* border: 20px solid rgb(9, 214, 250); */
-    /* animation: flip 2s infinite linear; */
-    transform: scaleX(-1);
-  }
 }
 </style>

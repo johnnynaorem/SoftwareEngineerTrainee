@@ -107,6 +107,30 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
+        [HttpGet("GetReservationById")]
+        [Authorize(Roles = "Admin, user")]
+
+        public async Task<IActionResult> GetReservationById(int id)
+        {
+            try
+            {
+                var reservation = await _movieReservationService.GetReservationById(id);
+                if (reservation == null)
+                {
+                    return Ok(reservation);
+                }
+                return Ok(new { message = $"Found Reservation with Id: {id}", reservation });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
+
         [HttpGet("GetAllReservationByCustomer")]
         [Authorize]
 

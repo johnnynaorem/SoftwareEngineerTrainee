@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieRentWebAPI.Interfaces;
+using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
 
 namespace MovieRentWebAPI.Controllers
@@ -20,7 +21,7 @@ namespace MovieRentWebAPI.Controllers
         }
 
         [HttpGet("GetAllPayments")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetPayments()
         {
             try
@@ -29,6 +30,26 @@ namespace MovieRentWebAPI.Controllers
                 return Ok(response);
             }
             catch (Exception ex) {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message,
+                });
+            }
+        }
+
+        [HttpGet("GetAllPaymentByCustomer")]
+        [Authorize(Roles = "Admin,user")]
+        public async Task<IActionResult> GetAllPaymentByCustomer(int id)
+        {
+            try
+            {
+                var payments = await _paymentService.GetAllPayments();
+                var response = (from payment in payments where payment.CustomerId == id select new { payment.CustomerId, payment.RentalId, payment.Amount, payment.PaymentType, payment.PaymentDate }).ToList();
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
                 {
                     ErrorCode = 500,

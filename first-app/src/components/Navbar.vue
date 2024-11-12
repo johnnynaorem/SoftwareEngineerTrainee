@@ -11,11 +11,15 @@ import ProductList from './ProductList.vue';
             return{
                 products: [],
                 Categories: [],
+                isLoading: true,
                 updateProduct:(slug) =>{ 
                     fetch(`https://dummyjson.com/products/category/${slug}`)
                     .then(res => res.json())
                     .then(data => {
-                        this.products = data.products
+                        this.products = data.products;
+                        setTimeout(()=>{
+                            this.isLoading = false;
+                        },1000)
                     });
                 }
             }
@@ -30,27 +34,26 @@ import ProductList from './ProductList.vue';
 
                 fetch('https://dummyjson.com/products')
                     .then(res => res.json())
-                    .then(data => this.products = data.products);
+                    .then(data => {
+                        this.products = data.products;
+                        setTimeout(()=>{
+                            this.isLoading = false;
+                        },1000)
+                    });
         }
   }
 </script>
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,5 +67,12 @@ import ProductList from './ProductList.vue';
     </div>
   </div>
 </nav>
-<ProductList :products="products" />
+<ProductList :products="products" :isLoading="isLoading" />
 </template>
+<style>
+.dropdown-menu {
+        cursor: pointer;
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+</style>

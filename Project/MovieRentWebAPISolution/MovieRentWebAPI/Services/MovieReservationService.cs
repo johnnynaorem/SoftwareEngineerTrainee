@@ -178,16 +178,17 @@ namespace MovieRentWebAPI.Services
             return reservation;
         }
 
-        public async Task<IEnumerable<Movie>> GetAllByCustomer(int customerId)
+        public async Task<IEnumerable<Reservation>> GetAllByCustomer(int customerId)
         {
            
 
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Movie>> GetAllByMovie(int movieId)
+        public async Task<Reservation> GetReservationById(int reservationId)
         {
-            throw new NotImplementedException();
+            var reservation = await _reservationRepo.Get(reservationId);
+            return reservation;
         }
     }
 }

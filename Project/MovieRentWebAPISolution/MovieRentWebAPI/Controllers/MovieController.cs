@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models.DTOs;
+using System.Data;
 
 namespace MovieRentWebAPI.Controllers
 {
@@ -89,6 +90,28 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
+        [HttpGet("GetAllMoviesCatalog")]
+        [Authorize]
+        public async Task<IActionResult> GetAllMoviesCatalog()
+        {
+            try
+            {
+                var movies = await _movieService.GetAll();
+                var moviesCategories = (from movie in movies
+                                  orderby movie.Genre
+                                  select movie.Genre).Distinct().ToList();
+                return Ok(moviesCategories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = "An unexpected error occurred. Please try again later."
+                });
+            }
+        }
+
         [HttpGet("filter")]
         [Authorize]
         public async Task<IActionResult> FilterMovies([FromQuery] MovieFilterDTO filter)
@@ -110,11 +133,11 @@ namespace MovieRentWebAPI.Controllers
 
         [HttpGet("GetMovieById")]
         [Authorize(Roles = "Admin,user")]
-        public async Task<IActionResult> GetMovie(int movieId)
+        public async Task<IActionResult> GetMovie(int id)
         {
             try
             {
-                var result = await _movieService.GetMovie(movieId);
+                var result = await _movieService.GetMovie(id);
                 return Ok(result);
             }
             catch (Exception ex)
