@@ -106,5 +106,55 @@ namespace MovieRentWebAPI.Controllers
                 });
             }
         }
+
+        [HttpGet("GetAllReservationByCustomer")]
+        [Authorize]
+
+        public async Task<IActionResult> GetAllReservationByCustomer(int customerId)
+        {
+            try
+            {
+                var reservation = await _movieReservationService.GetAll();
+                var reservationByCustomer = (from reserve in reservation where reserve.CustomerId == customerId select new { reserve.ReservationId, reserve.MovieId, reserve.CustomerId, reserve.Status, reserve.ReservationDate }).ToList();
+                return Ok(reservationByCustomer);
+            }
+            catch (EmptyCollectionException ex)
+            {
+                return Ok(new { message = "List is Empty", reservation = new List<Reservation>() });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
+
+        [HttpGet("GetAllReservationByMovie")]
+        [Authorize]
+
+        public async Task<IActionResult> GetAllReservationByMovie(int movieId)
+        {
+            try
+            {
+                var reservation = await _movieReservationService.GetAll();
+                var reservationByCustomer = (from reserve in reservation where reserve.MovieId == movieId select new { reserve.ReservationId, reserve.MovieId, reserve.CustomerId, reserve.Status, reserve.ReservationDate }).ToList();
+                return Ok(reservationByCustomer);
+            }
+            catch (EmptyCollectionException ex)
+            {
+                return Ok(new { message = "List is Empty", reservation = new List<Reservation>() });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
     }
 }

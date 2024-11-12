@@ -142,6 +142,22 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
+    "Method": "GetMovie",
+    "RelativePath": "api/Movie/GetMovieById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
     "Method": "GetAllMovies",
     "RelativePath": "api/Movie/GetMovies",
     "HttpMethod": "GET",
@@ -190,6 +206,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "GetAllReservationByCustomer",
+    "RelativePath": "api/MovieReservation/GetAllReservationByCustomer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "GetAllReservationByMovie",
+    "RelativePath": "api/MovieReservation/GetAllReservationByMovie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
