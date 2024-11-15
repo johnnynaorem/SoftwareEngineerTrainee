@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models.DTOs;
@@ -7,6 +8,7 @@ using System.Data;
 namespace MovieRentWebAPI.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowAllOrigins")]
     [ApiController]
     public class MovieController : ControllerBase
     {
@@ -98,8 +100,8 @@ namespace MovieRentWebAPI.Controllers
             {
                 var movies = await _movieService.GetAll();
                 var moviesCategories = (from movie in movies
-                                  orderby movie.Genre
-                                  select movie.Genre).Distinct().ToList();
+                                        orderby movie.Genre
+                                        select movie.Genre).Distinct().ToList();
                 return Ok(moviesCategories);
             }
             catch (Exception ex)
@@ -146,14 +148,14 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
-        [HttpGet("GetMovies")]
+        [HttpGet("GetAllMoviesPagination")]
         [Authorize(Roles = "Admin,user")]
-        public async Task<IActionResult> GetAllMovies(int pageNumber = 1, int pageSize = 10 )
+        public async Task<IActionResult> GetAllMovies(int pageNumber = 1, int pageSize = 10)
         {
             try
             {
                 var result = await _movieService.GetAll(pageNumber, pageSize);
-                return Ok(result); 
+                return Ok(result);
             }
             catch (Exception ex)
             {

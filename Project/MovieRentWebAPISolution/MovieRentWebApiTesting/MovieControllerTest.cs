@@ -417,5 +417,170 @@ namespace MovieRentWebApiTesting
             Assert.NotNull(result);
             Assert.AreEqual(result.StatusCode, 500);
         }
+
+        [Test]
+        public async Task GetAllCatalog_Success200_Ok()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            var movies = new List<Movie>()
+            {
+                new Movie
+                {
+                    MovieId = 1,
+                    Title = "Echoes of the Past",
+                    Genre = "Mystery",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 8,
+                },
+                new Movie
+                {
+                    MovieId = 2,
+                    Title = "Echoes of the Past2",
+                    Genre = "Mystery2",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 10,
+                },
+            };
+
+            _mockMovieService.Setup(s => s.GetAll())
+                .ReturnsAsync(movies);
+
+            var result = await _controller.GetAllMoviesCatalog() as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 200);
+        }
+
+        [Test]
+        public async Task GetAllCatalog_Exception_500()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            var movies = new List<Movie>()
+            {
+                new Movie
+                {
+                    MovieId = 1,
+                    Title = "Echoes of the Past",
+                    Genre = "Mystery",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 8,
+                },
+                new Movie
+                {
+                    MovieId = 2,
+                    Title = "Echoes of the Past2",
+                    Genre = "Mystery2",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 10,
+                },
+            };
+
+            _mockMovieService.Setup(s => s.GetAll())
+                .ThrowsAsync(new Exception("Error in Server"));
+
+            var result = await _controller.GetAllMoviesCatalog() as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 500);
+        }
+
+
+        [Test]
+        public async Task GetMovie_Exception_500()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            
+            _mockMovieService.Setup(s => s.GetMovie(1))
+                .ThrowsAsync(new Exception("Error in Server"));
+
+            var result = await _controller.GetMovie(1) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 400);
+        }
+
+        [Test]
+        public async Task GetMovie_Success_200_OK()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+            var movies = new List<Movie>()
+            {
+                new Movie
+                {
+                    MovieId = 1,
+                    Title = "Echoes of the Past",
+                    Genre = "Mystery",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 8,
+                },
+                new Movie
+                {
+                    MovieId = 2,
+                    Title = "Echoes of the Past2",
+                    Genre = "Mystery2",
+                    Description = "A detective haunted by the unsolved murder of his sister returns to his hometown, only to uncover secrets that the townsfolk would rather keep buried. As he digs deeper, he realizes that the killer might be closer than he ever imagined",
+                    Rental_Price = 550,
+                    CoverImage = "movie.jpg",
+                    Rating = 8,
+                    AvailableCopies = 10,
+                },
+            };
+
+            _mockMovieService.Setup(s => s.GetMovie(1))
+                .ReturnsAsync(movies[1]);
+
+            var result = await _controller.GetMovie(1) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 200);
+        }
+
+        [Test]
+        public async Task GetAllMoviesWithPagination_Exception_500()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+
+
+            _mockMovieService.Setup(s => s.GetAll(1,5))
+                .ThrowsAsync(new Exception("Error in Server"));
+
+            var result = await _controller.GetAllMovies(1,5) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 400);
+        }
+
+        [Test]
+        public async Task GetAllMoviesWithPagination_Success_200_OK()
+        {
+            var _mockMovieService = new Mock<IMovieService>();
+            var _controller = new MovieController(_mockMovieService.Object, loggerController.Object);
+                      
+            _mockMovieService.Setup(s => s.GetAll(1,5))
+                .ReturnsAsync(new PaginatedResponseDTO<Movie>());
+
+            var result = await _controller.GetAllMovies(1,5) as ObjectResult;
+            Assert.NotNull(result);
+            Assert.AreEqual(result.StatusCode, 200);
+        }
     }
 }

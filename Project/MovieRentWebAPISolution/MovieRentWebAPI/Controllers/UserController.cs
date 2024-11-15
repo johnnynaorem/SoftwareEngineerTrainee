@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieRentWebAPI.Exceptions;
@@ -9,6 +10,7 @@ using System.Security.Claims;
 namespace MovieRentWebAPI.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("AllowAllOrigins")]
     [ApiController]
     public class UserController : ControllerBase
     {

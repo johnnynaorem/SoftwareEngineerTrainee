@@ -121,7 +121,17 @@ namespace MovieRentWebApiTesting
         [Test]
         public async Task UpdateCustomerProfile_ShouldReturnOk_WhenValidRequest()
         {
-            
+            var _mockCustomerService = new Mock<ICustomerService>();
+            var controller = new CustomerController(_mockCustomerService.Object, _mockLogger.Object);
+
+            var createCustomerDto = new CreateCustomerDTO
+            {
+                FullName = "John Doe",
+                Address = "123 Main St",
+                PhoneNumber = "9876543210",
+                UserId = 1
+            };
+
             var updateCustomerDto = new CreateCustomerDTO
             {
                 FullName = "John Doe Updated",
@@ -130,7 +140,8 @@ namespace MovieRentWebApiTesting
                 UserId = 1
             };
 
-            await RegisterCustomer_ShouldReturnOk_WhenValidRequest();
+            _mockCustomerService.Setup(s => s.UpdateCustomer(createCustomerDto, 1))
+                .ReturnsAsync(1);
 
             // Act
             var result = await _controller.UpdateCustomerProfile(updateCustomerDto);
@@ -225,6 +236,8 @@ namespace MovieRentWebApiTesting
         public async Task PickUpMovie_ShouldReturnOk_WhenValidRequest()
         {
             // Arrange
+            var _mockService = new Mock<ICustomerService>();
+            var _controller = new CustomerController(_mockService.Object, _mockLogger.Object);
             var pickUp = new PickUpMovieDTO
             {
                 CustomerId = 1,
@@ -250,12 +263,11 @@ namespace MovieRentWebApiTesting
                 Rental_Price = 100
             };
 
-            await RegisterCustomer_ShouldReturnOk_WhenValidRequest();
-            await movieRepository.Add(movie);
-            await rentalRepository.Add(rental);
-
-            // Act
-            var result = await _controller.PickUpMovie(pickUp);
+            _mockService.Setup(s => s.PickUpMovie(pickUp))
+                .ReturnsAsync(new PickUpResponseMovieDTO
+                { CustomerId = 1, MovieId = 1, RentalId = 1, Status = RentalStatus.Active });
+             // Act
+             var result = await _controller.PickUpMovie(pickUp);
 
             // Assert
             var okResult = result as OkObjectResult;
@@ -312,6 +324,55 @@ namespace MovieRentWebApiTesting
             var internalServerErrorResult = result as ObjectResult;
             Assert.IsNotNull(internalServerErrorResult);
             Assert.AreEqual(500, internalServerErrorResult.StatusCode);
+        }
+
+        [Test]
+        public async Task ReturnMovie_Success200_Ok()
+        {
+            var _mockCustomerService = new Mock<ICustomerService>();
+            var controller = new CustomerController(_mockCustomerService.Object, _mockLogger.Object);
+
+            var returnMovie = new ReturnMovieResquestDTO
+            {
+                RentId = 1,
+                CustomerId = 1
+            };
+
+            _mockCustomerService.Setup(setup => setup.ReturnMovie(It.IsAny<ReturnMovieResquestDTO>()))
+                .ReturnsAsync(new ReturnMovieResponseDTO
+                {
+                    Message = "OK",
+                });
+
+            var result = await controller.ReturnMovie(returnMovie);
+            Assert.IsNotNull(result);
+            var OkResponse = result as OkObjectResult;
+
+            Assert.IsNotNull(OkResponse);
+            Assert.AreEqual(200, OkResponse.StatusCode);
+        }
+
+        [Test]
+        public async Task ReturnMovie_Exception_500InternalError()
+        {
+            var _mockCustomerService = new Mock<ICustomerService>();
+            var controller = new CustomerController(_mockCustomerService.Object, _mockLogger.Object);
+
+            var returnMovie = new ReturnMovieResquestDTO
+            {
+                RentId = 1,
+                CustomerId = 1
+            };
+
+            _mockCustomerService.Setup(setup => setup.ReturnMovie(It.IsAny<ReturnMovieResquestDTO>()))
+                .ThrowsAsync(new Exception("Some Error in Server"));
+
+            var result = await controller.ReturnMovie(returnMovie);
+            Assert.IsNotNull(result);
+            var OkResponse = result as ObjectResult;
+
+            Assert.IsNotNull(OkResponse);
+            Assert.AreEqual(500, OkResponse.StatusCode);
         }
     }
 }

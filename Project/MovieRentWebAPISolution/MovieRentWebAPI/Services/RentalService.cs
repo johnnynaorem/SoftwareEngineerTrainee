@@ -50,14 +50,15 @@ namespace MovieRentWebAPI.Services
 
 
             var isMovieReserved = reservations.FirstOrDefault(reserve => reserve.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId);
+            
+
+            if (isMovieReserved==null) return false;
+
             await _movieRervationService.UpdateMovieReservationStatus(new ReservedMovieStatusUpdateRequestDTO
             {
                 ReservationId = isMovieReserved.ReservationId,
                 Status = ReservationStatus.Completed
             });
-
-            if (isMovieReserved!=null) return false;
-
             return true;
         }
 

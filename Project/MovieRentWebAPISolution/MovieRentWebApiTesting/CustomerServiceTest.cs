@@ -86,7 +86,7 @@ namespace MovieRentWebApiTesting
         {
             // Arrange
             var customer = new Customer { CustomerId = 1, FullName = "John Doe" };
-            var movie = new Movie { MovieId = 1, Title = "Inception" };
+            var movie = new Movie { MovieId = 1, Title = "Inception", AvailableCopies=10 };
             var rental = new Rental
             {
                 RentalId = 1,
@@ -101,7 +101,7 @@ namespace MovieRentWebApiTesting
                 CustomerId = 1,
                 MovieId = 1,
                 Status = RentalStatus.Active,
-                RentalFee = 10.00
+                RentalFee = 10.00,
             };
 
             var pickUpDto = new PickUpMovieDTO
@@ -115,6 +115,7 @@ namespace MovieRentWebApiTesting
             _mockMovieRepo.Setup(repo => repo.Get(1)).ReturnsAsync(movie);
             _mockRentalService.Setup(service => service.GetRentals()).ReturnsAsync(new List<Rental> { rental });
             _mockRentalService.Setup(service => service.Update(It.IsAny<RentalUpdateRequestDTO>())).ReturnsAsync(update_rental);
+
 
             // Act
             var result = await _customerService.PickUpMovie(pickUpDto);

@@ -41,7 +41,8 @@ namespace MovieRentWebAPI.Controllers
                     });
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
                 {
                     ErrorMessage = ex.ToString(),
@@ -89,7 +90,8 @@ namespace MovieRentWebAPI.Controllers
                 var customers = await _customerService.GetAllCustomer();
                 return Ok(customers);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
                 {
                     ErrorCode = 500,

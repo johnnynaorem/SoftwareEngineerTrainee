@@ -152,24 +152,8 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
-    "Method": "GetMovie",
-    "RelativePath": "api/Movie/GetMovieById",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
     "Method": "GetAllMovies",
-    "RelativePath": "api/Movie/GetMovies",
+    "RelativePath": "api/Movie/GetAllMoviesPagination",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -181,6 +165,22 @@
       },
       {
         "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieController",
+    "Method": "GetMovie",
+    "RelativePath": "api/Movie/GetMovieById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -294,6 +294,22 @@
         "Name": "updateMovieReserveStatus",
         "Type": "MovieRentWebAPI.Models.DTOs.ReservedMovieStatusUpdateRequestDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.PaymentController",
+    "Method": "GetAllPaymentByCustomer",
+    "RelativePath": "api/Payment/GetAllPaymentByCustomer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

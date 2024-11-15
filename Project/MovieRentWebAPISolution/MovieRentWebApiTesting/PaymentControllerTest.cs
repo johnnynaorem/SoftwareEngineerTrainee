@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Castle.Core.Resource;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -120,6 +121,48 @@ namespace MovieRentWebApiTesting
             Assert.IsNotNull(errorResponse);
             Assert.AreEqual(500, errorResponse.ErrorCode);
             Assert.AreEqual("Payment failed", errorResponse.ErrorMessage);
+        }
+
+        [Test]
+        public async Task GetAllPaymentByCustomer_ReturnsOkResult()
+        {
+            
+            _mockPaymentService.Setup(service => service.GetAllPayments())
+                    .ReturnsAsync(new List<Payment> 
+                    {
+                        new Payment
+                        {
+                            RentalId = 1,
+                            CustomerId = 1,
+                            PaymentType = "UPI",
+                            Amount = 100,
+                            PaymentDate = DateTime.Now
+                        }
+                    });
+
+            // Act
+            var result = await _controller.GetAllPaymentByCustomer(1);
+
+            // Assert
+            var okResult = result as OkObjectResult;
+            Assert.IsNotNull(okResult);
+            Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
+        }
+
+        [Test]
+        public async Task GetAllPaymentByCustomer_ReturnsInternalServerError_WhenExceptionOccurs()
+        {
+            // Arrange
+             _mockPaymentService.Setup(service => service.GetAllPayments())
+                .ThrowsAsync(new Exception("Internal Server Error"));
+
+            // Act
+            var result = await _controller.GetAllPaymentByCustomer(1);
+
+            // Assert
+            var objectResult = result as ObjectResult;
+            Assert.IsNotNull(objectResult);
+            Assert.AreEqual(StatusCodes.Status500InternalServerError, objectResult.StatusCode);
         }
     }
 }
