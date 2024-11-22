@@ -24,11 +24,11 @@ namespace MovieRentWebAPI.Services
 
         }
 
-        private void SendMail(string title, string body)
+        private void SendMail(string toMail, string title, string body)
         {
             var rng = new Random();
             var message = new Message(new string[] {
-                        "johnnynaorem7@gmail.com" },
+                        toMail },
                     title,
                     body);
             _emailSender.SendEmail(message);
@@ -68,7 +68,7 @@ namespace MovieRentWebAPI.Services
                                     "Happy watching!\n\n" +
                                     "Best regards,\n" +
                                     "The Video Disc Rental App Team";
-                SendMail("Your Reservation Has Been Created", emailBody);
+                SendMail(customer.Email, "Your Reservation Has Been Created", emailBody);
             }
             return addReservation.ReservationId;
         }
@@ -106,7 +106,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for choosing the Video Disc Rental App.\n\n" +
                             "Warm regards,\n" +
                             "The Video Disc Rental App Team";
-                        SendMail("Update: Your Reservation Status", mailBody);
+                        SendMail(customer.Email, "Update: Your Reservation Status", mailBody);
                         break;
 
                     case ReservationStatus.Completed:
@@ -120,7 +120,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for being a valued member of the Video Disc Rental App community.\n\n" +
                             "Sincerely,\n" +
                             "The Video Disc Rental App Team";
-                        SendMail("Update: Your Reservation Status", mailBody);
+                        SendMail(customer.Email, "Update: Your Reservation Status", mailBody);
                         break;
 
                     case ReservationStatus.Cancelled:
@@ -134,7 +134,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for your understanding.\n\n" +
                             "Kind regards,\n" +
                             "The Video Disc Rental App Team";
-                        SendMail("Update: Your Reservation Status", mailBody);
+                        SendMail(customer.Email, "Update: Your Reservation Status", mailBody);
                         break;
 
                     case ReservationStatus.Expired:
@@ -148,7 +148,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for being part of the Video Disc Rental App family.\n\n" +
                             "Best wishes,\n" +
                             "The Video Disc Rental App Team";
-                        SendMail("Update: Your Reservation Status", mailBody);
+                        SendMail(customer.Email, "Update: Your Reservation Status", mailBody);
                         break;
 
                     case ReservationStatus.Not_Available:
@@ -163,7 +163,7 @@ namespace MovieRentWebAPI.Services
                             "Thank you for your understanding and continued support.\n\n" +
                             "Warm regards,\n" +
                             "The Video Disc Rental App Team";
-                        SendMail("Update: Your Reservation Status", mailBody);
+                        SendMail(customer.Email, "Update: Your Reservation Status", mailBody);
                         break;
 
                 }
@@ -178,17 +178,75 @@ namespace MovieRentWebAPI.Services
             return reservation;
         }
 
-        public async Task<IEnumerable<Reservation>> GetAllByCustomer(int customerId)
+        public async Task<IEnumerable<ReservationWithMovieAndCustomerDto>> GetAllByCustomer(int customerId)
         {
-           
 
-            throw new NotImplementedException();
+            var reservations = await _reservationRepo.GetAll();
+            var customerReservations = reservations.Where(r => r.CustomerId == customerId).ToList();
+            var result = new List<ReservationWithMovieAndCustomerDto>();
+            foreach (var reservation in customerReservations)
+            {
+                var movie = await _movieRepo.Get(reservation.MovieId);
+                var customer = await _customerRepo.Get(reservation.CustomerId);
+
+                var reservationDto = new ReservationWithMovieAndCustomerDto
+                {
+                    ReservationId = reservation.ReservationId,
+                    ReservationDate = reservation.ReservationDate,
+                    Status = reservation.Status, 
+                    CustomerId = customer.CustomerId,
+                    CustomerFullName = customer.FullName,
+                    CustomerEmail = customer.Email, 
+
+                    Movie = new MovieDetailsDTO
+                    {
+                        MovieId = movie.MovieId,
+                        Title = movie.Title,
+                        Genre = movie.Genre,
+                        RentalPrice = movie.Rental_Price,
+                        CoverImage = movie.CoverImage,
+                        Rating = movie.Rating,
+                        Description = movie.Description,
+                        ReleaseDate = movie.ReleaseDate,
+                        AvailableCopies = movie.AvailableCopies
+                    }
+                };
+
+                result.Add(reservationDto);
+            }
+
+            return result.OrderByDescending(o => o.ReservationId);
+
         }
 
-        public async Task<Reservation> GetReservationById(int reservationId)
+        public async Task<ReservationReturnDTO> GetReservationById(int reservationId)
         {
             var reservation = await _reservationRepo.Get(reservationId);
-            return reservation;
+            var movie = await _movieRepo.Get(reservation.MovieId);
+            var customer = await _customerRepo.Get(reservation.CustomerId);
+            var responserReservation = new ReservationReturnDTO
+            {
+                ReservationId = reservationId,
+                ReservationDate = reservation.ReservationDate,
+                Status = reservation.Status.ToString(),
+                Movie = new MovieResponseDTO
+                {
+                    MovieId = movie.MovieId,
+                    Title = movie.Title,
+                    Genre = movie.Genre,
+                    Description = movie.Description,
+                    ReleaseDate = movie.ReleaseDate,
+                    CoverImage = movie.CoverImage
+                },
+                Customer = new CustomerResponseDTO
+                {
+                    FullName = customer.FullName,
+                    PhoneNumber = customer.PhoneNumber,
+                    Address = customer.Address,
+                    Email = customer.Email,
+                }
+            };
+            return responserReservation;
         }
     }
 }

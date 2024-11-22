@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MovieRentWebAPI.Context;
 using MovieRentWebAPI.EmailInterface;
 using MovieRentWebAPI.EmailModels;
 using MovieRentWebAPI.Exceptions;
@@ -17,8 +19,9 @@ namespace MovieRentWebAPI.Services
         private readonly IEmailSender _emailSender;
         private readonly IRentalService _rentalService;
         private readonly IRepository<int, Movie> _movieRepo;
+        private readonly MovieRentContext _context;
 
-        public CustomerService(IRepository<int, Customer> customerRepository, ILogger<CustomerService> logger, IEmailSender emailSender, IRentalService rentalService, IRepository<int, Movie> movieRepo)
+        public CustomerService(IRepository<int, Customer> customerRepository, ILogger<CustomerService> logger, IEmailSender emailSender, IRentalService rentalService, IRepository<int, Movie> movieRepo, MovieRentContext context)
         {
 
             _rentalService = rentalService;
@@ -26,25 +29,32 @@ namespace MovieRentWebAPI.Services
             _logger = logger;
             _emailSender = emailSender;
             _movieRepo = movieRepo;
+            _context = context;
         }
 
-        private void SendMail(string title, string body)
+        private void SendMail(string mailTo, string title, string body)
         {
             var rng = new Random();
             var message = new Message(new string[] {
-                        "johnnynaorem7@gmail.com" },
+                        mailTo },
                     title,
                     body);
             _emailSender.SendEmail(message);
         }
         public async Task<int> CreateCustomer(CreateCustomerDTO entity)
         {
+            var isValidUser = await _context.Users.FirstOrDefaultAsync(u => u.UserId == entity.UserId);
+            if (isValidUser == null)
+            {
+                throw new InvalidOperationException($"Invalid User, there is no user with userId: {entity.UserId} in database");
+            }
             var customer = new Customer
             {
                 FullName = entity.FullName,
                 Address = entity.Address,
                 PhoneNumber = entity.PhoneNumber,
                 UserId = entity.UserId,
+                Email = isValidUser.UserEmail,
             };
 
             var addCustomer = await _customerRepo.Add(customer);
@@ -67,7 +77,7 @@ namespace MovieRentWebAPI.Services
                                 "Best regards,\n" +
                                 "The Video Disc Rental App Team";
 
-                SendMail("Your Customer Account Has Been Created", emailBody);
+                SendMail(isValidUser.UserEmail,"Your Customer Account Has Been Created", emailBody);
             }
             return addCustomer.CustomerId;
         }
@@ -113,7 +123,7 @@ namespace MovieRentWebAPI.Services
                                 "Best regards,\n" +
                                 "The Video Disc Rental App Team";
 
-                SendMail("Your Customer Account Profile Has Been Updated", emailBody);
+                SendMail(updatedCustomer.Email,"Your Customer Account Profile Has Been Updated", emailBody);
             }
             return updatedCustomer.CustomerId;
         }
@@ -171,7 +181,7 @@ namespace MovieRentWebAPI.Services
                                     $"**Rental Fee:** {rentalFeeFormatted}\n" +
                                     $"**Rental Status:** Active";
 
-            SendMail("Your Rental Status Updated To Active", emailBody);
+            SendMail(customer.Email,"Your Rental Status Updated To Active", emailBody);
             return new PickUpResponseMovieDTO
             {
                 RentalId = updateStatusRental.RentalId,
@@ -215,7 +225,7 @@ namespace MovieRentWebAPI.Services
                                     $"**Rental Status:** Returned";
 
 
-                    SendMail("Successfully Return Movie", emailBody);
+                    SendMail(customer.Email,"Successfully Return Movie", emailBody);
                 }
                 return new ReturnMovieResponseDTO
                 {

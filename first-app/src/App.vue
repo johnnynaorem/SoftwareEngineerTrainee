@@ -1,26 +1,42 @@
 <template>
-  <!-- <img alt="Vue logo" src="https://blog.logrocket.com/wp-content/uploads/2020/04/Vue-3.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <About msg="The Progressive
-JavaScript Framework
-An approachable, performant and versatile framework for building web user interfaces."/> -->
-  <Navbar />
-  <!-- <ProductList/> -->
-
+  <Slider />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue';
-// import About from './components/About.vue';
-import Navbar from './components/Navbar.vue';
-// import ProductList from './components/ProductList.vue';
+import Slider from './components/Slider.vue';
+
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    // HelloWorld,
-    // About,
+    Slider
+    // FilterView
+  },
+  setup() {
+    return {
+      items: [
+        {
+          id: 1,
+          first: 'johnny',
+          last: 'naorem'
+        },
+        {
+          id: 2,
+          first: 'rohit',
+          last: 'laishram'
+        },
+        {
+          id: 3,
+          first: 'disha',
+          last: 'gupta'
+        },
+        {
+          id: 4,
+          first: 'niharika',
+          last: 'grag'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -31,6 +47,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  /* background-color: #2c3e50; */
 }
 </style>

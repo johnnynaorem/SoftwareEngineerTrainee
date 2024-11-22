@@ -83,6 +83,27 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
+        [HttpGet("GetUser")]
+        [Authorize]
+        public async Task<IActionResult> GetUser(string email)
+        {
+            try
+                {
+                var users = await _userService.GetUsers();
+                var user = users.FirstOrDefault(u => u.UserEmail == email);
+                return Ok(user);
+                
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status401Unauthorized, new ErrorResponseDTO
+                {
+                    ErrorCode = 401,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
+
 
         [HttpPut("ChangePassword")]
         [Authorize]

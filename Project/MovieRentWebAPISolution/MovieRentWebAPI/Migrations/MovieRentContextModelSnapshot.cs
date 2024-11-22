@@ -34,6 +34,9 @@ namespace MovieRentWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -76,7 +79,7 @@ namespace MovieRentWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Rating")
+                    b.Property<double?>("Rating")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("ReleaseDate")
@@ -87,6 +90,9 @@ namespace MovieRentWebAPI.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrailerVideo")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MovieId");
@@ -193,6 +199,36 @@ namespace MovieRentWebAPI.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("MovieRentWebAPI.Models.ReviewForMovie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("Rating")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("MovieRentWebAPI.Models.User", b =>
@@ -324,6 +360,27 @@ namespace MovieRentWebAPI.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("MovieRentWebAPI.Models.ReviewForMovie", b =>
+                {
+                    b.HasOne("MovieRentWebAPI.Models.Customer", "Customer")
+                        .WithMany("Reviews")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Customer_Review");
+
+                    b.HasOne("MovieRentWebAPI.Models.Movie", "Movie")
+                        .WithMany("Reviews")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Movie_Review");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Movie");
+                });
+
             modelBuilder.Entity("MovieRentWebAPI.Models.Wishlist", b =>
                 {
                     b.HasOne("MovieRentWebAPI.Models.Customer", "Customer")
@@ -352,6 +409,8 @@ namespace MovieRentWebAPI.Migrations
 
                     b.Navigation("Reservations");
 
+                    b.Navigation("Reviews");
+
                     b.Navigation("Wishlists");
                 });
 
@@ -360,6 +419,8 @@ namespace MovieRentWebAPI.Migrations
                     b.Navigation("Rentals");
 
                     b.Navigation("Reservations");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("MovieRentWebAPI.Models.Rental", b =>

@@ -6,6 +6,7 @@
         public string Title { get; set; } = string.Empty;
         public string Genre { get; set; } = string.Empty;
         public double Rental_Price { get; set; }
+        public string? TrailerVideo { get; set; }
         public string CoverImage {  get; set; } = string.Empty;
         public double? Rating { get; set; }
         public string Description { get; set; } = string.Empty;

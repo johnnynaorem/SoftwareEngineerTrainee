@@ -51,6 +51,27 @@ namespace MovieRentWebAPI.Controllers
             }
         }
 
+        [HttpGet("GetCustomer")]
+        [Authorize]
+        public async Task<IActionResult> GetCustomer(int id)
+        {
+            try
+            {
+                var customers = await _customerService.GetAllCustomer();
+                var customer = customers.FirstOrDefault(c => c.UserId == id);
+                return Ok(customer);
+               
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorMessage = ex.Message.ToString(),
+                    ErrorCode = 500
+                });
+            }
+        }
+
         [HttpPatch("UpdateCustomerProfile")]
         [Authorize]
         public async Task<IActionResult> UpdateCustomerProfile(CreateCustomerDTO customer)

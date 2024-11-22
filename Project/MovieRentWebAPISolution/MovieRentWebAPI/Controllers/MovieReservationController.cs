@@ -5,6 +5,8 @@ using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace MovieRentWebAPI.Controllers
 {
@@ -138,9 +140,8 @@ namespace MovieRentWebAPI.Controllers
         {
             try
             {
-                var reservation = await _movieReservationService.GetAll();
-                var reservationByCustomer = (from reserve in reservation where reserve.CustomerId == customerId select new { reserve.ReservationId, reserve.MovieId, reserve.CustomerId, reserve.Status, reserve.ReservationDate }).ToList();
-                return Ok(reservationByCustomer);
+                var result = await _movieReservationService.GetAllByCustomer(customerId);
+                return Ok(result);
             }
             catch (EmptyCollectionException ex)
             {

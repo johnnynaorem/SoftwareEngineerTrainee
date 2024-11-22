@@ -23,6 +23,7 @@ namespace MovieRentWebApiTesting
         private Mock<IEmailSender> _mockEmailSender;
         private Mock<ILogger<CustomerService>> _mockLogger;
         private CustomerService _customerService;
+        private MovieRentContext movieRentContext;
 
         [SetUp]
         public void Setup()
@@ -40,7 +41,8 @@ namespace MovieRentWebApiTesting
                 _mockLogger.Object,
                 _mockEmailSender.Object,
                 _mockRentalService.Object,
-                _mockMovieRepo.Object
+                _mockMovieRepo.Object,
+                movieRentContext
             );
         }
 

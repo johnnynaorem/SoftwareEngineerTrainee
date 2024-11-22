@@ -61,7 +61,7 @@ namespace MovieRentWebApiTesting
             _mockLoggerCustomerService = new Mock<ILogger<CustomerService>>();
             reservationService = new MovieReservationService(reservationRepository,customerRepository,movieRepository, _mockLoggerMovieReservationService.Object, _mockEmailSender.Object);
             rentalService = new RentalService(rentalRepository, movieRepository, _mockLoggerRentalService.Object, reservationService, _mockEmailSender.Object, customerRepository);
-            customerService = new CustomerService(customerRepository, _mockLoggerCustomerService.Object, _mockEmailSender.Object, rentalService, movieRepository);
+            customerService = new CustomerService(customerRepository, _mockLoggerCustomerService.Object, _mockEmailSender.Object, rentalService, movieRepository, movieRentContext);
             //_mockCustomerService = new Mock<ICustomerService>();
             _mockLogger = new Mock<ILogger<CustomerController>>();
             _controller = new CustomerController(customerService, _mockLogger.Object);

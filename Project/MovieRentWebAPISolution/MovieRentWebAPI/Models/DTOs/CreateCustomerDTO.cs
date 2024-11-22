@@ -16,5 +16,6 @@ namespace MovieRentWebAPI.Models.DTOs
 
         [Required(ErrorMessage = "Cannot be Blank")]
         public int UserId { get; set; }
+
     }
 }

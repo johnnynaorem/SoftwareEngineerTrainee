@@ -1,15 +1,37 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-primary">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand text-light">MovieRent</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="../Images/logo.webp" alt="" width="70px" style="cursor: pointer; ">
+      <router-link to="/" class="navbar-brand text-light" style="flex:1; cursor: pointer;">MovieRent</router-link>
+      <button class="navbar-toggler btn-primary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ">
           <li class="nav-item ">
-            <router-link to="/" class="nav-link active text-light" aria-current="page" href="/">Home</router-link>
+            <router-link to="/" class="nav-link active text-light" aria-current="page">Home</router-link>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Movies
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <router-link class="movie-drop-down-list" to="/movies-all">Movies All</router-link>
+              </li>
+              <li>
+                <router-link class="movie-drop-down-list" to="/movies-all">Movies Comming Soon</router-link>
+              </li>
+              <li>
+                <router-link class="movie-drop-down-list" to="/movies-all">Movies Now Playing</router-link>
+              </li>
+              <li>
+                <router-link class="movie-drop-down-list" to="/movies-all">Movie Categeory</router-link>
+              </li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown"
@@ -39,7 +61,9 @@
                 data-bs-toggle="dropdown" aria-expanded="false">
               </button>
               <ul class="dropdown-menu" style=" font-size: 12px; position: absolute; left: -100px; cursor: pointer;">
-                <li><a class="dropdown-item" @click="reservation()">View Reservations</a></li>
+                <li>
+                  <RouterLink class="dropdown-item" to="/dashboard">Dashboard</RouterLink>
+                </li>
                 <li><a class="dropdown-item" @click="logOut()">Log Out</a></li>
               </ul>
             </div>
@@ -124,7 +148,12 @@ export default {
 
 <style scoped>
 .navbar {
-  position: relative;
+  /* position: relative; */
+  background: black;
+  opacity: .9;
+  width: 100%;
+  position: fixed;
+  min-height: 100px;
 }
 
 img {
@@ -134,6 +163,17 @@ img {
 .profile-logo {
   justify-items: end;
   flex: 1;
+}
+
+.show {
+  width: max-width;
+}
+
+.movie-drop-down-list {
+  padding: 10px;
+  text-decoration: none;
+  font-size: small;
+  color: black
 }
 
 li {

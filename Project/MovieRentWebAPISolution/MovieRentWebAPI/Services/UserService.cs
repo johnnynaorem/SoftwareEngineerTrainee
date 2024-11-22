@@ -124,7 +124,7 @@ namespace MovieRentWebAPI.Services
             catch (Exception e)
             {
                 _logger.LogError(e, "Could not register user");
-                throw new Exception("Could not register user");
+                throw;
             }
         }
 

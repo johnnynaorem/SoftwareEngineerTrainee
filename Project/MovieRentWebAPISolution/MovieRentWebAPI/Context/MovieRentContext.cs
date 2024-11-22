@@ -85,8 +85,7 @@ namespace MovieRentWebAPI.Context
                 .WithOne(r => r.Customer)
                 .HasForeignKey(r => r.CustomerId)
                 .HasConstraintName("FK_Customer_Review")
-                .HasConstraintName("FK_Customer_Review")
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
