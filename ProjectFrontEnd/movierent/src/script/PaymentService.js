@@ -12,6 +12,18 @@ export const getPaymentByCustomer = async (customerId) => {
   }
 };
 
+export const getAllPayments = async () => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Payment/GetAllPayments`
+    );
+    return response;
+  } catch (error) {
+    alert("Error when Fetching Payment");
+    return error;
+  }
+};
+
 // export const getReservationByReservationId = async (reservationId) => {
 //   try {
 //     const response = await axios.get(

@@ -43,7 +43,7 @@ namespace MovieRentWebAPI.Services
             };
 
             var addReservation = await _reservationRepo.Add(reservation);
-            if (addReservation != null) 
+            if (addReservation != null)
             {
                 var customer = await _customerRepo.Get(addReservation.CustomerId);
                 if (customer == null)
@@ -172,10 +172,41 @@ namespace MovieRentWebAPI.Services
             throw new InvalidOperationException("Reservation not found");
         }
 
-        public async Task<IEnumerable<Reservation>> GetAll()
+        public async Task<IEnumerable<ReservationWithMovieAndCustomerDto>> GetAll()
         {
-            var reservation = await _reservationRepo.GetAll();
-            return reservation;
+            var reservations = await _reservationRepo.GetAll();
+            var result = new List<ReservationWithMovieAndCustomerDto>();
+            foreach (var reservation in reservations)
+            {
+                var movie = await _movieRepo.Get(reservation.MovieId);
+                var customer = await _customerRepo.Get(reservation.CustomerId);
+
+                var reservationDto = new ReservationWithMovieAndCustomerDto
+                {
+                    ReservationId = reservation.ReservationId,
+                    ReservationDate = reservation.ReservationDate,
+                    Status = reservation.Status,
+                    CustomerId = customer.CustomerId,
+                    CustomerFullName = customer.FullName,
+                    CustomerEmail = customer.Email,
+
+                    Movie = new MovieDetailsDTO
+                    {
+                        MovieId = movie.MovieId,
+                        Title = movie.Title,
+                        Genre = movie.Genre,
+                        RentalPrice = movie.Rental_Price,
+                        CoverImage = movie.CoverImage,
+                        Rating = movie.Rating,
+                        Description = movie.Description,
+                        ReleaseDate = movie.ReleaseDate,
+                        AvailableCopies = movie.AvailableCopies
+                    }
+                };
+
+                result.Add(reservationDto);
+            }
+            return result.OrderByDescending(r => r.ReservationDate);
         }
 
         public async Task<IEnumerable<ReservationWithMovieAndCustomerDto>> GetAllByCustomer(int customerId)
@@ -193,10 +224,10 @@ namespace MovieRentWebAPI.Services
                 {
                     ReservationId = reservation.ReservationId,
                     ReservationDate = reservation.ReservationDate,
-                    Status = reservation.Status, 
+                    Status = reservation.Status,
                     CustomerId = customer.CustomerId,
                     CustomerFullName = customer.FullName,
-                    CustomerEmail = customer.Email, 
+                    CustomerEmail = customer.Email,
 
                     Movie = new MovieDetailsDTO
                     {

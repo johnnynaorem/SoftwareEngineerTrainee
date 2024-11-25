@@ -133,8 +133,8 @@ namespace MovieRentWebAPI.Services
             var rentals = await _rentalService.GetRentals();
             var isReady = (
                             from rental in rentals
-                            where rental.MovieId == movieId && rental.CustomerId == customerId && rental.Status == RentalStatus.Confirmed
-                            select new { rental.MovieId, rental.CustomerId }
+                            where rental.Movie.MovieId == movieId && rental.Customer.CustomerId == customerId && rental.Status == RentalStatus.Confirmed.ToString()
+                            select new { rental.Movie.MovieId, rental.Customer.CustomerId }
                            ).ToList();
 
             var movie = await _movieRepo.Get(movieId);
@@ -197,7 +197,7 @@ namespace MovieRentWebAPI.Services
             {
                 var rentals = await _rentalService.GetRentals();
 
-                var rental = rentals.FirstOrDefault(r => r.RentalId == returnMovie.RentId && r.CustomerId == returnMovie.CustomerId);
+                var rental = rentals.FirstOrDefault(r => r.RentalId == returnMovie.RentId && r.Customer.CustomerId == returnMovie.CustomerId);
                 if (rental == null) throw new InvalidOperationException($"There is no Rental With Rental ID: {returnMovie.RentId}");
 
                 var rentalUpdate = new RentalUpdateRequestDTO
@@ -206,8 +206,8 @@ namespace MovieRentWebAPI.Services
                     ReturnDate = DateTime.Now,
                     Status = RentalStatus.Returned
                 };
-                var movie = await _movieRepo.Get(rental.MovieId);
-                var customer = await _customerRepo.Get(rental.CustomerId);
+                var movie = await _movieRepo.Get(rental.Movie.MovieId);
+                var customer = await _customerRepo.Get(rental.Customer.CustomerId);
                 var returnMovieAndUpdateRentalStatusToReturn = await _rentalService.Update(rentalUpdate);
                 if (returnMovieAndUpdateRentalStatusToReturn != null)
                 {

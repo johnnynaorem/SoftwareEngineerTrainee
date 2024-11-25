@@ -27,11 +27,54 @@ namespace MovieRentWebAPI.Services
             _customerRepo = customerRepo;
 
         }
-        public async Task<IEnumerable<Rental>> GetRentals()
+        public async Task<IEnumerable<RentalWithMovieAndCustomerDetailsDTO>> GetRentals()
         {
             var rentals = await _rentalRepo.GetAll();
-            
-            return rentals;
+            var rentalDtos = new List<RentalWithMovieAndCustomerDetailsDTO>();
+
+            foreach (var rental in rentals)
+            {
+                var movie = await _movieRepo.Get(rental.MovieId);
+                var customer = await _customerRepo.Get(rental.CustomerId);
+
+                var rentalDto = new RentalWithMovieAndCustomerDetailsDTO
+                {
+                    RentalId = rental.RentalId,
+                    RentalDate = rental.RentalDate,
+                    DueDate = rental.DueDate,
+                    ReturnDate = rental.ReturnDate,
+                    Status = rental.Status.ToString(),
+                    RentalFee = rental.RentalFee,
+
+                    // Mapping Customer Details to CustomerDTO
+                    Customer = new CustomerDTO
+                    {
+                        CustomerId = customer.CustomerId,
+                        FullName = customer.FullName,
+                        Email = customer.Email,
+                        Address = customer.Address,
+                        PhoneNumber = customer.PhoneNumber,
+                    },
+
+                    // Mapping Movie Details to MovieDTO
+                    Movie = new MovieDetailsDTO
+                    {
+                        MovieId = movie.MovieId,
+                        Title = movie.Title,
+                        Genre = movie.Genre,
+                        RentalPrice = movie.Rental_Price,
+                        CoverImage = movie.CoverImage,
+                        Description = movie.Description,
+                        Rating = movie.Rating,
+                        ReleaseDate = movie.ReleaseDate,
+                        AvailableCopies = movie.AvailableCopies
+                    }
+                };
+
+                rentalDtos.Add(rentalDto);
+            }
+
+            return rentalDtos.OrderByDescending(r => r.RentalId);
         }
 
         private async Task<Movie> GetMovie(int id) {
@@ -50,7 +93,7 @@ namespace MovieRentWebAPI.Services
             //if (!isMovieReserved.Any()) return false;
 
 
-            var isMovieReserved = reservations.FirstOrDefault(reserve => reserve.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId);
+            var isMovieReserved = reservations.FirstOrDefault(reserve => reserve.Movie.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId);
             
 
             if (isMovieReserved==null) return false;
@@ -228,7 +271,7 @@ namespace MovieRentWebAPI.Services
                 rentalDtos.Add(rentalDto);
             }
 
-            return rentalDtos;
+            return rentalDtos.OrderByDescending(r => r.RentalId);
         }
     }
 }

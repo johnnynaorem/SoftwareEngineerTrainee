@@ -10,6 +10,6 @@ namespace MovieRentWebAPI.Interfaces
 
         Task<IEnumerable<ReservationWithMovieAndCustomerDto>> GetAllByCustomer(int customerId);
         Task<ReservationReturnDTO> GetReservationById(int movieId);
-        Task<IEnumerable<Reservation>> GetAll();
+        Task<IEnumerable<ReservationWithMovieAndCustomerDto>> GetAll();
     }
 }

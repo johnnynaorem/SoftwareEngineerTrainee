@@ -4,12 +4,22 @@ import MainLayout from '../Layout/MainLayout.vue';
 import { getMovieByCategory, getMovieById } from '@/script/MovieService';
 import { useRoute } from 'vue-router';
 import { useRouter } from 'vue-router';
+import { reservationSumbit } from '@/script/ReservationService';
+import { jwtDecode } from 'jwt-decode';
+import { getCustomer, getUser } from '@/script/UserService';
 
 const movie = ref();
 const route = useRoute()
 const router = useRouter()
 const movieRelated = ref([])
 const url = ref('')
+const reservationData = ref({
+    fullName: '',
+    email: '',
+    phone: '',
+    date: ''
+});
+const reservationCompleted = ref(false);
 
 const watchTrailer = (link) => {
     url.value = link
@@ -21,6 +31,10 @@ const toMoviePage = (id) => {
     router.push(`/movie/${id}`)
 
 }
+// @click="rentMovie(movie.movieId)"
+// const rentMovie = (movieId) => {
+//     console.log(movieId)
+// }
 
 const fetching = async () => {
     try {
@@ -41,6 +55,26 @@ const fetching = async () => {
         console.error('Error fetching payment data:', error);
     }
 }
+
+const movieResevation = async (event) => {
+    event.preventDefault();
+    const movieId = route.params.id;
+    const token = sessionStorage.getItem('token');
+    const decode = jwtDecode(token);
+    const user = await getUser(decode.Email);
+    const { data } = await getCustomer(user.data.userId);
+    const response = await reservationSumbit(data.customerId, movieId, reservationData.value.date);
+    if (response.status == 200) {
+        reservationCompleted.value = true;
+    }
+
+    reservationData.value = {
+        fullName: '',
+        email: '',
+        phone: '',
+        date: ''
+    };
+};
 
 onMounted(() => {
 
@@ -81,8 +115,8 @@ watch(
                         <h6 class="movie-genre">{{ movie.genre }} / 130 Mins</h6>
                     </div>
                     <div class="title-mapper-right">
-                        <button class="reserve-btn"
-                            @click="router.push(`/movie/${movie.movieId}/rent`)">Reserve</button>
+                        <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
+                            data-bs-target="#rentModal">Reserve</button>
                     </div>
                 </div>
                 <div class="image-mapper d-flex">
@@ -91,7 +125,7 @@ watch(
                     </div>
                     <div class="image-mapper-right position-relative">
                         <i class="fa-solid fa-circle-play fa-beat position-absolute btn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" @click="watchTrailer(movie.trailerVideo)"
+                            data-bs-target="#trailerModal" @click="watchTrailer(movie.trailerVideo)"
                             style="color: #FFD43B;"></i>
                         <img class="left-right" :src=movie.coverImage alt="Another Image">
                     </div>
@@ -135,8 +169,8 @@ watch(
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <!-- Trailer Modal -->
+            <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="TrailerModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content" style="background-color: black;">
@@ -147,11 +181,48 @@ watch(
                     </div>
                 </div>
             </div>
+            <!-- Rent Modal -->
+            <div class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModalLabel" aria-hidden="true">
+                <div class="modal-mapper modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content modal-content-mapper">
+                        <div class="modal-header">
+                            <div>
+                                <h4 class="modal-title" id="exampleModalLabel">Reserve your Movie today!</h4>
+                                <p>Fill out the form below to reserve your movie. Complete the necessary details to
+                                    ensure a smooth rental experience.</p>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Conditional Success Message -->
+                            <div v-if="reservationCompleted">
+                                <p class="text-success">Congratulations! Your reservation is completed.</p>
+                            </div>
+                            <form v-else v-on:submit="movieResevation">
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <input v-model="reservationData.fullName" type="text" class="form-control"
+                                        placeholder="Enter Full Name" required>
+                                    <input v-model="reservationData.email" type="text" class="form-control"
+                                        placeholder="Enter Email" required>
+                                    <input v-model="reservationData.phone" type="text" class="form-control"
+                                        placeholder="Enter Phone Number" required>
+                                </div>
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <input v-model="reservationData.date" type="datetime-local" class="form-control"
+                                        required>
+                                </div>
+                                <button type="submit" class="btn">Send</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </template>
     </MainLayout>
 </template>
+
 <style lang="scss" scoped>
-/* Banner style start */
 .content-top {
     width: 100%;
     height: 80vh;
@@ -219,7 +290,6 @@ watch(
 }
 
 /* Banner style end */
-
 
 .title-mapper {
     .title-mapper-right {
@@ -371,4 +441,40 @@ watch(
     }
 }
 
-//end</style>
+.modal-mapper {
+    max-width: 60%;
+    color: var(--light);
+
+    .modal-content-mapper {
+        background: red;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 10px 30px;
+        background: black;
+        border-radius: 20px;
+        color: var(--light);
+        transition: 0.2s ease-out;
+
+        &:hover {
+            background: rgb(134, 130, 130);
+        }
+    }
+
+    .input-mapper {
+        input {
+            background: transparent;
+            color: var(--light);
+
+            &::placeholder {
+                color: var(--light);
+            }
+        }
+
+    }
+}
+</style>

@@ -23,3 +23,15 @@ export const getRentalByRentalId = async (rentalId) => {
     return error;
   }
 };
+
+export const getAllRetals = async () => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Rental/GetRentals`
+    );
+    return response;
+  } catch (error) {
+    alert("Error when Fetching Rentals");
+    return error;
+  }
+};

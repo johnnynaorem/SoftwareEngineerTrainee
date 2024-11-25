@@ -4,7 +4,7 @@ import Login from "@/components/User/Login.vue";
 import Reservation from "@/components/MovieReservation/Reservation.vue";
 import ReservationDetail from "@/components/MovieReservation/ReservationDetail.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import { isAuthenticated } from "./UserService";
+import { isAdminAuthenticated, isAuthenticated } from "./UserService";
 import Registration from "@/components/User/Registration.vue";
 import LandingPage from "@/components/LandingPage.vue";
 import NotFoundPage from "@/components/NotFound/NotFoundPage.vue";
@@ -15,6 +15,11 @@ import Dashboard from "@/components/Dashboard/Dashboard.vue";
 import Rental from "@/components/Rental/UserRental.vue";
 import DisplayMovie from "@/components/Movie/DisplayMovie.vue";
 import MovieDetail from "@/components/Movie/MovieDetail.vue";
+import AdminDashboard from "@/components/Admin/AdminDashboard.vue";
+import ReservationList from "@/components/Admin/ReservationList.vue";
+import PaymentList from "@/components/Admin/PaymentList.vue";
+import RentalList from "@/components/Admin/RentalList.vue";
+import MovieList from "@/components/Admin/MovieList.vue";
 
 const routes = [
   {
@@ -83,6 +88,55 @@ const routes = [
     name: "MovieDetail",
     component: MovieDetail,
     meta: { requiresAuth: true },
+  },
+
+  //Admin path
+  {
+    path: "/admin/dashboard",
+    component: AdminDashboard,
+    children: [
+      {
+        path: "home",
+        component: Dashboard,
+      },
+      {
+        path: "movies",
+        component: MovieList,
+      },
+      {
+        path: "reservations",
+        component: ReservationList,
+      },
+      {
+        path: "payments",
+        component: PaymentList,
+      },
+      {
+        path: "rentals",
+        component: RentalList,
+      },
+      {
+        path: "reservation/:id",
+        name: "reservationByCustomer",
+        component: Dashboard,
+      },
+    ],
+    meta: { requiresAdmin: true },
+    beforeEnter: (to, from, next) => {
+      if (to.matched.some((record) => record.meta.requiresAdmin)) {
+        if (!isAuthenticated()) {
+          next({ name: "Login", query: { redirect: to.fullPath } });
+        } else {
+          if (!isAdminAuthenticated()) {
+            next({ path: "/unauthorized" });
+          } else {
+            next();
+          }
+        }
+      } else {
+        next();
+      }
+    },
   },
 ];
 

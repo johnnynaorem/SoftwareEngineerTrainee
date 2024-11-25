@@ -45,7 +45,7 @@ namespace MovieRentWebAPI.Controllers
             try
             {
                 var payments = await _paymentService.GetAllPayments();
-                var response = (from payment in payments where payment.CustomerId == id select new { payment.CustomerId, payment.RentalId, payment.Amount, payment.PaymentType, payment.PaymentDate }).ToList();
+                var response = (from payment in payments where payment.Customer.CustomerId == id select new { payment.Customer.CustomerId, payment.RentalId, payment.Amount, payment.PaymentType, payment.PaymentDate }).ToList();
                 return Ok(response);
             }
             catch (Exception ex)

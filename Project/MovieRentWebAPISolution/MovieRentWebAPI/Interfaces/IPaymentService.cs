@@ -6,6 +6,6 @@ namespace MovieRentWebAPI.Interfaces
     public interface IPaymentService
     {
         Task <string> GeneratePayment(MakePaymentDTO paymentCredentials);
-        Task<IEnumerable<Payment>> GetAllPayments();
+        Task<IEnumerable<ReturnPaymentWithCustomerDetails>> GetAllPayments();
     }
 }

@@ -1,9 +1,20 @@
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 
 export const isAuthenticated = () => {
   return sessionStorage.getItem("token");
+};
+
+export const isAdminAuthenticated = () => {
+  const token = sessionStorage.getItem("token");
+  const decode = jwtDecode(token);
+  const role =
+    decode["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+  if (role == "Admin") {
+    return true;
+  }
 };
 
 export const registration = async (username, email, password, role) => {

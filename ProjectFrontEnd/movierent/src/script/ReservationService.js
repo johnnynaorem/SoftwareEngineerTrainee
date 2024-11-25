@@ -23,3 +23,36 @@ export const getReservationByReservationId = async (reservationId) => {
     return error;
   }
 };
+
+export const reservationSumbit = async (
+  CustomerId,
+  MovieId,
+  ReservationDate
+) => {
+  try {
+    const response = await axios.post(
+      `https://localhost:7203/api/MovieReservation/ReserveMovie`,
+      {
+        CustomerId,
+        MovieId,
+        ReservationDate,
+      }
+    );
+    return response;
+  } catch (error) {
+    alert("Error when Movie Reservation");
+    return error;
+  }
+};
+
+export const getAllReservation = async () => {
+  try {
+    const response = await axios.get(
+      "https://localhost:7203/api/MovieReservation/GetAllReservation"
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};

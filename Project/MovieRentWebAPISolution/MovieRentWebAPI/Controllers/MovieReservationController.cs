@@ -165,7 +165,7 @@ namespace MovieRentWebAPI.Controllers
             try
             {
                 var reservation = await _movieReservationService.GetAll();
-                var reservationByCustomer = (from reserve in reservation where reserve.MovieId == movieId select new { reserve.ReservationId, reserve.MovieId, reserve.CustomerId, reserve.Status, reserve.ReservationDate }).ToList();
+                var reservationByCustomer = (from reserve in reservation where reserve.Movie.MovieId == movieId select new { reserve.ReservationId, reserve.Movie.MovieId, reserve.CustomerId, reserve.Status, reserve.ReservationDate }).ToList();
                 return Ok(reservationByCustomer);
             }
             catch (EmptyCollectionException ex)

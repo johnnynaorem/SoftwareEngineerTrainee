@@ -96,10 +96,36 @@ namespace MovieRentWebAPI.Services
             }
         }
 
-        public async Task<IEnumerable<Payment>> GetAllPayments()
+        public async Task<IEnumerable<ReturnPaymentWithCustomerDetails>> GetAllPayments()
         {
-            var payment = await _paymentRepo.GetAll();
-            return payment;
+            var payments = await _paymentRepo.GetAll();
+            var result = new List<ReturnPaymentWithCustomerDetails>();
+
+            foreach (var payment in payments) {
+                var customer = await _customerRepo.Get(payment.CustomerId);
+
+                var returnPayment = new ReturnPaymentWithCustomerDetails
+                {
+                    Amount = payment.Amount,
+                    paymentId = payment.paymentId,
+                    PaymentDate = payment.PaymentDate,
+                    PaymentType = payment.PaymentType,
+                    RentalId = payment.RentalId,
+                    Customer = new CustomerDTO
+                    {
+                        CustomerId = customer.CustomerId,
+                        FullName = customer.FullName,
+                        Address = customer.Address,
+                        PhoneNumber = customer.PhoneNumber,
+                        Email = customer.Email,
+
+                    }
+                };
+                result.Add(returnPayment);
+                
+            }
+
+            return result.OrderByDescending(p => p.PaymentDate);
         }
     }
 }

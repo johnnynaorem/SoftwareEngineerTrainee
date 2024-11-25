@@ -15,6 +15,12 @@
                                 {{ sortOrder === 'asc' ? '↑' : '↓' }}
                             </span>
                         </th>
+                        <th scope="col" @click="sortBy('customer')">
+                            Customer
+                            <span v-if="sortKey === 'customer'">
+                                {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                            </span>
+                        </th>
                         <th scope="col" @click="sortBy('movie')">
                             Movie
                             <span v-if="sortKey === 'movie'">
@@ -34,6 +40,7 @@
                 <tbody>
                     <tr v-for="(reservation, i) in filteredReservations" :key="i">
                         <th>{{ reservation.reservationId }}</th>
+                        <td>{{ reservation.customerFullName }}</td>
                         <td>
                             <div class="d-flex table-movie-mapper">
                                 <img :src=reservation.movie.coverImage alt="" width="30px">
@@ -47,10 +54,11 @@
                         </td>
                         <td>{{ new Date(reservation.reservationDate).toDateString() }}</td>
                         <td>
-                            <button class="btn btn-primary mx-1"
-                                @click="viewMore(reservation.reservationId)">View</button>
-                            <button class="btn btn-warning mx-1" :disabled="reservation.status !== 0"
-                                @click="viewMore(reservation.reservationId)">Rent</button>
+                            <!-- <button class="btn btn-primary" @click="viewMore(reservation.reservationId)">View</button> -->
+                            <button style="border: none; outline: none; background-color: transparent;"
+                                @click="() => console.log(reservation)">
+                                <span class="material-icons">edit</span>
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -61,9 +69,9 @@
 </template>
 
 <script>
-import { getCustomer, getUser } from '@/script/UserService';
-import { jwtDecode } from 'jwt-decode';
-import { getReservationByCustomer } from '@/script/ReservationService';
+// import { getCustomer, getUser } from '@/script/UserService';
+// import { jwtDecode } from 'jwt-decode';
+import { getAllReservation } from '@/script/ReservationService';
 
 export default {
     name: 'ReservationMovie',
@@ -112,7 +120,7 @@ export default {
         },
         viewMore(reservationId) {
             this.$router.push({
-                name: 'reservationDetail',
+                name: 'reservationByCustomer',
                 params: { id: reservationId }
             });
         },
@@ -122,10 +130,11 @@ export default {
                 const reservationIdMatch = reservation.reservationId.toString().toLowerCase().includes(query);
                 const statusMatch = this.statusText(reservation.status).toLowerCase().includes(query);
                 const movieMatch = reservation.movie.title.toLowerCase().includes(query);
-                return reservationIdMatch || statusMatch || movieMatch;
+                const customerMatch = reservation.customerFullName.toLowerCase().includes(query);
+                return reservationIdMatch || statusMatch || movieMatch || customerMatch;
             });
 
-            this.sortReservations();
+            // this.sortReservations();
         },
         sortBy(key) {
             if (this.sortKey === key) {
@@ -155,6 +164,11 @@ export default {
                         ? movieA.localeCompare(movieB)
                         : movieB.localeCompare(movieA)
                 }
+                else if (this.sortKey === 'customer') {
+                    return this.sortOrder === 'asc'
+                        ? a.customerFullName.localeCompare(b.customerFullName)
+                        : b.customerFullName.localeCompare(a.customerFullName)
+                }
                 return 0;
             });
 
@@ -163,11 +177,11 @@ export default {
     },
     mounted() {
         const fetching = async () => {
-            const token = sessionStorage.getItem('token');
-            const decode = jwtDecode(token);
-            const user = await getUser(decode.Email);
-            const customer = await getCustomer(user.data.userId);
-            const reservations = await getReservationByCustomer(customer.data.customerId);
+            // const token = sessionStorage.getItem('token');
+            // const decode = jwtDecode(token);
+            // const user = await getUser(decode.Email);
+            // const customer = await getCustomer(user.data.userId);
+            const reservations = await getAllReservation();
             if (reservations.status == 200) {
                 this.reservations = reservations.data;
                 this.filteredReservations = reservations.data;

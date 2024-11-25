@@ -1,11 +1,12 @@
 <script>
 import { jwtDecode } from 'jwt-decode';
 import MainLayout from './Layout/MainLayout.vue';
+import router from '@/script/Route';
 
 export default {
     name: "LandingPage",
     components: {
-        MainLayout
+        MainLayout,
     },
     data() {
         return {
@@ -22,13 +23,16 @@ export default {
         const decode = jwtDecode(token);
 
         const role = decode['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
-        if (role == 'Admin') this.isAdmin = true;
+        if (role == 'Admin') {
+            this.isAdmin = true;
+            router.push('/admin/dashboard/home');
+        }
     }
 }
 </script>
 
 <template>
-    <MainLayout v-if="!isAdmin">
+    <MainLayout>
         <template #default>
             <div class="container-fluid p-0">
                 <div class="banner">
@@ -251,9 +255,6 @@ export default {
             </div>
         </template>
     </MainLayout>
-    <div v-else>
-        Admin Page
-    </div>
 </template>
 
 <style scoped>
