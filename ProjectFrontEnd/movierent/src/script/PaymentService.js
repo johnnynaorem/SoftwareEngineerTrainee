@@ -24,14 +24,19 @@ export const getAllPayments = async () => {
   }
 };
 
-// export const getReservationByReservationId = async (reservationId) => {
-//   try {
-//     const response = await axios.get(
-//       `https://localhost:7203/api/MovieReservation/GetReservationById?id=${reservationId}`
-//     );
-//     return response;
-//   } catch (error) {
-//     alert("Error when Fetching Reservation");
-//     return error;
-//   }
-// };
+export const makePayment = async (rentalId, customerId, paymentType) => {
+  try {
+    const response = await axios.post(
+      `https://localhost:7203/api/Payment/MakePayment`,
+      {
+        rentalId,
+        customerId,
+        paymentType,
+      }
+    );
+    return response;
+  } catch (error) {
+    alert("Error when Payment");
+    return error;
+  }
+};

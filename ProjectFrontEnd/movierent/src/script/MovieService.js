@@ -66,3 +66,34 @@ export const getMovieById = async (id) => {
     return err;
   }
 };
+
+export const addMovie = async (
+  title,
+  genre,
+  rental_Price,
+  coverImage,
+  rating,
+  description,
+  availableCopies,
+  releaseDate
+) => {
+  try {
+    const response = await axios.post(
+      `https://localhost:7203/api/Movie/AddMovie`,
+      {
+        title,
+        genre,
+        rental_Price,
+        coverImage,
+        rating,
+        description,
+        availableCopies,
+        releaseDate,
+      }
+    );
+    return response;
+  } catch (err) {
+    alert("Error when Adding Movie");
+    return err;
+  }
+};

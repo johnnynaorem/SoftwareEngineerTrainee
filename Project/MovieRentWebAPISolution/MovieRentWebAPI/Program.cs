@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MovieRentWebAPI.Context;
@@ -8,9 +9,11 @@ using MovieRentWebAPI.EmailModels;
 using MovieRentWebAPI.EmailService;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
+using MovieRentWebAPI.Payments;
 using MovieRentWebAPI.Repositories;
 using MovieRentWebAPI.Services;
 using MovieRentWebAPI.Validations;
+using Stripe;
 using System.Text;
 
 namespace MovieRentWebAPI
@@ -32,6 +35,8 @@ namespace MovieRentWebAPI
             });
             #endregion
 
+            
+
             #region Authentication
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(option =>
@@ -50,7 +55,7 @@ namespace MovieRentWebAPI
             #region Repositories
             builder.Services.AddScoped<IRepository<int, Movie>, MovieRepository>();
             builder.Services.AddScoped<IRepository<string, User>, UserRepository>();
-            builder.Services.AddScoped<IRepository<int, Customer>, CustomerRepository>();
+            builder.Services.AddScoped<IRepository<int, Models.Customer>, CustomerRepository>();
             builder.Services.AddScoped<IRepository<int, Reservation>, ReservationRepository>();
             builder.Services.AddScoped<IRepository<int, Rental>, RentalRepository>();
             builder.Services.AddScoped<IRepository<int, Payment>, PaymentRepository>();
@@ -59,10 +64,10 @@ namespace MovieRentWebAPI
 
             #region Services
             builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<ITokenService, Services.TokenService>();
             builder.Services.AddScoped<IEmailSender, EmailSender>();
             builder.Services.AddScoped<IMovieService, MovieService>();
-            builder.Services.AddScoped<ICustomerService, CustomerService>();
+            builder.Services.AddScoped<ICustomerService, Services.CustomerService>();
             builder.Services.AddScoped<IReservationService, MovieReservationService>();
             builder.Services.AddScoped<IRentalService, RentalService>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
@@ -75,9 +80,9 @@ namespace MovieRentWebAPI
                 .Get<EmailConfiguration>();
             builder.Services.AddSingleton(emailConfig);
 
+
             // Add services to the container.
 
-            builder.Services.AddControllers();
 
             // Register CORS policy
             builder.Services.AddCors(options =>
@@ -90,6 +95,10 @@ namespace MovieRentWebAPI
                 });
             });
 
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            builder.Services.AddControllers();
+
+            builder.Services.AddSingleton<StripeClient>(new StripeClient(builder.Configuration["Stripe:SecretKey"]));
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(opt =>
@@ -123,6 +132,8 @@ namespace MovieRentWebAPI
 
             var app = builder.Build();
 
+            var stripeSettings = app.Services.GetRequiredService<IOptions<StripeSettings>>().Value;
+            StripeConfiguration.ApiKey = stripeSettings.SecretKey;
             app.UseCors("AllowAllOrigins");
 
             // Configure the HTTP request pipeline.

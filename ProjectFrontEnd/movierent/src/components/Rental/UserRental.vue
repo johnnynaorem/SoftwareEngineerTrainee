@@ -6,7 +6,7 @@
                 <input class="search-input" type="search" placeholder="Search by Rental ID or Status"
                     v-model="searchValue" @input="search" />
             </div>
-            <table class="table">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col" @click="sortBy('rentalId')">
@@ -65,7 +65,14 @@
                         </td>
                         <td>{{ new Date(rental.rentalDate).toDateString() }}</td>
                         <td>
-                            <button class="btn btn-primary" @click="viewMore(rental.rentalId)">View</button>
+                            <div>
+                                <button class="btn btn-primary mx-1" :disabled="rental.status !== 'Confirmed'"
+                                    @click="pickupMovie(rental.rentalId, rental.customer.customerId, rental.movie.movieId)">Pickup</button>
+                                <button class="btn btn-warning text-dark mx-1"
+                                    :disabled="rental.status == '!Active' || rental.status == 'Returned' || rental.status == 'Overdue'"
+                                    @click="returnMovie(rental.rentalId, rental.customer.customerId)">Return</button>
+
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -75,10 +82,12 @@
 </template>
 
 <script setup>
-import { getRentalByCustomer } from '@/script/RentalService';
+import { getRentalByCustomer, pickupMovieByCustomer, returnMovieByCustomer } from '@/script/RentalService';
 import { getCustomer, getUser } from '@/script/UserService';
 import { jwtDecode } from 'jwt-decode';
 import { onMounted, ref } from 'vue';
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 const rentals = ref([]);
 const filteredRentals = ref([]);
@@ -97,6 +106,21 @@ const search = () => {
     });
     sortRentals();
 };
+
+const pickupMovie = async (rentalId, movieId, customerId) => {
+    console.log(rentalId, customerId, movieId);
+    const response = await pickupMovieByCustomer(rentalId, customerId, movieId);
+    if (response.status == 200) {
+        toast.success("Movie is Successfully Pickup!....")
+    }
+}
+const returnMovie = async (rentalId, customerId) => {
+    console.log(rentalId, customerId);
+    const response = await returnMovieByCustomer(rentalId, customerId);
+    if (response.status == 200) {
+        toast.success("Movie is Successfully Returned!....")
+    }
+}
 
 const sortBy = (key) => {
     if (sortKey.value === key) {
@@ -159,6 +183,12 @@ onMounted(() => {
         outline: none;
         border-radius: 10px;
         background: var(--light);
+    }
+}
+
+.table {
+    th {
+        cursor: pointer;
     }
 }
 

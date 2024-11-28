@@ -6,7 +6,7 @@
                 <input class="search-input" type="search" placeholder="Search by Reservation ID or Status"
                     v-model="searchValue" @input="search" />
             </div>
-            <table class="table">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col" @click="sortBy('reservationId')">
@@ -49,12 +49,75 @@
                         <td>
                             <button class="btn btn-primary mx-1"
                                 @click="viewMore(reservation.reservationId)">View</button>
-                            <button class="btn btn-warning mx-1" :disabled="reservation.status !== 0"
-                                @click="viewMore(reservation.reservationId)">Rent</button>
+                            <button type="button" class="btn btn-warning mx-1 rent-btn" data-bs-toggle="modal"
+                                data-bs-target="#rentMovieModal" :disabled="reservation.status !== 0"
+                                @click="rentMovieSetup(reservation.movie.movieId, reservation.customerId, reservation.movie.title, reservation.customerFullName, reservation.movie.rentalPrice)">Rent</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <!-- Rental Movie Modal -->
+            <div class="modal fade" id="rentMovieModal" tabindex="-1" aria-labelledby="rentMovieModalLabel"
+                aria-hidden="true">
+                <div class="modal-mapper modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content modal-content-mapper">
+                        <div class="modal-header">
+                            <div>
+                                <h4 class="modal-title" id="reservationUpdateModalLabel">
+                                    Rent "{{ movieToBeRent.currentMovie }}"
+                                </h4>
+                                <p>
+                                    Get ready to enjoy "{{ movieToBeRent.currentMovie }}"! Simply confirm your rental to
+                                    start watching
+                                    this exciting film. Whether it's an action-packed adventure, a heartfelt drama, or a
+                                    comedy, you’re just
+                                    a few clicks away from streaming this movie on your device. Don't miss out – rent
+                                    now and enjoy instantly.
+                                </p>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Conditional Success Message -->
+                            <div v-if="isPaymentTime && !isPaymentSuccessfull">
+                                <h4>Complete Your Payment Process for the Rental!</h4>
+                                <div>
+                                    <h2>Pay for your order</h2>
+                                    <div id="card-element"></div> <!-- Card Element -->
+                                    <button @click="handleSubmit" :disabled="isProcessing">Pay Now</button>
+                                </div>
+                            </div>
+
+                            <div v-if="isPaymentSuccessfull">
+                                <p class="text-success">{{ movieToBeRent.currentMovie }} successfully rented!!</p>
+                            </div>
+
+                            <!-- Show form only if neither payment time nor success is true -->
+                            <form v-if="!isPaymentTime && !isPaymentSuccessfull" @submit="rentMovieMethod">
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <div class="movie-input-mapper">
+                                        <label for="movie">Movie Name</label>
+                                        <input id="movie" type="text" class="form-control"
+                                            v-model="movieToBeRent.currentMovie" disabled>
+                                    </div>
+                                    <div class="rantee-input-mapper">
+                                        <label for="rantee">Rantee</label>
+                                        <input id="rantee" type="text" class="form-control"
+                                            v-model="movieToBeRent.customerName" disabled>
+                                    </div>
+                                    <div class="rentalPrice-input-mapper">
+                                        <label for="price">Price in ₹</label>
+                                        <input type="number" class="form-control" v-model="movieToBeRent.rentalPrice"
+                                            disabled>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
     <router-view />
@@ -64,17 +127,37 @@
 import { getCustomer, getUser } from '@/script/UserService';
 import { jwtDecode } from 'jwt-decode';
 import { getReservationByCustomer } from '@/script/ReservationService';
+import { loadStripe } from "@stripe/stripe-js";
+import { CardElement } from "@stripe/react-stripe-js";
+import { rentMovie } from '@/script/RentalService';
+import { makePayment } from '@/script/PaymentService';
 
 export default {
     name: 'ReservationMovie',
     components: {},
     data() {
         return {
+            movieToBeRent: {
+                currentMovie: '',
+                customerName: '',
+                customerId: null,
+                movieId: null,
+                rentalPrice: 0,
+
+
+            },
+            stripe: null,
+            elements: null,
+            clientSecret: null,
+            isProcessing: false,
+            isPaymentTime: false,
+            isPaymentSuccessfull: false,
             searchValue: '',
             reservations: [],
             filteredReservations: [],
             sortKey: '',
-            sortOrder: 'asc'
+            sortOrder: 'asc',
+            rentalId: null
         };
     },
     methods: {
@@ -159,9 +242,88 @@ export default {
             });
 
             this.filteredReservations = sortedReservations;
-        }
+        },
+
+        rentMovieSetup(movieId, customerId, movieTitle, customerName, rentalPrice) {
+            console.log(movieId, customerId, movieTitle)
+            this.movieToBeRent.currentMovie = movieTitle
+            this.movieToBeRent.customerName = customerName
+            this.movieToBeRent.customerId = customerId
+            this.movieToBeRent.movieId = movieId
+            this.movieToBeRent.rentalPrice = rentalPrice
+        },
+        async rentMovieMethod(event) {
+            event.preventDefault();
+            const responseRental = await rentMovie(this.movieToBeRent.customerId, this.movieToBeRent.movieId);
+            if (responseRental.status === 200) {
+                this.isPaymentTime = true;
+                this.rentalId = responseRental.data;
+                this.stripe = await loadStripe("pk_test_51OjhOhSFOS5YpWUi0nBFqisLpS52YZNSozPPJZafVCSyDrridXyMOqcgJNI2ortDLFrigd5Gv2UzvXd4oFA1p6iy00D3vAcpCg");
+                this.elements = this.stripe.elements();
+
+                // Get the client secret from your server for Stripe payment
+                const response = await fetch("https://localhost:7203/api/Payment/create-payment-intent", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        amount: this.movieToBeRent.rentalPrice * 100,
+                        currency: "usd",
+                        description: `Movie rental payment for ${this.movieToBeRent.currentMovie}`,
+                        customerName: this.movieToBeRent.customerName,
+                        customerAddress: {
+                            line1: "123 Main St",
+                            city: "Mumbai",
+                            state: "MH",
+                            country: "IN",
+                            PostalCode: "400001"
+                        }
+                    }),
+                });
+                const data = await response.json();
+                this.clientSecret = data.clientSecret;
+
+                // Mount the card element in the form
+                const cardElement = this.elements.create("card");
+                cardElement.mount("#card-element");
+                this.isPaymentTime = true;
+            }
+        },
+        async handleSubmit() {
+            if (this.isProcessing || !this.clientSecret) return;
+
+            this.isProcessing = true;
+
+            // Confirm the card payment with Stripe
+            const { error, paymentIntent } = await this.stripe.confirmCardPayment(
+                this.clientSecret,
+                {
+                    payment_method: {
+                        card: this.elements.getElement(CardElement), // Stripe card element
+                    },
+                }
+            );
+
+            if (error) {
+                console.error(error);
+                alert("Payment failed: " + error.message); // Show error message
+            } else if (paymentIntent.status === "succeeded") {
+                this.isPaymentSuccessfull = true;
+                console.log(this.rentalId);
+                const paymentResponse = await makePayment(this.rentalId, this.movieToBeRent.customerId, 'card');
+                if (paymentResponse.status == 200) {
+                    alert("Payment successful!");
+                }
+            }
+
+            this.isProcessing = false;
+        },
+        async paymentMethod(e, price) {
+            e.preventDefault();
+            console.log(price);
+            this.isPaymentSuccessfull = true;
+        },
     },
-    mounted() {
+    async mounted() {
         const fetching = async () => {
             const token = sessionStorage.getItem('token');
             const decode = jwtDecode(token);
@@ -175,7 +337,7 @@ export default {
         };
         fetching();
     }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -186,6 +348,12 @@ export default {
         outline: none;
         border-radius: 10px;
         background: var(--light);
+    }
+}
+
+.table {
+    th {
+        cursor: pointer;
     }
 }
 
@@ -209,6 +377,7 @@ export default {
 .text {
     padding: 10px 6px;
     border-radius: 10px;
+    font-size: small;
 
     &.status-active {
         background-color: #28a745;
@@ -236,8 +405,67 @@ export default {
     }
 
     &.status-not-available {
+        font-size: x-small;
         background-color: #abe018;
         color: black;
+    }
+}
+
+.modal-mapper {
+    max-width: 60%;
+    color: var(--light);
+
+    .modal-content-mapper {
+        background: red;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 10px 30px;
+        background: black;
+        border-radius: 20px;
+        color: var(--light);
+        transition: 0.2s ease-out;
+
+        &:hover {
+            background: rgb(134, 130, 130);
+        }
+    }
+
+    .input-mapper {
+        input {
+            background: transparent;
+            color: var(--light);
+
+            &::placeholder {
+                color: var(--light);
+            }
+        }
+
+    }
+
+    .select-mapper {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 20px;
+
+        select {
+            cursor: pointer;
+            border: none;
+            border: 2px solid rgb(20, 1, 1);
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+            background-color: transparent;
+            color: white;
+
+            option {
+                background: red;
+            }
+        }
     }
 }
 </style>

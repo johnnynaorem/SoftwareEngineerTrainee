@@ -316,6 +316,22 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.PaymentController",
+    "Method": "CreatePaymentIntent",
+    "RelativePath": "api/Payment/create-payment-intent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentRequest",
+        "Type": "MovieRentWebAPI.Payments.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.PaymentController",
     "Method": "GetAllPaymentByCustomer",
     "RelativePath": "api/Payment/GetAllPaymentByCustomer",
     "HttpMethod": "GET",

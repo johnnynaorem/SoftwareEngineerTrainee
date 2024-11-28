@@ -35,3 +35,45 @@ export const getAllRetals = async () => {
     return error;
   }
 };
+
+export const rentMovie = async (customerId, movieId) => {
+  try {
+    const response = await axios.post(
+      "https://localhost:7203/api/Rental/RentMovie",
+      { customerId, movieId }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};
+
+//pickup Movie
+
+export const pickupMovieByCustomer = async (rentId, movieId, customerId) => {
+  try {
+    const response = await axios.patch(
+      "https://localhost:7203/api/Customer/PickUpMovie",
+      { rentId, movieId, customerId }
+    );
+    return response;
+  } catch (err) {
+    console.log(err);
+    alert("Error when Pickup movie");
+  }
+};
+
+//return Movie
+export const returnMovieByCustomer = async (rentId, customerId) => {
+  try {
+    const response = await axios.patch(
+      "https://localhost:7203/api/Customer/returnMovie",
+      { rentId, customerId }
+    );
+    return response;
+  } catch (err) {
+    console.log(err);
+    alert("Error when returning movie");
+  }
+};

@@ -6,7 +6,7 @@
                 <input class="search-input" @input="search" v-model="searchValue" type="search"
                     placeholder="Search (YYYY-MM-DD)" />
             </div>
-            <table class="table">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Sl</th>
@@ -130,6 +130,12 @@ onMounted(() => {
         outline: none;
         border-radius: 10px;
         background: var(--light);
+    }
+}
+
+.table {
+    th {
+        cursor: pointer;
     }
 }
 </style>

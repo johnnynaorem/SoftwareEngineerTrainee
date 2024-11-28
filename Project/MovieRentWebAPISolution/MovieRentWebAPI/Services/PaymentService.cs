@@ -4,6 +4,7 @@ using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
 using MovieRentWebAPI.Repositories;
+using Stripe;
 
 namespace MovieRentWebAPI.Services
 {
@@ -12,12 +13,12 @@ namespace MovieRentWebAPI.Services
         private readonly ILogger<PaymentService> _logger;
         private readonly IRepository<int, Payment> _paymentRepo;
         private readonly IRepository<int, Rental> _rentalRepo;
-        private readonly IRepository<int, Customer> _customerRepo;
+        private readonly IRepository<int, Models.Customer> _customerRepo;
         private readonly IRepository<int, Movie> _movieRepo;
         private IRentalService _rentalService;
         private IEmailSender _emailSender;
 
-        public PaymentService(IRepository<int, Payment> paymentRepository, IRepository<int, Rental> rentalRepo, ILogger<PaymentService> logger, IRentalService rentalService, IEmailSender emailSender, IRepository<int, Customer> customerRepository, IRepository<int, Movie> movieRepository)
+        public PaymentService(IRepository<int, Payment> paymentRepository, IRepository<int, Rental> rentalRepo, ILogger<PaymentService> logger, IRentalService rentalService, IEmailSender emailSender, IRepository<int, Models.Customer> customerRepository, IRepository<int, Movie> movieRepository)
         {
             _logger = logger;
             _paymentRepo = paymentRepository;
@@ -127,5 +128,23 @@ namespace MovieRentWebAPI.Services
 
             return result.OrderByDescending(p => p.PaymentDate);
         }
+
+        //public int TestPayment()
+        //{
+        //    StripeConfiguration.ApiKey = "sk_test_51OjhOhSFOS5YpWUiiyLFyHpaRNNUTxRzTpEADmls5ZphTWuu2qF5kao83GV4Lv4hxfnv3XzTov5B5AvJYgLTWtL300jDxD0CbL";
+
+        //    var options = new PaymentIntentCreateOptions
+        //    {
+        //        Amount = 2000,
+        //        Currency = "usd",
+        //        AutomaticPaymentMethods = new PaymentIntentAutomaticPaymentMethodsOptions
+        //        {
+        //            Enabled = true,
+        //        },
+        //    };
+        //    var service = new PaymentIntentService();
+        //    service.Create(options);
+        //    return 1;
+        //}
     }
 }

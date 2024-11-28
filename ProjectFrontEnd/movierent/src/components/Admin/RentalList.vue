@@ -6,7 +6,7 @@
                 <input class="search-input" type="search" placeholder="Search by Rental ID or Status"
                     v-model="searchValue" @input="search" />
             </div>
-            <table class="table">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col" @click="sortBy('rentalId')">
@@ -158,6 +158,12 @@ onMounted(() => {
         outline: none;
         border-radius: 10px;
         background: var(--light);
+    }
+}
+
+.table {
+    th {
+        cursor: pointer;
     }
 }
 

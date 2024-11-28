@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,4 +24,64 @@
         crossorigin="anonymous"></script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Payment</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <h1>Stripe Payment</h1>
+    <form id="payment-form">
+      <div id="card-element"></div>
+      <button id="submit">Pay</button>
+    </form>
+
+    <script>
+      // Your Stripe publishable key
+      const stripe = Stripe(
+        "pk_test_51OjhOhSFOS5YpWUi0nBFqisLpS52YZNSozPPJZafVCSyDrridXyMOqcgJNI2ortDLFrigd5Gv2UzvXd4oFA1p6iy00D3vAcpCg"
+      );
+      const elements = stripe.elements();
+      const card = elements.create("card");
+      card.mount("#card-element");
+
+      const paymentForm = document.getElementById("payment-form");
+      paymentForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // Create a payment intent using your backend
+        const response = await fetch(
+          "https://localhost:7203/api/Payment/create-payment-intent",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ amount: 5000, currency: "usd" }), // Amount in cents (e.g., 50.00 USD)
+          }
+        );
+
+        const paymentIntentResponse = await response.json();
+        const clientSecret = paymentIntentResponse.clientSecret;
+
+        // Confirm the payment on the frontend
+        const result = await stripe.confirmCardPayment(clientSecret, {
+          payment_method: {
+            card: card,
+          },
+        });
+
+        if (result.error) {
+          alert(result.error.message);
+        } else {
+          if (result.paymentIntent.status === "succeeded") {
+            alert("Payment successful!");
+          }
+        }
+      });
+    </script>
+  </body>
 </html>

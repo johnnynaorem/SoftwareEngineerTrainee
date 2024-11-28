@@ -20,6 +20,7 @@ import ReservationList from "@/components/Admin/ReservationList.vue";
 import PaymentList from "@/components/Admin/PaymentList.vue";
 import RentalList from "@/components/Admin/RentalList.vue";
 import MovieList from "@/components/Admin/MovieList.vue";
+import UnAuthorize from "@/components/UnAuthorize.vue";
 
 const routes = [
   {
@@ -39,6 +40,10 @@ const routes = [
   },
 
   { path: "/:pathMatch(.*)", name: "NotFound", component: NotFoundPage },
+  {
+    path: "/unauthorized",
+    component: UnAuthorize,
+  },
 
   {
     path: "/dashboard",

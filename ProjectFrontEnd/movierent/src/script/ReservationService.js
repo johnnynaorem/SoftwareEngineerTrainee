@@ -56,3 +56,20 @@ export const getAllReservation = async () => {
     return error;
   }
 };
+
+export const updateReservationStatus = async (reservationId, status) => {
+  try {
+    const response = await axios.patch(
+      `https://localhost:7203/api/MovieReservation/UpdateMovieReserveStatus`,
+      {
+        reservationId,
+        status,
+      }
+    );
+    return response;
+  } catch (error) {
+    alert("Error in updating Status");
+    console.log(error);
+    return error;
+  }
+};

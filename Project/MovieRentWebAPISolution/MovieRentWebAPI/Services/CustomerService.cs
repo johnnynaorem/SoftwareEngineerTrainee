@@ -133,7 +133,7 @@ namespace MovieRentWebAPI.Services
             var rentals = await _rentalService.GetRentals();
             var isReady = (
                             from rental in rentals
-                            where rental.Movie.MovieId == movieId && rental.Customer.CustomerId == customerId && rental.Status == RentalStatus.Confirmed.ToString()
+                            where rental.Movie.MovieId == movieId && rental.Customer.CustomerId == customerId && rental.Status == "Confirmed"
                             select new { rental.Movie.MovieId, rental.Customer.CustomerId }
                            ).ToList();
 

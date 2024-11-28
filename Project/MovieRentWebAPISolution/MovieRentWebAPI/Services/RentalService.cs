@@ -141,7 +141,7 @@ namespace MovieRentWebAPI.Services
                 _logger.LogError(ex, "Error occurred while checking and updating overdue rentals.");
             }
         }
-        public async Task<string> RentMovie(RentMovieDTO rentMovieDTO)
+        public async Task<int> RentMovie(RentMovieDTO rentMovieDTO)
         {
             try
             {
@@ -198,7 +198,8 @@ namespace MovieRentWebAPI.Services
 
                 SendMail("Complete Payment for Rent Movie", emailBody);
 
-                return "Successfully rented movie with ID: " + addRental.RentalId.ToString();
+                //return "Successfully rented movie with ID: " + addRental.RentalId.ToString();
+                return addRental.RentalId;
             }
             catch (Exception ex)
             {
