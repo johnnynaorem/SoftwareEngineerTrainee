@@ -12,7 +12,7 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Sl</th>
+                        <th scope="col">Id</th>
                         <th scope="col" @click="sortBy('movie')">
                             Movie
                             <span v-if="sortKey === 'movie'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
@@ -39,8 +39,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(movie, i) in movies" :key="i">
-                        <th>{{ i + 1 }}</th>
+                    <tr v-for="(movie, i) in paginatedMovies" :key="i">
+                        <th>{{ movie.movieId }}</th>
                         <td>
                             <div class="d-flex table-movie-mapper">
                                 <img :src=movie.coverImage alt="" width="30px">
@@ -61,6 +61,27 @@
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Pagination Controls -->
+            <div v-if="totalPage" class="pagination-controls d-flex align-items-center justify-content-center">
+                <i :class="currentPage == 1 ? 'fa-sharp-duotone fa-solid fa-backward' : 'fa-solid fa-backward fa-fade'"
+                    @click="previousPage()" :disabled="currentPage == 1" :style="{
+                        '--fa-primary-opacity': currentPage == 1 ? 0.5 : 0.9,
+                        'font-size': '1.5rem',
+                        'cursor': currentPage == 1 ? 'not-allowed' : 'pointer'
+                    }"></i>
+
+                <span class="mx-3">Page {{ currentPage }} of {{ totalPage }}</span>
+
+                <i :class="currentPage == totalPage ? 'fa-sharp-duotone fa-solid fa-forward' : 'fa-solid fa-forward fa-fade'"
+                    @click="nextPage()" :disabled="currentPage == totalPage" :style="{
+                        '--fa-primary-opacity': currentPage == 1 ? 0.5 : 0.9,
+                        'font-size': '1.5rem',
+                        'cursor': currentPage == totalPage ? 'not-allowed' : 'pointer'
+                    }"></i>
+            </div>
+
+
             <!-- Add New Movie Modal -->
             <div class="modal fade" id="addNewMovieModal" tabindex="-1" aria-labelledby="addNewMovieModalLabel"
                 aria-hidden="true">
@@ -133,18 +154,6 @@
                                 </div>
                                 <button type="submit" class="btn">Send</button>
                             </form>
-                            <!-- <div v-else class="select-mapper">
-                                <select v-model="updateStatus" name="" id="">
-                                    <option value="" disabled selected>{{ currentReservationStatus }}</option>
-                                    <option value="active">Active</option>
-                                    <option value="completed">Completed</option>
-                                    <option value="cancelled">Cancelled</option>
-                                    <option value="expired">Expired</option>
-                                    <option value="notAvailable">Not Available</option>
-                                </select>
-                                <button type="submit" class="btn mx-3" @click="updateStatusMethod()">Send</button>
-                            </div> -->
-
                         </div>
                     </div>
                 </div>
@@ -158,11 +167,15 @@ import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 import { addMovie, getAllMovie } from '@/script/MovieService';
 import { onMounted, ref } from 'vue';
+import { computed } from "vue";
+import { watch } from "vue";
 
 const movies = ref([]);
 const searchValue = ref("");
 const sortKey = ref("");
 const sortOrder = ref("asc");
+const totalPage = ref(0)
+const currentPage = ref(1)
 const movieToBeAdd = ref({
     title: "",
     genre: "",
@@ -175,55 +188,65 @@ const movieToBeAdd = ref({
 })
 const isMovieAddSuccess = ref(false);
 
-// const filteredMovie = computed(() => {
-//     const query = searchValue.value.toLowerCase();
-//     const filtered = movies.value.filter(movie => {
-//         return (
-//             movie.amount.toString().toLowerCase().includes(query) ||
-//             movie.rentalId.toString().toLowerCase().includes(query) ||
-//             movie.paymentDate.toLowerCase().includes(query) ||
-//             movie.paymentType.toLowerCase().includes(query) ||
-//             movie.customer.fullName.toLowerCase().includes(query)
-//         );
-//     });
-//     return sortMovies(filtered);
-// });
+const filterMovies = computed(() => {
+    const query = searchValue.value.toLowerCase();
+    const filtered = movies.value.filter(movie => {
+        return (
+            movie.title.toString().toLowerCase().includes(query) ||
+            // movie.rentalId.toString().toLowerCase().includes(query) ||
+            movie.releaseDate.toLowerCase().includes(query)
+            // movie.paymentType.toLowerCase().includes(query) ||
+            // movie.customer.fullName.toLowerCase().includes(query)
+        );
+    });
+    // const start = (currentPage.value - 1) * 5;
+    // const end = start + 5;
+    // return filtered.slice(start, end);
+    return filtered;
+});
 
-// const sortMovies = (paymentsToSort) => {
-//     if (!sortKey.value) return paymentsToSort;
 
-//     return paymentsToSort.sort((a, b) => {
-//         const aValue = a[sortKey.value];
-//         const bValue = b[sortKey.value];
+const sortMovies = (movieToSort) => {
+    if (!sortKey.value) return movieToSort;
 
-//         if (sortKey.value === 'paymentDate') {
-//             const dateA = new Date(aValue).getTime();
-//             const dateB = new Date(bValue).getTime();
-//             return sortOrder.value === 'asc' ? dateA - dateB : dateB - dateA;
-//         }
+    return movieToSort.sort((a, b) => {
+        const aValue = a[sortKey.value];
+        const bValue = b[sortKey.value];
 
-//         if (sortKey.value == 'customerName') {
-//             return sortOrder.value === 'asc' ? a.customer.fullName.localeCompare(b.customer.fullName) : b.customer.fullName.localeCompare(a.customer.fullName)
-//         }
+        if (sortKey.value === 'movie') {
+            return sortOrder.value === 'asc' ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title);
+        }
 
-//         if (typeof aValue === 'string') {
-//             const stringA = aValue.toLowerCase();
-//             const stringB = bValue.toLowerCase();
-//             return sortOrder.value === 'asc' ? stringA.localeCompare(stringB) : stringB.localeCompare(stringA);
-//         }
+        // if (sortKey.value == 'customerName') {
+        //     return sortOrder.value === 'asc' ? a.customer.fullName.localeCompare(b.customer.fullName) : b.customer.fullName.localeCompare(a.customer.fullName)
+        // }
 
-//         return sortOrder.value === 'asc' ? aValue - bValue : bValue - aValue;
-//     });
-// };
+        // if (typeof aValue === 'string') {
+        //     const stringA = aValue.toLowerCase();
+        //     const stringB = bValue.toLowerCase();
+        //     return sortOrder.value === 'asc' ? stringA.localeCompare(stringB) : stringB.localeCompare(stringA);
+        // }
 
-// const sortBy = (key) => {
-//     if (sortKey.value === key) {
-//         sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
-//     } else {
-//         sortKey.value = key;
-//         sortOrder.value = 'asc';
-//     }
-// };
+        return sortOrder.value === 'asc' ? aValue - bValue : bValue - aValue;
+    });
+};
+
+const sortBy = (key) => {
+    if (sortKey.value === key) {
+        sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
+
+    } else {
+        sortKey.value = key;
+        sortOrder.value = 'asc';
+    }
+    sortMovies(paginatedMovies.value)
+};
+
+const paginatedMovies = computed(() => {
+    const start = (currentPage.value - 1) * 5;
+    const end = start + 5;
+    return filterMovies.value.slice(start, end);
+});
 
 const addNewMovieMethod = async (event) => {
     event.preventDefault();
@@ -241,13 +264,30 @@ const addNewMovieMethod = async (event) => {
     }
 }
 
+const nextPage = () => {
+    if (currentPage.value < totalPage.value) {
+        currentPage.value++;
+    }
+}
+
+const previousPage = async () => {
+    if (currentPage.value === totalPage.value) {
+        currentPage.value--;
+    }
+}
+
+watch(filterMovies, (filtered) => {
+    totalPage.value = Math.ceil(filtered.length / 5);  // Recalculate total pages based on filtered data
+});
+
 onMounted(() => {
     const fetching = async () => {
         try {
-            // const returnMovie = await getMovieWithPagination(1, 5);
             const returnMovie = await getAllMovie();
+            // const returnMovie = await getMovieWithPagination(1, 5);
             if (returnMovie.status === 200) {
                 movies.value = returnMovie.data;
+                totalPage.value = Math.ceil(returnMovie.data.length / 5);
             }
         } catch (error) {
             console.error('Error fetching movie data:', error);
@@ -305,6 +345,11 @@ onMounted(() => {
     th {
         cursor: pointer;
     }
+}
+
+.pagination-controls {
+    text-align: center;
+    margin-top: 47px
 }
 
 .modal-mapper {
