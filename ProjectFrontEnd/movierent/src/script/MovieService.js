@@ -97,3 +97,123 @@ export const addMovie = async (
     return err;
   }
 };
+
+export const updateMovie = async (
+  movieId,
+  title,
+  genre,
+  rental_Price,
+  coverImage,
+  rating,
+  description,
+  availableCopies,
+  releaseDate
+) => {
+  try {
+    const response = await axios.patch(
+      `https://localhost:7203/api/Movie/UpdateMovieDetails?movieId=${movieId}`,
+      {
+        title,
+        genre,
+        rental_Price,
+        coverImage,
+        rating,
+        description,
+        availableCopies,
+        releaseDate,
+      }
+    );
+    return response;
+  } catch (err) {
+    alert("Error when Updating Movie Details");
+    return err;
+  }
+};
+
+export const movieFilter = async (title, genre) => {
+  try {
+    if (title != "" && genre != "") {
+      const response = await axios.get(
+        `https://localhost:7203/api/Movie/filter?title=${title}&genre=${genre}`
+      );
+      return response;
+    }
+    if (title == "" && genre != "") {
+      const response = await axios.get(
+        `https://localhost:7203/api/Movie/filter?genre=${genre}`
+      );
+      return response;
+    }
+
+    if (title != "" && genre == "") {
+      const response = await axios.get(
+        `https://localhost:7203/api/Movie/filter?title=${title}`
+      );
+      return response;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const addMovieToWishlist = async (movieId, customerId) => {
+  try {
+    const response = await axios.post(
+      `https://localhost:7203/api/Wishlist/AddWishlist`,
+      {
+        movieId,
+        customerId,
+      }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    alert("Error when add to wishlist process");
+  }
+};
+
+export const removeMovieFromWishlist = async (movieId, customerId) => {
+  try {
+    const response = await axios.delete(
+      `https://localhost:7203/api/Wishlist/RemoveWishlist`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: {
+          movieId,
+          customerId,
+        },
+      }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    alert("Error when remove from wishlist process");
+  }
+};
+
+export const getWishlistByMovieIdAndCustomerId = async (
+  movieId,
+  customerId
+) => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Wishlist/GetWishlistByMovieIdAndCustomerId?movieId=${movieId}&customerId=${customerId}`
+    );
+    return response;
+  } catch (error) {
+    return error;
+  }
+};
+
+export const getWishlistsCustomerId = async (customerId) => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Wishlist/GetWishlistsByCustomer?customerId=${customerId}`
+    );
+    return response;
+  } catch (error) {
+    return error;
+  }
+};

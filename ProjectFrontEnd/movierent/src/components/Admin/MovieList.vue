@@ -9,58 +9,61 @@
             <div class="search my-4">
                 <input class="search-input" @input="search" v-model="searchValue" type="search" placeholder="Search" />
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col" @click="sortBy('movie')">
-                            Movie
-                            <span v-if="sortKey === 'movie'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
-                        <th scope="col" @click="sortBy('genre')">
-                            Genre
-                            <span v-if="sortKey === 'genre'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
-                        <th scope="col" @click="sortBy('rentalPrice')">
-                            RentalPrice
-                            <span v-if="sortKey === 'rentalPrice'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
-                        <th scope="col" @click="sortBy('availableCopies')">
-                            Available Copy
-                            <span v-if="sortKey === 'availableCopies'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
-                        <th scope="col" @click="sortBy('releaseDate')">
-                            Release Date
-                            <span v-if="sortKey === 'releaseDate'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
-                        <th scope="col">
-                            Action
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(movie, i) in paginatedMovies" :key="i">
-                        <th>{{ movie.movieId }}</th>
-                        <td>
-                            <div class="d-flex table-movie-mapper">
-                                <img :src=movie.coverImage alt="" width="30px">
-                                <p>{{ movie.title }}</p>
-                            </div>
-                        </td>
-                        <td>{{ movie.genre }}</td>
-                        <td>{{ movie.rental_Price }}</td>
-                        <td>{{ movie.availableCopies }}</td>
-                        <td>{{ new Date(movie.releaseDate).toDateString() }}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
-                                data-bs-target="#reservationUpdateModal"
-                                style="border: none; outline: none; background-color: transparent;">
-                                <span class="material-icons" style="color:black">edit</span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-mapper">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col" @click="sortBy('movie')">
+                                Movie
+                                <span v-if="sortKey === 'movie'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                            </th>
+                            <th scope="col" @click="sortBy('genre')">
+                                Genre
+                                <span v-if="sortKey === 'genre'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                            </th>
+                            <th scope="col" @click="sortBy('rentalPrice')">
+                                RentalPrice
+                                <span v-if="sortKey === 'rentalPrice'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                            </th>
+                            <th scope="col" @click="sortBy('availableCopies')">
+                                Available Copy
+                                <span v-if="sortKey === 'availableCopies'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                            </th>
+                            <th scope="col" @click="sortBy('releaseDate')">
+                                Release Date
+                                <span v-if="sortKey === 'releaseDate'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
+                            </th>
+                            <th scope="col">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(movie, i) in paginatedMovies" :key="i">
+                            <th>{{ movie.movieId }}</th>
+                            <td>
+                                <div class="d-flex table-movie-mapper">
+                                    <img :src=movie.coverImage alt="" width="30px">
+                                    <p>{{ movie.title }}</p>
+                                </div>
+                            </td>
+                            <td>{{ movie.genre }}</td>
+                            <td>{{ movie.rental_Price }}</td>
+                            <td>{{ movie.availableCopies }}</td>
+                            <td>{{ new Date(movie.releaseDate).toDateString() }}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
+                                    data-bs-target="#updateMovieModal"
+                                    style="border: none; outline: none; background-color: transparent;">
+                                    <span class="material-icons" style="color:black"
+                                        @click="editPrepare(movie)">edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <!-- Pagination Controls -->
             <div v-if="totalPage" class="pagination-controls d-flex align-items-center justify-content-center">
@@ -82,6 +85,86 @@
             </div>
 
 
+            <!-- Update Movie Modal -->
+            <div class="modal fade" id="updateMovieModal" tabindex="-1" aria-labelledby="updateMovieModalLabel"
+                aria-hidden="true">
+                <div class="modal-mapper modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content modal-content-mapper">
+                        <div class="modal-header">
+                            <div>
+                                <h4 class="modal-title" id="addNewMovieModalLabel">Update Movie Details..!</h4>
+                                <p>To add a new movie, please fill in the required details and select the appropriate
+                                    status. This will help us accurately track the movie in the system and manage its
+                                    progress.</p>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="{
+                                clearFilled(),
+                                    isMovieUpdateSuccess = false;
+                            }">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Conditional Success Message -->
+                            <div v-if="isMovieUpdateSuccess">
+                                <p class="text-white">Movie is Sucessfully Updated.</p>
+                            </div>
+                            <form v-else v-on:submit="updateMovieMethod">
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <div>
+                                        <label for="movie">Movie Name</label>
+                                        <input type="text" class="form-control" placeholder="Title" required
+                                            v-model="movieToBeAdd.title">
+                                    </div>
+                                    <div>
+                                        <label for="movie">Genre</label>
+                                        <input type="text" class="form-control" placeholder="Genre" required
+                                            v-model="movieToBeAdd.genre">
+                                    </div>
+                                    <div>
+                                        <label for="movie">Rental Price</label>
+                                        <input type="number" class="form-control" required placeholder="Enter Price"
+                                            v-model="movieToBeAdd.rental_Price" step=".01" min="0" max="1000">
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <div>
+                                        <label for="movie">Movie Cover Image</label>
+                                        <input type="text" class="form-control" placeholder="CoverImage" required
+                                            v-model="movieToBeAdd.coverImage">
+                                    </div>
+                                    <div>
+                                        <label for="movie">Rating</label>
+                                        <input type="number" class="form-control" required placeholder="Enter Rating"
+                                            v-model="movieToBeAdd.rating" step="0.5" min="1" max="10">
+                                    </div>
+                                    <div>
+                                        <label for="movie">Release Date</label>
+                                        <input type="datetime-local" class="form-control" required
+                                            v-model="movieToBeAdd.releaseDate">
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <div>
+                                        <label for="movie">Available Copies</label>
+                                        <input type="number" class="form-control" required placeholder="No of Copies"
+                                            v-model="movieToBeAdd.availableCopies">
+                                    </div>
+
+                                </div>
+                                <div class="input-group mb-3 d-flex gap-2 input-mapper">
+                                    <div>
+                                        <label for="movie">Description</label>
+                                        <textarea cols="80" rows="4" class="form-control" required
+                                            placeholder="......about movie" v-model="movieToBeAdd.description" />
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Add New Movie Modal -->
             <div class="modal fade" id="addNewMovieModal" tabindex="-1" aria-labelledby="addNewMovieModalLabel"
                 aria-hidden="true">
@@ -89,17 +172,18 @@
                     <div class="modal-content modal-content-mapper">
                         <div class="modal-header">
                             <div>
-                                <h4 class="modal-title" id="addNewMovieModalLabel">Add new Movie!</h4>
+                                <h4 class="modal-title" id="addNewMovieModalLabel">Add New Movie!</h4>
                                 <p>To add a new movie, please fill in the required details and select the appropriate
                                     status. This will help us accurately track the movie in the system and manage its
                                     progress.</p>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
                             <!-- Conditional Success Message -->
                             <div v-if="isMovieAddSuccess">
-                                <p class="text-success">Movie is Sucessfully Added.</p>
+                                <p class="text-white">Movie is Sucessfully Added.</p>
                             </div>
                             <form v-else v-on:submit="addNewMovieMethod">
                                 <div class="input-group mb-3 d-flex gap-2 input-mapper">
@@ -116,7 +200,7 @@
                                     <div>
                                         <label for="movie">Rental Price</label>
                                         <input type="number" class="form-control" required placeholder="Enter Price"
-                                            v-model="movieToBeAdd.rental_Price">
+                                            v-model="movieToBeAdd.rental_Price" step="0.01" min="0" max="1000">
                                     </div>
                                 </div>
                                 <div class="input-group mb-3 d-flex gap-2 input-mapper">
@@ -128,7 +212,7 @@
                                     <div>
                                         <label for="movie">Rating</label>
                                         <input type="number" class="form-control" required placeholder="Enter Rating"
-                                            v-model="movieToBeAdd.rating">
+                                            v-model="movieToBeAdd.rating" step="0.5" min="1" max="10">
                                     </div>
                                     <div>
                                         <label for="movie">Release Date</label>
@@ -165,11 +249,12 @@
 <script setup>
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
-import { addMovie, getAllMovie } from '@/script/MovieService';
+import { addMovie, getAllMovie, updateMovie } from '@/script/MovieService';
 import { onMounted, ref } from 'vue';
 import { computed } from "vue";
 import { watch } from "vue";
 
+const movieToBeUpdateId = ref(0);
 const movies = ref([]);
 const searchValue = ref("");
 const sortKey = ref("");
@@ -187,6 +272,55 @@ const movieToBeAdd = ref({
     releaseDate: ""
 })
 const isMovieAddSuccess = ref(false);
+const isMovieUpdateSuccess = ref(false);
+
+const clearFilled = () => {
+    movieToBeAdd.value = {
+        title: "",
+        genre: "",
+        rental_Price: 0,
+        coverImage: "",
+        rating: 0,
+        description: "",
+        availableCopies: 0,
+        releaseDate: ""
+    }
+}
+
+const editPrepare = (movie) => {
+    movieToBeAdd.value.title = movie.title,
+        movieToBeAdd.value.genre = movie.genre
+    movieToBeAdd.value.rental_Price = movie.rental_Price
+    movieToBeAdd.value.coverImage = movie.coverImage
+    movieToBeAdd.value.rating = movie.rating
+    movieToBeAdd.value.description = movie.description
+    movieToBeAdd.value.availableCopies = movie.availableCopies
+    movieToBeAdd.value.releaseDate = movie.releaseDate;
+    movieToBeUpdateId.value = movie.movieId;
+}
+
+
+
+const updateMovieMethod = async (event) => {
+    event.preventDefault();
+    const updateMovieResponse = await updateMovie(movieToBeUpdateId.value, movieToBeAdd.value.title,
+        movieToBeAdd.value.genre,
+        movieToBeAdd.value.rental_Price,
+        movieToBeAdd.value.coverImage,
+        movieToBeAdd.value.rating,
+        movieToBeAdd.value.description,
+        movieToBeAdd.value.availableCopies,
+        movieToBeAdd.value.releaseDate);
+
+    clearFilled();
+
+    if (updateMovieResponse.data == movieToBeUpdateId.value) {
+        isMovieUpdateSuccess.value = true;
+        toast.success("Movie Update Successfull")
+        fetching();
+
+    }
+}
 
 const filterMovies = computed(() => {
     const query = searchValue.value.toLowerCase();
@@ -239,7 +373,7 @@ const sortBy = (key) => {
         sortKey.value = key;
         sortOrder.value = 'asc';
     }
-    sortMovies(paginatedMovies.value)
+    sortMovies(movies.value)
 };
 
 const paginatedMovies = computed(() => {
@@ -250,7 +384,6 @@ const paginatedMovies = computed(() => {
 
 const addNewMovieMethod = async (event) => {
     event.preventDefault();
-    console.log(movieToBeAdd.value)
     const returnMovie = await addMovie(movieToBeAdd.value.title,
         movieToBeAdd.value.genre,
         movieToBeAdd.value.rental_Price,
@@ -260,7 +393,9 @@ const addNewMovieMethod = async (event) => {
         movieToBeAdd.value.availableCopies,
         movieToBeAdd.value.releaseDate);
     if (returnMovie.status == 200) {
+        isMovieAddSuccess.value = true;
         toast.success("Movie is added successfully!!");
+        fetching();
     }
 }
 
@@ -271,29 +406,30 @@ const nextPage = () => {
 }
 
 const previousPage = async () => {
-    if (currentPage.value === totalPage.value) {
+    if (currentPage.value !== 1) {
         currentPage.value--;
     }
 }
 
 watch(filterMovies, (filtered) => {
+    currentPage.value = 1;
     totalPage.value = Math.ceil(filtered.length / 5);  // Recalculate total pages based on filtered data
 });
 
-onMounted(() => {
-    const fetching = async () => {
-        try {
-            const returnMovie = await getAllMovie();
-            // const returnMovie = await getMovieWithPagination(1, 5);
-            if (returnMovie.status === 200) {
-                movies.value = returnMovie.data;
-                totalPage.value = Math.ceil(returnMovie.data.length / 5);
-            }
-        } catch (error) {
-            console.error('Error fetching movie data:', error);
+const fetching = async () => {
+    try {
+        const returnMovie = await getAllMovie();
+        // const returnMovie = await getMovieWithPagination(1, 5);
+        if (returnMovie.status === 200) {
+            movies.value = returnMovie.data;
+            totalPage.value = Math.ceil(returnMovie.data.length / 5);
         }
-    };
+    } catch (error) {
+        console.error('Error fetching movie data:', error);
+    }
+};
 
+onMounted(() => {
     fetching();
 });
 </script>
@@ -322,6 +458,10 @@ onMounted(() => {
         border-radius: 10px;
         background: var(--light);
     }
+}
+
+.table-mapper {
+    min-height: 380px;
 }
 
 .table-movie-mapper {
@@ -357,7 +497,7 @@ onMounted(() => {
     color: var(--light);
 
     .modal-content-mapper {
-        background: red;
+        background: #191919;
         padding: 20px;
         border-radius: 20px;
     }

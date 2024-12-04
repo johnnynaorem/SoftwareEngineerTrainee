@@ -76,6 +76,10 @@ const routes = [
         path: "rental",
         component: Rental,
       },
+      {
+        path: "wishlist",
+        component: Rental,
+      },
     ],
   },
 

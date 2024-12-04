@@ -31,7 +31,13 @@
                 </span>
                 <span class="text">Rental</span>
             </router-link>
-            <router-link class="button" to="/dashboard/profile">
+            <router-link class="button" to="/dashboard/wishlist">
+                <span class="material-icons">
+                    favorite
+                </span>
+                <span class="text">Wishlist</span>
+            </router-link>
+            <router-link class="button mt-5" to="/dashboard/profile">
                 <span class="material-icons">
                     person
                 </span>

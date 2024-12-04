@@ -73,3 +73,19 @@ export const updateReservationStatus = async (reservationId, status) => {
     return error;
   }
 };
+
+export const getReservationByCustomerIdAndMovieId = async (
+  movieId,
+  customerId
+) => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/MovieReservation/GetReservationByMovieIdAndCustomerId?movieId=${movieId}&customerId=${customerId}`
+    );
+    return response;
+  } catch (err) {
+    console.log(err);
+    alert("Error when Fetching Reservation using customer and movie ids");
+    return err;
+  }
+};

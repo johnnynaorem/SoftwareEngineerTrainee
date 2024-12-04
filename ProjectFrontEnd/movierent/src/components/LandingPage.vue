@@ -2,6 +2,7 @@
 import { jwtDecode } from 'jwt-decode';
 import MainLayout from './Layout/MainLayout.vue';
 import router from '@/script/Route';
+import { getMovieById } from '@/script/MovieService';
 
 export default {
     name: "LandingPage",
@@ -15,10 +16,12 @@ export default {
             url: "",
             watchTrailer: (link) => {
                 this.url = link
-            }
+            },
+            movies: [],
+            movieALt: []
         }
     },
-    mounted() {
+    async mounted() {
         const token = sessionStorage.getItem('token')
         const decode = jwtDecode(token);
 
@@ -27,6 +30,22 @@ export default {
             this.isAdmin = true;
             router.push('/admin/dashboard/home');
         }
+
+        const movieOne = await getMovieById(18)
+        this.movies.push(movieOne.data)
+        const movieTwo = await getMovieById(19)
+        this.movies.push(movieTwo.data)
+        const movieThree = await getMovieById(20)
+        this.movies.push(movieThree.data)
+
+        const movieAltOne = await getMovieById(14)
+        this.movieALt.push(movieAltOne.data)
+        const movieAltTwo = await getMovieById(13)
+        this.movieALt.push(movieAltTwo.data)
+        const movieAltThree = await getMovieById(15)
+        this.movieALt.push(movieAltThree.data)
+        const movieAltFour = await getMovieById(12)
+        this.movieALt.push(movieAltFour.data)
     }
 }
 </script>
@@ -84,55 +103,16 @@ export default {
                         </div>
                         <div class="content-middle container">
                             <div class="row p-md-3">
-                                <div class="cardContainer mb-3 col-12  col-sm-6 col-md-4 col-lg-3">
+                                <div class="cardContainer mb-3 col-6 col-md-4 col-lg-3" v-for="(movie, i) in movieALt"
+                                    :key="i">
                                     <div class="card-div">
-                                        <img src="https://i.pinimg.com/originals/f6/85/02/f68502d0ebd5a484e3a78dd6ec3861ab.jpg"
-                                            class="card-img" alt="Movie Image">
+                                        <img :src="movie.coverImage" class="card-img" alt="Movie Image">
                                         <div class="card-body">
-                                            <h6 class="card-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Rem, reprehenderit......</p>
-                                            <a class="btn btn-primary">Reserve At 500 only/==</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardContainer mb-3 col-12  col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-div">
-                                        <img src="https://i.pinimg.com/originals/f6/85/02/f68502d0ebd5a484e3a78dd6ec3861ab.jpg"
-                                            class="card-img" alt="Movie Image">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Rem, reprehenderit......</p>
-                                            <a class="btn btn-primary">Reserve At 500 only/==</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardContainer mb-3 col-12 col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-div">
-                                        <img src="https://i.pinimg.com/originals/f6/85/02/f68502d0ebd5a484e3a78dd6ec3861ab.jpg"
-                                            class="card-img" alt="Movie Image">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Rem, reprehenderit......</p>
-                                            <a class="btn btn-primary">Reserve At 500 only/==</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cardContainer mb-3 col-12  col-sm-6 col-md-4 col-lg-3">
-                                    <div class="card-div">
-                                        <img src="https://i.pinimg.com/originals/f6/85/02/f68502d0ebd5a484e3a78dd6ec3861ab.jpg"
-                                            class="card-img" alt="Movie Image">
-                                        <div class="card-body">
-                                            <h6 class="card-title">Lorem ipsum dolor sit amet consectetur.</h6>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Rem, reprehenderit......</p>
-                                            <a class="btn btn-primary">Reserve At 500 only/==</a>
+                                            <h6 class="card-title">{{ movie.title }}</h6>
+                                            <p class="card-text">{{ movie.description.substring(0, 15) }}......</p>
+                                            <a class="btn btn-primary"
+                                                @click="this.$router.push(`/movie/${movie.movieId}`)">Reserve
+                                                At {{ movie.rental_Price }} only/==</a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,17 +129,17 @@ export default {
 
                         <div class="feature-movie-container mt-5">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-12 col-md-6 col-lg-4" v-for="(movie, i) in movies" :key="i">
                                     <div class="feature-movie-image-div position-relative">
-                                        <img src="../Images/banner-02.jpg" alt="" width="100%">
+                                        <img :src="movie.coverImage" alt="" width="100%">
 
                                         <div class="feature-movie-text position-absolute ps-4 py-4">
-                                            <h5>The Fifth Day</h5>
+                                            <h5>{{ movie.title }}</h5>
                                             <div class="d-flex mb-2" style="width: 57%;">
                                                 <div class="d-flex align-items-center">
                                                     <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
                                                         alt="">
-                                                    <p>Action</p>
+                                                    <p>{{ movie.genre }}</p>
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
@@ -171,67 +151,10 @@ export default {
                                             <div class="feature-movie-button-div d-flex gap-3">
                                                 <button type="button" class="btn" data-bs-toggle="modal"
                                                     data-bs-target="#exampleModal"
-                                                    @click="watchTrailer('https://www.youtube.com/embed/Qkm2qdUuXcA?si=Hg4q1ON-50e3PBxc')">Watch
+                                                    @click="watchTrailer(movie.trailerVideo)">Watch
                                                     Trailer</button>
-                                                <button>Rent Movie</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="feature-movie-image-div position-relative">
-                                        <img src="../Images/banner-02.jpg" alt="" width="100%">
-
-                                        <div class="feature-movie-text position-absolute ps-4 py-4">
-                                            <h5>The Fifth Day</h5>
-                                            <div class="d-flex mb-2" style="width: 57%;">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
-                                                        alt="">
-                                                    <p>Action</p>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
-                                                        alt="">
-
-                                                    <p>180 mins</p>
-                                                </div>
-                                            </div>
-                                            <div class="feature-movie-button-div d-flex gap-3">
-                                                <button type="button" class="btn" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal"
-                                                    @click="watchTrailer('https://www.youtube.com/embed/Qkm2qdUuXcA?si=Hg4q1ON-50e3PBxc')">Watch
-                                                    Trailer</button>
-                                                <button>Rent Movie</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="feature-movie-image-div position-relative">
-                                        <img src="../Images/banner-02.jpg" alt="" width="100%">
-
-                                        <div class="feature-movie-text position-absolute ps-4 py-4">
-                                            <h5>The Fifth Day</h5>
-                                            <div class="d-flex mb-2" style="width: 57%;">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
-                                                        alt="">
-                                                    <p>Action</p>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://th.bing.com/th/id/OIP.kQlRZLmD9xvTA1ijiTqqSAAAAA?rs=1&pid=ImgDetMain"
-                                                        alt="">
-
-                                                    <p>180 mins</p>
-                                                </div>
-                                            </div>
-                                            <div class="feature-movie-button-div d-flex gap-3">
-                                                <button type="button" class="btn" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal"
-                                                    @click="watchTrailer('https://www.youtube.com/embed/Qkm2qdUuXcA?si=Hg4q1ON-50e3PBxc')">Watch
-                                                    Trailer</button>
-                                                <button>Rent Movie</button>
+                                                <button @click="this.$router.push(`/movie/${movie.movieId}`);">Rent
+                                                    Movie</button>
                                             </div>
                                         </div>
                                     </div>
@@ -402,8 +325,8 @@ export default {
     object-fit: cover;
     height: 100%;
     width: 100%;
-
 }
+
 
 .feature-movie-text {
     background-color: rgb(255, 255, 255);
@@ -425,10 +348,47 @@ export default {
     margin: 0;
 }
 
+.feature-movie-image-div:hover {
+    transform: scale(1.1);
+
+}
+
+@media (max-width: 765px) {
+    .content-bottom h1 {
+        font-size: 30px;
+        font-weight: bolder
+    }
+
+    .feature-movie-image-div {
+        margin-bottom: 120px;
+    }
+
+    .feature-movie-image-div:hover {
+        transform: scale(1.04);
+
+    }
+
+    .feature-movie-image-div img {
+        height: 90%;
+        width: 90%;
+    }
+
+    .feature-movie-text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 991px) {
+    .feature-movie-image-div {
+        margin-bottom: 120px;
+    }
+}
+
 .feature-movie-text img {
     width: 20%;
     object-fit: contain;
 }
+
 
 .feature-movie-button-div button {
     border: none;
@@ -445,10 +405,7 @@ export default {
     color: white
 }
 
-.feature-movie-image-div:hover {
-    transform: scale(1.1);
 
-}
 
 .feature-movie-image-div:hover .feature-movie-text {
     width: 80%;

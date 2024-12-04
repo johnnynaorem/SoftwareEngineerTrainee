@@ -35,14 +35,21 @@ export default {
                     }, 3000);
                 }
                 else {
-                    toast.error(
-                        data.response.data.errorMessage,
-                        {
-                            rtl: true,
-                            limit: 2,
-                            position: toast.POSITION.TOP_CENTER,
-                        },
-                    );
+                    if (data.response.data.errorMessage) {
+                        toast.error(
+                            data.response.data.errorMessage,
+                            {
+                                rtl: true,
+                                limit: 2,
+                                position: toast.POSITION.TOP_CENTER,
+                            },
+                        );
+                    }
+                    else if (data.response.data.errors.Password) {
+                        toast.error("Password: " + data.response.data.errors.Password[0]);
+                    }
+                    else if (data.response.data.errors.UserEmail)
+                        toast.error("Email: " + data.response.data.errors.UserEmail[0]);
                 }
             }
         }

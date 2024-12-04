@@ -6,65 +6,86 @@
                 <input class="search-input" type="search" placeholder="Search by Reservation ID or Status"
                     v-model="searchValue" @input="search" />
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col" @click="sortBy('reservationId')">
-                            Reservation Id
-                            <span v-if="sortKey === 'reservationId'">
-                                {{ sortOrder === 'asc' ? '↑' : '↓' }}
-                            </span>
-                        </th>
-                        <th scope="col" @click="sortBy('customer')">
-                            Customer
-                            <span v-if="sortKey === 'customer'">
-                                {{ sortOrder === 'asc' ? '↑' : '↓' }}
-                            </span>
-                        </th>
-                        <th scope="col" @click="sortBy('movie')">
-                            Movie
-                            <span v-if="sortKey === 'movie'">
-                                {{ sortOrder === 'asc' ? '↑' : '↓' }}
-                            </span>
-                        </th>
-                        <th scope="col" @click="sortBy('status')">
-                            Status
-                            <span v-if="sortKey === 'status'">
-                                {{ sortOrder === 'asc' ? '↑' : '↓' }}
-                            </span>
-                        </th>
-                        <th scope="col">Reservation Date</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(reservation, i) in filteredReservations" :key="i">
-                        <th>{{ reservation.reservationId }}</th>
-                        <td>{{ reservation.customerFullName }}</td>
-                        <td>
-                            <div class="d-flex table-movie-mapper">
-                                <img :src=reservation.movie.coverImage alt="" width="30px">
-                                <p>{{ reservation.movie.title }}</p>
-                            </div>
-                        </td>
-                        <td class="status">
-                            <span class="text" :class="getStatusClass(reservation.status)">
-                                {{ statusText(reservation.status) }}
-                            </span>
-                        </td>
-                        <td>{{ new Date(reservation.reservationDate).toDateString() }}</td>
-                        <td>
-                            <!-- <button class="btn btn-primary" @click="viewMore(reservation.reservationId)">View</button> -->
-                            <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
-                                data-bs-target="#reservationUpdateModal"
-                                style="border: none; outline: none; background-color: transparent;">
-                                <span class="material-icons" style="color:black"
-                                    @click="() => reservationToBeEdited(reservation.reservationId, reservation.status)">edit</span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="table-mapper">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" @click="sortBy('reservationId')">
+                                Reservation Id
+                                <span v-if="sortKey === 'reservationId'">
+                                    {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                                </span>
+                            </th>
+                            <th scope="col" @click="sortBy('customer')">
+                                Customer
+                                <span v-if="sortKey === 'customer'">
+                                    {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                                </span>
+                            </th>
+                            <th scope="col" @click="sortBy('movie')">
+                                Movie
+                                <span v-if="sortKey === 'movie'">
+                                    {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                                </span>
+                            </th>
+                            <th scope="col" @click="sortBy('status')">
+                                Status
+                                <span v-if="sortKey === 'status'">
+                                    {{ sortOrder === 'asc' ? '↑' : '↓' }}
+                                </span>
+                            </th>
+                            <th scope="col">Reservation Date</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(reservation, i) in paginatedMovies" :key="i">
+                            <th>{{ reservation.reservationId }}</th>
+                            <td>{{ reservation.customerFullName }}</td>
+                            <td>
+                                <div class="d-flex table-movie-mapper">
+                                    <img :src=reservation.movie.coverImage alt="" width="30px">
+                                    <p>{{ reservation.movie.title }}</p>
+                                </div>
+                            </td>
+                            <td class="status">
+                                <span class="text" :class="getStatusClass(reservation.status)">
+                                    {{ statusText(reservation.status) }}
+                                </span>
+                            </td>
+                            <td>{{ new Date(reservation.reservationDate).toDateString() }}</td>
+                            <td>
+                                <!-- <button class="btn btn-primary" @click="viewMore(reservation.reservationId)">View</button> -->
+                                <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
+                                    data-bs-target="#reservationUpdateModal"
+                                    style="border: none; outline: none; background-color: transparent;">
+                                    <span class="material-icons" style="color:black"
+                                        @click="() => reservationToBeEdited(reservation.reservationId, reservation.status)">edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div v-if="totalPage" class="pagination-controls d-flex align-items-center justify-content-center">
+                <i :class="currentPage == 1 ? 'fa-sharp-duotone fa-solid fa-backward' : 'fa-solid fa-backward fa-fade'"
+                    @click="previousPage()" :disabled="currentPage == 1" :style="{
+                        '--fa-primary-opacity': currentPage == 1 ? 0.5 : 0.9,
+                        'font-size': '1.5rem',
+                        'cursor': currentPage == 1 ? 'not-allowed' : 'pointer'
+                    }"></i>
+
+                <span class="mx-3">Page {{ currentPage }} of {{ totalPage }}</span>
+
+                <i :class="currentPage == totalPage ? 'fa-sharp-duotone fa-solid fa-forward' : 'fa-solid fa-forward fa-fade'"
+                    @click="nextPage()" :disabled="currentPage == totalPage" :style="{
+                        '--fa-primary-opacity': currentPage == 1 ? 0.5 : 0.9,
+                        'font-size': '1.5rem',
+                        'cursor': currentPage == totalPage ? 'not-allowed' : 'pointer'
+                    }"></i>
+            </div>
+
             <!-- Rerservation Status Update Modal -->
             <div class="modal fade" id="reservationUpdateModal" tabindex="-1"
                 aria-labelledby="reservationUpdateModalLabel" aria-hidden="true">
@@ -77,12 +98,13 @@
                                     This will update the reservation's progress in the system. Choose from the following
                                     options to reflect the appropriate stage of the rental process.</p>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
                             <!-- Conditional Success Message -->
                             <div v-if="reservationStatusUpdateCompleted">
-                                <p class="text-success">Reservation Status Update is completed.</p>
+                                <p class="text-white">Reservation Status Update is completed.</p>
                             </div>
                             <!-- <form v-else v-on:submit="movieResevation">
                                 <div class="input-group mb-3 d-flex gap-2 input-mapper">
@@ -123,6 +145,8 @@
 <script>
 // import { getCustomer, getUser } from '@/script/UserService';
 // import { jwtDecode } from 'jwt-decode';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 import { getAllReservation, updateReservationStatus } from '@/script/ReservationService';
 
 export default {
@@ -137,10 +161,30 @@ export default {
             reservations: [],
             filteredReservations: [],
             sortKey: '',
-            sortOrder: 'asc'
+            sortOrder: 'asc',
+            totalPage: 0,
+            currentPage: 1
         };
     },
+    computed: {
+        paginatedMovies() {
+            const start = (this.currentPage - 1) * 5;
+            const end = start + 5;
+            return this.filteredReservations.slice(start, end);
+        }
+    },
     methods: {
+        nextPage() {
+            if (this.currentPage < this.totalPage) {
+                this.currentPage++;
+            }
+        },
+
+        previousPage() {
+            if (this.currentPage !== 1) {
+                this.currentPage--;
+            }
+        },
         statusText(status) {
             switch (Number(status)) {
                 case 0:
@@ -180,6 +224,7 @@ export default {
             });
         },
         search() {
+            this.currentPage = 1;
             const query = this.searchValue.toLowerCase();
             this.filteredReservations = this.reservations.filter(reservation => {
                 const reservationIdMatch = reservation.reservationId.toString().toLowerCase().includes(query);
@@ -188,8 +233,6 @@ export default {
                 const customerMatch = reservation.customerFullName.toLowerCase().includes(query);
                 return reservationIdMatch || statusMatch || movieMatch || customerMatch;
             });
-
-            // this.sortReservations();
         },
         sortBy(key) {
             if (this.sortKey === key) {
@@ -240,7 +283,7 @@ export default {
             sessionStorage.setItem("reservationId", id)
         },
         async updateStatusMethod() {
-            console.log(this.currentReservationStatus, this.updateStatus)
+            toast.info("Updating Status");
             if (this.currentReservationStatus.toLowerCase() !== this.updateStatus.toLowerCase()) {
                 let status = 0;
                 if (this.updateStatus == 'completed') status = 2;
@@ -250,16 +293,15 @@ export default {
                 const reservationId = sessionStorage.getItem('reservationId')
                 const { data } = await updateReservationStatus(reservationId, status);
                 if (data) {
-                    console.log(data);
                     this.updateStatus = '';
+                    toast.success("Status Updated!");
                     this.reservationStatusUpdateCompleted = true;
+                    this.fetching();
                 }
             }
-            else alert("Default Status");
-        }
-    },
-    mounted() {
-        const fetching = async () => {
+            else toast.warning("Default Status");
+        },
+        async fetching() {
             // const token = sessionStorage.getItem('token');
             // const decode = jwtDecode(token);
             // const user = await getUser(decode.Email);
@@ -268,9 +310,18 @@ export default {
             if (reservations.status == 200) {
                 this.reservations = reservations.data;
                 this.filteredReservations = reservations.data;
+                this.totalPage = Math.ceil(reservations.data.length / 5);
             }
-        };
-        fetching();
+        },
+    },
+
+    mounted() {
+        this.fetching();
+    },
+    watch: {
+        filteredReservations(newFilteredReservations) {
+            this.totalPage = Math.ceil(newFilteredReservations.length / 5);
+        }
     }
 };
 </script>
@@ -290,6 +341,10 @@ export default {
     th {
         cursor: pointer;
     }
+}
+
+.table-mapper {
+    min-height: 430px;
 }
 
 .table-movie-mapper {
@@ -351,7 +406,7 @@ export default {
     color: var(--light);
 
     .modal-content-mapper {
-        background: red;
+        background: #191919;
         padding: 20px;
         border-radius: 20px;
     }

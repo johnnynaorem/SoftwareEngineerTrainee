@@ -9,7 +9,7 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" @click="sortBy('rentalId')">
+                        <!-- <th scope="col" @click="sortBy('rentalId')">
                             Rental Id
                             <span v-if="sortKey === 'rentalId'">
                                 {{ sortOrder === 'asc' ? '↑' : '↓' }}
@@ -20,6 +20,9 @@
                             <span v-if="sortKey === 'customer'">
                                 {{ sortOrder === 'asc' ? '↑' : '↓' }}
                             </span>
+                        </th> -->
+                        <th scope="col">
+                            Sl
                         </th>
                         <th scope="col" @click="sortBy('movie')">
                             Movie
@@ -28,7 +31,7 @@
                             </span>
                         </th>
                         <th scope="col" @click="sortBy('status')">
-                            Status
+                            Rental Status
                             <span v-if="sortKey === 'status'">
                                 {{ sortOrder === 'asc' ? '↑' : '↓' }}
                             </span>
@@ -45,8 +48,9 @@
                 </thead>
                 <tbody>
                     <tr v-for="(rental, i) in filteredRentals" :key="i">
-                        <th>{{ rental.rentalId }}</th>
-                        <td>{{ rental.customer.fullName }}</td>
+                        <!-- <th>{{ rental.rentalId }}</th>
+                        <td>{{ rental.customer.fullName }}</td> -->
+                        <th>{{ i + 1 }}</th>
                         <td>
                             <div class="d-flex table-movie-mapper">
                                 <img :src="rental.movie.coverImage" alt="" width="30px">
@@ -69,7 +73,7 @@
                                 <button class="btn btn-primary mx-1" :disabled="rental.status !== 'Confirmed'"
                                     @click="pickupMovie(rental.rentalId, rental.customer.customerId, rental.movie.movieId)">Pickup</button>
                                 <button class="btn btn-warning text-dark mx-1"
-                                    :disabled="rental.status == '!Active' || rental.status == 'Returned' || rental.status == 'Overdue'"
+                                    :disabled="rental.status == '!Active' || rental.status == 'Returned' || rental.status == 'Pending' || rental.status == 'Confirmed' || rental.status == '!Overdue'"
                                     @click="returnMovie(rental.rentalId, rental.customer.customerId)">Return</button>
 
                             </div>
@@ -112,6 +116,7 @@ const pickupMovie = async (rentalId, movieId, customerId) => {
     const response = await pickupMovieByCustomer(rentalId, customerId, movieId);
     if (response.status == 200) {
         toast.success("Movie is Successfully Pickup!....")
+        fetching();
     }
 }
 const returnMovie = async (rentalId, customerId) => {
@@ -119,6 +124,8 @@ const returnMovie = async (rentalId, customerId) => {
     const response = await returnMovieByCustomer(rentalId, customerId);
     if (response.status == 200) {
         toast.success("Movie is Successfully Returned!....")
+        fetching()
+
     }
 }
 
@@ -155,22 +162,22 @@ const sortRentals = () => {
     });
 };
 
-onMounted(() => {
-    const fetching = async () => {
-        try {
-            const token = sessionStorage.getItem('token');
-            const decode = jwtDecode(token);
-            const user = await getUser(decode.Email);
-            const returnCustomer = await getCustomer(user.data.userId);
-            const returnRentals = await getRentalByCustomer(returnCustomer.data.customerId);
-            if (returnRentals.status === 200) {
-                rentals.value = returnRentals.data;
-                filteredRentals.value = returnRentals.data;
-            }
-        } catch (error) {
-            console.error('Error fetching rental data:', error);
+const fetching = async () => {
+    try {
+        const token = sessionStorage.getItem('token');
+        const decode = jwtDecode(token);
+        const user = await getUser(decode.Email);
+        const returnCustomer = await getCustomer(user.data.userId);
+        const returnRentals = await getRentalByCustomer(returnCustomer.data.customerId);
+        if (returnRentals.status === 200) {
+            rentals.value = returnRentals.data;
+            filteredRentals.value = returnRentals.data;
         }
-    };
+    } catch (error) {
+        console.error('Error fetching rental data:', error);
+    }
+};
+onMounted(() => {
     fetching();
 });
 </script>

@@ -9,12 +9,15 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" @click="sortBy('reservationId')">
+                        <th scope="col">
+                            Sl
+                        </th>
+                        <!-- <th scope="col" @click="sortBy('reservationId')">
                             Reservation Id
                             <span v-if="sortKey === 'reservationId'">
                                 {{ sortOrder === 'asc' ? '↑' : '↓' }}
                             </span>
-                        </th>
+                        </th> -->
                         <th scope="col" @click="sortBy('movie')">
                             Movie
                             <span v-if="sortKey === 'movie'">
@@ -33,7 +36,8 @@
                 </thead>
                 <tbody>
                     <tr v-for="(reservation, i) in filteredReservations" :key="i">
-                        <th>{{ reservation.reservationId }}</th>
+                        <!-- <th>{{ reservation.reservationId }}</th> -->
+                        <th>{{ i + 1 }}</th>
                         <td>
                             <div class="d-flex table-movie-mapper">
                                 <img :src=reservation.movie.coverImage alt="" width="30px">
@@ -75,7 +79,8 @@
                                     now and enjoy instantly.
                                 </p>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
                             <!-- Conditional Success Message -->
@@ -89,7 +94,7 @@
                             </div>
 
                             <div v-if="isPaymentSuccessfull">
-                                <p class="text-success">{{ movieToBeRent.currentMovie }} successfully rented!!</p>
+                                <p class="text-white">{{ movieToBeRent.currentMovie }} successfully rented!!</p>
                             </div>
 
                             <!-- Show form only if neither payment time nor success is true -->
@@ -131,6 +136,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
 import { rentMovie } from '@/script/RentalService';
 import { makePayment } from '@/script/PaymentService';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 export default {
     name: 'ReservationMovie',
@@ -254,8 +261,10 @@ export default {
         },
         async rentMovieMethod(event) {
             event.preventDefault();
+            toast.info("Processing");
             const responseRental = await rentMovie(this.movieToBeRent.customerId, this.movieToBeRent.movieId);
             if (responseRental.status === 200) {
+                toast.info("Complete Payment For Futher Process");
                 this.isPaymentTime = true;
                 this.rentalId = responseRental.data;
                 this.stripe = await loadStripe("pk_test_51OjhOhSFOS5YpWUi0nBFqisLpS52YZNSozPPJZafVCSyDrridXyMOqcgJNI2ortDLFrigd5Gv2UzvXd4oFA1p6iy00D3vAcpCg");
@@ -290,28 +299,27 @@ export default {
         },
         async handleSubmit() {
             if (this.isProcessing || !this.clientSecret) return;
-
+            toast.info("Processing");
             this.isProcessing = true;
 
-            // Confirm the card payment with Stripe
             const { error, paymentIntent } = await this.stripe.confirmCardPayment(
                 this.clientSecret,
                 {
                     payment_method: {
-                        card: this.elements.getElement(CardElement), // Stripe card element
+                        card: this.elements.getElement(CardElement),
                     },
                 }
             );
 
             if (error) {
                 console.error(error);
-                alert("Payment failed: " + error.message); // Show error message
+                toast.error("Payment failed: " + error.message);
             } else if (paymentIntent.status === "succeeded") {
                 this.isPaymentSuccessfull = true;
-                console.log(this.rentalId);
                 const paymentResponse = await makePayment(this.rentalId, this.movieToBeRent.customerId, 'card');
                 if (paymentResponse.status == 200) {
-                    alert("Payment successful!");
+                    toast.success("Payment successful!");
+                    this.fetching();
                 }
             }
 
@@ -322,9 +330,7 @@ export default {
             console.log(price);
             this.isPaymentSuccessfull = true;
         },
-    },
-    async mounted() {
-        const fetching = async () => {
+        async fetching() {
             const token = sessionStorage.getItem('token');
             const decode = jwtDecode(token);
             const user = await getUser(decode.Email);
@@ -334,8 +340,10 @@ export default {
                 this.reservations = reservations.data;
                 this.filteredReservations = reservations.data;
             }
-        };
-        fetching();
+        }
+    },
+    mounted() {
+        this.fetching();
     }
 }
 </script>
@@ -416,7 +424,7 @@ export default {
     color: var(--light);
 
     .modal-content-mapper {
-        background: red;
+        background: #191919;
         padding: 20px;
         border-radius: 20px;
     }

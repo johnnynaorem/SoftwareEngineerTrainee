@@ -77,3 +77,16 @@ export const returnMovieByCustomer = async (rentId, customerId) => {
     alert("Error when returning movie");
   }
 };
+
+export const getRentalByCustomerIdAndMovieId = async (movieId, customerId) => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Rental/GetRentalByMovieIdAndCustomerId?movieId=${movieId}&customerId=${customerId}`
+    );
+    return response;
+  } catch (err) {
+    console.log(err);
+    alert("Error when Fetching Reservation using customer and movie ids");
+    return err;
+  }
+};

@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid mt-5">
-        <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-            <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+    <div class="container-fluid p-0">
+        <footer class="text-center text-lg-start text-white" style="background-color: black">
+            <section class="d-flex justify-content-between p-4" style="background-color: #191919">
                 <div class="me-5">
                     <span>Get connected with us on social networks:</span>
                 </div>
@@ -27,7 +27,7 @@
                 </div>
             </section>
 
-            <section class="">
+            <section style="border: 1px solid;">
                 <div class="container text-center text-md-start mt-5">
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

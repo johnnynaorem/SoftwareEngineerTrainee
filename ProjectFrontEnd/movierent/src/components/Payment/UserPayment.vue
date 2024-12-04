@@ -10,10 +10,10 @@
                 <thead>
                     <tr>
                         <th scope="col">Sl</th>
-                        <th scope="col" @click="sortBy('customerName')">
+                        <!-- <th scope="col" @click="sortBy('customerName')">
                             Paid By
                             <span v-if="sortKey === 'customerName'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
-                        </th>
+                        </th> -->
                         <th scope="col" @click="sortBy('rentalId')">
                             Rental Id
                             <span v-if="sortKey === 'rentalId'">{{ sortOrder === 'asc' ? '↑' : '↓' }}</span>
@@ -35,7 +35,7 @@
                 <tbody>
                     <tr v-for="(payment, i) in filteredPayments" :key="i">
                         <th>{{ i + 1 }}</th>
-                        <td>{{ customerName }}</td>
+                        <!-- <td>{{ customerName }}</td> -->
                         <td>{{ payment.rentalId }}</td>
                         <td>{{ payment.amount }}</td>
                         <td>{{ payment.paymentType }}</td>

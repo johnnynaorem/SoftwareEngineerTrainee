@@ -1,18 +1,24 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
 import MainLayout from '../Layout/MainLayout.vue';
-import { getMovieByCategory, getMovieById } from '@/script/MovieService';
+import { addMovieToWishlist, getMovieByCategory, getMovieById, getWishlistByMovieIdAndCustomerId, removeMovieFromWishlist } from '@/script/MovieService';
 import { useRoute } from 'vue-router';
 import { useRouter } from 'vue-router';
 import { reservationSumbit } from '@/script/ReservationService';
 import { jwtDecode } from 'jwt-decode';
 import { getCustomer, getUser } from '@/script/UserService';
+import { getRentalByCustomerIdAndMovieId } from '@/script/RentalService';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 const movie = ref();
+const rentalStatus = ref(null)
 const route = useRoute()
 const router = useRouter()
 const movieRelated = ref([])
 const url = ref('')
+const isMovieIsInWishlist = ref(false)
+// const isReservedMovie = ref(false)
 const reservationData = ref({
     fullName: '',
     email: '',
@@ -25,11 +31,63 @@ const watchTrailer = (link) => {
     url.value = link
 }
 
+const minDate = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+};
+
+const maxDate = () => {
+    const now = new Date();
+    now.setDate(now.getDate() + 7);
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+};
 
 const toMoviePage = (id) => {
     console.log()
     router.push(`/movie/${id}`)
 
+}
+
+const addToWishlist = async () => {
+    const movieId = route.params.id;
+    const token = sessionStorage.getItem('token');
+    const decode = jwtDecode(token);
+    const user = await getUser(decode.Email);
+    const { data } = await getCustomer(user.data.userId);
+    const addToWishlistResponse = await addMovieToWishlist(movieId, data.customerId);
+    if (addToWishlistResponse.status == 200) {
+        if (addToWishlistResponse.data == true) {
+            toast.success("Movie Added to Wishlist")
+            isMovieIsInWishlist.value = true;
+        }
+    }
+}
+const removeFromWishlist = async () => {
+    const movieId = route.params.id;
+    const token = sessionStorage.getItem('token');
+    const decode = jwtDecode(token);
+    const user = await getUser(decode.Email);
+    const { data } = await getCustomer(user.data.userId);
+    const removeFromWishlistResponse = await removeMovieFromWishlist(movieId, data.customerId);
+    if (removeFromWishlistResponse.status == 200) {
+        if (removeFromWishlistResponse.data == true) {
+            toast.success("Movie Removed from Wishlist")
+            isMovieIsInWishlist.value = false;
+        }
+    }
 }
 // @click="rentMovie(movie.movieId)"
 // const rentMovie = (movieId) => {
@@ -49,7 +107,18 @@ const fetching = async () => {
 
         const relativeMovie = await getMovieByCategory(genre);
         if (relativeMovie.status === 200) {
-            movieRelated.value = relativeMovie.data;
+            let related = relativeMovie.data;
+            related = related.filter(m => m.movieId !== movie.value.movieId);
+            movieRelated.value = related;
+        }
+        const movieId = route.params.id;
+        const token = sessionStorage.getItem('token');
+        const decode = jwtDecode(token);
+        const user = await getUser(decode.Email);
+        const { data } = await getCustomer(user.data.userId);
+        const response = await getRentalByCustomerIdAndMovieId(movieId, data.customerId)
+        if (response.status == 200) {
+            rentalStatus.value = response.data.status;
         }
     } catch (error) {
         console.error('Error fetching payment data:', error);
@@ -64,7 +133,9 @@ const movieResevation = async (event) => {
     const user = await getUser(decode.Email);
     const { data } = await getCustomer(user.data.userId);
     const response = await reservationSumbit(data.customerId, movieId, reservationData.value.date);
+    toast.pen
     if (response.status == 200) {
+        toast.success("Reserved Successfull!")
         reservationCompleted.value = true;
     }
 
@@ -77,14 +148,29 @@ const movieResevation = async (event) => {
 };
 
 onMounted(() => {
-
+    const getWishlist = async () => {
+        const movieId = route.params.id;
+        const token = sessionStorage.getItem('token');
+        const decode = jwtDecode(token);
+        const user = await getUser(decode.Email);
+        const { data } = await getCustomer(user.data.userId);
+        reservationData.value = {
+            fullName: data.fullName,
+            email: data.email,
+            phone: data.phoneNumber,
+        }
+        const wishlist = await getWishlistByMovieIdAndCustomerId(movieId, data.customerId);
+        if (wishlist.status == 200) {
+            isMovieIsInWishlist.value = true;
+        }
+    }
+    getWishlist();
     fetching();
 });
 
 watch(
     () => route.params.id,
-    (newMovieId) => {
-        console.log("Movie ID changed:", newMovieId);
+    () => {
         fetching();
     }
 );
@@ -115,8 +201,24 @@ watch(
                         <h6 class="movie-genre">{{ movie.genre }} / 130 Mins</h6>
                     </div>
                     <div class="title-mapper-right">
-                        <button type="button" class="btn btn-primary reserve-btn" data-bs-toggle="modal"
-                            data-bs-target="#rentModal">Reserve</button>
+                        <div class="d-flex align-items-center gap-3">
+                            <i v-if="!isMovieIsInWishlist" class="fa-regular fa-heart"
+                                style="color: #f00f0f; font-size: 30px; cursor: pointer;" @click="addToWishlist()"></i>
+                            <i v-if="isMovieIsInWishlist" class="fa-solid fa-heart"
+                                style="color: #f00f0f; font-size: 30px; cursor: pointer;"
+                                @click="removeFromWishlist()"></i>
+                            <button v-if="rentalStatus == 3 || rentalStatus == null" type="button"
+                                class="btn btn-primary reserve-btn" data-bs-toggle="modal"
+                                data-bs-target="#rentModal">Reserve</button>
+                            <button v-else-if="rentalStatus == 0" class="btn btn-primary reserve-btn"
+                                @click="router.push('/dashboard/rental')">Payment Pending</button>
+                            <button v-else-if="rentalStatus == 1" class="btn btn-primary reserve-btn"
+                                @click="router.push('/dashboard/rental')">Pickup Movie</button>
+                            <button v-else-if="rentalStatus == 2" class="btn btn-primary reserve-btn"
+                                @click="router.push('/dashboard/rental')">Currently Renting</button>
+                            <button v-else-if="rentalStatus == 4" class="btn btn-primary reserve-btn"
+                                @click="router.push('/dashboard/rental')">Overdue! Return Now</button>
+                        </div>
                     </div>
                 </div>
                 <div class="image-mapper d-flex">
@@ -191,25 +293,35 @@ watch(
                                 <p>Fill out the form below to reserve your movie. Complete the necessary details to
                                     ensure a smooth rental experience.</p>
                             </div>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
                             <!-- Conditional Success Message -->
                             <div v-if="reservationCompleted">
-                                <p class="text-success">Congratulations! Your reservation is completed.</p>
+                                <p class="text-light">Congratulations! Your reservation is completed.</p>
                             </div>
                             <form v-else v-on:submit="movieResevation">
                                 <div class="input-group mb-3 d-flex gap-2 input-mapper">
-                                    <input v-model="reservationData.fullName" type="text" class="form-control"
-                                        placeholder="Enter Full Name" required>
-                                    <input v-model="reservationData.email" type="text" class="form-control"
-                                        placeholder="Enter Email" required>
-                                    <input v-model="reservationData.phone" type="text" class="form-control"
-                                        placeholder="Enter Phone Number" required>
+                                    <div>
+                                        <label>Rentee</label>
+                                        <input v-model="reservationData.fullName" type="text" class="form-control"
+                                            placeholder="Enter Full Name" required>
+                                    </div>
+                                    <div>
+                                        <label>Email</label>
+                                        <input v-model="reservationData.email" type="text" class="form-control"
+                                            placeholder="Enter Email" required>
+                                    </div>
+                                    <div>
+                                        <label>Phone</label>
+                                        <input v-model="reservationData.phone" type="text" class="form-control"
+                                            placeholder="Enter Phone Number" required>
+                                    </div>
                                 </div>
                                 <div class="input-group mb-3 d-flex gap-2 input-mapper">
                                     <input v-model="reservationData.date" type="datetime-local" class="form-control"
-                                        required>
+                                        required :min="minDate()" :max="maxDate()">
                                 </div>
                                 <button type="submit" class="btn">Send</button>
                             </form>
@@ -446,7 +558,7 @@ watch(
     color: var(--light);
 
     .modal-content-mapper {
-        background: red;
+        background: #191919;
         padding: 20px;
         border-radius: 20px;
     }

@@ -35,7 +35,8 @@ export const registration = async (username, email, password, role) => {
       toast.error(error.response.data.errorMessage);
     if (error.response.data.errors.Password) {
       toast.error("Password: " + error.response.data.errors.Password[0]);
-    } else if (error.response.data.errors.UserName)
+    }
+    if (error.response.data.errors.UserName)
       toast.error("Username: " + error.response.data.errors.UserName[0]);
     else if (error.response.data.errors.UserEmail)
       toast.error("Email: " + error.response.data.errors.UserEmail[0]);
@@ -76,5 +77,24 @@ export const getCustomer = async (id) => {
     return response;
   } catch (err) {
     return err;
+  }
+};
+
+export const profileUpdate = async (fullName, phoneNumber, Address, userId) => {
+  try {
+    const response = await axios.patch(
+      `https://localhost:7203/api/Customer/UpdateCustomerProfile`,
+      {
+        fullName,
+        phoneNumber,
+        Address,
+        userId,
+      }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    toast.error("Error when Updating Profile");
+    return error;
   }
 };

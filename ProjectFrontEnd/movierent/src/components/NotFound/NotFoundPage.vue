@@ -27,7 +27,7 @@ export default {
                     <img src="../../Images/image-lines-header.jpg" alt="" width="100%">
                 </div>
                 <div class="content-buttom" style="margin-top: 100px;">
-                    <img src="../../Images/image-404.png" alt="">
+                    <img class="mb-5" src="../../Images/image-404.png" alt="" width="60%">
                     <h2 class="my-3" style="font-weight: bolder;">Sorry we can't find that page!</h2>
                     <h3 class="my-3" style="font-weight: 500; color: gray;">The page you are looking for was never
                         existed.</h3>

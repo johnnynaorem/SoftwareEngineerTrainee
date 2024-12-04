@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <template #default>
-            <div v-if="!isAdmin" class="content">
+            <div v-if="!isAdmin" class="content" style="background-color: black">
                 <div class="content-top">
                     <div class="breadcrumbs d-flex justify-content-center align-items-center gap-2">
                         <RouterLink to="/" class="home">Home</RouterLink>
@@ -15,25 +15,57 @@
                 <div class="content-middle" style="width: 100%;">
                     <img src="../../Images/image-lines-header.jpg" alt="" width="100%">
                 </div>
+                <div class="container mt-5 d-flex flex-wrap flex-column flex-lg-row">
+                    <div class="sideFilter-mapper mt-3">
+                        <div class="sideFilterContent p-4"
+                            style="background: #191919; color: white; border-radius: 20px;">
+                            <input class="p-2 mt-2" type="text" placeholder="search" @input="search"
+                                v-model="searchValue"
+                                style="outline: none; border: none; background: black; color: white; border-radius: 20px;">
+                            <hr />
+                            <h5> Movie types</h5>
+                            <div class="box-mapper my-4">
+                                <input type="checkbox" name="action" id="action" class="me-3" @change="select"
+                                    value="Action">
+                                <label for="action">Action Movie</label>
+                            </div>
+                            <div class="box-mapper my-4">
+                                <input type="checkbox" name="crime" id="crime" class="me-3" @change="select"
+                                    value="Crime" />
+                                <label for="crime">Crime Movie</label>
+                            </div>
+                            <div class="box-mapper my-4">
+                                <input type="checkbox" name="drama" id="drama" class="me-3" @change="select"
+                                    value="Drama" />
+                                <label for="drama">Drama Movie</label>
+                            </div>
+                            <div class="box-mapper my-4">
+                                <input type="checkbox" name="scifi" id="scifi" class="me-3" @change="select"
+                                    value="Sci-Fi" />
+                                <label for="scifi">Sci-Fi Movie</label>
+                            </div>
+                        </div>
 
-                <div class="container mt-5">
-                    <div class="row p-md-3">
-                        <div class="cardContainer mb-3 col-12  col-sm-6 col-md-4 col-lg-3" v-for="movie in movies"
-                            :key="movie.movieId">
-                            <div class="card-div">
-                                <img :src=movie.coverImage class="card-img" alt="Movie Image">
-                                <div class="card-body">
-                                    <p class="card-text m-0">{{ movie.genre }} / 180 Mins</p>
-                                    <p class="card-title">{{ movie.title }}</p>
-                                    <div class="btn-container">
-                                        <button class="btn btn-primary"
-                                            @click="toMoviePage(movie.movieId)">Rent</button>
+                    </div>
+                    <div class="container mt-3" style="flex: 1;">
+                        <div class="row p-md-3">
+                            <div class="cardContainer mb-3 col-12  col-sm-12 col-md-6 col-lg-4" v-for="movie in movies"
+                                :key="movie.movieId" style="justify-items: center;">
+                                <div class="card-div">
+                                    <img :src=movie.coverImage class="card-img" alt="Movie Image">
+                                    <div class="card-body">
+                                        <p class="card-text m-0">{{ movie.genre }} / 180 Mins</p>
+                                        <p class="card-title">{{ movie.title }}</p>
+                                        <div class="btn-container">
+                                            <button class="btn btn-primary"
+                                                @click="toMoviePage(movie.movieId)">Rent</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="movie-pagination container mx-auto d-flex justify-content-center gap-3">
+                    <div class="movie-pagination container mx-auto d-flex justify-content-center gap-3 mb-5">
                         <button class="pag-btn" @click="previous()">
                             <span class="material-icons">chevron_left</span>
                         </button>
@@ -42,6 +74,7 @@
                             <span class="material-icons">chevron_right</span>
                         </button>
                     </div>
+
                 </div>
 
             </div>
@@ -53,7 +86,7 @@
 </template>
 
 <script>
-import { getMovieWithPagination } from '@/script/MovieService';
+import { getMovieWithPagination, movieFilter } from '@/script/MovieService';
 import { jwtDecode } from 'jwt-decode';
 import MainLayout from '../Layout/MainLayout.vue';
 
@@ -68,9 +101,42 @@ export default {
             page: 1,
             totalPage: 0,
             movies: [],
+            searchValue: "",
+            genre: "",
+            isOptionSelected: false
         }
     },
     methods: {
+
+        async search() {
+            if (this.searchValue != "" || this.isOptionSelected) {
+                const response = await movieFilter(this.searchValue, this.genre);
+                this.movies = response.data;
+                this.totalPage = Math.ceil(response.data.length / 5);
+            }
+            else this.fetchMovieWithPage();
+        },
+
+        async select(event) {
+            this.isOptionSelected = !this.isOptionSelected
+            if (this.isOptionSelected) {
+                this.genre = event.target.value;
+                const response = await movieFilter(this.searchValue, this.genre);
+                this.movies = response.data;
+                this.totalPage = Math.ceil(response.data.length / 5);
+            }
+            else if (!this.isOptionSelected && this.searchValue != "") {
+                this.genre = "";
+                const response = await movieFilter(this.searchValue, this.genre);
+                this.movies = response.data;
+                this.totalPage = Math.ceil(response.data.length / 5);
+            }
+            else {
+                this.genre = "";
+                this.fetchMovieWithPage();
+            }
+        },
+
         previous() {
             if (this.page > 1) {
                 this.page--;
@@ -205,7 +271,7 @@ export default {
     position: relative;
     overflow: hidden;
     height: 100%;
-    width: 100%;
+    width: 90%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: .2s ease-out;
 }
