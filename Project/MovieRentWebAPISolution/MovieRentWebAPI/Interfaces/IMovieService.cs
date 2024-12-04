@@ -11,5 +11,6 @@ namespace MovieRentWebAPI.Interfaces
         Task<Movie> GetMovie(int key);
         Task<IEnumerable<Movie>> FilterMoviesAsync(MovieFilterDTO filter);
         Task<int> UpdateMovie(CreateMovieDTO movieDTO, int key);
+        
     }
 }

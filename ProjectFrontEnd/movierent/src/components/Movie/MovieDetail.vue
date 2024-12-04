@@ -1,22 +1,24 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
 import MainLayout from '../Layout/MainLayout.vue';
-import { addMovieToWishlist, getMovieByCategory, getMovieById, getWishlistByMovieIdAndCustomerId, removeMovieFromWishlist } from '@/script/MovieService';
+import { addMovieToWishlist, getALlCommentForMovie, getMovieByCategory, getMovieById, getWishlistByMovieIdAndCustomerId, removeMovieFromWishlist } from '@/script/MovieService';
 import { useRoute } from 'vue-router';
 import { useRouter } from 'vue-router';
 import { reservationSumbit } from '@/script/ReservationService';
 import { jwtDecode } from 'jwt-decode';
-import { getCustomer, getUser } from '@/script/UserService';
+import { getCustomer, getUser, MakeCommentForMovie } from '@/script/UserService';
 import { getRentalByCustomerIdAndMovieId } from '@/script/RentalService';
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 
 const movie = ref();
+const comments = ref([])
 const rentalStatus = ref(null)
 const route = useRoute()
 const router = useRouter()
 const movieRelated = ref([])
 const url = ref('')
+const customerId = ref();
 const isMovieIsInWishlist = ref(false)
 // const isReservedMovie = ref(false)
 const reservationData = ref({
@@ -24,6 +26,10 @@ const reservationData = ref({
     email: '',
     phone: '',
     date: ''
+});
+const makeComment = ref({
+    comment: '',
+    rating: null,
 });
 const reservationCompleted = ref(false);
 
@@ -67,6 +73,7 @@ const addToWishlist = async () => {
     const decode = jwtDecode(token);
     const user = await getUser(decode.Email);
     const { data } = await getCustomer(user.data.userId);
+
     const addToWishlistResponse = await addMovieToWishlist(movieId, data.customerId);
     if (addToWishlistResponse.status == 200) {
         if (addToWishlistResponse.data == true) {
@@ -94,6 +101,14 @@ const removeFromWishlist = async () => {
 //     console.log(movieId)
 // }
 
+const fetchingComment = async () => {
+    const movieId = route.params.id;
+    const responseComment = await getALlCommentForMovie(movieId)
+    if (responseComment.status == 200) {
+        comments.value = responseComment.data;
+    }
+}
+
 const fetching = async () => {
     try {
         const id = route.params.id;
@@ -116,12 +131,13 @@ const fetching = async () => {
         const decode = jwtDecode(token);
         const user = await getUser(decode.Email);
         const { data } = await getCustomer(user.data.userId);
+        customerId.value = data.customerId;
         const response = await getRentalByCustomerIdAndMovieId(movieId, data.customerId)
         if (response.status == 200) {
             rentalStatus.value = response.data.status;
         }
     } catch (error) {
-        console.error('Error fetching payment data:', error);
+        console.error('Something Went Wrong:', error);
     }
 }
 
@@ -147,23 +163,37 @@ const movieResevation = async (event) => {
     };
 };
 
-onMounted(() => {
-    const getWishlist = async () => {
-        const movieId = route.params.id;
-        const token = sessionStorage.getItem('token');
-        const decode = jwtDecode(token);
-        const user = await getUser(decode.Email);
-        const { data } = await getCustomer(user.data.userId);
-        reservationData.value = {
-            fullName: data.fullName,
-            email: data.email,
-            phone: data.phoneNumber,
-        }
-        const wishlist = await getWishlistByMovieIdAndCustomerId(movieId, data.customerId);
-        if (wishlist.status == 200) {
-            isMovieIsInWishlist.value = true;
-        }
+const addCommentMethod = async () => {
+    const movieId = route.params.id;
+    const response = await MakeCommentForMovie(makeComment.value.comment, makeComment.value.rating, movieId, customerId.value);
+    if (response.status == 200) {
+        toast.success("Comment Added!!")
+        fetchingComment();
     }
+}
+
+const getWishlist = async () => {
+    const movieId = route.params.id;
+    const token = sessionStorage.getItem('token');
+    const decode = jwtDecode(token);
+    const user = await getUser(decode.Email);
+    const { data } = await getCustomer(user.data.userId);
+    reservationData.value = {
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phoneNumber,
+    }
+    const wishlist = await getWishlistByMovieIdAndCustomerId(movieId, data.customerId);
+    if (wishlist.status == 200) {
+        isMovieIsInWishlist.value = true;
+    }
+    else {
+        isMovieIsInWishlist.value = false;
+    }
+}
+
+onMounted(() => {
+    fetchingComment();
     getWishlist();
     fetching();
 });
@@ -171,6 +201,7 @@ onMounted(() => {
 watch(
     () => route.params.id,
     () => {
+        getWishlist();
         fetching();
     }
 );
@@ -247,6 +278,21 @@ watch(
                     <p style="line-height: 1.8rem; color: gray;">
                         {{ movie.description }}
                     </p>
+                </div>
+                <hr class="my-5" />
+                <div class="commentSection">
+                    <div class="d-flex gap-2 align-item-center">
+                        <h4>Reviews ({{ comments.length }})</h4>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="btn btn-secondary">Add Comment</button>
+                    </div>
+                    <div class="review-mapper" v-for="(comment, i) in comments" :key="i">
+                        <div class="review d-flex gap-4 p-3 mt-2" style="border: 2px solid grey;">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+                                alt="image" width="30px" height="30px" style="border-radius: 50%; object-fit: cover;">
+                            <p>{{ comment.comment }}</p>
+                        </div>
+                    </div>
                 </div>
                 <hr class="my-5">
                 <div class="more-relative-movie-mapper">
@@ -330,6 +376,32 @@ watch(
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <label for="">Comment</label>
+                                <input type="text" v-model="makeComment.comment">
+                            </div>
+                            <div>
+                                <label for="">Rating</label>
+                                <input type="text" v-model="makeComment.rating">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" @click="addCommentMethod()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </template>
     </MainLayout>
 </template>

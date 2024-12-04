@@ -1,11 +1,14 @@
 import axios from "./Interceptor";
-// export const addMovie = async () => {
-//     try {
-
-//     } catch (error) {
-
-//     }
-// }
+export const getALlCommentForMovie = async (movieId) => {
+  try {
+    const response = await axios.get(
+      `https://localhost:7203/api/Customer/GetAllComments?movieId=${movieId}`
+    );
+    return response;
+  } catch (error) {
+    return error;
+  }
+};
 
 export const getAllMovie = async () => {
   try {

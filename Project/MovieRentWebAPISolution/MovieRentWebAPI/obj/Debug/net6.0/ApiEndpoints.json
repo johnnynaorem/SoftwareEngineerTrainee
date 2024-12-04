@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "GetAllComments",
+    "RelativePath": "api/Customer/GetAllComments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
     "Method": "GetAllCustomers",
     "RelativePath": "api/Customer/GetAllCustomer",
     "HttpMethod": "GET",
@@ -21,6 +37,22 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.CustomerController",
+    "Method": "MakeComment",
+    "RelativePath": "api/Customer/MakeComment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "MovieRentWebAPI.Models.DTOs.MakeCommentDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

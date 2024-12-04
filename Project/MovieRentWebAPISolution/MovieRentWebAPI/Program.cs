@@ -60,6 +60,7 @@ namespace MovieRentWebAPI
             builder.Services.AddScoped<IRepository<int, Rental>, RentalRepository>();
             builder.Services.AddScoped<IRepository<int, Payment>, PaymentRepository>();
             builder.Services.AddScoped<IRepository<int, Wishlist>, WishlistRepository>();
+            builder.Services.AddScoped<IRepository<int, ReviewForMovie>, ReviewRepository>();
             #endregion
 
             #region Services

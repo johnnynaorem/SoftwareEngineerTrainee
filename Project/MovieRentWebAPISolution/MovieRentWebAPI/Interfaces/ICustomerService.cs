@@ -13,5 +13,7 @@ namespace MovieRentWebAPI.Interfaces
 
         Task<ReturnMovieResponseDTO> ReturnMovie(ReturnMovieResquestDTO returnMovie);
 
+        Task<int> CommentToMovie(MakeCommentDTO comment);
+        Task<IEnumerable<ResponseReviewsWithCustomerDetailsDTO>> GetAllReviewForMovie(int movieId);
     }
 }

@@ -167,5 +167,43 @@ namespace MovieRentWebAPI.Controllers
                 });
             }
         }
+
+        [HttpPost("MakeComment")]
+        [Authorize]
+        public async Task<IActionResult> MakeComment(MakeCommentDTO comment)
+        {
+            try
+            {
+                var response = await _customerService.CommentToMovie(comment);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
+
+        [HttpGet("GetAllComments")]
+        [Authorize]
+        public async Task<IActionResult> GetAllComments(int movieId)
+        {
+            try
+            {
+                var response = await _customerService.GetAllReviewForMovie(movieId);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, new ErrorResponseDTO
+                {
+                    ErrorCode = 204,
+                    ErrorMessage = ex.Message
+                });
+            }
+        }
     }
 }

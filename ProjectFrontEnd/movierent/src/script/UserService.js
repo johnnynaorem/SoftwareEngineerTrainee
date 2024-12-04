@@ -98,3 +98,27 @@ export const profileUpdate = async (fullName, phoneNumber, Address, userId) => {
     return error;
   }
 };
+
+export const MakeCommentForMovie = async (
+  comment,
+  rating,
+  movieId,
+  customerId
+) => {
+  try {
+    const response = await axios.post(
+      `https://localhost:7203/api/Customer/MakeComment`,
+      {
+        comment,
+        rating,
+        movieId,
+        customerId,
+      }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    toast.error("Error when Make Comment");
+    return error;
+  }
+};

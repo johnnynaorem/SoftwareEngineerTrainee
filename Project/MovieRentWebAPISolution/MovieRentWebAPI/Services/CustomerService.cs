@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MovieRentWebAPI.Context;
 using MovieRentWebAPI.EmailInterface;
 using MovieRentWebAPI.EmailModels;
@@ -7,7 +6,6 @@ using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models;
 using MovieRentWebAPI.Models.DTOs;
-using MovieRentWebAPI.Repositories;
 using System.Globalization;
 
 namespace MovieRentWebAPI.Services
@@ -20,8 +18,9 @@ namespace MovieRentWebAPI.Services
         private readonly IRentalService _rentalService;
         private readonly IRepository<int, Movie> _movieRepo;
         private readonly MovieRentContext _context;
+        private readonly IRepository<int, ReviewForMovie> _reviewRepo;
 
-        public CustomerService(IRepository<int, Customer> customerRepository, ILogger<CustomerService> logger, IEmailSender emailSender, IRentalService rentalService, IRepository<int, Movie> movieRepo, MovieRentContext context)
+        public CustomerService(IRepository<int, Customer> customerRepository, IRepository<int, ReviewForMovie> reviewRepo, ILogger<CustomerService> logger, IEmailSender emailSender, IRentalService rentalService, IRepository<int, Movie> movieRepo, MovieRentContext context)
         {
 
             _rentalService = rentalService;
@@ -30,6 +29,7 @@ namespace MovieRentWebAPI.Services
             _emailSender = emailSender;
             _movieRepo = movieRepo;
             _context = context;
+            _reviewRepo = reviewRepo;
         }
 
         private void SendMail(string mailTo, string title, string body)
@@ -77,7 +77,7 @@ namespace MovieRentWebAPI.Services
                                 "Best regards,\n" +
                                 "The Video Disc Rental App Team";
 
-                SendMail(isValidUser.UserEmail,"Your Customer Account Has Been Created", emailBody);
+                SendMail(isValidUser.UserEmail, "Your Customer Account Has Been Created", emailBody);
             }
             return addCustomer.CustomerId;
         }
@@ -123,7 +123,7 @@ namespace MovieRentWebAPI.Services
                                 "Best regards,\n" +
                                 "The Video Disc Rental App Team";
 
-                SendMail(updatedCustomer.Email,"Your Customer Account Profile Has Been Updated", emailBody);
+                SendMail(updatedCustomer.Email, "Your Customer Account Profile Has Been Updated", emailBody);
             }
             return updatedCustomer.CustomerId;
         }
@@ -181,7 +181,7 @@ namespace MovieRentWebAPI.Services
                                     $"**Rental Fee:** {rentalFeeFormatted}\n" +
                                     $"**Rental Status:** Active";
 
-            SendMail(customer.Email,"Your Rental Status Updated To Active", emailBody);
+            SendMail(customer.Email, "Your Rental Status Updated To Active", emailBody);
             return new PickUpResponseMovieDTO
             {
                 RentalId = updateStatusRental.RentalId,
@@ -225,18 +225,58 @@ namespace MovieRentWebAPI.Services
                                     $"**Rental Status:** Returned";
 
 
-                    SendMail(customer.Email,"Successfully Return Movie", emailBody);
+                    SendMail(customer.Email, "Successfully Return Movie", emailBody);
                 }
                 return new ReturnMovieResponseDTO
                 {
                     Message = $"Successfully Return Movie, MovieID: {returnMovieAndUpdateRentalStatusToReturn.MovieId}"
                 };
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while Returning movie.");
                 throw;
             }
         }
+
+        public async Task<int> CommentToMovie(MakeCommentDTO comment)
+        {
+            var addComment = new ReviewForMovie
+            {
+                Comment = comment.Comment,
+                Rating = comment.Rating,
+                CustomerId = comment.CustomerId,
+                MovieId = comment.MovieId
+            };
+            var response = await _reviewRepo.Add(addComment);
+            return response.Id;
+        }
+
+        public async Task<IEnumerable<ResponseReviewsWithCustomerDetailsDTO>> GetAllReviewForMovie(int movieId)
+        {
+            var reviews = await _reviewRepo.GetAll();
+            var returnReviews = reviews.Where(r => r.MovieId == movieId).OrderByDescending(o => o.Id).ToList();
+            var result = new List<ResponseReviewsWithCustomerDetailsDTO>().ToList();
+            foreach (var item in returnReviews)
+            {
+                var customer = await _customerRepo.Get(item.CustomerId);
+                var comments = new ResponseReviewsWithCustomerDetailsDTO
+                {
+                    Id = item.Id,
+                    Rating = item.Rating,
+                    Comment = item.Comment,
+                    Customer = new CustomerResponseDTO
+                    {
+                        FullName = customer.FullName,
+                        PhoneNumber = customer.PhoneNumber,
+                        Address = customer.Address,
+                        Email = customer.Email,
+                    }
+                };
+                result.Add(comments);
+            }
+            return result;
+        }
+
     }
 }

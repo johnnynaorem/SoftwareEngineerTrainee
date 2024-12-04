@@ -21,6 +21,7 @@ import PaymentList from "@/components/Admin/PaymentList.vue";
 import RentalList from "@/components/Admin/RentalList.vue";
 import MovieList from "@/components/Admin/MovieList.vue";
 import UnAuthorize from "@/components/UnAuthorize.vue";
+import WishlistMovie from "@/components/Wishlist/WishlistMovie.vue";
 
 const routes = [
   {
@@ -78,7 +79,7 @@ const routes = [
       },
       {
         path: "wishlist",
-        component: Rental,
+        component: WishlistMovie,
       },
     ],
   },
