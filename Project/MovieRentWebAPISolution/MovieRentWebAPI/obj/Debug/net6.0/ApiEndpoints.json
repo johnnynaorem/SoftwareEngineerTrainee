@@ -284,6 +284,27 @@
   },
   {
     "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
+    "Method": "GetReservationByMovieIdAndCustomerId",
+    "RelativePath": "api/MovieReservation/GetReservationByMovieIdAndCustomerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.MovieReservationController",
     "Method": "ReserveMovie",
     "RelativePath": "api/MovieReservation/ReserveMovie",
     "HttpMethod": "POST",
@@ -368,6 +389,27 @@
         "Name": "payment",
         "Type": "MovieRentWebAPI.Models.DTOs.MakePaymentDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.RentalController",
+    "Method": "GetRentalByMovieIdAndCustomerId",
+    "RelativePath": "api/Rental/GetRentalByMovieIdAndCustomerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -506,6 +548,43 @@
         "Name": "wishlistDto",
         "Type": "MovieRentWebAPI.Models.DTOs.AddWishlistDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.WishlistController",
+    "Method": "GetWishlistByMovieIdAndCustomerId",
+    "RelativePath": "api/Wishlist/GetWishlistByMovieIdAndCustomerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieRentWebAPI.Controllers.WishlistController",
+    "Method": "GetWishlistsByCustomer",
+    "RelativePath": "api/Wishlist/GetWishlistsByCustomer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -4,105 +4,106 @@
     <div class="main">
         <!-- Search Bar Section -->
         <CustomerNavbar />
+        <div>
+            <header class="search-bar">
+                <div class="route">
 
-        <header class="search-bar">
-            <div class="route">
+                    <span>{{ source }}</span>
+                    <i class="arrow-icon">→</i>
+                    <span>{{ destination }}</span>
+                    <span class="date">{{ formattedDate }}</span>
+                </div>
+                <button class="modify-btn" @click="modifySearch">Modify</button>
+            </header>
+            <div class="content">
+                <!-- Filter Section -->
+                <aside class="filters">
 
-                <span>{{ source }}</span>
-                <i class="arrow-icon">→</i>
-                <span>{{ destination }}</span>
-                <span class="date">{{ formattedDate }}</span>
+                    <div class="filter-group-type">
+                        <h3>Type</h3>
+                        <div class="typeSelectorMapper d-flex align-items-center">
+                            <label for="ac">AC</label>
+                            <input type="checkbox" id="ac" name="ac">
+                        </div>
+                        <div class="typeSelectorMapper d-flex align-items-center">
+                            <label for="nonAc">Non-AC</label>
+                            <input type="checkbox" id="nonAc" name="nonAc" />
+                        </div>
+                    </div>
+                    <div class="filter-group mt-4">
+                        <h3>Arrival Time</h3>
+                        <div class="arrivalTimeSelectorMapper d-flex align-items-center">
+                            <label for="before6am">Before 6 am</label>
+                            <input type="checkbox" id="before6am" name="before6am">
+                        </div>
+                        <div class="arrivalTimeSelectorMapper d-flex align-items-center">
+                            <label for="6amto12pm">6 am to 12 pm</label>
+                            <input type="checkbox" id="6amto12pm" name="6amto12pm" />
+                        </div>
+                        <div class="arrivalTimeSelectorMapper d-flex align-items-center">
+                            <label for="12pmto6pm">12 pm to 6 pm </label>
+                            <input type="checkbox" id="12pmto6pm" name="12pmto6pm" />
+                        </div>
+                        <div class="arrivalTimeSelectorMapper d-flex align-items-center">
+                            <label for="after6pm"> After 6 pm </label>
+                            <input type="checkbox" id="after6pm" name="after6pm">
+                        </div>
+                    </div>
+
+                </aside>
+                <div>
+                    <b-toast v-model="showToastMessage" auto-hide-delay="5000" title="BootstrapVue Toast"
+                        :variant="toastType" style="position: fixed; top: 0; right: 0; padding: 1rem; z-index: 1000;">
+                        {{ toastContent }}
+                    </b-toast>
+                </div>
+                <!-- Bus List Section -->
+                <section class="bus-list">
+                    <!-- <DotLottieVue class="loading" v-if="loading" autoplay loop src="" /> -->
+                    <div>
+                        <div class="bus-item" v-for="bus in buses" :key="bus.busId">
+                            <div class="bus-company-busnumber-mapper">
+                                <div class="busCompany my-1">{{ bus.companyName }}</div>
+                                <div class="busNumber my-1">{{ bus.busNumber }}</div>
+                                <div class="busType my-1">{{ bus.busType }}</div>
+                            </div>
+                            <div class="bus-departure-arrival d-flex gap-4 mt-4">
+                                <div class="departureContent-mapper">
+                                    <h4 class="">{{ formatDate(bus.departure) }}</h4>
+                                    <p class="station">Departure</p>
+                                </div>
+                                <div class="arrivalContent-mapper">
+                                    <h4>{{ formatDate(bus.arrival) }}</h4>
+                                    <p class="station">Arrival</p>
+                                </div>
+                            </div>
+                            <div class="priceContentMapper mt-4">
+                                <p class="m-0 priceTitle">Starts from</p>
+                                <div><span class="priceValue">₹{{ bus.standardFare }}</span> <span
+                                        class="price-type">(StandardFare)</span></div>
+                                <div><span class="priceValue">₹{{ bus.premiumFare }}</span> <span
+                                        class="price-type">(PremiumFare)</span>
+                                </div>
+                            </div>
+                            <div class="seatContent mt-4">
+                                <div :class="['blinking-text']" :style="{ color: busColor(bus.status) }">{{ bus.status
+                                    }}
+                                </div>
+                                <div><span class="seatAvailableValue mx-1">{{ bus.seatsLeft }}</span><span
+                                        class="seat-text">Seats
+                                        available</span></div>
+
+                            </div>
+                            <button class=" view-seats-btn" @click="watch(bus.busId)">View Seats</button>
+                            <div class="about-text">
+                                <p>Booking policies</p>
+                                <p>{{ bus.companyName }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
             </div>
-            <button class="modify-btn" @click="modifySearch">Modify</button>
-        </header>
-
-
-
-        <div class="content">
-            <!-- Filter Section -->
-            <aside class="filters">
-
-                <div class="filter-group-type">
-                    <h3>Type</h3>
-                    <div class="typeSelectorMapper d-flex align-items-center">
-                        <label for="ac">AC</label>
-                        <input type="checkbox" id="ac" name="ac">
-                    </div>
-                    <div class="typeSelectorMapper d-flex align-items-center">
-                        <label for="nonAc">Non-AC</label>
-                        <input type="checkbox" id="nonAc" name="nonAc" />
-                    </div>
-                </div>
-                <div class="filter-group mt-4">
-                    <h3>Arrival Time</h3>
-                    <div class="arrivalTimeSelectorMapper d-flex align-items-center">
-                        <label for="before6am">Before 6 am</label>
-                        <input type="checkbox" id="before6am" name="before6am">
-                    </div>
-                    <div class="arrivalTimeSelectorMapper d-flex align-items-center">
-                        <label for="6amto12pm">6 am to 12 pm</label>
-                        <input type="checkbox" id="6amto12pm" name="6amto12pm" />
-                    </div>
-                    <div class="arrivalTimeSelectorMapper d-flex align-items-center">
-                        <label for="12pmto6pm">12 pm to 6 pm </label>
-                        <input type="checkbox" id="12pmto6pm" name="12pmto6pm" />
-                    </div>
-                    <div class="arrivalTimeSelectorMapper d-flex align-items-center">
-                        <label for="after6pm"> After 6 pm </label>
-                        <input type="checkbox" id="after6pm" name="after6pm">
-                    </div>
-                </div>
-                <div class="filter-group mt-4">
-                    <h3>Boarding Point</h3>
-                    <input type="text" placeholder="Boarding Point" />
-                </div>
-                <div class="filter-group mt-4">
-                    <h3>Dropping Point</h3>
-                    <input type="text" placeholder="Dropping Point" />
-                </div>
-            </aside>
-
-            <!-- Bus List Section -->
-            <section class="bus-list">
-
-                <div class="bus-item" v-for="bus in buses" :key="bus.busId">
-                    <div class="bus-company-busnumber-mapper">
-                        <div class="busCompany my-1">{{ bus.companyName }}</div>
-                        <div class="busNumber my-1">{{ bus.busNumber }}</div>
-                        <div class="busType my-1">{{ bus.busType }}</div>
-                    </div>
-                    <div class="bus-departure-arrival d-flex gap-4 mt-4">
-                        <div class="departureContent-mapper">
-                            <h4 class="">{{ formatDate(bus.departure) }}</h4>
-                            <p class="station">Departure</p>
-                        </div>
-                        <div class="arrivalContent-mapper">
-                            <h4>{{ formatDate(bus.arrival) }}</h4>
-                            <p class="station">Arrival</p>
-                        </div>
-                    </div>
-                    <div class="priceContentMapper mt-4">
-                        <p class="m-0 priceTitle">Starts from</p>
-                        <div><span class="priceValue">₹{{ bus.standardFare }}</span> <span
-                                class="price-type">(StandardFare)</span></div>
-                        <div><span class="priceValue">₹{{ bus.premiumFare }}</span> <span
-                                class="price-type">(PremiumFare)</span>
-                        </div>
-                    </div>
-                    <div class="seatContent mt-4">
-                        <div :class="['blinking-text']" :style="{ color: busColor(bus.status) }">{{ bus.status }}</div>
-                        <div><span class="seatAvailableValue mx-1">{{ bus.seatsLeft }}</span><span
-                                class="seat-text">Seats
-                                available</span></div>
-
-                    </div>
-                    <button class=" view-seats-btn" @click="watch(bus.busId)">View Seats</button>
-                    <div class="about-text">
-                        <p>Booking policies</p>
-                        <p>{{ bus.companyName }}</p>
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
 </template>
@@ -110,11 +111,12 @@
 <script>
 import { GetBuses } from '../../script/BusService';
 import CustomerNavbar from './CustomerNavbar.vue';
-
+// import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 export default {
     name: "SearchResult",
     components: {
-        CustomerNavbar
+        CustomerNavbar,
+        // DotLottieVue
     },
     data() {
         return {
@@ -122,6 +124,11 @@ export default {
             source: '',
             destination: '',
             date: '',
+            loading: true,
+            showToastMessage: false,
+            errorMessage: '',
+            toastType: '',
+            toastContent: '',
         };
     },
     computed: {
@@ -136,12 +143,18 @@ export default {
             GetBuses(source, destination, formattedDate)
                 .then((response) => {
                     this.buses = response.data;
-                    console.log(response)
+                    this.loading = false;
                 })
                 .catch((err) => {
                     console.error(err);
-                    alert('Error fetching buses.');
+                    // alert('Error fetching buses.');
+                    this.makeToast("warning", "Error fetching buses.")
                 });
+        },
+        makeToast(type, content) {
+            this.toastType = type;
+            this.toastContent = content;
+            this.showToastMessage = true;
         },
         formatDate(dateString) {
             const date = new Date(dateString);
@@ -230,8 +243,8 @@ export default {
     align-items: end;
     position: fixed;
     z-index: 2;
-    height: 99px;
-    padding: 19px 42px;
+    height: 140px;
+    padding: 15px 42px;
     background-color: white;
     border-bottom: 1px solid rgb(230, 241, 237);
     box-shadow: 0 1px 2px rgb(192, 197, 195);
@@ -260,7 +273,7 @@ export default {
     color: white;
     border: none;
     align-items: end;
-    padding: 2px 15px;
+    padding: 1px 15px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -382,8 +395,8 @@ export default {
 
 .filters h3 {
     font-weight: bolder;
-    border-bottom: 4px solid green;
-    color: #0f1111;
+    border-bottom: 4px solid rgb(205 121 31);
+    color: #3e3e52;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -433,26 +446,17 @@ export default {
 }
 
 .blinking-text {
-    text-align: right;
+    text-align: center;
     margin-top: 5%;
     font-size: 15px;
     color: green;
     animation: blink 3s infinite;
 }
 
-/* .view-seats-btn {
-background-color: rgb(205 121 31);
-color: FFFAFF;
-border: none;
- 
-padding: 5px 10px;
-border-radius: 5px;
-cursor: pointer;
+.loading {
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 400px;
 }
- 
- 
- 
-.rating-price .low {
-color: red;
-}*/
 </style>

@@ -18,73 +18,70 @@ import SearchResult from "@/components/CustomerServices/SearchResult.vue";
 import SeatsSelection from "@/components/CustomerServices/SeatsSelection.vue";
 import BusOperatorDashboard from "@/components/BusOperator/BusOperatorDashboard.vue";
 import DashboardLayout from "@/components/DashboardLayout.vue";
-
-
+import TestToast from "@/components/TestToast.vue";
 
 const routes = [
-    { path: '/', component: LandingPage, },
-    { path: '/auth', component: AuthForm },
-    { path: '/dashboard', component: DashboardLayout },
+  { path: "/", component: LandingPage },
+  { path: "/s", component: TestToast },
+  { path: "/auth", component: AuthForm },
+  { path: "/dashboard", component: DashboardLayout },
 
-    {
-        path: '/admindashboard',
-        component: AdminDashboard,
-        meta: { requireAuth: true },
-        children: [
-            { path: "users", component: AdminUsers },
-            { path: "allbuses", component: AllBuses },
-            { path: "operators", component: BusOperators },
-            { path: "payments", component: PaymentsHistory },
-            { path: "routes", component: BusRoutes },
-        ],
-    },
-    {
-        path: '/operatordashboard',
-        component: BusOperatorDashboard,
-        meta: { requireAuth: true },
-        children: [
-            { path: "customers", component: AllCustomers },
-            { path: "buses", component: OperatorBuses },
-            { path: "reviews", component: OperatorReviews },
-        ],
-    },
-    {
-        path: '/search',
-        name: 'SearchBus',
-        component: SearchBus,
-        meta: { requireAuth: true },
-    },
-    {
-        path: '/searchResult',
-        name: 'SearchResult',
-        component: SearchResult,
-        meta: { requireAuth: true },
-    },
-    {
-        path: '/seat/:id',
-        name: 'Seats',
-        component: SeatsSelection,
-        meta: { requireAuth: true },
-    },
+  {
+    path: "/admindashboard",
+    component: AdminDashboard,
+    meta: { requireAuth: true },
+    children: [
+      { path: "users", component: AdminUsers },
+      { path: "allbuses", component: AllBuses },
+      { path: "operators", component: BusOperators },
+      { path: "payments", component: PaymentsHistory },
+      { path: "routes", component: BusRoutes },
+    ],
+  },
+  {
+    path: "/operatordashboard",
+    component: BusOperatorDashboard,
+    meta: { requireAuth: true },
+    children: [
+      { path: "customers", component: AllCustomers },
+      { path: "buses", component: OperatorBuses },
+      { path: "reviews", component: OperatorReviews },
+    ],
+  },
+  {
+    path: "/search",
+    name: "SearchBus",
+    component: SearchBus,
+    meta: { requireAuth: true },
+  },
+  {
+    path: "/searchResult",
+    name: "SearchResult",
+    component: SearchResult,
+    meta: { requireAuth: true },
+  },
+  {
+    path: "/seat/:id",
+    name: "Seats",
+    component: SeatsSelection,
+    meta: { requireAuth: true },
+  },
 ];
 
-
-
-
 const router = createRouter({
-    history: createWebHistory(),
-    routes
+  history: createWebHistory(),
+  routes,
 });
 
 router.beforeEach((to, from, next) => {
-    const userRole = localStorage.getItem('role');
+  const userRole = localStorage.getItem("role");
 
-    if (to.meta.role && to.meta.role !== userRole) {
-        alert('Access denied!');
-        next('/');
-    } else {
-        next();
-    }
+  if (to.meta.role && to.meta.role !== userRole) {
+    alert("Access denied!");
+    next("/");
+  } else {
+    next();
+  }
 });
 
 export default router;

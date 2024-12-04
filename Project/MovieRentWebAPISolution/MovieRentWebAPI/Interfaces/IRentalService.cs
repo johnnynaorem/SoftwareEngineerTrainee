@@ -9,5 +9,6 @@ namespace MovieRentWebAPI.Interfaces
         Task<IEnumerable<RentalWithMovieAndCustomerDetailsDTO>> GetRentals();
         Task<IEnumerable<RentalWithMovieAndCustomerDetailsDTO>> GetRentalByCustomer(int customerId);
         Task<Rental> Update(RentalUpdateRequestDTO rentalUpdateRequestDTO);
+        Task<Rental> GetRentalByMovieIdAndCustomerId(int movieId, int customerId);
     }
 }

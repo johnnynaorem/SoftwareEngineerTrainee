@@ -77,7 +77,8 @@ namespace MovieRentWebAPI.Services
             return rentalDtos.OrderByDescending(r => r.RentalId);
         }
 
-        private async Task<Movie> GetMovie(int id) {
+        private async Task<Movie> GetMovie(int id)
+        {
             var movie = await _movieRepo.Get(id);
             return movie;
         }
@@ -94,9 +95,9 @@ namespace MovieRentWebAPI.Services
 
 
             var isMovieReserved = reservations.FirstOrDefault(reserve => reserve.Movie.MovieId == movieId && reserve.Status == ReservationStatus.Active && reserve.CustomerId == customerId);
-            
 
-            if (isMovieReserved==null) return false;
+
+            if (isMovieReserved == null) return false;
 
             await _movieRervationService.UpdateMovieReservationStatus(new ReservedMovieStatusUpdateRequestDTO
             {
@@ -156,7 +157,7 @@ namespace MovieRentWebAPI.Services
                 }
 
                 var customer = await _customerRepo.Get(rentMovieDTO.CustomerId);
-                if(customer == null)
+                if (customer == null)
                 {
                     throw new InvalidOperationException("Customer not Found");
                 }
@@ -238,7 +239,7 @@ namespace MovieRentWebAPI.Services
                 var rentalDto = new RentalWithMovieAndCustomerDetailsDTO
                 {
                     RentalId = rental.RentalId,
-                    RentalDate = rental.RentalDate,             
+                    RentalDate = rental.RentalDate,
                     DueDate = rental.DueDate,
                     ReturnDate = rental.ReturnDate,
                     Status = rental.Status.ToString(),
@@ -274,5 +275,12 @@ namespace MovieRentWebAPI.Services
 
             return rentalDtos.OrderByDescending(r => r.RentalId);
         }
+        public async Task<Rental> GetRentalByMovieIdAndCustomerId(int movieId, int customerId)
+        {
+            var rentals = await _rentalRepo.GetAll();
+            var rental = rentals.FirstOrDefault(r => r.MovieId == movieId && r.CustomerId == customerId);
+            return rental;
+        }
     }
+
 }

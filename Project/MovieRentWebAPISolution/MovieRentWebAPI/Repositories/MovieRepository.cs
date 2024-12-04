@@ -93,7 +93,7 @@ namespace MovieRentWebAPI.Repositories
                 updateMovie.AvailableCopies = entity.AvailableCopies;
             }
 
-            if (entity.Rental_Price != updateMovie.Rental_Price)
+            if (entity.Rental_Price != 0)
             {
                 updateMovie.Rental_Price = entity.Rental_Price;
             }

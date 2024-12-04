@@ -30,6 +30,20 @@ namespace MovieRentWebAPI.Services
            
         }
 
+        public async Task<Wishlist> GetWishlistByMovieIdAndCustomerId(int movieId, int customerId)
+        {
+            var wishlists = await _wishlistRepo.GetAll();
+            var wishlist = wishlists.FirstOrDefault(w => w.MovieId == movieId && w.CustomerId == customerId);
+            return wishlist;
+        }
+
+        public async Task<IEnumerable<Wishlist>> GetWishlistsByCustomer(int customerId)
+        {
+            var wishlists = await _wishlistRepo.GetAll();
+            var wishlist = wishlists.Where(w => w.CustomerId == customerId).ToList();
+            return wishlist;
+        }
+
         public async Task<bool> RemoveWishlist(AddWishlistDTO wishlist)
         {
             try

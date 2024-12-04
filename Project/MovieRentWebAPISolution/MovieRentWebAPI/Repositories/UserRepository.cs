@@ -23,7 +23,7 @@ namespace MovieRentWebAPI.Repositories
         {
             try
             {
-                var user = _context.Users.FirstOrDefault(x => x.UserName == entity.UserName && x.UserEmail == entity.UserEmail);
+                var user = _context.Users.FirstOrDefault(x => x.UserEmail == entity.UserEmail);
                 if (user == null)
                 {
                     await _context.Users.AddAsync(entity);

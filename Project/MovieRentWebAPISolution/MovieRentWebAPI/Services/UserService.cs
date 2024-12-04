@@ -13,13 +13,15 @@ namespace MovieRentWebAPI.Services
     public class UserService : IUserService
     {
         private readonly IRepository<string, User> _userRepo;
+        private readonly IRepository<int, Customer> _customerRepo;
         private readonly ILogger<UserService> _logger;
         private readonly ITokenService _tokenService;
         private readonly IEmailSender _emailSender;
 
-        public UserService(IRepository<string, User> userRepository, ILogger<UserService> logger, ITokenService tokenService, IEmailSender emailSender)
+        public UserService(IRepository<string, User> userRepository, IRepository<int, Customer> customerRepository, ILogger<UserService> logger, ITokenService tokenService, IEmailSender emailSender)
         {
             _userRepo = userRepository;
+            _customerRepo = customerRepository;
             _logger = logger;
             _tokenService = tokenService;
             _emailSender = emailSender;
@@ -98,6 +100,20 @@ namespace MovieRentWebAPI.Services
             try
             {
                 var addesUser = await _userRepo.Add(user);
+
+                var newCustomer = new Customer
+                {
+                    FullName = addesUser.UserName,
+                    Address = "",
+                    PhoneNumber = "",
+                    Email = addesUser.UserEmail,
+                    UserId = addesUser.UserId
+                };
+
+                if(addesUser.Role == UserRole.user)
+                {
+                    await _customerRepo.Add(newCustomer);
+                }
                 LoginResponseDTO response = new LoginResponseDTO()
                 {
                     Username = addesUser.UserName,

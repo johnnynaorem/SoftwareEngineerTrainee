@@ -2,7 +2,7 @@
 {
     public enum RentalStatus {
         Pending, Confirmed, Active, Returned, Overdue
-    }
+    }       
     public class Rental
     {
         public int RentalId { get; set; }

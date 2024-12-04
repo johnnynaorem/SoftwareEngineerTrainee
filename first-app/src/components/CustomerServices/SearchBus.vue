@@ -5,31 +5,35 @@
         <!-- Main Content -->
         <main class="main-content">
 
-            <!-- Horizontal Search Bar -->
-            <div class="search-bar">
-                <div class="search">
 
-                    <div class="search-bar">
-                        <div class="input-group">
-                            <label for="source">Source</label>
-                            <input id="source" type="text" v-model="source" placeholder="Source" />
-                        </div>
-                        <div class="input-group">
-                            <label for="destination">Destination</label>
-                            <input id="destination" type="text" v-model="destination" placeholder="Destination" />
-                        </div>
-                        <div class="input-group">
-                            <label for="date">Date</label>
-                            <input id="date" type="date" v-model="date" />
-                        </div>
-                        <div class="button-group">
-                            <button class="search-button" style="margin-top: 18px;" @click="search">Search</button>
-                        </div>
 
+            <div class="search">
+                <div class="title">
+                    <h2>Book your trip and let the journey begin</h2>
+                </div>
+                <div class="search-bar">
+
+
+                    <div class="input-group">
+                        <label for="source">Source</label>
+                        <input id="source" type="text" v-model="source" placeholder="Source" />
+                    </div>
+                    <div class="input-group">
+                        <label for="destination">Destination</label>
+                        <input id="destination" type="text" v-model="destination" placeholder="Destination" />
+                    </div>
+                    <div class="input-group">
+                        <label for="date">Date</label>
+                        <input id="date" type="date" v-model="date" :min="minDate" />
+                    </div>
+                    <div class="button-group">
+                        <button class="search-button" style="margin-top: 18px;" @click="search">Search</button>
                     </div>
 
                 </div>
+
             </div>
+
         </main>
     </div>
 
@@ -38,17 +42,20 @@
 
 
     <!-- Features Section -->
-    <!-- <div class="features">
-            <div class="feature">
-                <h3>36 Million</h3>
-            </div>
-            <div class="feature">
-                <h3>Over 5000</h3>
-            </div>
-            <div class="feature">
-                <h3>200,000+</h3>
-            </div>
-        </div> -->
+    <div class="features">
+        <div class="feature">
+            <h3>36 Million</h3>
+        </div>
+        <div class="feature">
+            <h3>Over 5000</h3>
+        </div>
+        <div class="feature">
+            <h3>200,000+</h3>
+        </div>
+        <div class="feature">
+            <h3>200,000+</h3>
+        </div>
+    </div>
 
 </template>
 
@@ -64,7 +71,8 @@ export default {
         return {
             source: '',
             destination: '',
-            date: ''
+            date: '',
+            minDate: ''
         }
     },
     methods: {
@@ -79,7 +87,22 @@ export default {
                 }
             });
 
-        }
+        },
+        setMinDate() {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            let mm = today.getMonth() + 1; // Months are zero-indexed
+            let dd = today.getDate();
+
+            // Format the date as YYYY-MM-DD
+            if (mm < 10) mm = '0' + mm; // Ensure month is two digits
+            if (dd < 10) dd = '0' + dd; // Ensure day is two digits
+
+            this.minDate = `${yyyy}-${mm}-${dd}`;
+        },
+    },
+    mounted() {
+        this.setMinDate();
     }
 
 };
@@ -110,7 +133,7 @@ body {
 
     width: 100%;
     text-align: center;
-    height: 350px;
+    height: 300px;
     background-image: url('../../../public/Screenshot\ 2024-11-22\ 105120.png');
 
     background-size: cover;
@@ -130,6 +153,7 @@ input {
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+
 }
 
 .button-group {
@@ -140,8 +164,7 @@ input {
 .title {
     font-size: 1.8em;
     font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 100px;
 }
 
 /* Horizontal Search Bar */
@@ -150,9 +173,8 @@ input {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
-    padding: 45px 0;
-
+    margin-bottom: 63px;
+    padding: 5px 0;
 
 }
 
@@ -167,10 +189,9 @@ input {
 }
 
 .input-group input {
-    padding: 10px;
+    padding: 7px;
     font-size: 0.9em;
     border: 1px solid #ddd;
-    border-radius: 7px;
 }
 
 .search-button {
@@ -203,7 +224,7 @@ img {
 .feature {
     text-align: center;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

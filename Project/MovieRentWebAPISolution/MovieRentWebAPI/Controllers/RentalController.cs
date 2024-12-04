@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using MovieRentWebAPI.Exceptions;
 using MovieRentWebAPI.Interfaces;
 using MovieRentWebAPI.Models.DTOs;
+using MovieRentWebAPI.Services;
 
 namespace MovieRentWebAPI.Controllers
 {
@@ -100,6 +101,25 @@ namespace MovieRentWebAPI.Controllers
             {
                 var response = await _rentalService.Update(rentMovie);
                 return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResponseDTO
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = ex.Message,
+                });
+            }
+        }
+
+        [HttpGet("GetRentalByMovieIdAndCustomerId")]
+        [Authorize]
+        public async Task<IActionResult> GetRentalByMovieIdAndCustomerId(int movieId, int customerId)
+        {
+            try
+            {
+                var rental = await _rentalService.GetRentalByMovieIdAndCustomerId(movieId, customerId);
+                return Ok(rental);
             }
             catch (Exception ex)
             {

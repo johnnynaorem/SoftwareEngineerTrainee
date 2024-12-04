@@ -37,6 +37,22 @@
                 </form>
             </div>
 
+            <div>
+                <b-toast v-model="showToastMessage" auto-hide-delay="5000" title="BootstrapVue Toast"
+                    :variant="toastType" style="position: fixed; top: 0; right: 0; padding: 1rem; z-index: 1000;">
+                    {{ toastContent }}
+                </b-toast>
+            </div>
+
+            <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex" v-if="show">
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
 
             <!-- Right Side: Image Section -->
             <div class="image-section"></div>
@@ -45,7 +61,6 @@
 </template>
 
 <script>
-import router from '@/script/router';
 
 export default {
     name: "LandingPage",
@@ -54,14 +69,40 @@ export default {
             from: '',
             to: '',
             date: '',
-            showToastMessage: false
+            show: true,
+            showToastMessage: false,
+            errorMessage: '',
+            toastType: '',
+            toastContent: '',
         }
     },
     methods: {
         searchBus() {
-            router.push('/auth')
+            const token = sessionStorage.getItem("token");
+            if (!token) {
+                this.makeToast("info", "Login First!!!.")
+                setTimeout(() => {
+                    this.$router.push('/auth');
 
-        }
+                }, 4000)
+            }
+            else {
+                this.$router.push({
+                    name: 'SearchResult',
+                    query: {
+                        source: this.from,
+                        destination: this.to,
+                        date: this.date
+                    }
+                });
+            }
+
+        },
+        makeToast(type, content) {
+            this.toastType = type;
+            this.toastContent = content;
+            this.showToastMessage = true;
+        },
     }
 }
 </script>
@@ -140,7 +181,7 @@ export default {
 /* Styling the main content */
 .content {
     display: flex;
-    margin: 0 10px;
+    margin: 0 0px;
     position: relative;
     align-items: center;
 }
@@ -190,14 +231,15 @@ export default {
 
 .form-group input {
     outline: none;
-    width: 100%;
+    width: 99%;
+    height: 50px;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 .form-group input::placeholder {
-    color: black;
+    color: rgba(0, 0, 0, 0.616);
 }
 
 .search-btn {

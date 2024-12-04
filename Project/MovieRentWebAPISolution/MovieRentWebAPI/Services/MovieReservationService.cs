@@ -279,5 +279,12 @@ namespace MovieRentWebAPI.Services
             };
             return responserReservation;
         }
+
+        public async Task<Reservation> GetReservationByMovieId(int movieId, int customerId)
+        {
+            var reservations = await _reservationRepo.GetAll();
+            var reservation = reservations.FirstOrDefault(r => r.MovieId == movieId && r.CustomerId == customerId);
+            return reservation;
+        }
     }
 }

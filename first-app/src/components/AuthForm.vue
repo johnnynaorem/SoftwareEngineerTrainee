@@ -54,11 +54,11 @@
 			</form>
 		</div>
 
-		<div>
+		<!-- <div>
 			<div v-if="showToastMessage" class="toast">
 				{{ username }}
 			</div>
-		</div>
+		</div> -->
 
 		<div class="overlay-container">
 			<div class="overlay">
@@ -74,6 +74,25 @@
 				</div>
 			</div>
 		</div>
+
+
+	</div>
+
+	<div>
+		<b-toast v-model="showToastMessage" auto-hide-delay="5000" title="BootstrapVue Toast" :variant="toastType"
+			style="position: fixed; top: 0; right: 0; padding: 1rem; z-index: 1000;">
+			{{ toastContent }}
+		</b-toast>
+	</div>
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			Dropdown button
+		</button>
+		<ul class="dropdown-menu">
+			<li><a class="dropdown-item" href="#">Action</a></li>
+			<li><a class="dropdown-item" href="#">Another action</a></li>
+			<li><a class="dropdown-item" href="#">Something else here</a></li>
+		</ul>
 	</div>
 
 </template>
@@ -82,6 +101,7 @@
 import router from '@/script/router';
 import { Register, Login } from "@/script/UserAuthenticateService";
 import { jwtDecode } from 'jwt-decode';
+
 
 export default {
 	name: 'AuthForm',
@@ -97,7 +117,10 @@ export default {
 			email: '',
 			loginPassword: '',
 			registerPassword: '',
-			role: ''
+			role: '',
+			errorMessage: '',
+			toastType: '',
+			toastContent: '',
 		};
 	},
 	methods: {
@@ -114,8 +137,6 @@ export default {
 			event.preventDefault();
 			Register(this.fname, this.lname, this.registerPassword, this.contact, this.email, this.role)
 				.then((response) => {
-
-					console.log(response)
 					this.showToastMessage = true;
 					this.username = response.data.data
 					setTimeout(() => {
@@ -131,38 +152,45 @@ export default {
 		},
 
 
+
 		async login(event) {
 			event.preventDefault();
-			const res = await Login(this.input, this.loginPassword)
-			if (res.status == 200) {
-				sessionStorage.setItem("token", res.data.token);
-				const token = res.data.token;
-				const decoded = jwtDecode(token);
-				const role = decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
-				localStorage.setItem("role", role);
-				if (role == "Customer") {
-					router.push('/search')
-				} else if (role == "BusOperator") {
 
-					router.push('/operatordashboard')
+			try {
+				const res = await Login(this.input, this.loginPassword);
+
+				if (res.status === 200) {
+					sessionStorage.setItem("token", res.data.token);
+					const token = res.data.token;
+					const decoded = jwtDecode(token);
+					const role = decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+					sessionStorage.setItem("role", role);
+					sessionStorage.setItem("id", res.data.userId);
+
+					// Navigate based on role
+					if (role === "Customer") {
+						router.push("/search");
+					} else if (role === "BusOperator") {
+						router.push("/operatordashboard");
+					} else if (role === "Admin") {
+						router.push("/admindashboard");
+					} else {
+						router.push("/search");
+					}
 				}
-				else if (role == "Admin") {
-
-					router.push('/admindashboard')
-				}
-				else {
-
-					router.push('/')
-				}
-
-
-
+			} catch (err) {
+				this.makeToast("success", "Incorrect username or password!")
 			}
+		},
 
-		}
-
+		makeToast(type, content) {
+			this.toastType = type;
+			this.toastContent = content;
+			this.showToastMessage = true;
+		},
 	},
-};
+
+}
 </script>
 
 <style scoped>
@@ -321,8 +349,8 @@ form {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
+	padding: 8px 20px;
+	height: 99%;
 	text-align: center;
 
 }
@@ -331,7 +359,7 @@ input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
-	margin: 8px 0;
+	margin: 5px 0;
 	width: 100%;
 }
 
@@ -340,12 +368,13 @@ input {
 	border-radius: 10px;
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
-	margin-top: 70px;
+	margin-top: 60px;
+	font-size: small;
 	overflow: hidden;
 	margin-left: 305px;
 	width: 768px;
-	max-width: 100%;
-	min-height: 500px;
+	max-width: 90%;
+	min-height: 526px;
 
 }
 
@@ -411,7 +440,7 @@ input {
 }
 
 .overlay {
-	background: rgb(0 121 145);
+	background: #1ebba1;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

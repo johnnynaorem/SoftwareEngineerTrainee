@@ -56,5 +56,45 @@ namespace MovieRentWebAPI.Controllers
 
             }
         }
+
+        [HttpGet("GetWishlistByMovieIdAndCustomerId")]
+        [Authorize(Roles = "user")]
+        public async Task<IActionResult> GetWishlistByMovieIdAndCustomerId(int movieId, int customerId)
+        {
+            try
+            {
+                var wishlist = await _wishlistService.GetWishlistByMovieIdAndCustomerId(movieId, customerId);
+                return Ok(wishlist);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, new ErrorResponseDTO
+                {
+                    ErrorCode = 204,
+                    ErrorMessage = ex.Message,
+                });
+
+            }
+        }
+
+        [HttpGet("GetWishlistsByCustomer")]
+        [Authorize(Roles = "user")]
+        public async Task<IActionResult> GetWishlistsByCustomer(int customerId)
+        {
+            try
+            {
+                var wishlist = await _wishlistService.GetWishlistsByCustomer(customerId);
+                return Ok(wishlist);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, new ErrorResponseDTO
+                {
+                    ErrorCode = 204,
+                    ErrorMessage = ex.Message,
+                });
+
+            }
+        }
     }
 }
