@@ -62,8 +62,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Controllers\\WishlistController.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:09:20.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T19:09:20.451Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Interfaces\\ICustomerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:53:18.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:53:18.619Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Interfaces\\IMovieService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:52:42.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:52:42.922Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Services\\MovieService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:52:37.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:52:37.286Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Controllers\\MovieController.cs",
               "ViewState": "AgIAAKIAAAAAAAAAAAAiwLYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:51:59.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:51:59.593Z"
             },
             {
               "$type": "Document",
@@ -127,8 +122,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Services\\WishlistService.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAIwD8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:41:09.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:41:09.597Z"
             },
             {
               "$type": "Document",
@@ -140,8 +134,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Models\\DTOs\\ResponseReviewsWithCustomerDetailsDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:33:36.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:33:36.965Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Services\\CustomerService.cs",
               "ViewState": "AgIAANYAAAAAAAAAAAAiwBIAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:13:54.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:13:54.717Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "MovieRentWebAPI\\Models\\ReviewForMovie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T18:13:25.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T18:13:25.393Z"
             }
           ]
         }

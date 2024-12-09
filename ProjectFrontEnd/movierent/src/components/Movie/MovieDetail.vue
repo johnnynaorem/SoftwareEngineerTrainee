@@ -201,8 +201,9 @@ onMounted(() => {
 watch(
     () => route.params.id,
     () => {
-        getWishlist();
         fetching();
+        getWishlist();
+        fetchingComment();
     }
 );
 
@@ -283,14 +284,19 @@ watch(
                 <div class="commentSection">
                     <div class="d-flex gap-2 align-item-center">
                         <h4>Reviews ({{ comments.length }})</h4>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            class="btn btn-secondary">Add Comment</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn"
+                            style="border: 1px solid red;">Add
+                            Comment</button>
                     </div>
                     <div class="review-mapper" v-for="(comment, i) in comments" :key="i">
-                        <div class="review d-flex gap-4 p-3 mt-2" style="border: 2px solid grey;">
+                        <div class="review d-flex gap-4 p-3 mt-2 align-items-center"
+                            style="border: 2px solid grey; border-radius: 10px;">
                             <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
-                                alt="image" width="30px" height="30px" style="border-radius: 50%; object-fit: cover;">
-                            <p>{{ comment.comment }}</p>
+                                alt="image" width="40px" height="40px" style="border-radius: 50%; object-fit: cover;">
+                            <div class="d-flex gap-2 flex-column">
+                                <p class="m-0" style="color: orangered;">Comment</p>
+                                <p class="m-0 ms-4">{{ comment.comment }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
