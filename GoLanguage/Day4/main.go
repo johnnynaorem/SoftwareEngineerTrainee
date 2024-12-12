@@ -53,7 +53,7 @@ func count(n int) []int {
  // ? Sorting
 
  // ?Bubble Sort
-
+// ? Time Complexity: O(n^2)
  func BubbleSort(arr []int) []int {
 	for i := 0; i < len(arr)-1; i++ {
 		isSwap := false
@@ -73,6 +73,8 @@ func count(n int) []int {
  }
 
  //Selection Sort
+
+ //Time Complexity: O(n^2)
  func SelectionSort(arr []int) []int {
 
 	for i := 0; i < len(arr)-1; i++ {
@@ -92,18 +94,20 @@ func count(n int) []int {
 	return arr
  }
 
+
  // Insertion Sort
+//  ? Time Complexity = O(n^2)
  func InsertionSort(arr []int) []int {
 	for i := 1; i < len(arr)-1; i++ {
 		current := arr[i]
-		prev := i-1
+		prev := 0
 
-		for prev>=0 && current < arr[prev]{
+		for prev>=0 && current < arr[prev] {
 			arr[prev+1] = arr[prev]
 			prev --
 		}
-		fmt.Println(prev)
 		arr[prev+1] = current
 	}
 	return arr;
  }
+
