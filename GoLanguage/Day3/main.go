@@ -1,11 +1,15 @@
 package main
 
-import featureCalculator "module/featureCalculator"
+import (
+	banking "module/banking"
+	// featureCalculator "module/featureCalculator"
+)
 
 // import "fmt"
 
 
 func main() {
 	// checkPalindrome()
-	featureCalculator.Calculator()
+	// featureCalculator.Calculator()
+	banking.Banking()
 }
