@@ -6,11 +6,11 @@ import (
 	"time"
 )
 
-type Transaction struct {
-	Date   time.Time
-	Amount float64
-	Type   string
-}
+	type Transaction struct {
+		Date   time.Time
+		Amount float64
+		Type   string
+	}
 
 type BankAccount struct {
 	Balance          float64
@@ -43,10 +43,10 @@ func (account *BankAccount) Withdraw(amount float64) {
 		return
 	}
 
-	if account.Balance == amount {
-		fmt.Println("Minimum Balance should be 500")
-		return
-	}
+	// if account.Balance == amount {
+	// 	fmt.Println("Minimum Balance should be 500")
+	// 	return
+	// }
 
 	account.Balance -= amount
 	account.TransactionHistory = append(account.TransactionHistory, Transaction{
