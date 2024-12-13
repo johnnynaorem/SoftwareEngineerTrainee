@@ -106,9 +106,10 @@ AE124            Delhi        Kolkata    2999    16-12-2024/09:00
 AE125            Kolkata      Mumbai     3590    17-12-2024/10:00
 AE126            Imphal       Delhi      2499    15-12-2024/20:30
 AE127            Chennai      Bangalore  2599    18-12-2024/15:00
+```
 
-
-Customer Menu:
+### Customer Menu:
+```plaintext
 1. See All Flights
 2. Search Flight
 3. Sort By Flight Fair
@@ -143,9 +144,11 @@ AE124  Delhi     Kolkata    2999   16-12-2024/09:00
 AE123  Imphal    Delhi      2799   15-12-2024/10:30
 AE127  Chennai   Bangalore  2599   18-12-2024/15:00
 AE126  Imphal    Delhi      2499   15-12-2024/20:30
+```
 
 
 ## Example Code
+```plaintext
 
 ### main.go (or flight_booking.go)
 
