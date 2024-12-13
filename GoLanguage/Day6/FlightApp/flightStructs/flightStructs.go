@@ -175,17 +175,31 @@ func customerMenu(flights *Flights) {
 						fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
 					}
 
-					// var sortChoice int
-					// fmt.Println("\n1. Sort by Price")
-					// fmt.Println("0. Exit")
-					// fmt.Print("Choose an option: ")
-					// fmt.Scanln(&sortChoice)
+					var sortChoice int
+					fmt.Println("\n1. Sort by Price")
+					fmt.Println("2. Sort by Flight Date")
+					fmt.Println("0. Exit")
+					fmt.Print("Choose an option: ")
+					fmt.Scanln(&sortChoice)
 
-					// switch choice {
-					// case 1:
-					// 	SortByFair(f)
-					// }
-
+					switch sortChoice {
+					case 1:
+						sort.Slice(result.flights, func(i, j int) bool {
+							return result.flights[i].fair > result.flights[j].fair
+						})
+						fmt.Println("\nSorted by Price:")
+						for _, txn := range result.flights {
+							fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
+						}
+					case 2:
+						sort.Slice(result.flights, func(i, j int) bool {
+							return result.flights[i].flightDate > result.flights[j].flightDate
+						})
+						fmt.Println("\nSorted by Flight Date:")
+						for _, txn := range result.flights {
+							fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
+						}
+					}
 				} else {
 					fmt.Println("\nNo matching flights found.")
 				}
