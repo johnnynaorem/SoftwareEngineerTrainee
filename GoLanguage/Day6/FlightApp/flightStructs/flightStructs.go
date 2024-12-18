@@ -6,11 +6,11 @@ import (
 )
 
 type FlightStruct struct {
-	flightNumber  string
-	departureFrom string
-	arrivalTo     string
-	flightDate    string
-	fair          float64
+	FlightNumber  string
+	DepartureFrom string
+	ArrivalTo     string
+	FlightDate    string
+	Fair          float64
 }
 
 type Flights struct {
@@ -21,14 +21,14 @@ func (flight *Flights) getAllFlight() {
 	fmt.Println("All Flights:")
 	fmt.Println("Flight Number\t", "Departure\t", "Arrival\t", "Fair\t", "Date")
 	for _, txn := range flight.flights {
-		fmt.Println(txn.flightNumber, "\t\t", txn.departureFrom, " \t", txn.arrivalTo, "         ", txn.fair, "  ", txn.flightDate)
+		fmt.Println(txn.FlightNumber, "\t\t", txn.DepartureFrom, " \t", txn.ArrivalTo, "         ", txn.Fair, "  ", txn.FlightDate)
 	}
 }
 
-func searchFlight(flights *Flights, departureFrom string, arrivalTo string) Flights {
+func searchFlight(flights *Flights, DepartureFrom string, ArrivalTo string) Flights {
 	var sortFlight Flights
 	for _, txn := range flights.flights {
-		if txn.departureFrom == departureFrom && txn.arrivalTo == arrivalTo {
+		if txn.DepartureFrom == DepartureFrom && txn.ArrivalTo == ArrivalTo {
 			sortFlight.flights = append(sortFlight.flights, txn)
 		}
 	}
@@ -38,39 +38,39 @@ func searchFlight(flights *Flights, departureFrom string, arrivalTo string) Flig
 func createFlightStruct(flights *Flights) {
 	flights.flights = append(flights.flights,
 		FlightStruct{
-			flightNumber:  "AE123",
-			departureFrom: "Imphal",
-			arrivalTo:     "Delhi",
-			flightDate:    "15-12-2024/10:30",
-			fair:          2799,
+			FlightNumber:  "AE123",
+			DepartureFrom: "Imphal",
+			ArrivalTo:     "Delhi",
+			FlightDate:    "15-12-2024/10:30",
+			Fair:          2799,
 		},
 		FlightStruct{
-			flightNumber:  "AE124",
-			departureFrom: "Delhi",
-			arrivalTo:     "Kolkata",
-			flightDate:    "16-12-2024/09:00",
-			fair:          2999,
+			FlightNumber:  "AE124",
+			DepartureFrom: "Delhi",
+			ArrivalTo:     "Kolkata",
+			FlightDate:    "16-12-2024/09:00",
+			Fair:          2999,
 		},
 		FlightStruct{
-			flightNumber:  "AE125",
-			departureFrom: "Kolkata",
-			arrivalTo:     "Mumbai",
-			flightDate:    "17-12-2024/10:00",
-			fair:          3590,
+			FlightNumber:  "AE125",
+			DepartureFrom: "Kolkata",
+			ArrivalTo:     "Mumbai",
+			FlightDate:    "17-12-2024/10:00",
+			Fair:          3590,
 		},
 		FlightStruct{
-			flightNumber:  "AE126",
-			departureFrom: "Imphal",
-			arrivalTo:     "Delhi",
-			flightDate:    "15-12-2024/20:30",
-			fair:          2499,
+			FlightNumber:  "AE126",
+			DepartureFrom: "Imphal",
+			ArrivalTo:     "Delhi",
+			FlightDate:    "15-12-2024/20:30",
+			Fair:          2499,
 		},
 	)
 }
 
 func SortByFair(flights *Flights) {
 	sort.Slice(flights.flights, func(i, j int) bool {
-		return flights.flights[i].fair > flights.flights[j].fair
+		return flights.flights[i].Fair > flights.flights[j].Fair
 	})
 	flights.getAllFlight()
 }
@@ -78,7 +78,7 @@ func SortByFair(flights *Flights) {
 func DeleteFlight(flights *Flights, flightNumber string, flightDate string) {
 	fmt.Println(flightDate, flightNumber)
 	for index, txn := range flights.flights {
-		if txn.flightNumber == flightNumber && txn.flightDate == flightDate {
+		if txn.FlightNumber == flightNumber && txn.FlightDate == flightDate {
 			// slice1 := flights.flights[0:index]
 			// slice2 := flights.flights[index+1:]
 			// mergedSlice := append(slice1, slice2...)
@@ -105,25 +105,25 @@ func adminMenu(flights *Flights) {
 			flights.getAllFlight()
 
 		case 2:
-			var flightNumber, departureFrom, arrivalTo, flightDate string
-			var fair float64
+			var flightNumber, DepartureFrom, ArrivalTo, flightDate string
+			var Fair float64
 			fmt.Print("Enter Flight Number: ")
 			fmt.Scanln(&flightNumber)
 			fmt.Print("Enter Departure City: ")
-			fmt.Scanln(&departureFrom)
+			fmt.Scanln(&DepartureFrom)
 			fmt.Print("Enter Arrival City: ")
-			fmt.Scanln(&arrivalTo)
+			fmt.Scanln(&ArrivalTo)
 			fmt.Print("Enter Flight Date: ")
 			fmt.Scanln(&flightDate)
 			fmt.Print("Enter Flight Fare: ")
-			fmt.Scanln(&fair)
+			fmt.Scanln(&Fair)
 
 			newFlight := FlightStruct{
-				flightNumber:  flightNumber,
-				departureFrom: departureFrom,
-				arrivalTo:     arrivalTo,
-				flightDate:    flightDate,
-				fair:          fair,
+				FlightNumber:  flightNumber,
+				DepartureFrom: DepartureFrom,
+				ArrivalTo:     ArrivalTo,
+				FlightDate:    flightDate,
+				Fair:          Fair,
 			}
 			flights.flights = append(flights.flights, newFlight)
 			fmt.Println("Flight added successfully.")
@@ -162,17 +162,17 @@ func customerMenu(flights *Flights) {
 			flights.getAllFlight()
 
 		case 2:
-			var departureFrom, arrivalTo string
+			var DepartureFrom, ArrivalTo string
 			fmt.Print("From: ")
-			fmt.Scanln(&departureFrom)
+			fmt.Scanln(&DepartureFrom)
 			fmt.Print("To: ")
-			fmt.Scanln(&arrivalTo)
-			if departureFrom != "" && arrivalTo != "" {
-				result := searchFlight(flights, departureFrom, arrivalTo)
+			fmt.Scanln(&ArrivalTo)
+			if DepartureFrom != "" && ArrivalTo != "" {
+				result := searchFlight(flights, DepartureFrom, ArrivalTo)
 				if len(result.flights) > 0 {
 					fmt.Println("\nMatching Flights:")
 					for _, txn := range result.flights {
-						fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
+						fmt.Println(txn.FlightNumber, txn.DepartureFrom, txn.ArrivalTo, txn.Fair, txn.FlightDate)
 					}
 
 					var sortChoice int
@@ -185,19 +185,19 @@ func customerMenu(flights *Flights) {
 					switch sortChoice {
 					case 1:
 						sort.Slice(result.flights, func(i, j int) bool {
-							return result.flights[i].fair > result.flights[j].fair
+							return result.flights[i].Fair > result.flights[j].Fair
 						})
 						fmt.Println("\nSorted by Price:")
 						for _, txn := range result.flights {
-							fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
+							fmt.Println(txn.FlightNumber, txn.DepartureFrom, txn.ArrivalTo, txn.Fair, txn.FlightDate)
 						}
 					case 2:
 						sort.Slice(result.flights, func(i, j int) bool {
-							return result.flights[i].flightDate > result.flights[j].flightDate
+							return result.flights[i].FlightDate > result.flights[j].FlightDate
 						})
 						fmt.Println("\nSorted by Flight Date:")
 						for _, txn := range result.flights {
-							fmt.Println(txn.flightNumber, txn.departureFrom, txn.arrivalTo, txn.fair, txn.flightDate)
+							fmt.Println(txn.FlightNumber, txn.DepartureFrom, txn.ArrivalTo, txn.Fair, txn.FlightDate)
 						}
 					}
 				} else {
