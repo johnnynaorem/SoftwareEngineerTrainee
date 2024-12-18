@@ -71,9 +71,8 @@ func AddUser(ctx *gin.Context) {
 		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
 
 		if err != nil {
-			fmt.Println(err)
+			logger.Error("Fail to Hashing Password", zap.String("message", err.Error()))
 		}
-		fmt.Println(hashedPassword)
 
 		newUser := &model.User{Name: user.Name, Email: user.Email, Password: string(hashedPassword), Address: user.Address, City: user.City, Phone: user.Phone}
 

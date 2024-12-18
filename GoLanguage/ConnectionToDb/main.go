@@ -30,6 +30,7 @@ func main() {
 	//? Method : @POST
 	// ? Endpoint Route : /save-user
 	httpServer.POST("/save-user", AddUser)
+	httpServer.POST("/login-user", AuthenticateUser)
 	httpServer.GET("/hi", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusCreated, gin.H{"message": "User created successfully"})
 	})
