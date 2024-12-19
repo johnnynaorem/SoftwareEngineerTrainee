@@ -27,7 +27,7 @@ func AuthenticateUser(ctx *gin.Context) {
 	}
 
 	// ? After fields are validated
-	var existingUser model.User
+	var existingUser *model.User
 
 	userNotFoundError := userDbConnector.Where("email = ?", user.Email).First(&existingUser).Error
 	// ? If the user is already exist -> userNotFoundError = nil
@@ -51,5 +51,9 @@ func AuthenticateUser(ctx *gin.Context) {
 	}
 
 	logger.Info("User Authenticated Successfully", zap.String("username", existingUser.Name), zap.String("useremail", userEmail))
-	ctx.JSON(http.StatusOK, gin.H{"message": "User Authenticated Successfully"})
+	token, err := jwtManager.GeneratingToken(existingUser)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"token failure": "Couldn't generate the token"})
+	}
+	ctx.JSON(http.StatusOK, gin.H{"message": "User login successfully", "token": token})
 }

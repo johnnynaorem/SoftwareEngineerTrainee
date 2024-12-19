@@ -2,7 +2,10 @@ package main
 
 import (
 	"auth-micro/config"
+	"auth-micro/jwt"
+	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -11,6 +14,7 @@ import (
 
 var logger *zap.Logger
 var userDbConnector *gorm.DB
+var jwtManager *jwt.JWTManager
 
 func init() {
 	var err error
@@ -25,14 +29,25 @@ func init() {
 func main() {
 	userDbConnector = config.ConnectDB()
 
+	// Create a new jwt manager
+	jwtManager = jwt.NewJWTManager("SECRET_KEY", 5*time.Hour)
+
 	// configuration of the http server.
 	httpServer := gin.Default()
+
 	//? Method : @POST
 	// ? Endpoint Route : /save-user
 	httpServer.POST("/save-user", AddUser)
 	httpServer.POST("/login-user", AuthenticateUser)
 	httpServer.GET("/hi", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusCreated, gin.H{"message": "User created successfully"})
+	})
+
+	// * Protected Route
+	httpServer.Use(jwt.AuthorizeJwtToken())
+	httpServer.GET("/testAuthorization", func(ctx *gin.Context) {
+		fmt.Println(ctx.GetString("usermail"))
+		ctx.JSON(http.StatusOK, gin.H{"message": "Successfull"})
 	})
 
 	// running the server

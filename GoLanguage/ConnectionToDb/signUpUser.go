@@ -84,7 +84,11 @@ func AddUser(ctx *gin.Context) {
 			return
 		}
 		logger.Info(fmt.Sprintf("User %s created successfully", user.Name))
-		ctx.JSON(http.StatusCreated, gin.H{"message": "User created successfully"})
+		token, err := jwtManager.GeneratingToken(newUser)
+		if err != nil {
+			ctx.JSON(http.StatusInternalServerError, gin.H{"token failure": "Couldn't generate the token"})
+		}
+		ctx.JSON(http.StatusCreated, gin.H{"message": "User created successfully", "token": token})
 
 	} else {
 		logger.Warn("User Email Already Exist", zap.String("usermail", user.Email))
