@@ -60,23 +60,23 @@ func AddFlight(ctx *gin.Context) {
 	// 	return
 	// }
 
-	// ?2. Check for Existing user.
+	// ?2. Check for Existing Flight.
 	var existingFlight flightstructs.FlightStruct
 
-	flightNotFoundError := userDbConnector.Where("flight_number = ?", flight.FlightNumber).First(&existingFlight).Error
+	flightNotFoundError := flightDbConnector.Where("flight_number = ?", flight.FlightNumber).First(&existingFlight).Error
 
 	if flightNotFoundError == gorm.ErrRecordNotFound {
 		newFlight := &flightstructs.FlightStruct{FlightNumber: flight.FlightNumber, Fair: flight.Fair, ArrivalTo: flight.ArrivalTo, DepartureFrom: flight.DepartureFrom, FlightDate: flight.FlightDate}
 
-		primaryKey := userDbConnector.Create(newFlight)
+		primaryKey := flightDbConnector.Create(newFlight)
 
 		if primaryKey.Error != nil {
-			logger.Error("Failed to Create user", zap.String("flight number ", flight.FlightNumber), zap.Error(primaryKey.Error))
-			ctx.JSON(http.StatusConflict, gin.H{"message": "The Flight is already registered"})
+			logger.Error("Failed to Add Flight", zap.String("flight number ", flight.FlightNumber), zap.Error(primaryKey.Error))
+			ctx.JSON(http.StatusConflict, gin.H{"message": "The Flight is already added"})
 			return
 		}
 		logger.Info(fmt.Sprintf("User %s created successfully", flight.FlightNumber))
-		ctx.JSON(http.StatusCreated, gin.H{"message": "User created successfully"})
+		ctx.JSON(http.StatusCreated, gin.H{"message": "Flight added successfully"})
 
 	} else {
 		logger.Warn("User Flight Already Exist", zap.String("flight number", flight.FlightNumber))
