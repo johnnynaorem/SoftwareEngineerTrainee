@@ -13,7 +13,7 @@ import (
 )
 
 var logger *zap.Logger
-var userDbConnector *gorm.DB
+var dbConnector *gorm.DB
 var jwtManager *jwt.JWTManager
 
 func init() {
@@ -27,12 +27,12 @@ func init() {
 }
 
 func main() {
-	userDbConnector = config.ConnectDB()
+	dbConnector = config.ConnectDB()
 
-	// Create a new jwt manager
+	// * Create a new jwt manager
 	jwtManager = jwt.NewJWTManager("SECRET_KEY", 5*time.Hour)
 
-	// configuration of the http server.
+	// * configuration of the http server.
 	httpServer := gin.Default()
 
 	//? Method : @POST
@@ -47,9 +47,14 @@ func main() {
 	httpServer.Use(jwt.AuthorizeJwtToken())
 	httpServer.GET("/testAuthorization", func(ctx *gin.Context) {
 		fmt.Println(ctx.GetString("usermail"))
-		ctx.JSON(http.StatusOK, gin.H{"message": "Successfull"})
+		ctx.JSON(http.StatusOK, gin.H{"message": "Authorization"})
 	})
 
-	// running the server
+	httpServer.POST("/add-product", AddProduct)
+	httpServer.GET("/get-all-products", GetAllProduct)
+	httpServer.GET("/get-all-products-by-user", GetAllProductByUserId)
+	httpServer.DELETE("/delete-product/:id", DeleteProduct)
+
+	// ! running the server
 	httpServer.Run(":8080")
 }

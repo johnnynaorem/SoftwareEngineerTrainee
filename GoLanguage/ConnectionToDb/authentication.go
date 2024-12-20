@@ -29,7 +29,7 @@ func AuthenticateUser(ctx *gin.Context) {
 	// ? After fields are validated
 	var existingUser *model.User
 
-	userNotFoundError := userDbConnector.Where("email = ?", user.Email).First(&existingUser).Error
+	userNotFoundError := dbConnector.Where("email = ?", user.Email).First(&existingUser).Error
 	// ? If the user is already exist -> userNotFoundError = nil
 	// ? If the user does not exist -> userNotFoundError = error
 

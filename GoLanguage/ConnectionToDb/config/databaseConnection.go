@@ -15,11 +15,13 @@ func DatabaseDsn() string {
 }
 
 func ConnectDB() *gorm.DB {
-	userdb, err := gorm.Open(mysql.Open(DatabaseDsn()), &gorm.Config{})
+	db, err := gorm.Open(mysql.Open(DatabaseDsn()), &gorm.Config{})
 
 	if err != nil {
 		panic("Failed to connect DB")
 	}
-	userdb.AutoMigrate(&model.User{})
-	return userdb
+	if err := db.AutoMigrate(&model.User{}, &model.Product{}); err != nil {
+		panic(fmt.Sprintf("Failed to auto-migrate: %v", err.Error()))
+	}
+	return db
 }

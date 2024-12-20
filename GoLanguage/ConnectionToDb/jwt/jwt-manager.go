@@ -53,17 +53,17 @@ func VerifyToken(accessToken string) (*UserClaims, error) {
 			_, ok := token.Method.(*jwt.SigningMethodHMAC)
 
 			if !ok {
-				return nil, fmt.Errorf("Unexpected Token signing Method")
+				return nil, fmt.Errorf("unexpected token signing method")
 			}
 			return []byte("SECRET_KEY"), nil
 		},
 	)
 	if err != nil {
-		return nil, fmt.Errorf("Invalid Token %w", err)
+		return nil, fmt.Errorf("invalid token %w", err)
 	}
 	claims, ok := token.Claims.(*UserClaims)
 	if !ok {
-		return nil, fmt.Errorf("Invalid Token %w", err)
+		return nil, fmt.Errorf("invalid token %w", err)
 	}
 	return claims, nil
 }

@@ -15,17 +15,17 @@ import (
 func validateUser(user model.User) error {
 	// Email format validation
 	if !isValidEmail(user.Email) {
-		return fmt.Errorf("Invalid email format")
+		return fmt.Errorf("invalid email format")
 	}
 
 	// Password length validation
 	if len(user.Password) < 8 {
-		return fmt.Errorf("Password must be at least 8 characters long")
+		return fmt.Errorf("password must be at least 8 characters long")
 	}
 
 	// Phone number format validation (assuming it should be numeric)
 	if !isValidPhone(user.Phone) {
-		return fmt.Errorf("Invalid phone number format")
+		return fmt.Errorf("invalid phone number format")
 	}
 
 	// Address and City check
@@ -64,7 +64,7 @@ func AddUser(ctx *gin.Context) {
 	// ?2. Check for Existing user.
 	var existingUser model.User
 
-	userNotFoundError := userDbConnector.Where("email = ?", user.Email).First(&existingUser).Error
+	userNotFoundError := dbConnector.Where("email = ?", user.Email).First(&existingUser).Error
 
 	if userNotFoundError == gorm.ErrRecordNotFound {
 		// ?3. hash password
@@ -76,7 +76,7 @@ func AddUser(ctx *gin.Context) {
 
 		newUser := &model.User{Name: user.Name, Email: user.Email, Password: string(hashedPassword), Address: user.Address, City: user.City, Phone: user.Phone}
 
-		primaryKey := userDbConnector.Create(newUser)
+		primaryKey := dbConnector.Create(newUser)
 
 		if primaryKey.Error != nil {
 			logger.Error("Failed to Create user", zap.String("userPhone ", user.Phone), zap.Error(primaryKey.Error))
