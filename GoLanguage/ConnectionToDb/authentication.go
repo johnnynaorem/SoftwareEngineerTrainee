@@ -54,6 +54,7 @@ func AuthenticateUser(ctx *gin.Context) {
 	token, err := jwtManager.GeneratingToken(existingUser)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"token failure": "Couldn't generate the token"})
+		return
 	}
 	ctx.JSON(http.StatusOK, gin.H{"message": "User login successfully", "token": token})
 }
