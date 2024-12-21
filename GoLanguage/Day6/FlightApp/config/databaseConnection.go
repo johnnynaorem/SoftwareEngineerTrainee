@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	flightstructs "myModule/flightStructs"
+	"myModule/model"
 
 	// "gorm.io/driver/sqlserver"
 	"gorm.io/driver/mysql"
@@ -20,6 +20,6 @@ func ConnectDB() *gorm.DB {
 	if err != nil {
 		panic("Failed to connect DB")
 	}
-	userdb.AutoMigrate(&flightstructs.FlightStruct{})
+	userdb.AutoMigrate(&model.User{}, &model.Flights{})
 	return userdb
 }
