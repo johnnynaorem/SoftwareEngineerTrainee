@@ -1,0 +1,23 @@
+# * Install GoLang 
+FROM golang:1.22.2-apline3.19
+
+# * Set the Current Working Directory inside the container
+WORKDIR / app 
+
+# * Copy all the codes into the container
+COPY . .
+
+# * Download all the dependencies
+RUN go mod tidy && go mod vendor
+
+# * Expose the port on which the application will run
+EXPOSE 8081
+
+# * Run the application
+CMD ["go", "run", "."]
+
+# ! Build Command
+# ? docker build -t <image-name>/<my-project>
+
+# ! Run Command 
+# ? docker container run -p 8090:8081 -e MYSQL_HOST=host.docker.internal <image-name>/<my-project>

@@ -1,0 +1,26 @@
+# ! Version 3.6 is the latest version of docker-compose
+# * not need to write
+
+# ? version: '3.6'
+
+# * services:
+services:
+  # * database:
+  database:
+    # ? sql_image
+    image: mysql:8.0
+
+    # ? set environment variables
+    environment:
+      MYSQL_ROOT_PASSWORD: Johnny02
+      MYSQL_DATABASE: flightdb
+
+    # ? volumes for persisting data
+    volumes:
+      - "mysql-data:/var/lib/mysql"
+
+    # ? expose ports(port mapping)
+    ports: "3307:3306"
+
+  # * FlightService:
+  myModule:
