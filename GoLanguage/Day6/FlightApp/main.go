@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
@@ -30,6 +31,9 @@ func init() {
 }
 
 func main() {
+	if err := godotenv.Load(".env"); err != nil {
+		panic("No .env file found")
+	}
 	flightDbConnector = config.ConnectDB()
 
 	// * Create a new jwt manager
@@ -52,6 +56,7 @@ func main() {
 	httpServer.GET("/get-all-flight-by-user", GetAllByUser)
 	httpServer.GET("/search-flight", SearchFlight)
 	httpServer.DELETE("/delete-flight/:flightId", DeleteFlight)
+	httpServer.PATCH("/update-flight/:flightId", UpdateFlight)
 
 	// running the server
 	httpServer.Run(":8081")
