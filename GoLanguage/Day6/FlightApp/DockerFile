@@ -1,5 +1,5 @@
 # * Install GoLang 
-FROM golang:1.22.2-apline3.19
+FROM golang:1.23.4-alpine3.19
 
 # * Set the Current Working Directory inside the container
 WORKDIR / app 
@@ -21,3 +21,9 @@ CMD ["go", "run", "."]
 
 # ! Run Command 
 # ? docker container run -p 8090:8081 -e MYSQL_HOST=host.docker.internal <image-name>/<my-project>
+
+# ! Stop Command
+# ? docker container stop <container-id>
+
+# ! Push to Docker Registry
+# ? docker push johnnynaorem/flight_management_project:target<tagname>/<latest>
